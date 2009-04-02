@@ -1,9 +1,0 @@
-#Tue Feb 17 03:16:45 EST 2009
-eclipse.preferences.version=1
-gmf_dashboard/domainGenerationModel=platform\:/resource/edu.fiu.RRComSSys/model/GCML/GCML.genmodel
-gmf_dashboard/domainModel=platform\:/resource/edu.fiu.RRComSSys/model/GCML/GCML.ecore
-gmf_dashboard/generationModel=platform\:/resource/edu.fiu.RRComSSys/model/GCML/GCML.gmfgen
-gmf_dashboard/graphicalDefinitionModel=platform\:/resource/edu.fiu.RRComSSys/model/GCML/GCML.gmfgraph
-gmf_dashboard/mappingModel=platform\:/resource/edu.fiu.RRComSSys/model/GCML/GCML.gmfmap
-gmf_dashboard/option_rcp=*
-gmf_dashboard/toolingDefinitionModel=platform\:/resource/edu.fiu.RRComSSys/model/GCML/GCML.gmftool
