@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="28" version="2.0">
+<workbenchAdvisor/>
+<window height="990" maximized="true" width="1343" x="364" y="19">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="104" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="142" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="104" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="104" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="85" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="207" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1238549513156" focus="true" label="Workspace - Java">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="5"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
+<part id="27"/>
+<part id="28"/>
+<part id="29"/>
+<part id="30"/>
+<part id="31"/>
+<part id="32"/>
+<part id="33"/>
+<part id="34"/>
+<part id="35"/>
+<part id="36"/>
+<part id="37"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IModelManagementEngine.java" partName="IModelManagementEngine.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mme/IModelManagementEngine.java" title="IModelManagementEngine.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mme/IModelManagementEngine.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mme/IModelManagementEngine.java"/>
+<editorState selectionLength="0" selectionOffset="239"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IModelTransformationEngine.java" partName="IModelTransformationEngine.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/IModelTransformationEngine.java" title="IModelTransformationEngine.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/IModelTransformationEngine.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/IModelTransformationEngine.java"/>
+<editorState selectionLength="0" selectionOffset="143"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ISynthesisEngine.java" partName="ISynthesisEngine.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/ISynthesisEngine.java" title="ISynthesisEngine.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/ISynthesisEngine.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/ISynthesisEngine.java"/>
+<editorState selectionLength="0" selectionOffset="227"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ISchemaTransformationEngine.java" partName="ISchemaTransformationEngine.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/ste/ISchemaTransformationEngine.java" title="ISchemaTransformationEngine.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/ste/ISchemaTransformationEngine.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/ste/ISchemaTransformationEngine.java"/>
+<editorState selectionLength="0" selectionOffset="184"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CMLDocument.java" partName="CMLDocument.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/CMLDocument.java" title="CMLDocument.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/CMLDocument.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/CMLDocument.java"/>
+<editorState selectionLength="0" selectionOffset="212"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ModelManagementEngine.java" partName="ModelManagementEngine.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mme/ModelManagementEngine.java" title="ModelManagementEngine.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mme/ModelManagementEngine.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mme/ModelManagementEngine.java"/>
+<editorState selectionLength="25" selectionOffset="451"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ModelTransformationEngine.java" partName="ModelTransformationEngine.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/ModelTransformationEngine.java" title="ModelTransformationEngine.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/ModelTransformationEngine.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/ModelTransformationEngine.java"/>
+<editorState selectionLength="34" selectionOffset="843"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XCMLWorkflowDocument.java" partName="XCMLWorkflowDocument.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlwfmodel/XCMLWorkflowDocument.java" title="XCMLWorkflowDocument.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlwfmodel/XCMLWorkflowDocument.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlwfmodel/XCMLWorkflowDocument.java"/>
+<editorState selectionLength="0" selectionOffset="185"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WorkflowSymbol.java" partName="WorkflowSymbol.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlwfmodel/WorkflowSymbol.java" title="WorkflowSymbol.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlwfmodel/WorkflowSymbol.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlwfmodel/WorkflowSymbol.java"/>
+<editorState selectionLength="0" selectionOffset="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XCMLDocument.java" partName="XCMLDocument.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/XCMLDocument.java" title="XCMLDocument.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/XCMLDocument.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/XCMLDocument.java"/>
+<editorState selectionLength="0" selectionOffset="346"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VideoFile.java" partName="VideoFile.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/VideoFile.java" title="VideoFile.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/VideoFile.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/VideoFile.java"/>
+<editorState selectionLength="0" selectionOffset="8"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserDefinition.java" partName="UserDefinition.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/UserDefinition.java" title="UserDefinition.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/UserDefinition.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/UserDefinition.java"/>
+<editorState selectionLength="0" selectionOffset="363"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TextFile.java" partName="TextFile.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/TextFile.java" title="TextFile.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/TextFile.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/TextFile.java"/>
+<editorState selectionLength="0" selectionOffset="187"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Text.java" partName="Text.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Text.java" title="Text.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Text.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Text.java"/>
+<editorState selectionLength="0" selectionOffset="182"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StreamFile.java" partName="StreamFile.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/StreamFile.java" title="StreamFile.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/StreamFile.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/StreamFile.java"/>
+<editorState selectionLength="0" selectionOffset="186"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Person.java" partName="Person.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Person.java" title="Person.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Person.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Person.java"/>
+<editorState selectionLength="0" selectionOffset="178"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NonStreamFile.java" partName="NonStreamFile.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/NonStreamFile.java" title="NonStreamFile.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/NonStreamFile.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/NonStreamFile.java"/>
+<editorState selectionLength="0" selectionOffset="190"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MediumType.java" partName="MediumType.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/MediumType.java" title="MediumType.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/MediumType.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/MediumType.java"/>
+<editorState selectionLength="0" selectionOffset="471"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MediumApplication.java" partName="MediumApplication.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/MediumApplication.java" title="MediumApplication.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/MediumApplication.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/MediumApplication.java"/>
+<editorState selectionLength="0" selectionOffset="198"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Medium.java" partName="Medium.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Medium.java" title="Medium.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Medium.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Medium.java"/>
+<editorState selectionLength="0" selectionOffset="261"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LiveVideo.java" partName="LiveVideo.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveVideo.java" title="LiveVideo.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveVideo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveVideo.java"/>
+<editorState selectionLength="0" selectionOffset="192"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LiveStream.java" partName="LiveStream.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveStream.java" title="LiveStream.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveStream.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveStream.java"/>
+<editorState selectionLength="0" selectionOffset="182"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LiveAudioVideo.java" partName="LiveAudioVideo.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveAudioVideo.java" title="LiveAudioVideo.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveAudioVideo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveAudioVideo.java"/>
+<editorState selectionLength="0" selectionOffset="194"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LiveAudio.java" partName="LiveAudio.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveAudio.java" title="LiveAudio.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveAudio.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveAudio.java"/>
+<editorState selectionLength="0" selectionOffset="189"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IsAttached.java" partName="IsAttached.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/IsAttached.java" title="IsAttached.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/IsAttached.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/IsAttached.java"/>
+<editorState selectionLength="0" selectionOffset="189"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="File.java" partName="File.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/File.java" title="File.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/File.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/File.java"/>
+<editorState selectionLength="42" selectionOffset="171"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Device.java" partName="Device.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Device.java" title="Device.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Device.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Device.java"/>
+<editorState selectionLength="0" selectionOffset="346"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Connection.java" partName="Connection.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Connection.java" title="Connection.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Connection.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Connection.java"/>
+<editorState selectionLength="5" selectionOffset="511"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Capability.java" partName="Capability.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Capability.java" title="Capability.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Capability.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Capability.java"/>
+<editorState selectionLength="0" selectionOffset="290"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BinaryFile.java" partName="BinaryFile.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/BinaryFile.java" title="BinaryFile.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/BinaryFile.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/BinaryFile.java"/>
+<editorState selectionLength="0" selectionOffset="197"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AudioVideoFile.java" partName="AudioVideoFile.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/AudioVideoFile.java" title="AudioVideoFile.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/AudioVideoFile.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/AudioVideoFile.java"/>
+<editorState selectionLength="0" selectionOffset="194"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AudioFile.java" partName="AudioFile.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/AudioFile.java" title="AudioFile.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/AudioFile.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/AudioFile.java"/>
+<editorState selectionLength="0" selectionOffset="279"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BuiltInType.java" partName="BuiltInType.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/BuiltInType.java" title="BuiltInType.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/BuiltInType.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/BuiltInType.java"/>
+<editorState selectionLength="0" selectionOffset="244"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Action.java" partName="Action.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Action.java" title="Action.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Action.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Action.java"/>
+<editorState selectionLength="0" selectionOffset="94"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SchemaTransformationEngine.java" partName="SchemaTransformationEngine.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/ste/SchemaTransformationEngine.java" title="SchemaTransformationEngine.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/ste/SchemaTransformationEngine.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/ste/SchemaTransformationEngine.java"/>
+<editorState selectionLength="343" selectionOffset="179"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SynthesisEngine.java" partName="SynthesisEngine.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/SynthesisEngine.java" title="SynthesisEngine.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/SynthesisEngine.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/SynthesisEngine.java"/>
+<editorState selectionLength="0" selectionOffset="724"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IAPICommand.java" partName="IAPICommand.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/IAPICommand.java" title="IAPICommand.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/IAPICommand.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/IAPICommand.java"/>
+<editorState selectionLength="0" selectionOffset="97"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ICommunicationAPI.java" partName="ICommunicationAPI.java" path="C:/Projects/RRComSSys/Projects/CVM/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/ICommunicationAPI.java" title="ICommunicationAPI.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/ICommunicationAPI.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/ICommunicationAPI.java"/>
+<editorState selectionLength="0" selectionOffset="155"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="1"/>
+</view>
+<view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy">
+<viewState hidefields="false" hidelocaltypes="false" hidenonpublic="false" hidestatic="false" isWindowWorkingSet="false" link_editors="0" mv_vertical_scroll="0" orientation="3" qualified_names="0" ratio="350" showinherited="false" sortbydefiningtype="false" vertical_scroll="0" view="2" workingSetName=""/>
+</view>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" isWindowWorkingSet="true" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="false">&#x0A;<xmlDefinedFilters>&#x0A;<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.gmf.codegen.ui.hide_generated" isEnabled="false"/>
+<child filterId="org.eclipse.emf.mint.ui.filters.GeneratedFilter" isEnabled="false"/>
+<child filterId="org.eclipse.emf.mint.ui.filters.GeneratedNotFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.emf.mint.ui.filters.GeneratedNoneFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
+<viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
+<org.eclipse.mylyn.tasklist.ui.views.tasklist.sortIndex>
+<sorter sortDirection="1" sortIndex="0"/>
+<sorter2 sortDirection="1" sortIndex="2"/>
+</org.eclipse.mylyn.tasklist.ui.views.tasklist.sortIndex>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.openarchitectureware.xpand2.refactoring.CodingActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="org.eclipse.m2m.qvt.oml.runtime.actions"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<new_wizard_action id="org.eclipse.m2m.qvt.oml.ui.wizards.NewQVTTransformationWizard"/>
+<new_wizard_action id="org.eclipse.m2m.qvt.oml.ui.wizards.NewQvtLibraryWizard"/>
+<new_wizard_action id="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="131072" id="right" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@15fdf31" orientation="512" selectedTabId="org.eclipse.mylyn.tasks.ui.views.tasks" style="0">
+<fastViews>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="Hierarchy"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@10a4a32" ratio="0.75" ratioLeft="756" ratioRight="252" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.3538936" ratioLeft="459" ratioRight="838" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.61807907" ratioLeft="547" ratioRight="338" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.PropertySheet" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@15fdf31" ratio="0.75" ratioLeft="567" ratioRight="189" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.49903288" ratioLeft="258" ratioRight="259" relationship="4" relative="org.eclipse.ui.internal.ViewStack@15fdf31">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mme/ModelManagementEngine.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/ModelTransformationEngine.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlwfmodel/XCMLWorkflowDocument.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/StreamFile.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Person.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/NonStreamFile.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/MediumType.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/MediumApplication.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Medium.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveVideo.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveStream.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveAudioVideo.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveAudio.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/IsAttached.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/File.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Device.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Connection.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Capability.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/BinaryFile.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/AudioVideoFile.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/AudioFile.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/BuiltInType.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Action.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/ste/ISchemaTransformationEngine.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/CMLDocument.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/ste/SchemaTransformationEngine.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/ISynthesisEngine.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/SynthesisEngine.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/IAPICommand.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/ICommunicationAPI.java"/>
+</editors>
+<item historyLabel="StreamFile.java" index="3">
+<position info="not_deleted" x="186" y="0"/>
+</item>
+<item historyLabel="Person.java" index="4">
+<position info="not_deleted" x="178" y="0"/>
+</item>
+<item historyLabel="NonStreamFile.java" index="5">
+<position info="not_deleted" x="190" y="0"/>
+</item>
+<item historyLabel="MediumType.java" index="6">
+<position info="not_deleted" x="471" y="0"/>
+</item>
+<item historyLabel="MediumApplication.java" index="7">
+<position info="not_deleted" x="198" y="0"/>
+</item>
+<item historyLabel="Medium.java" index="8">
+<position info="not_deleted" x="261" y="0"/>
+</item>
+<item historyLabel="LiveVideo.java" index="9">
+<position info="not_deleted" x="192" y="0"/>
+</item>
+<item historyLabel="LiveStream.java" index="10">
+<position info="not_deleted" x="182" y="0"/>
+</item>
+<item historyLabel="LiveAudioVideo.java" index="11">
+<position info="not_deleted" x="194" y="0"/>
+</item>
+<item historyLabel="LiveAudio.java" index="12">
+<position info="not_deleted" x="189" y="0"/>
+</item>
+<item historyLabel="IsAttached.java" index="13">
+<position info="not_deleted" x="189" y="0"/>
+</item>
+<item historyLabel="File.java" index="14">
+<position info="not_deleted" x="171" y="42"/>
+</item>
+<item historyLabel="Device.java" index="15">
+<position info="not_deleted" x="346" y="0"/>
+</item>
+<item historyLabel="Connection.java" index="16">
+<position info="not_deleted" x="511" y="5"/>
+</item>
+<item historyLabel="Capability.java" index="17">
+<position info="not_deleted" x="290" y="0"/>
+</item>
+<item historyLabel="BinaryFile.java" index="18">
+<position info="not_deleted" x="197" y="0"/>
+</item>
+<item historyLabel="AudioVideoFile.java" index="19">
+<position info="not_deleted" x="194" y="0"/>
+</item>
+<item historyLabel="AudioFile.java" index="20">
+<position info="not_deleted" x="279" y="0"/>
+</item>
+<item historyLabel="Capability.java" index="17">
+<position info="not_deleted" x="290" y="0"/>
+</item>
+<item historyLabel="BuiltInType.java" index="21">
+<position/>
+</item>
+<item historyLabel="Medium.java" index="8">
+<position info="not_deleted" x="261" y="0"/>
+</item>
+<item historyLabel="Action.java" index="22">
+<position/>
+</item>
+<item historyLabel="XCMLWorkflowDocument.java" index="2">
+<position info="not_deleted" x="185" y="0"/>
+</item>
+<item historyLabel="ModelTransformationEngine.java" index="1">
+<position info="not_deleted" x="200" y="0"/>
+</item>
+<item historyLabel="ISchemaTransformationEngine.java" index="23">
+<position/>
+</item>
+<item historyLabel="CMLDocument.java" index="24">
+<position info="not_deleted" x="212" y="0"/>
+</item>
+<item historyLabel="ModelManagementEngine.java" index="0">
+<position info="not_deleted" x="222" y="324"/>
+</item>
+<item historyLabel="ISchemaTransformationEngine.java" index="23">
+<position info="not_deleted" x="141" y="0"/>
+</item>
+<item historyLabel="ISchemaTransformationEngine.java" index="23">
+<position info="not_deleted" x="184" y="0"/>
+</item>
+<item historyLabel="SchemaTransformationEngine.java" index="25">
+<position/>
+</item>
+<item historyLabel="ISynthesisEngine.java" index="26">
+<position info="not_deleted" x="124" y="0"/>
+</item>
+<item historyLabel="ISynthesisEngine.java" index="26">
+<position info="not_deleted" x="227" y="0"/>
+</item>
+<item historyLabel="SynthesisEngine.java" index="27">
+<position/>
+</item>
+<item historyLabel="SchemaTransformationEngine.java" index="25">
+<position info="not_deleted" x="179" y="343"/>
+</item>
+<item historyLabel="SynthesisEngine.java" index="27">
+<position info="not_deleted" x="724" y="0"/>
+</item>
+<item historyLabel="IAPICommand.java" index="28">
+<position/>
+</item>
+<item historyLabel="ICommunicationAPI.java" index="29">
+<position/>
+</item>
+<item historyLabel="IAPICommand.java" index="28">
+<position info="not_deleted" x="97" y="0"/>
+</item>
+<item historyLabel="SynthesisEngine.java" index="27">
+<position info="not_deleted" x="724" y="0"/>
+</item>
+<item historyLabel="ICommunicationAPI.java" index="29">
+<position info="not_deleted" x="81" y="7"/>
+</item>
+<item historyLabel="ICommunicationAPI.java" index="29">
+<position info="not_deleted" x="155" y="0"/>
+</item>
+<item historyLabel="ICommunicationAPI.java" index="29">
+<position info="not_deleted" x="155" y="0"/>
+</item>
+<item historyLabel="IAPICommand.java" index="28">
+<position info="not_deleted" x="97" y="0"/>
+</item>
+<item historyLabel="ICommunicationAPI.java" index="29">
+<position info="not_deleted" x="155" y="0"/>
+</item>
+<item historyLabel="ModelTransformationEngine.java" index="1">
+<position info="not_deleted" x="843" y="34"/>
+</item>
+<item historyLabel="ModelManagementEngine.java" index="0">
+<position info="not_deleted" x="222" y="324"/>
+</item>
+<item historyLabel="ModelManagementEngine.java" index="0">
+<position info="not_deleted" x="713" y="0"/>
+</item>
+<item historyLabel="ModelManagementEngine.java" index="0">
+<position info="not_deleted" x="788" y="0"/>
+</item>
+<item historyLabel="ModelManagementEngine.java" index="0">
+<position info="not_deleted" x="451" y="25"/>
+</item>
+<item active="true" historyLabel="ICommunicationAPI.java" index="29">
+<position info="not_deleted" x="155" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="right"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@15fdf31"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ICommunicationAPI.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/ICommunicationAPI.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/ICommunicationAPI.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IAPICommand.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/IAPICommand.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/IAPICommand.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SynthesisEngine.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/SynthesisEngine.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/se/SynthesisEngine.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SchemaTransformationEngine.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/ste/SchemaTransformationEngine.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/ste/SchemaTransformationEngine.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Action.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Action.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Action.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BuiltInType.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/BuiltInType.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/BuiltInType.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AudioFile.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/AudioFile.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/AudioFile.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AudioVideoFile.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/AudioVideoFile.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/AudioVideoFile.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BinaryFile.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/BinaryFile.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/BinaryFile.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Capability.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Capability.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Capability.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Connection.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Connection.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Connection.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Device.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Device.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/Device.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="File.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/File.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/File.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IsAttached.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/IsAttached.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/IsAttached.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LiveAudio.java" tooltip="RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveAudio.java">
+<persistable path="/RRComSSys.CVM/src/edu/fiu/cis/rrcomssys/cvm/mte/xcmlmodel/LiveAudio.java"/>
+</file>
+</mruList>
+</workbench>
