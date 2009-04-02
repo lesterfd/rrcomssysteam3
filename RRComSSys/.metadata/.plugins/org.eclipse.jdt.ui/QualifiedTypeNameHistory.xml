@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="CommunicationVirtualMachine.ModelTransformer.ModelTransformer.XCMLObjectModel.XCMLObjectModel.XCMLDocument"/>
+<fullyQualifiedTypeName name="edu.fiu.cis.rrcomssys.cvm.mte.xcmlwfmodel.XCMLWorkflowDocument"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="edu.fiu.cis.rrcomssys.cvm.mte.xcmlmodel.XCMLDocument"/>
+<fullyQualifiedTypeName name="edu.fiu.cis.rrcomssys.cvm.mte.CMLDocument"/>
+<fullyQualifiedTypeName name="edu.fiu.cis.rrcomssys.cvm.mte.ModelTransformationEngine"/>
+<fullyQualifiedTypeName name="edu.fiu.cis.rrcomssys.cvm.se.SynthesisEngine"/>
+</qualifiedTypeNameHistroy>

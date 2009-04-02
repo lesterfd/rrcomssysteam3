@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="776" class="GCML.provider.GCMLEditPlugin$Implementation" localization="plugin" name="%pluginName" project="RRComSSys.CMVE.edit" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="775" class="GCML.diagram.part.GCMLDiagramEditorPlugin" localization="plugin" name="%pluginName" project="RRComSSys.CMVE.diagram" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="778" localization="plugin" name="%pluginName" project="RRComSSys.CMVE.tests" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="777" class="GCML.presentation.GCMLEditorPlugin$Implementation" localization="plugin" name="%pluginName" project="RRComSSys.CMVE.editor" provider="%providerName">
+		<library name="."/>
+	</bundle>
+	<bundle bundleID="774" localization="plugin" name="%pluginName" project="RRComSSys.CMVE" provider="%providerName">
+		<library name="."/>
+	</bundle>
+</map>

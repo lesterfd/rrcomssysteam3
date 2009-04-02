@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="GCML.presentation.GCMLModelWizardID"
+            name="%_UI_GCMLModelWizard_label"
+            class="GCML.presentation.GCMLModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/GCMLModelFile.gif">
+         <description>%_UI_GCMLModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="GCML.presentation.GCMLEditorID"
+            name="%_UI_GCMLEditor_label"
+            icon="icons/full/obj16/GCMLModelFile.gif"
+            extensions="gcml"
+            class="GCML.presentation.GCMLEditor"
+            contributorClass="GCML.presentation.GCMLActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

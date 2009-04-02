@@ -1,0 +1,22 @@
+package edu.fiu.cis.rrcomssys.cvm.mte;
+
+public class ModelTransformationEngine implements IModelTransformationEngine
+{
+
+	@Override
+	public CMLDocument loadCMLDocument(String fileName)
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+	/* Member Variables */
+
+	/* Constructors & Initializers */
+
+	/* Properties */
+
+	/* Public Methods */
+
+	/* Private Methods */
+
+}
