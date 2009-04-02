@@ -1,7 +1,0 @@
-# Tracing options for the edu.fiu.RRComSSys.diagram plug-in
-
-# Common issues
-edu.fiu.RRComSSys.diagram/debug=false
-
-# Visual IDs
-edu.fiu.RRComSSys.diagram/debug/visualID=false
