@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.fiu.RRComSSys/src"
+    modelPluginID="edu.fiu.RRComSSys" modelName="XCML" importerID="org.eclipse.xsd.ecore.importer"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>XCML.xsd</foreignModel>
+  <genPackages prefix="XCML" resource="XML" disposableProviderFactory="true" ecorePackage="XCML.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="XCML.ecore#//ActionType">
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//ActionType/send"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//ActionType/doNotSend"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//ActionType/start"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="XCML.ecore#//CapabilityType">
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//CapabilityType/TextFile"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//CapabilityType/BinaryFile"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//CapabilityType/StreamFile"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//CapabilityType/NonStreamFile"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//CapabilityType/AudioFile"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//CapabilityType/VideoFile"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//CapabilityType/AVFile"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//CapabilityType/Text"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//CapabilityType/LiveStream"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//CapabilityType/LiveAudio"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//CapabilityType/LiveVideo"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//CapabilityType/LiveAV"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="XCML.ecore#//StateType">
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//StateType/on"/>
+      <genEnumLiterals ecoreEnumLiteral="XCML.ecore#//StateType/off"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="XCML.ecore#//ActionTypeObject"/>
+    <genDataTypes ecoreDataType="XCML.ecore#//CapabilityTypeObject"/>
+    <genDataTypes ecoreDataType="XCML.ecore#//StateTypeObject"/>
+    <genClasses ecoreClass="XCML.ecore#//ConnectionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//ConnectionType/device"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//ConnectionType/mediumTypeNameRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//ConnectionType/formTypeNameRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//ConnectionType/bandwidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//ConnectionType/connectionID"/>
+    </genClasses>
+    <genClasses ecoreClass="XCML.ecore#//DataType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//DataType/medium"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//DataType/form"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//DataType/communicationID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//DataType/connectionID"/>
+    </genClasses>
+    <genClasses ecoreClass="XCML.ecore#//DeviceType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//DeviceType/deviceCapability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//DeviceType/deviceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//DeviceType/isLocal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//DeviceType/isVirtual"/>
+    </genClasses>
+    <genClasses ecoreClass="XCML.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference XCML.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference XCML.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//DocumentRoot/data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//DocumentRoot/userSchema"/>
+    </genClasses>
+    <genClasses ecoreClass="XCML.ecore#//FormType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//FormType/form"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//FormType/medium"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//FormType/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//FormType/formDataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//FormType/formID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//FormType/layoutSpecification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//FormType/suggestedApplication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//FormType/voiceCommand"/>
+    </genClasses>
+    <genClasses ecoreClass="XCML.ecore#//FormTypeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//FormTypeType/formType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//FormTypeType/mediumDataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//FormTypeType/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//FormTypeType/formTypeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//FormTypeType/suggestedApplication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//FormTypeType/voiceCommand"/>
+    </genClasses>
+    <genClasses ecoreClass="XCML.ecore#//IsAttachedType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//IsAttachedType/deviceID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//IsAttachedType/personID"/>
+    </genClasses>
+    <genClasses ecoreClass="XCML.ecore#//MediumType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumType/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumType/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumType/firstTransferTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumType/lastModifyTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumType/mediumDataType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumType/mediumName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumType/mediumSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumType/mediumURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumType/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumType/validityPeriod"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumType/voiceCommand"/>
+    </genClasses>
+    <genClasses ecoreClass="XCML.ecore#//MediumTypeType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumTypeType/derivedFromBuiltInType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumTypeType/mediumTypeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumTypeType/suggestedApplication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//MediumTypeType/voiceCommand"/>
+    </genClasses>
+    <genClasses ecoreClass="XCML.ecore#//PersonType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//PersonType/personID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//PersonType/personName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//PersonType/personRole"/>
+    </genClasses>
+    <genClasses ecoreClass="XCML.ecore#//UserSchemaType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//UserSchemaType/connection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//UserSchemaType/mediumType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//UserSchemaType/formType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//UserSchemaType/person"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference XCML.ecore#//UserSchemaType/isAttached"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute XCML.ecore#//UserSchemaType/communicationID"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

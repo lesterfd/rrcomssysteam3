@@ -1,0 +1,31 @@
+package edu.fiu.cis.rrcomssys.cvm.se;
+
+import edu.fiu.cis.rrcomssys.cvm.mte.CMLDocument;
+
+public class SynthesisEngine implements ISynthesisEngine
+{
+
+	@Override
+	public void executeCommands(CMLDocument doc)
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void generateCommands(CMLDocument doc)
+	{
+		// TODO Auto-generated method stub
+
+	}
+	/* Member Variables */
+
+	/* Constructors & Initializers */
+
+	/* Properties */
+
+	/* Public Methods */
+
+	/* Private Methods */
+
+}

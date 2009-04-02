@@ -1,0 +1,19 @@
+package edu.fiu.cis.rrcomssys.cvm.mme;
+
+import edu.fiu.cis.rrcomssys.cvm.mte.CMLDocument;
+
+public class ModelManagementEngine implements IModelManagementEngine
+{
+	@Override
+	public CMLDocument loadCMLDocument(String fileName)
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public void executeModel(CMLDocument doc)
+	{
+		// TODO Auto-generated method stub
+	}
+}
