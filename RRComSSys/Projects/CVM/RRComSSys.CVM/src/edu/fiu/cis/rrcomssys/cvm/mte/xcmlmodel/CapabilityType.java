@@ -1,6 +1,6 @@
 package edu.fiu.cis.rrcomssys.cvm.mte.xcmlmodel;
 
-public enum BuiltInType
+public enum CapabilityType
 {
 	Text,
 	TextFile,

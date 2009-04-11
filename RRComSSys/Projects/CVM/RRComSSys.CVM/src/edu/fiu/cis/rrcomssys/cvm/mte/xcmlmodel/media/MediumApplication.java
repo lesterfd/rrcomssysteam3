@@ -11,7 +11,7 @@
 
 
 
-package edu.fiu.cis.rrcomssys.cvm.mte.xcmlmodel;
+package edu.fiu.cis.rrcomssys.cvm.mte.xcmlmodel.media;
 
 
 /** */
