@@ -74,7 +74,7 @@ public class ConnectionDeviceReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistConnectionDevice_4001(getNewSource(), getOldTarget());
+				.canExistConnectionDevice_3001(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class ConnectionDeviceReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistConnectionDevice_4001(getOldSource(), getNewTarget());
+				.canExistConnectionDevice_3001(getOldSource(), getNewTarget());
 	}
 
 	/**

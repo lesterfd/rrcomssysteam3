@@ -26,42 +26,42 @@ public class GCMLDocumentItemSemanticEditPolicy extends
 	 * @generated
 	 */
 	protected Command getCreateCommand(CreateElementRequest req) {
-		if (GCMLElementTypes.IsAttached_2001 == req.getElementType()) {
+		if (GCMLElementTypes.IsAttached_1001 == req.getElementType()) {
 			if (req.getContainmentFeature() == null) {
 				req.setContainmentFeature(GCMLPackage.eINSTANCE
 						.getGCMLDocument_Shape());
 			}
 			return getGEFWrapper(new IsAttachedCreateCommand(req));
 		}
-		if (GCMLElementTypes.Capability_2002 == req.getElementType()) {
+		if (GCMLElementTypes.Capability_1002 == req.getElementType()) {
 			if (req.getContainmentFeature() == null) {
 				req.setContainmentFeature(GCMLPackage.eINSTANCE
 						.getGCMLDocument_Shape());
 			}
 			return getGEFWrapper(new CapabilityCreateCommand(req));
 		}
-		if (GCMLElementTypes.Device_2003 == req.getElementType()) {
+		if (GCMLElementTypes.Device_1003 == req.getElementType()) {
 			if (req.getContainmentFeature() == null) {
 				req.setContainmentFeature(GCMLPackage.eINSTANCE
 						.getGCMLDocument_Shape());
 			}
 			return getGEFWrapper(new DeviceCreateCommand(req));
 		}
-		if (GCMLElementTypes.Connection_2004 == req.getElementType()) {
+		if (GCMLElementTypes.Connection_1004 == req.getElementType()) {
 			if (req.getContainmentFeature() == null) {
 				req.setContainmentFeature(GCMLPackage.eINSTANCE
 						.getGCMLDocument_Shape());
 			}
 			return getGEFWrapper(new ConnectionCreateCommand(req));
 		}
-		if (GCMLElementTypes.Person_2005 == req.getElementType()) {
+		if (GCMLElementTypes.Person_1005 == req.getElementType()) {
 			if (req.getContainmentFeature() == null) {
 				req.setContainmentFeature(GCMLPackage.eINSTANCE
 						.getGCMLDocument_Shape());
 			}
 			return getGEFWrapper(new PersonCreateCommand(req));
 		}
-		if (GCMLElementTypes.Medium_2006 == req.getElementType()) {
+		if (GCMLElementTypes.Medium_1006 == req.getElementType()) {
 			if (req.getContainmentFeature() == null) {
 				req.setContainmentFeature(GCMLPackage.eINSTANCE
 						.getGCMLDocument_Shape());

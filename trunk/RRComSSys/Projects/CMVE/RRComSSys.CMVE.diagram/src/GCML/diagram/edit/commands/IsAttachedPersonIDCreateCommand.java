@@ -55,7 +55,7 @@ public class IsAttachedPersonIDCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canCreateIsAttachedPersonID_4003(getSource(), getTarget());
+				.canCreateIsAttachedPersonID_3003(getSource(), getTarget());
 	}
 
 	/**

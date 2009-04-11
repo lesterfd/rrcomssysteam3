@@ -59,7 +59,7 @@ public class MediumActionEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5007;
+	public static final int VISUAL_ID = 4007;
 
 	/**
 	 * @generated
@@ -307,7 +307,7 @@ public class MediumActionEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			String parserHint = ((View) getModel()).getType();
 			IAdaptable hintAdapter = new GCMLParserProvider.HintAdapter(
-					GCMLElementTypes.Medium_2006, getParserElement(),
+					GCMLElementTypes.Medium_1006, getParserElement(),
 					parserHint);
 			parser = ParserService.getInstance().getParser(hintAdapter);
 		}

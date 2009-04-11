@@ -16,5 +16,25 @@
             class="communication.CommunicationPackage"
             genModel="model/Communication.genmodel"/>
    </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="RRComSSys.CMVE.diagram.GCMLApplication"
+            name="CMVE">
+         <property
+               name="appName"
+               value="CMVE">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="product1"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="RRComSSys.CMWF.diagram.WFGCMLApplication"
+            name="CMVE">
+      </product>
+   </extension>
 
 </plugin>

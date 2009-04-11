@@ -30,7 +30,7 @@ public class GCMLDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	 * @generated
 	 */
-	public static final String ID = "edu.fiu.RRComSSys.diagram"; //$NON-NLS-1$
+	public static final String ID = "RRComSSys.CMVE.diagram"; //$NON-NLS-1$
 
 	/**
 	 * @generated

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.fiu.RRComSSys/src"
-    modelPluginID="edu.fiu.RRComSSys" modelName="GCML" importerID="org.eclipse.emf.importer.ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/RRComSSys.CMVE/src"
+    modelPluginID="RRComSSys.CMVE" modelName="GCML" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="6.0" copyrightFields="false">
   <foreignModel>GCML.ecore</foreignModel>
   <genPackages prefix="GCML" resource="XML" disposableProviderFactory="true" ecorePackage="GCML.ecore#/">

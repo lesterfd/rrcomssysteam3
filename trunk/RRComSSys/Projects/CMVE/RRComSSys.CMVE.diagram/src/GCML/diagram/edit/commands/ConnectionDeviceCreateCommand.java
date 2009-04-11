@@ -55,7 +55,7 @@ public class ConnectionDeviceCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canCreateConnectionDevice_4001(getSource(), getTarget());
+				.canCreateConnectionDevice_3001(getSource(), getTarget());
 	}
 
 	/**

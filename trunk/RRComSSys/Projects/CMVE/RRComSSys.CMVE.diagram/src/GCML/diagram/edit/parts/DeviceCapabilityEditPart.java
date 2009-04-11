@@ -20,7 +20,7 @@ public class DeviceCapabilityEditPart extends ConnectionNodeEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 4005;
+	public static final int VISUAL_ID = 3005;
 
 	/**
 	 * @generated

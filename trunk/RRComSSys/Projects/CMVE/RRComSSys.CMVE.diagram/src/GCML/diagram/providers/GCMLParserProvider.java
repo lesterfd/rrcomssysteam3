@@ -32,22 +32,22 @@ public class GCMLParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser capabilityBuiltInType_5001Parser;
+	private IParser capabilityBuiltInType_4001Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getCapabilityBuiltInType_5001Parser() {
-		if (capabilityBuiltInType_5001Parser == null) {
-			capabilityBuiltInType_5001Parser = createCapabilityBuiltInType_5001Parser();
+	private IParser getCapabilityBuiltInType_4001Parser() {
+		if (capabilityBuiltInType_4001Parser == null) {
+			capabilityBuiltInType_4001Parser = createCapabilityBuiltInType_4001Parser();
 		}
-		return capabilityBuiltInType_5001Parser;
+		return capabilityBuiltInType_4001Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected IParser createCapabilityBuiltInType_5001Parser() {
+	protected IParser createCapabilityBuiltInType_4001Parser() {
 		EAttribute[] features = new EAttribute[] { GCMLPackage.eINSTANCE
 				.getCapability_BuiltInType(), };
 		MessageFormatParser parser = new MessageFormatParser(features);
@@ -57,22 +57,22 @@ public class GCMLParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser personPersonName_5002Parser;
+	private IParser personPersonName_4002Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getPersonPersonName_5002Parser() {
-		if (personPersonName_5002Parser == null) {
-			personPersonName_5002Parser = createPersonPersonName_5002Parser();
+	private IParser getPersonPersonName_4002Parser() {
+		if (personPersonName_4002Parser == null) {
+			personPersonName_4002Parser = createPersonPersonName_4002Parser();
 		}
-		return personPersonName_5002Parser;
+		return personPersonName_4002Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected IParser createPersonPersonName_5002Parser() {
+	protected IParser createPersonPersonName_4002Parser() {
 		EAttribute[] features = new EAttribute[] { GCMLPackage.eINSTANCE
 				.getPerson_PersonName(), };
 		MessageFormatParser parser = new MessageFormatParser(features);
@@ -82,22 +82,22 @@ public class GCMLParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser personPersonID_5003Parser;
+	private IParser personPersonID_4003Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getPersonPersonID_5003Parser() {
-		if (personPersonID_5003Parser == null) {
-			personPersonID_5003Parser = createPersonPersonID_5003Parser();
+	private IParser getPersonPersonID_4003Parser() {
+		if (personPersonID_4003Parser == null) {
+			personPersonID_4003Parser = createPersonPersonID_4003Parser();
 		}
-		return personPersonID_5003Parser;
+		return personPersonID_4003Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected IParser createPersonPersonID_5003Parser() {
+	protected IParser createPersonPersonID_4003Parser() {
 		EAttribute[] features = new EAttribute[] { GCMLPackage.eINSTANCE
 				.getPerson_PersonID(), };
 		MessageFormatParser parser = new MessageFormatParser(features);
@@ -107,22 +107,22 @@ public class GCMLParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser personPersonRole_5004Parser;
+	private IParser personPersonRole_4004Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getPersonPersonRole_5004Parser() {
-		if (personPersonRole_5004Parser == null) {
-			personPersonRole_5004Parser = createPersonPersonRole_5004Parser();
+	private IParser getPersonPersonRole_4004Parser() {
+		if (personPersonRole_4004Parser == null) {
+			personPersonRole_4004Parser = createPersonPersonRole_4004Parser();
 		}
-		return personPersonRole_5004Parser;
+		return personPersonRole_4004Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected IParser createPersonPersonRole_5004Parser() {
+	protected IParser createPersonPersonRole_4004Parser() {
 		EAttribute[] features = new EAttribute[] { GCMLPackage.eINSTANCE
 				.getPerson_PersonRole(), };
 		MessageFormatParser parser = new MessageFormatParser(features);
@@ -132,22 +132,22 @@ public class GCMLParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser mediumMediumURL_5005Parser;
+	private IParser mediumMediumURL_4005Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getMediumMediumURL_5005Parser() {
-		if (mediumMediumURL_5005Parser == null) {
-			mediumMediumURL_5005Parser = createMediumMediumURL_5005Parser();
+	private IParser getMediumMediumURL_4005Parser() {
+		if (mediumMediumURL_4005Parser == null) {
+			mediumMediumURL_4005Parser = createMediumMediumURL_4005Parser();
 		}
-		return mediumMediumURL_5005Parser;
+		return mediumMediumURL_4005Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected IParser createMediumMediumURL_5005Parser() {
+	protected IParser createMediumMediumURL_4005Parser() {
 		EAttribute[] features = new EAttribute[] { GCMLPackage.eINSTANCE
 				.getMedium_MediumURL(), };
 		MessageFormatParser parser = new MessageFormatParser(features);
@@ -157,22 +157,22 @@ public class GCMLParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser mediumBuiltInType_5006Parser;
+	private IParser mediumBuiltInType_4006Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getMediumBuiltInType_5006Parser() {
-		if (mediumBuiltInType_5006Parser == null) {
-			mediumBuiltInType_5006Parser = createMediumBuiltInType_5006Parser();
+	private IParser getMediumBuiltInType_4006Parser() {
+		if (mediumBuiltInType_4006Parser == null) {
+			mediumBuiltInType_4006Parser = createMediumBuiltInType_4006Parser();
 		}
-		return mediumBuiltInType_5006Parser;
+		return mediumBuiltInType_4006Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected IParser createMediumBuiltInType_5006Parser() {
+	protected IParser createMediumBuiltInType_4006Parser() {
 		EAttribute[] features = new EAttribute[] { GCMLPackage.eINSTANCE
 				.getMedium_BuiltInType(), };
 		MessageFormatParser parser = new MessageFormatParser(features);
@@ -182,22 +182,22 @@ public class GCMLParserProvider extends AbstractProvider implements
 	/**
 	 * @generated
 	 */
-	private IParser mediumAction_5007Parser;
+	private IParser mediumAction_4007Parser;
 
 	/**
 	 * @generated
 	 */
-	private IParser getMediumAction_5007Parser() {
-		if (mediumAction_5007Parser == null) {
-			mediumAction_5007Parser = createMediumAction_5007Parser();
+	private IParser getMediumAction_4007Parser() {
+		if (mediumAction_4007Parser == null) {
+			mediumAction_4007Parser = createMediumAction_4007Parser();
 		}
-		return mediumAction_5007Parser;
+		return mediumAction_4007Parser;
 	}
 
 	/**
 	 * @generated
 	 */
-	protected IParser createMediumAction_5007Parser() {
+	protected IParser createMediumAction_4007Parser() {
 		EAttribute[] features = new EAttribute[] { GCMLPackage.eINSTANCE
 				.getMedium_Action(), };
 		MessageFormatParser parser = new MessageFormatParser(features);
@@ -210,19 +210,19 @@ public class GCMLParserProvider extends AbstractProvider implements
 	protected IParser getParser(int visualID) {
 		switch (visualID) {
 		case CapabilityBuiltInTypeEditPart.VISUAL_ID:
-			return getCapabilityBuiltInType_5001Parser();
+			return getCapabilityBuiltInType_4001Parser();
 		case PersonPersonNameEditPart.VISUAL_ID:
-			return getPersonPersonName_5002Parser();
+			return getPersonPersonName_4002Parser();
 		case PersonPersonIDEditPart.VISUAL_ID:
-			return getPersonPersonID_5003Parser();
+			return getPersonPersonID_4003Parser();
 		case PersonPersonRoleEditPart.VISUAL_ID:
-			return getPersonPersonRole_5004Parser();
+			return getPersonPersonRole_4004Parser();
 		case MediumMediumURLEditPart.VISUAL_ID:
-			return getMediumMediumURL_5005Parser();
+			return getMediumMediumURL_4005Parser();
 		case MediumBuiltInTypeEditPart.VISUAL_ID:
-			return getMediumBuiltInType_5006Parser();
+			return getMediumBuiltInType_4006Parser();
 		case MediumActionEditPart.VISUAL_ID:
-			return getMediumAction_5007Parser();
+			return getMediumAction_4007Parser();
 		}
 		return null;
 	}

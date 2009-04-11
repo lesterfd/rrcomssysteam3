@@ -71,7 +71,7 @@ public class PersonPersonNameEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5002;
+	public static final int VISUAL_ID = 4002;
 
 	/**
 	 * @generated
@@ -319,7 +319,7 @@ public class PersonPersonNameEditPart extends CompartmentEditPart implements
 		if (parser == null) {
 			String parserHint = ((View) getModel()).getType();
 			IAdaptable hintAdapter = new GCMLParserProvider.HintAdapter(
-					GCMLElementTypes.Person_2005, getParserElement(),
+					GCMLElementTypes.Person_1005, getParserElement(),
 					parserHint);
 			parser = ParserService.getInstance().getParser(hintAdapter);
 		}

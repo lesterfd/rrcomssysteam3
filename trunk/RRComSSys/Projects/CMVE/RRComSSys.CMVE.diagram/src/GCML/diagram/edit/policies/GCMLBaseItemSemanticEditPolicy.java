@@ -115,14 +115,14 @@ public class GCMLBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 			elementType = null;
 		}
 		Command semanticCommand = getSemanticCommandSwitch(completedRequest);
-		if (semanticCommand != null) {
-			ICommand command = semanticCommand instanceof ICommandProxy ? ((ICommandProxy) semanticCommand)
-					.getICommand()
-					: new CommandProxy(semanticCommand);
-			completedRequest.setParameter(
-					GCMLBaseEditHelper.EDIT_POLICY_COMMAND, command);
-		}
 		if (elementType != null) {
+			if (semanticCommand != null) {
+				ICommand command = semanticCommand instanceof ICommandProxy ? ((ICommandProxy) semanticCommand)
+						.getICommand()
+						: new CommandProxy(semanticCommand);
+				completedRequest.setParameter(
+						GCMLBaseEditHelper.EDIT_POLICY_COMMAND, command);
+			}
 			ICommand command = elementType.getEditCommand(completedRequest);
 			if (command != null) {
 				if (!(command instanceof CompositeTransactionalCommand)) {
@@ -351,72 +351,72 @@ public class GCMLBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public static boolean canCreateConnectionDevice_4001(Connection source,
+		public static boolean canCreateConnectionDevice_3001(Connection source,
 				Device target) {
 			if (source != null) {
 				if (source.getDevice().contains(target)) {
 					return false;
 				}
 			}
-			return canExistConnectionDevice_4001(source, target);
+			return canExistConnectionDevice_3001(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canCreateConnectionMedium_4002(Connection source,
+		public static boolean canCreateConnectionMedium_3002(Connection source,
 				Medium target) {
 			if (source != null) {
 				if (source.getMedium().contains(target)) {
 					return false;
 				}
 			}
-			return canExistConnectionMedium_4002(source, target);
+			return canExistConnectionMedium_3002(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canCreateIsAttachedPersonID_4003(
+		public static boolean canCreateIsAttachedPersonID_3003(
 				IsAttached source, Person target) {
 			if (source != null) {
 				if (source.getPersonID() != null) {
 					return false;
 				}
 			}
-			return canExistIsAttachedPersonID_4003(source, target);
+			return canExistIsAttachedPersonID_3003(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canCreateIsAttachedDeviceID_4004(
+		public static boolean canCreateIsAttachedDeviceID_3004(
 				IsAttached source, Device target) {
 			if (source != null) {
 				if (source.getDeviceID() != null) {
 					return false;
 				}
 			}
-			return canExistIsAttachedDeviceID_4004(source, target);
+			return canExistIsAttachedDeviceID_3004(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canCreateDeviceCapability_4005(Device source,
+		public static boolean canCreateDeviceCapability_3005(Device source,
 				Capability target) {
 			if (source != null) {
 				if (source.getCapability().contains(target)) {
 					return false;
 				}
 			}
-			return canExistDeviceCapability_4005(source, target);
+			return canExistDeviceCapability_3005(source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canExistConnectionDevice_4001(Connection source,
+		public static boolean canExistConnectionDevice_3001(Connection source,
 				Device target) {
 
 			return true;
@@ -425,7 +425,7 @@ public class GCMLBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public static boolean canExistConnectionMedium_4002(Connection source,
+		public static boolean canExistConnectionMedium_3002(Connection source,
 				Medium target) {
 
 			return true;
@@ -434,7 +434,7 @@ public class GCMLBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public static boolean canExistIsAttachedPersonID_4003(
+		public static boolean canExistIsAttachedPersonID_3003(
 				IsAttached source, Person target) {
 
 			return true;
@@ -443,7 +443,7 @@ public class GCMLBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public static boolean canExistIsAttachedDeviceID_4004(
+		public static boolean canExistIsAttachedDeviceID_3004(
 				IsAttached source, Device target) {
 
 			return true;
@@ -452,7 +452,7 @@ public class GCMLBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		/**
 		 * @generated
 		 */
-		public static boolean canExistDeviceCapability_4005(Device source,
+		public static boolean canExistDeviceCapability_3005(Device source,
 				Capability target) {
 
 			return true;

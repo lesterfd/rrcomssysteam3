@@ -56,7 +56,7 @@ public class GCMLDocumentCanonicalEditPolicy extends
 		View viewObject = (View) getHost().getModel();
 		List result = new LinkedList();
 		for (Iterator it = GCMLDiagramUpdater
-				.getGCMLDocument_1000SemanticChildren(viewObject).iterator(); it
+				.getGCMLDocument_79SemanticChildren(viewObject).iterator(); it
 				.hasNext();) {
 			result.add(((GCMLNodeDescriptor) it.next()).getModelElement());
 		}
@@ -220,7 +220,7 @@ public class GCMLDocumentCanonicalEditPolicy extends
 		case GCMLDocumentEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GCMLDiagramUpdater
-						.getGCMLDocument_1000ContainedLinks(view));
+						.getGCMLDocument_79ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -231,7 +231,7 @@ public class GCMLDocumentCanonicalEditPolicy extends
 		case IsAttachedEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GCMLDiagramUpdater
-						.getIsAttached_2001ContainedLinks(view));
+						.getIsAttached_1001ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -242,7 +242,7 @@ public class GCMLDocumentCanonicalEditPolicy extends
 		case CapabilityEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GCMLDiagramUpdater
-						.getCapability_2002ContainedLinks(view));
+						.getCapability_1002ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -253,7 +253,7 @@ public class GCMLDocumentCanonicalEditPolicy extends
 		case DeviceEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GCMLDiagramUpdater
-						.getDevice_2003ContainedLinks(view));
+						.getDevice_1003ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -264,7 +264,7 @@ public class GCMLDocumentCanonicalEditPolicy extends
 		case ConnectionEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GCMLDiagramUpdater
-						.getConnection_2004ContainedLinks(view));
+						.getConnection_1004ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -275,7 +275,7 @@ public class GCMLDocumentCanonicalEditPolicy extends
 		case PersonEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GCMLDiagramUpdater
-						.getPerson_2005ContainedLinks(view));
+						.getPerson_1005ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$
@@ -286,7 +286,7 @@ public class GCMLDocumentCanonicalEditPolicy extends
 		case MediumEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(GCMLDiagramUpdater
-						.getMedium_2006ContainedLinks(view));
+						.getMedium_1006ContainedLinks(view));
 			}
 			if (!domain2NotationMap.containsKey(view.getElement())
 					|| view.getEAnnotation("Shortcut") == null) { //$NON-NLS-1$

@@ -74,7 +74,7 @@ public class DeviceCapabilityReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistDeviceCapability_4005(getNewSource(), getOldTarget());
+				.canExistDeviceCapability_3005(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class DeviceCapabilityReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistDeviceCapability_4005(getOldSource(), getNewTarget());
+				.canExistDeviceCapability_3005(getOldSource(), getNewTarget());
 	}
 
 	/**

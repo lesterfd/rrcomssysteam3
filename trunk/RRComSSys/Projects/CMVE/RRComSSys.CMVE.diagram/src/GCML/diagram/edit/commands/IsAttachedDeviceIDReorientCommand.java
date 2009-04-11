@@ -74,7 +74,7 @@ public class IsAttachedDeviceIDReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistIsAttachedDeviceID_4004(getNewSource(), getOldTarget());
+				.canExistIsAttachedDeviceID_3004(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class IsAttachedDeviceIDReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistIsAttachedDeviceID_4004(getOldSource(), getNewTarget());
+				.canExistIsAttachedDeviceID_3004(getOldSource(), getNewTarget());
 	}
 
 	/**

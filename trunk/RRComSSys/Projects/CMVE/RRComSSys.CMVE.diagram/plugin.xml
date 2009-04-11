@@ -58,12 +58,12 @@
       <?gmfgen generated="true"?>
       <objectContribution
             adaptable="false"
-            id="edu.fiu.RRComSSys.diagram.LoadResource"
+            id="RRComSSys.CMVE.diagram.LoadResource"
             objectClass="GCML.diagram.edit.parts.GCMLDocumentEditPart">
          <action
                class="GCML.diagram.part.GCMLLoadResourceAction"
                enablesFor="1"
-               id="edu.fiu.RRComSSys.diagram.LoadResourceAction"
+               id="RRComSSys.CMVE.diagram.LoadResourceAction"
                label="%loadResourceActionLabel"
                menubarPath="additions">
          </action>
@@ -75,12 +75,12 @@
       <actionSet
             label="%initDiagramActionLabel"
             visible="true"
-            id="edu.fiu.RRComSSys.diagram.InitDiagram">
+            id="RRComSSys.CMVE.diagram.InitDiagram">
          <action
                label="%initDiagramActionLabel"
                class="GCML.diagram.part.GCMLInitDiagramFileAction"
                menubarPath="file/additions"
-               id="edu.fiu.RRComSSys.diagram.InitDiagramAction">
+               id="RRComSSys.CMVE.diagram.InitDiagramAction">
          </action>
       </actionSet>
    </extension>
@@ -123,38 +123,38 @@
    <extension point="org.eclipse.ui.preferencePages">
       <?gmfgen generated="true"?>
       <page
-            id="edu.fiu.RRComSSys.diagram.general"
-            name="%preference.page.title.edu.fiu.RRComSSys.diagram.general"
+            id="RRComSSys.CMVE.diagram.general"
+            name="%preference.page.title.RRComSSys.CMVE.diagram.general"
             class="GCML.diagram.preferences.DiagramGeneralPreferencePage">
       </page>
       <page
-            id="edu.fiu.RRComSSys.diagram.appearance"
-            name="%preference.page.title.edu.fiu.RRComSSys.diagram.appearance"
-            category="edu.fiu.RRComSSys.diagram.general"
+            id="RRComSSys.CMVE.diagram.appearance"
+            name="%preference.page.title.RRComSSys.CMVE.diagram.appearance"
+            category="RRComSSys.CMVE.diagram.general"
             class="GCML.diagram.preferences.DiagramAppearancePreferencePage">
       </page>
       <page
-            id="edu.fiu.RRComSSys.diagram.connections"
-            name="%preference.page.title.edu.fiu.RRComSSys.diagram.connections"
-            category="edu.fiu.RRComSSys.diagram.general"
+            id="RRComSSys.CMVE.diagram.connections"
+            name="%preference.page.title.RRComSSys.CMVE.diagram.connections"
+            category="RRComSSys.CMVE.diagram.general"
             class="GCML.diagram.preferences.DiagramConnectionsPreferencePage">
       </page>
       <page
-            id="edu.fiu.RRComSSys.diagram.printing"
-            name="%preference.page.title.edu.fiu.RRComSSys.diagram.printing"
-            category="edu.fiu.RRComSSys.diagram.general"
+            id="RRComSSys.CMVE.diagram.printing"
+            name="%preference.page.title.RRComSSys.CMVE.diagram.printing"
+            category="RRComSSys.CMVE.diagram.general"
             class="GCML.diagram.preferences.DiagramPrintingPreferencePage">
       </page>
       <page
-            id="edu.fiu.RRComSSys.diagram.rulersAndGrid"
-            name="%preference.page.title.edu.fiu.RRComSSys.diagram.rulersAndGrid"
-            category="edu.fiu.RRComSSys.diagram.general"
+            id="RRComSSys.CMVE.diagram.rulersAndGrid"
+            name="%preference.page.title.RRComSSys.CMVE.diagram.rulersAndGrid"
+            category="RRComSSys.CMVE.diagram.general"
             class="GCML.diagram.preferences.DiagramRulersAndGridPreferencePage">
       </page>
       <page
-            id="edu.fiu.RRComSSys.diagram.pathmaps"
-            name="%preference.page.title.edu.fiu.RRComSSys.diagram.pathmaps"
-            category="edu.fiu.RRComSSys.diagram.general"
+            id="RRComSSys.CMVE.diagram.pathmaps"
+            name="%preference.page.title.RRComSSys.CMVE.diagram.pathmaps"
+            category="RRComSSys.CMVE.diagram.general"
             class="org.eclipse.gmf.runtime.emf.ui.preferences.PathmapsPreferencePage">
       </page>
    </extension>
@@ -162,7 +162,7 @@
    <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
       <?gmfgen generated="true"?>
       <propertyContributor
-            contributorId="edu.fiu.RRComSSys.diagram"
+            contributorId="RRComSSys.CMVE.diagram"
             labelProvider="GCML.diagram.sheet.GCMLSheetLabelProvider">
          <propertyCategory category="domain"/>
          <propertyCategory category="visual"/>
@@ -172,7 +172,7 @@
 
    <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
       <?gmfgen generated="true"?>   
-      <propertyTabs contributorId="edu.fiu.RRComSSys.diagram">
+      <propertyTabs contributorId="RRComSSys.CMVE.diagram">
          <propertyTab
              category="visual"
              id="property.tab.AppearancePropertySection"
@@ -190,7 +190,7 @@
 
    <extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
       <?gmfgen generated="true"?>   
-      <propertySections contributorId="edu.fiu.RRComSSys.diagram">
+      <propertySections contributorId="RRComSSys.CMVE.diagram">
          <propertySection id="property.section.ConnectorAppearancePropertySection" 
             filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
             class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
@@ -263,143 +263,143 @@
       <?gmfgen generated="true"?>
       <metamodel nsURI="http://GCML/1.0">
          <metamodelType
-               id="edu.fiu.RRComSSys.diagram.GCMLDocument_1000"
-               name="%metatype.name.GCMLDocument_1000"
+               id="RRComSSys.CMVE.diagram.GCMLDocument_79"
+               name="%metatype.name.GCMLDocument_79"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="GCMLDocument"
                edithelper="GCML.diagram.edit.helpers.GCMLDocumentEditHelper">
-            <param name="semanticHint" value="1000"/>
+            <param name="semanticHint" value="79"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://GCML/1.0">
          <metamodelType
-               id="edu.fiu.RRComSSys.diagram.IsAttached_2001"
-               name="%metatype.name.IsAttached_2001"
+               id="RRComSSys.CMVE.diagram.IsAttached_1001"
+               name="%metatype.name.IsAttached_1001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="IsAttached"
                edithelper="GCML.diagram.edit.helpers.IsAttachedEditHelper">
-            <param name="semanticHint" value="2001"/>
+            <param name="semanticHint" value="1001"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://GCML/1.0">
          <metamodelType
-               id="edu.fiu.RRComSSys.diagram.Capability_2002"
-               name="%metatype.name.Capability_2002"
+               id="RRComSSys.CMVE.diagram.Capability_1002"
+               name="%metatype.name.Capability_1002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Capability"
                edithelper="GCML.diagram.edit.helpers.CapabilityEditHelper">
-            <param name="semanticHint" value="2002"/>
+            <param name="semanticHint" value="1002"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://GCML/1.0">
          <metamodelType
-               id="edu.fiu.RRComSSys.diagram.Device_2003"
-               name="%metatype.name.Device_2003"
+               id="RRComSSys.CMVE.diagram.Device_1003"
+               name="%metatype.name.Device_1003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Device"
                edithelper="GCML.diagram.edit.helpers.DeviceEditHelper">
-            <param name="semanticHint" value="2003"/>
+            <param name="semanticHint" value="1003"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://GCML/1.0">
          <metamodelType
-               id="edu.fiu.RRComSSys.diagram.Connection_2004"
-               name="%metatype.name.Connection_2004"
+               id="RRComSSys.CMVE.diagram.Connection_1004"
+               name="%metatype.name.Connection_1004"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Connection"
                edithelper="GCML.diagram.edit.helpers.ConnectionEditHelper">
-            <param name="semanticHint" value="2004"/>
+            <param name="semanticHint" value="1004"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://GCML/1.0">
          <metamodelType
-               id="edu.fiu.RRComSSys.diagram.Person_2005"
-               name="%metatype.name.Person_2005"
+               id="RRComSSys.CMVE.diagram.Person_1005"
+               name="%metatype.name.Person_1005"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Person"
                edithelper="GCML.diagram.edit.helpers.PersonEditHelper">
-            <param name="semanticHint" value="2005"/>
+            <param name="semanticHint" value="1005"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://GCML/1.0">
          <metamodelType
-               id="edu.fiu.RRComSSys.diagram.Medium_2006"
-               name="%metatype.name.Medium_2006"
+               id="RRComSSys.CMVE.diagram.Medium_1006"
+               name="%metatype.name.Medium_1006"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Medium"
                edithelper="GCML.diagram.edit.helpers.MediumEditHelper">
-            <param name="semanticHint" value="2006"/>
+            <param name="semanticHint" value="1006"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://GCML/1.0">
          <specializationType
-               id="edu.fiu.RRComSSys.diagram.ConnectionDevice_4001"
-               name="%metatype.name.ConnectionDevice_4001"
+               id="RRComSSys.CMVE.diagram.ConnectionDevice_3001"
+               name="%metatype.name.ConnectionDevice_3001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4001"/>
+            <param name="semanticHint" value="3001"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://GCML/1.0">
          <specializationType
-               id="edu.fiu.RRComSSys.diagram.ConnectionMedium_4002"
-               name="%metatype.name.ConnectionMedium_4002"
+               id="RRComSSys.CMVE.diagram.ConnectionMedium_3002"
+               name="%metatype.name.ConnectionMedium_3002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4002"/>
+            <param name="semanticHint" value="3002"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://GCML/1.0">
          <specializationType
-               id="edu.fiu.RRComSSys.diagram.IsAttachedPersonID_4003"
-               name="%metatype.name.IsAttachedPersonID_4003"
+               id="RRComSSys.CMVE.diagram.IsAttachedPersonID_3003"
+               name="%metatype.name.IsAttachedPersonID_3003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4003"/>
+            <param name="semanticHint" value="3003"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://GCML/1.0">
          <specializationType
-               id="edu.fiu.RRComSSys.diagram.IsAttachedDeviceID_4004"
-               name="%metatype.name.IsAttachedDeviceID_4004"
+               id="RRComSSys.CMVE.diagram.IsAttachedDeviceID_3004"
+               name="%metatype.name.IsAttachedDeviceID_3004"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4004"/>
+            <param name="semanticHint" value="3004"/>
          </specializationType>
       </metamodel>
       <metamodel nsURI="http://GCML/1.0">
          <specializationType
-               id="edu.fiu.RRComSSys.diagram.DeviceCapability_4005"
-               name="%metatype.name.DeviceCapability_4005"
+               id="RRComSSys.CMVE.diagram.DeviceCapability_3005"
+               name="%metatype.name.DeviceCapability_3005"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
             <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4005"/>
+            <param name="semanticHint" value="3005"/>
          </specializationType>
       </metamodel>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings">
       <?gmfgen generated="true"?>
-      <clientContext id="GCMLClientContext">
+      <clientContext id="RRComSSys.CMVE.diagram.TypeContext">
          <enablement>
             <test
                property="org.eclipse.gmf.runtime.emf.core.editingDomain"
-               value="edu.fiu.RRComSSys.diagram.EditingDomain"/>
+               value="RRComSSys.CMVE.diagram.EditingDomain"/>
          </enablement>
       </clientContext> 
-      <binding context="GCMLClientContext">
-         <elementType ref="edu.fiu.RRComSSys.diagram.GCMLDocument_1000"/>
-         <elementType ref="edu.fiu.RRComSSys.diagram.IsAttached_2001"/>
-         <elementType ref="edu.fiu.RRComSSys.diagram.Capability_2002"/>
-         <elementType ref="edu.fiu.RRComSSys.diagram.Device_2003"/>
-         <elementType ref="edu.fiu.RRComSSys.diagram.Connection_2004"/>
-         <elementType ref="edu.fiu.RRComSSys.diagram.Person_2005"/>
-         <elementType ref="edu.fiu.RRComSSys.diagram.Medium_2006"/>
-         <elementType ref="edu.fiu.RRComSSys.diagram.ConnectionDevice_4001"/>
-         <elementType ref="edu.fiu.RRComSSys.diagram.ConnectionMedium_4002"/>
-         <elementType ref="edu.fiu.RRComSSys.diagram.IsAttachedPersonID_4003"/>
-         <elementType ref="edu.fiu.RRComSSys.diagram.IsAttachedDeviceID_4004"/>
-         <elementType ref="edu.fiu.RRComSSys.diagram.DeviceCapability_4005"/>
+      <binding context="RRComSSys.CMVE.diagram.TypeContext">
+         <elementType ref="RRComSSys.CMVE.diagram.GCMLDocument_79"/>
+         <elementType ref="RRComSSys.CMVE.diagram.IsAttached_1001"/>
+         <elementType ref="RRComSSys.CMVE.diagram.Capability_1002"/>
+         <elementType ref="RRComSSys.CMVE.diagram.Device_1003"/>
+         <elementType ref="RRComSSys.CMVE.diagram.Connection_1004"/>
+         <elementType ref="RRComSSys.CMVE.diagram.Person_1005"/>
+         <elementType ref="RRComSSys.CMVE.diagram.Medium_1006"/>
+         <elementType ref="RRComSSys.CMVE.diagram.ConnectionDevice_3001"/>
+         <elementType ref="RRComSSys.CMVE.diagram.ConnectionMedium_3002"/>
+         <elementType ref="RRComSSys.CMVE.diagram.IsAttachedPersonID_3003"/>
+         <elementType ref="RRComSSys.CMVE.diagram.IsAttachedDeviceID_3004"/>
+         <elementType ref="RRComSSys.CMVE.diagram.DeviceCapability_3005"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>
@@ -426,22 +426,22 @@
             name="%openURIActionLabel"
             description="%openURIActionDescription"
             categoryId="org.eclipse.ui.category.file"
-            id="edu.fiu.RRComSSys.diagram.OpenURICommand"/>  
+            id="RRComSSys.CMVE.diagram.OpenURICommand"/>  
       <command
             name="%openActionLabel"
             description="%openActionDescription"
             categoryId="org.eclipse.ui.category.file"
-            id="edu.fiu.RRComSSys.diagram.OpenCommand"/>  
+            id="RRComSSys.CMVE.diagram.OpenCommand"/>  
    </extension>
 
    <extension point="org.eclipse.ui.bindings">
       <?gmfgen generated="true"?>
       <key
-            commandId="edu.fiu.RRComSSys.diagram.OpenURICommand"
+            commandId="RRComSSys.CMVE.diagram.OpenURICommand"
             sequence="M1+U"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
       <key
-            commandId="edu.fiu.RRComSSys.diagram.OpenCommand"
+            commandId="RRComSSys.CMVE.diagram.OpenCommand"
             sequence="M1+O"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
    </extension>
@@ -451,32 +451,32 @@
       <actionSet
             label="%applicationActionSetLabel"
             visible="true"
-            id="edu.fiu.RRComSSys.diagram.ActionSet">
+            id="RRComSSys.CMVE.diagram.ActionSet">
          <action
                label="%newDiagramActionLabel"
                class="GCML.diagram.application.DiagramEditorActionBarAdvisor$NewDiagramAction"
                menubarPath="file/new/additions"
-               id="edu.fiu.RRComSSys.diagram.NewDiagramAction">
+               id="RRComSSys.CMVE.diagram.NewDiagramAction">
          </action>
          <action
                label="%aboutActionLabel"
                class="GCML.diagram.application.DiagramEditorActionBarAdvisor$AboutAction"
                menubarPath="help/additions"
-               id="edu.fiu.RRComSSys.diagram.AboutAction">
+               id="RRComSSys.CMVE.diagram.AboutAction">
          </action>
          <action
                label="%openURIActionLabel"
-               definitionId="edu.fiu.RRComSSys.diagram.OpenURICommand"
+               definitionId="RRComSSys.CMVE.diagram.OpenURICommand"
                class="GCML.diagram.application.DiagramEditorActionBarAdvisor$OpenURIAction"
                menubarPath="file/additions"
-               id="edu.fiu.RRComSSys.diagram.OpenURIAction">
+               id="RRComSSys.CMVE.diagram.OpenURIAction">
          </action>
          <action
                label="%openActionLabel"
-               definitionId="edu.fiu.RRComSSys.diagram.OpenCommand"
+               definitionId="RRComSSys.CMVE.diagram.OpenCommand"
                class="GCML.diagram.application.DiagramEditorActionBarAdvisor$OpenAction"
                menubarPath="file/additions"
-               id="edu.fiu.RRComSSys.diagram.OpenAction">
+               id="RRComSSys.CMVE.diagram.OpenAction">
          </action>
       </actionSet>
    </extension>
