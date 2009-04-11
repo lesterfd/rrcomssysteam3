@@ -1,7 +1,7 @@
-# Tracing options for the edu.fiu.RRComSSys.diagram plug-in
+# Tracing options for the RRComSSys.CMVE.diagram plug-in
 
 # Common issues
-edu.fiu.RRComSSys.diagram/debug=false
+RRComSSys.CMVE.diagram/debug=false
 
 # Visual IDs
-edu.fiu.RRComSSys.diagram/debug/visualID=false
+RRComSSys.CMVE.diagram/debug/visualID=false

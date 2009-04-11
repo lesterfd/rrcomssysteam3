@@ -48,7 +48,7 @@ public class PersonItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (GCMLElementTypes.IsAttachedPersonID_4003 == req.getElementType()) {
+		if (GCMLElementTypes.IsAttachedPersonID_3003 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -59,7 +59,7 @@ public class PersonItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (GCMLElementTypes.IsAttachedPersonID_4003 == req.getElementType()) {
+		if (GCMLElementTypes.IsAttachedPersonID_3003 == req.getElementType()) {
 			return getGEFWrapper(new IsAttachedPersonIDCreateCommand(req, req
 					.getSource(), req.getTarget()));
 		}

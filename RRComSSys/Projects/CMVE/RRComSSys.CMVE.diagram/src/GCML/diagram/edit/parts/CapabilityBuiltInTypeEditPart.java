@@ -59,7 +59,7 @@ public class CapabilityBuiltInTypeEditPart extends CompartmentEditPart
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 5001;
+	public static final int VISUAL_ID = 4001;
 
 	/**
 	 * @generated
@@ -307,7 +307,7 @@ public class CapabilityBuiltInTypeEditPart extends CompartmentEditPart
 		if (parser == null) {
 			String parserHint = ((View) getModel()).getType();
 			IAdaptable hintAdapter = new GCMLParserProvider.HintAdapter(
-					GCMLElementTypes.Capability_2002, getParserElement(),
+					GCMLElementTypes.Capability_1002, getParserElement(),
 					parserHint);
 			parser = ParserService.getInstance().getParser(hintAdapter);
 		}

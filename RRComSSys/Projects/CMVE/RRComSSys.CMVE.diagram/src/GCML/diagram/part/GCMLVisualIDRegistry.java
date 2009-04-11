@@ -35,7 +35,7 @@ public class GCMLVisualIDRegistry {
 	/**
 	 * @generated
 	 */
-	private static final String DEBUG_KEY = "edu.fiu.RRComSSys.diagram/debug/visualID"; //$NON-NLS-1$
+	private static final String DEBUG_KEY = "RRComSSys.CMVE.diagram/debug/visualID"; //$NON-NLS-1$
 
 	/**
 	 * @generated

@@ -51,11 +51,11 @@ public class ConnectionItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (GCMLElementTypes.ConnectionDevice_4001 == req.getElementType()) {
+		if (GCMLElementTypes.ConnectionDevice_3001 == req.getElementType()) {
 			return getGEFWrapper(new ConnectionDeviceCreateCommand(req, req
 					.getSource(), req.getTarget()));
 		}
-		if (GCMLElementTypes.ConnectionMedium_4002 == req.getElementType()) {
+		if (GCMLElementTypes.ConnectionMedium_3002 == req.getElementType()) {
 			return getGEFWrapper(new ConnectionMediumCreateCommand(req, req
 					.getSource(), req.getTarget()));
 		}
@@ -67,10 +67,10 @@ public class ConnectionItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (GCMLElementTypes.ConnectionDevice_4001 == req.getElementType()) {
+		if (GCMLElementTypes.ConnectionDevice_3001 == req.getElementType()) {
 			return null;
 		}
-		if (GCMLElementTypes.ConnectionMedium_4002 == req.getElementType()) {
+		if (GCMLElementTypes.ConnectionMedium_3002 == req.getElementType()) {
 			return null;
 		}
 		return null;

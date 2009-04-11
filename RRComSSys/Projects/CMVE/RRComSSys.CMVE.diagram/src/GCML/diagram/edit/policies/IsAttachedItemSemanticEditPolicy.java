@@ -51,11 +51,11 @@ public class IsAttachedItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (GCMLElementTypes.IsAttachedPersonID_4003 == req.getElementType()) {
+		if (GCMLElementTypes.IsAttachedPersonID_3003 == req.getElementType()) {
 			return getGEFWrapper(new IsAttachedPersonIDCreateCommand(req, req
 					.getSource(), req.getTarget()));
 		}
-		if (GCMLElementTypes.IsAttachedDeviceID_4004 == req.getElementType()) {
+		if (GCMLElementTypes.IsAttachedDeviceID_3004 == req.getElementType()) {
 			return getGEFWrapper(new IsAttachedDeviceIDCreateCommand(req, req
 					.getSource(), req.getTarget()));
 		}
@@ -67,10 +67,10 @@ public class IsAttachedItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (GCMLElementTypes.IsAttachedPersonID_4003 == req.getElementType()) {
+		if (GCMLElementTypes.IsAttachedPersonID_3003 == req.getElementType()) {
 			return null;
 		}
-		if (GCMLElementTypes.IsAttachedDeviceID_4004 == req.getElementType()) {
+		if (GCMLElementTypes.IsAttachedDeviceID_3004 == req.getElementType()) {
 			return null;
 		}
 		return null;

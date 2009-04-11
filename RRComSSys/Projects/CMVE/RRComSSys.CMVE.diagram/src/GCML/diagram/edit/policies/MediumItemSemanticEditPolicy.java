@@ -48,7 +48,7 @@ public class MediumItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (GCMLElementTypes.ConnectionMedium_4002 == req.getElementType()) {
+		if (GCMLElementTypes.ConnectionMedium_3002 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -59,7 +59,7 @@ public class MediumItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (GCMLElementTypes.ConnectionMedium_4002 == req.getElementType()) {
+		if (GCMLElementTypes.ConnectionMedium_3002 == req.getElementType()) {
 			return getGEFWrapper(new ConnectionMediumCreateCommand(req, req
 					.getSource(), req.getTarget()));
 		}

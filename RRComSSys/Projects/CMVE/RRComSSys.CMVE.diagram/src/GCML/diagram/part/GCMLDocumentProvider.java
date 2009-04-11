@@ -141,7 +141,7 @@ public class GCMLDocumentProvider extends AbstractDocumentProvider implements
 	private TransactionalEditingDomain createEditingDomain() {
 		TransactionalEditingDomain editingDomain = DiagramEditingDomainFactory
 				.getInstance().createEditingDomain();
-		editingDomain.setID("edu.fiu.RRComSSys.diagram.EditingDomain"); //$NON-NLS-1$
+		editingDomain.setID("RRComSSys.CMVE.diagram.EditingDomain"); //$NON-NLS-1$
 		final NotificationFilter diagramResourceModifiedFilter = NotificationFilter
 				.createNotifierFilter(editingDomain.getResourceSet()).and(
 						NotificationFilter

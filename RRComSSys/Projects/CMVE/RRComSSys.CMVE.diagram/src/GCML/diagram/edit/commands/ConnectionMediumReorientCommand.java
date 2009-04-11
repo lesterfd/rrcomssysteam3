@@ -74,7 +74,7 @@ public class ConnectionMediumReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistConnectionMedium_4002(getNewSource(), getOldTarget());
+				.canExistConnectionMedium_3002(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class ConnectionMediumReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistConnectionMedium_4002(getOldSource(), getNewTarget());
+				.canExistConnectionMedium_3002(getOldSource(), getNewTarget());
 	}
 
 	/**

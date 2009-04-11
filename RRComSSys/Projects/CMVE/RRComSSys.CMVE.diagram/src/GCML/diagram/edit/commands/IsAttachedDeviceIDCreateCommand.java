@@ -55,7 +55,7 @@ public class IsAttachedDeviceIDCreateCommand extends EditElementCommand {
 		}
 		// target may be null here but it's possible to check constraint
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canCreateIsAttachedDeviceID_4004(getSource(), getTarget());
+				.canCreateIsAttachedDeviceID_3004(getSource(), getTarget());
 	}
 
 	/**

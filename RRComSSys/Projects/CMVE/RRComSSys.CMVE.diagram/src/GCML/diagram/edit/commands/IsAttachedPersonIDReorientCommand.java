@@ -74,7 +74,7 @@ public class IsAttachedPersonIDReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistIsAttachedPersonID_4003(getNewSource(), getOldTarget());
+				.canExistIsAttachedPersonID_3003(getNewSource(), getOldTarget());
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class IsAttachedPersonIDReorientCommand extends EditElementCommand {
 			return false;
 		}
 		return GCMLBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistIsAttachedPersonID_4003(getOldSource(), getNewTarget());
+				.canExistIsAttachedPersonID_3003(getOldSource(), getNewTarget());
 	}
 
 	/**

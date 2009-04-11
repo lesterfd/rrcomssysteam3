@@ -48,7 +48,7 @@ public class CapabilityItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (GCMLElementTypes.DeviceCapability_4005 == req.getElementType()) {
+		if (GCMLElementTypes.DeviceCapability_3005 == req.getElementType()) {
 			return null;
 		}
 		return null;
@@ -59,7 +59,7 @@ public class CapabilityItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (GCMLElementTypes.DeviceCapability_4005 == req.getElementType()) {
+		if (GCMLElementTypes.DeviceCapability_3005 == req.getElementType()) {
 			return getGEFWrapper(new DeviceCapabilityCreateCommand(req, req
 					.getSource(), req.getTarget()));
 		}

@@ -54,13 +54,13 @@ public class DeviceItemSemanticEditPolicy extends
 	 */
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (GCMLElementTypes.ConnectionDevice_4001 == req.getElementType()) {
+		if (GCMLElementTypes.ConnectionDevice_3001 == req.getElementType()) {
 			return null;
 		}
-		if (GCMLElementTypes.IsAttachedDeviceID_4004 == req.getElementType()) {
+		if (GCMLElementTypes.IsAttachedDeviceID_3004 == req.getElementType()) {
 			return null;
 		}
-		if (GCMLElementTypes.DeviceCapability_4005 == req.getElementType()) {
+		if (GCMLElementTypes.DeviceCapability_3005 == req.getElementType()) {
 			return getGEFWrapper(new DeviceCapabilityCreateCommand(req, req
 					.getSource(), req.getTarget()));
 		}
@@ -72,15 +72,15 @@ public class DeviceItemSemanticEditPolicy extends
 	 */
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
-		if (GCMLElementTypes.ConnectionDevice_4001 == req.getElementType()) {
+		if (GCMLElementTypes.ConnectionDevice_3001 == req.getElementType()) {
 			return getGEFWrapper(new ConnectionDeviceCreateCommand(req, req
 					.getSource(), req.getTarget()));
 		}
-		if (GCMLElementTypes.IsAttachedDeviceID_4004 == req.getElementType()) {
+		if (GCMLElementTypes.IsAttachedDeviceID_3004 == req.getElementType()) {
 			return getGEFWrapper(new IsAttachedDeviceIDCreateCommand(req, req
 					.getSource(), req.getTarget()));
 		}
-		if (GCMLElementTypes.DeviceCapability_4005 == req.getElementType()) {
+		if (GCMLElementTypes.DeviceCapability_3005 == req.getElementType()) {
 			return null;
 		}
 		return null;

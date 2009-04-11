@@ -44,12 +44,12 @@ public class GCMLModelingAssistantProvider extends ModelingAssistantProvider {
 				.getAdapter(IGraphicalEditPart.class);
 		if (editPart instanceof GCMLDocumentEditPart) {
 			List types = new ArrayList();
-			types.add(GCMLElementTypes.IsAttached_2001);
-			types.add(GCMLElementTypes.Capability_2002);
-			types.add(GCMLElementTypes.Device_2003);
-			types.add(GCMLElementTypes.Connection_2004);
-			types.add(GCMLElementTypes.Person_2005);
-			types.add(GCMLElementTypes.Medium_2006);
+			types.add(GCMLElementTypes.IsAttached_1001);
+			types.add(GCMLElementTypes.Capability_1002);
+			types.add(GCMLElementTypes.Device_1003);
+			types.add(GCMLElementTypes.Connection_1004);
+			types.add(GCMLElementTypes.Person_1005);
+			types.add(GCMLElementTypes.Medium_1006);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -63,19 +63,19 @@ public class GCMLModelingAssistantProvider extends ModelingAssistantProvider {
 				.getAdapter(IGraphicalEditPart.class);
 		if (sourceEditPart instanceof IsAttachedEditPart) {
 			List types = new ArrayList();
-			types.add(GCMLElementTypes.IsAttachedPersonID_4003);
-			types.add(GCMLElementTypes.IsAttachedDeviceID_4004);
+			types.add(GCMLElementTypes.IsAttachedPersonID_3003);
+			types.add(GCMLElementTypes.IsAttachedDeviceID_3004);
 			return types;
 		}
 		if (sourceEditPart instanceof DeviceEditPart) {
 			List types = new ArrayList();
-			types.add(GCMLElementTypes.DeviceCapability_4005);
+			types.add(GCMLElementTypes.DeviceCapability_3005);
 			return types;
 		}
 		if (sourceEditPart instanceof ConnectionEditPart) {
 			List types = new ArrayList();
-			types.add(GCMLElementTypes.ConnectionDevice_4001);
-			types.add(GCMLElementTypes.ConnectionMedium_4002);
+			types.add(GCMLElementTypes.ConnectionDevice_3001);
+			types.add(GCMLElementTypes.ConnectionMedium_3002);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -89,23 +89,23 @@ public class GCMLModelingAssistantProvider extends ModelingAssistantProvider {
 				.getAdapter(IGraphicalEditPart.class);
 		if (targetEditPart instanceof CapabilityEditPart) {
 			List types = new ArrayList();
-			types.add(GCMLElementTypes.DeviceCapability_4005);
+			types.add(GCMLElementTypes.DeviceCapability_3005);
 			return types;
 		}
 		if (targetEditPart instanceof DeviceEditPart) {
 			List types = new ArrayList();
-			types.add(GCMLElementTypes.ConnectionDevice_4001);
-			types.add(GCMLElementTypes.IsAttachedDeviceID_4004);
+			types.add(GCMLElementTypes.ConnectionDevice_3001);
+			types.add(GCMLElementTypes.IsAttachedDeviceID_3004);
 			return types;
 		}
 		if (targetEditPart instanceof PersonEditPart) {
 			List types = new ArrayList();
-			types.add(GCMLElementTypes.IsAttachedPersonID_4003);
+			types.add(GCMLElementTypes.IsAttachedPersonID_3003);
 			return types;
 		}
 		if (targetEditPart instanceof MediumEditPart) {
 			List types = new ArrayList();
-			types.add(GCMLElementTypes.ConnectionMedium_4002);
+			types.add(GCMLElementTypes.ConnectionMedium_3002);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -123,27 +123,27 @@ public class GCMLModelingAssistantProvider extends ModelingAssistantProvider {
 		if (sourceEditPart instanceof IsAttachedEditPart) {
 			List types = new ArrayList();
 			if (targetEditPart instanceof PersonEditPart) {
-				types.add(GCMLElementTypes.IsAttachedPersonID_4003);
+				types.add(GCMLElementTypes.IsAttachedPersonID_3003);
 			}
 			if (targetEditPart instanceof DeviceEditPart) {
-				types.add(GCMLElementTypes.IsAttachedDeviceID_4004);
+				types.add(GCMLElementTypes.IsAttachedDeviceID_3004);
 			}
 			return types;
 		}
 		if (sourceEditPart instanceof DeviceEditPart) {
 			List types = new ArrayList();
 			if (targetEditPart instanceof CapabilityEditPart) {
-				types.add(GCMLElementTypes.DeviceCapability_4005);
+				types.add(GCMLElementTypes.DeviceCapability_3005);
 			}
 			return types;
 		}
 		if (sourceEditPart instanceof ConnectionEditPart) {
 			List types = new ArrayList();
 			if (targetEditPart instanceof DeviceEditPart) {
-				types.add(GCMLElementTypes.ConnectionDevice_4001);
+				types.add(GCMLElementTypes.ConnectionDevice_3001);
 			}
 			if (targetEditPart instanceof MediumEditPart) {
-				types.add(GCMLElementTypes.ConnectionMedium_4002);
+				types.add(GCMLElementTypes.ConnectionMedium_3002);
 			}
 			return types;
 		}
@@ -159,32 +159,32 @@ public class GCMLModelingAssistantProvider extends ModelingAssistantProvider {
 				.getAdapter(IGraphicalEditPart.class);
 		if (targetEditPart instanceof CapabilityEditPart) {
 			List types = new ArrayList();
-			if (relationshipType == GCMLElementTypes.DeviceCapability_4005) {
-				types.add(GCMLElementTypes.Device_2003);
+			if (relationshipType == GCMLElementTypes.DeviceCapability_3005) {
+				types.add(GCMLElementTypes.Device_1003);
 			}
 			return types;
 		}
 		if (targetEditPart instanceof DeviceEditPart) {
 			List types = new ArrayList();
-			if (relationshipType == GCMLElementTypes.ConnectionDevice_4001) {
-				types.add(GCMLElementTypes.Connection_2004);
+			if (relationshipType == GCMLElementTypes.ConnectionDevice_3001) {
+				types.add(GCMLElementTypes.Connection_1004);
 			}
-			if (relationshipType == GCMLElementTypes.IsAttachedDeviceID_4004) {
-				types.add(GCMLElementTypes.IsAttached_2001);
+			if (relationshipType == GCMLElementTypes.IsAttachedDeviceID_3004) {
+				types.add(GCMLElementTypes.IsAttached_1001);
 			}
 			return types;
 		}
 		if (targetEditPart instanceof PersonEditPart) {
 			List types = new ArrayList();
-			if (relationshipType == GCMLElementTypes.IsAttachedPersonID_4003) {
-				types.add(GCMLElementTypes.IsAttached_2001);
+			if (relationshipType == GCMLElementTypes.IsAttachedPersonID_3003) {
+				types.add(GCMLElementTypes.IsAttached_1001);
 			}
 			return types;
 		}
 		if (targetEditPart instanceof MediumEditPart) {
 			List types = new ArrayList();
-			if (relationshipType == GCMLElementTypes.ConnectionMedium_4002) {
-				types.add(GCMLElementTypes.Connection_2004);
+			if (relationshipType == GCMLElementTypes.ConnectionMedium_3002) {
+				types.add(GCMLElementTypes.Connection_1004);
 			}
 			return types;
 		}
@@ -200,28 +200,28 @@ public class GCMLModelingAssistantProvider extends ModelingAssistantProvider {
 				.getAdapter(IGraphicalEditPart.class);
 		if (sourceEditPart instanceof IsAttachedEditPart) {
 			List types = new ArrayList();
-			if (relationshipType == GCMLElementTypes.IsAttachedPersonID_4003) {
-				types.add(GCMLElementTypes.Person_2005);
+			if (relationshipType == GCMLElementTypes.IsAttachedPersonID_3003) {
+				types.add(GCMLElementTypes.Person_1005);
 			}
-			if (relationshipType == GCMLElementTypes.IsAttachedDeviceID_4004) {
-				types.add(GCMLElementTypes.Device_2003);
+			if (relationshipType == GCMLElementTypes.IsAttachedDeviceID_3004) {
+				types.add(GCMLElementTypes.Device_1003);
 			}
 			return types;
 		}
 		if (sourceEditPart instanceof DeviceEditPart) {
 			List types = new ArrayList();
-			if (relationshipType == GCMLElementTypes.DeviceCapability_4005) {
-				types.add(GCMLElementTypes.Capability_2002);
+			if (relationshipType == GCMLElementTypes.DeviceCapability_3005) {
+				types.add(GCMLElementTypes.Capability_1002);
 			}
 			return types;
 		}
 		if (sourceEditPart instanceof ConnectionEditPart) {
 			List types = new ArrayList();
-			if (relationshipType == GCMLElementTypes.ConnectionDevice_4001) {
-				types.add(GCMLElementTypes.Device_2003);
+			if (relationshipType == GCMLElementTypes.ConnectionDevice_3001) {
+				types.add(GCMLElementTypes.Device_1003);
 			}
-			if (relationshipType == GCMLElementTypes.ConnectionMedium_4002) {
-				types.add(GCMLElementTypes.Medium_2006);
+			if (relationshipType == GCMLElementTypes.ConnectionMedium_3002) {
+				types.add(GCMLElementTypes.Medium_1006);
 			}
 			return types;
 		}

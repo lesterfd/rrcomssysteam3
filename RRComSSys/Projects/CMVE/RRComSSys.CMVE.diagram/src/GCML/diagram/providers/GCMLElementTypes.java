@@ -48,51 +48,62 @@ public class GCMLElementTypes extends ElementInitializers {
 	/**
 	 * @generated
 	 */
-	public static final IElementType GCMLDocument_1000 = getElementType("edu.fiu.RRComSSys.diagram.GCMLDocument_1000"); //$NON-NLS-1$
+	public static final IElementType GCMLDocument_79 = getElementType("RRComSSys.CMVE.diagram.GCMLDocument_79"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType IsAttached_2001 = getElementType("edu.fiu.RRComSSys.diagram.IsAttached_2001"); //$NON-NLS-1$
+	public static final IElementType IsAttached_1001 = getElementType("RRComSSys.CMVE.diagram.IsAttached_1001"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Capability_2002 = getElementType("edu.fiu.RRComSSys.diagram.Capability_2002"); //$NON-NLS-1$
+	public static final IElementType Capability_1002 = getElementType("RRComSSys.CMVE.diagram.Capability_1002"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Device_2003 = getElementType("edu.fiu.RRComSSys.diagram.Device_2003"); //$NON-NLS-1$
+	public static final IElementType Device_1003 = getElementType("RRComSSys.CMVE.diagram.Device_1003"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Connection_2004 = getElementType("edu.fiu.RRComSSys.diagram.Connection_2004"); //$NON-NLS-1$
+	public static final IElementType Connection_1004 = getElementType("RRComSSys.CMVE.diagram.Connection_1004"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Person_2005 = getElementType("edu.fiu.RRComSSys.diagram.Person_2005"); //$NON-NLS-1$
+	public static final IElementType Person_1005 = getElementType("RRComSSys.CMVE.diagram.Person_1005"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType Medium_2006 = getElementType("edu.fiu.RRComSSys.diagram.Medium_2006"); //$NON-NLS-1$
+	public static final IElementType Medium_1006 = getElementType("RRComSSys.CMVE.diagram.Medium_1006"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType ConnectionDevice_4001 = getElementType("edu.fiu.RRComSSys.diagram.ConnectionDevice_4001"); //$NON-NLS-1$
+	public static final IElementType ConnectionDevice_3001 = getElementType("RRComSSys.CMVE.diagram.ConnectionDevice_3001"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType ConnectionMedium_4002 = getElementType("edu.fiu.RRComSSys.diagram.ConnectionMedium_4002"); //$NON-NLS-1$
+	public static final IElementType ConnectionMedium_3002 = getElementType("RRComSSys.CMVE.diagram.ConnectionMedium_3002"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType IsAttachedPersonID_4003 = getElementType("edu.fiu.RRComSSys.diagram.IsAttachedPersonID_4003"); //$NON-NLS-1$
+	public static final IElementType IsAttachedPersonID_3003 = getElementType("RRComSSys.CMVE.diagram.IsAttachedPersonID_3003"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType IsAttachedDeviceID_4004 = getElementType("edu.fiu.RRComSSys.diagram.IsAttachedDeviceID_4004"); //$NON-NLS-1$
+	public static final IElementType IsAttachedDeviceID_3004 = getElementType("RRComSSys.CMVE.diagram.IsAttachedDeviceID_3004"); //$NON-NLS-1$
+
 	/**
 	 * @generated
 	 */
-	public static final IElementType DeviceCapability_4005 = getElementType("edu.fiu.RRComSSys.diagram.DeviceCapability_4005"); //$NON-NLS-1$
+	public static final IElementType DeviceCapability_3005 = getElementType("RRComSSys.CMVE.diagram.DeviceCapability_3005"); //$NON-NLS-1$
 
 	/**
 	 * @generated
@@ -205,37 +216,37 @@ public class GCMLElementTypes extends ElementInitializers {
 		if (elements == null) {
 			elements = new IdentityHashMap();
 
-			elements.put(GCMLDocument_1000, GCMLPackage.eINSTANCE
+			elements.put(GCMLDocument_79, GCMLPackage.eINSTANCE
 					.getGCMLDocument());
 
 			elements
-					.put(IsAttached_2001, GCMLPackage.eINSTANCE.getIsAttached());
+					.put(IsAttached_1001, GCMLPackage.eINSTANCE.getIsAttached());
 
 			elements
-					.put(Capability_2002, GCMLPackage.eINSTANCE.getCapability());
+					.put(Capability_1002, GCMLPackage.eINSTANCE.getCapability());
 
-			elements.put(Device_2003, GCMLPackage.eINSTANCE.getDevice());
+			elements.put(Device_1003, GCMLPackage.eINSTANCE.getDevice());
 
 			elements
-					.put(Connection_2004, GCMLPackage.eINSTANCE.getConnection());
+					.put(Connection_1004, GCMLPackage.eINSTANCE.getConnection());
 
-			elements.put(Person_2005, GCMLPackage.eINSTANCE.getPerson());
+			elements.put(Person_1005, GCMLPackage.eINSTANCE.getPerson());
 
-			elements.put(Medium_2006, GCMLPackage.eINSTANCE.getMedium());
+			elements.put(Medium_1006, GCMLPackage.eINSTANCE.getMedium());
 
-			elements.put(ConnectionDevice_4001, GCMLPackage.eINSTANCE
+			elements.put(ConnectionDevice_3001, GCMLPackage.eINSTANCE
 					.getConnection_Device());
 
-			elements.put(ConnectionMedium_4002, GCMLPackage.eINSTANCE
+			elements.put(ConnectionMedium_3002, GCMLPackage.eINSTANCE
 					.getConnection_Medium());
 
-			elements.put(IsAttachedPersonID_4003, GCMLPackage.eINSTANCE
+			elements.put(IsAttachedPersonID_3003, GCMLPackage.eINSTANCE
 					.getIsAttached_PersonID());
 
-			elements.put(IsAttachedDeviceID_4004, GCMLPackage.eINSTANCE
+			elements.put(IsAttachedDeviceID_3004, GCMLPackage.eINSTANCE
 					.getIsAttached_DeviceID());
 
-			elements.put(DeviceCapability_4005, GCMLPackage.eINSTANCE
+			elements.put(DeviceCapability_3005, GCMLPackage.eINSTANCE
 					.getDevice_Capability());
 		}
 		return (ENamedElement) elements.get(type);
@@ -254,18 +265,18 @@ public class GCMLElementTypes extends ElementInitializers {
 	public static boolean isKnownElementType(IElementType elementType) {
 		if (KNOWN_ELEMENT_TYPES == null) {
 			KNOWN_ELEMENT_TYPES = new HashSet();
-			KNOWN_ELEMENT_TYPES.add(GCMLDocument_1000);
-			KNOWN_ELEMENT_TYPES.add(IsAttached_2001);
-			KNOWN_ELEMENT_TYPES.add(Capability_2002);
-			KNOWN_ELEMENT_TYPES.add(Device_2003);
-			KNOWN_ELEMENT_TYPES.add(Connection_2004);
-			KNOWN_ELEMENT_TYPES.add(Person_2005);
-			KNOWN_ELEMENT_TYPES.add(Medium_2006);
-			KNOWN_ELEMENT_TYPES.add(ConnectionDevice_4001);
-			KNOWN_ELEMENT_TYPES.add(ConnectionMedium_4002);
-			KNOWN_ELEMENT_TYPES.add(IsAttachedPersonID_4003);
-			KNOWN_ELEMENT_TYPES.add(IsAttachedDeviceID_4004);
-			KNOWN_ELEMENT_TYPES.add(DeviceCapability_4005);
+			KNOWN_ELEMENT_TYPES.add(GCMLDocument_79);
+			KNOWN_ELEMENT_TYPES.add(IsAttached_1001);
+			KNOWN_ELEMENT_TYPES.add(Capability_1002);
+			KNOWN_ELEMENT_TYPES.add(Device_1003);
+			KNOWN_ELEMENT_TYPES.add(Connection_1004);
+			KNOWN_ELEMENT_TYPES.add(Person_1005);
+			KNOWN_ELEMENT_TYPES.add(Medium_1006);
+			KNOWN_ELEMENT_TYPES.add(ConnectionDevice_3001);
+			KNOWN_ELEMENT_TYPES.add(ConnectionMedium_3002);
+			KNOWN_ELEMENT_TYPES.add(IsAttachedPersonID_3003);
+			KNOWN_ELEMENT_TYPES.add(IsAttachedDeviceID_3004);
+			KNOWN_ELEMENT_TYPES.add(DeviceCapability_3005);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
