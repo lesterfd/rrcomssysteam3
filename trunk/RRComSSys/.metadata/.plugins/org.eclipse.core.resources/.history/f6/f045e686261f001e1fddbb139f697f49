@@ -1,6 +1,0 @@
-package edu.fiu.cis.rrcomssys.cvm.ste;
-
-public interface ISchemaTransformationEngine
-{
-	public CMLDocument transformToInstance(XCMLDocument doc);
-}

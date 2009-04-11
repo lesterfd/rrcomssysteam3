@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move 5 elements(s) to &apos;XCML&apos;&#x0D;&#x0A;- Original project: &apos;RRComSSys.CMVE&apos;&#x0D;&#x0A;- Destination element: &apos;XCML&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     XCML.ecore&#x0D;&#x0A;     XCML.genmodel&#x0D;&#x0A;     XCML.xsd2ecore&#x0D;&#x0A;     XCML.ecorediag&#x0D;&#x0A;     XCML.xsd" description="Move files" element1="model/GCML/XCML.ecore" element2="model/GCML/XCML.genmodel" element3="model/GCML/XCML.xsd2ecore" element4="model/GCML/XCML.ecorediag" element5="model/GCML/XCML.xsd" files="5" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1238551425984" target="model/XCML" units="0" version="1.0"/>
-</session>
