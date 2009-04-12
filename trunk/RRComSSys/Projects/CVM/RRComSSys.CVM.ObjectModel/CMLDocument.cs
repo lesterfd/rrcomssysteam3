@@ -13,6 +13,10 @@ namespace RRComSSys.CVM.ObjectModel
 {
 	public class CMLDocument
 	{
+		#region Member Variables
+		private String _documentLoadedFrom;
+		#endregion
+
 		#region Events
 		public event EventHandler DocumentLoaded;
 		#endregion
@@ -76,16 +80,64 @@ namespace RRComSSys.CVM.ObjectModel
 						file.Name));
 
 			// Run onLoad
+			result._documentLoadedFrom = file.FullName;
+			result.OnLoad();
 			if (result.DocumentLoaded != null)
 				result.DocumentLoaded(result, EventArgs.Empty);
-			result.OnLoad();
 
 			return result;
 		}
 
 		#endregion
 
+		#region Public Methods
+		public override string ToString()
+		{
+			return Serialize();
+		}
+
+		public bool SaveDocument()
+		{
+			return SaveDocument(_documentLoadedFrom);
+		}
+
+		public bool SaveDocument(String fileName)
+		{
+			Exception result;
+			return SaveDocument(fileName, out result);
+		}
+
+		public bool SaveDocument(String fileName, out Exception exception)
+		{
+			exception = null;
+			try
+			{
+				String xmlString = Serialize();
+				FileInfo xmlFile = new FileInfo(fileName);
+				StreamWriter streamWriter = xmlFile.CreateText();
+				streamWriter.WriteLine(xmlString);
+				streamWriter.Close();
+				return true;
+			}
+			catch (System.Exception e)
+			{
+				exception = e;
+				return false;
+			}
+		}
+		#endregion
+
 		#region Private Methods
+		protected String Serialize()
+		{
+			XmlSerializer xmlSerializer = new XmlSerializer(this.GetType());
+			MemoryStream memoryStream = new MemoryStream();
+			xmlSerializer.Serialize(memoryStream, this);
+			memoryStream.Seek(0, SeekOrigin.Begin);
+			StreamReader streamReader = new StreamReader(memoryStream);
+			return streamReader.ReadToEnd();
+		}
+
 		protected virtual void OnLoad() { }
 		#endregion
 	}
