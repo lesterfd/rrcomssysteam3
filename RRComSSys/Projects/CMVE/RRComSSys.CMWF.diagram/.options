@@ -1,0 +1,7 @@
+# Tracing options for the RRComSSys.CMWF.diagram plug-in
+
+# Common issues
+RRComSSys.CMWF.diagram/debug=false
+
+# Visual IDs
+RRComSSys.CMWF.diagram/debug/visualID=false

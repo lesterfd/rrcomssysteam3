@@ -1,0 +1,9 @@
+#Sat Apr 11 17:58:27 EDT 2009
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/RRComSSys.CMWF/model/WFGCML.genmodel
+gmf_dashboard/domainModel=platform\:/resource/RRComSSys.CMWF/model/WFGCML.ecore
+gmf_dashboard/generationModel=platform\:/resource/RRComSSys.CMWF/model/WFGCML.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/RRComSSys.CMWF/model/WFGCML.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/RRComSSys.CMWF/model/WFGCML.gmfmap
+gmf_dashboard/option_rcp=*
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/RRComSSys.CMWF/model/WFGCML.gmftool

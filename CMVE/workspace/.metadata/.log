@@ -1,0 +1,281 @@
+!SESSION 2009-04-11 18:31:58.321 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2009-04-11 18:32:00.696
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-11 18:32:00.696
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(RRComSSys.CMVE.diagram.OpenCommand,Open...,
+		Open file,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(RRComSSys.CMWF.diagram.OpenCommand,Open...,
+		Open file,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-11 18:32:00.696
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(RRComSSys.CMVE.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(RRComSSys.CMWF.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 0 2009-04-11 18:35:08.903
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NoClassDefFoundError: org/eclipse/ui/views/navigator/ResourceComparator
+	at org.eclipse.emf.common.ui.dialogs.ResourceDialog$2.widgetSelected(ResourceDialog.java:287)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:228)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3823)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3422)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at GCML.diagram.application.DiagramEditorActionBarAdvisor$OpenURIAction.run(DiagramEditorActionBarAdvisor.java:336)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:251)
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:229)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:583)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:500)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3823)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3422)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2382)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2346)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2198)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:493)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:288)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:488)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at GCML.diagram.application.GCMLApplication.run(GCMLApplication.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.internal.app.EclipseAppContainer.callMethodWithException(EclipseAppContainer.java:574)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:195)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:386)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:549)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:504)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1236)
+Caused by: java.lang.ClassNotFoundException: org.eclipse.ui.views.navigator.ResourceComparator
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClassInternal(BundleLoader.java:481)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:397)
+	at org.eclipse.osgi.framework.internal.core.BundleLoader.findClass(BundleLoader.java:385)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:87)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	... 43 more
+!SESSION 2009-04-11 18:46:34.994 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2009-04-11 18:46:38.229
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-11 18:46:38.229
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(RRComSSys.CMVE.diagram.OpenCommand,Open...,
+		Open file,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(RRComSSys.CMWF.diagram.OpenCommand,Open...,
+		Open file,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-11 18:46:38.229
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(RRComSSys.CMVE.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(RRComSSys.CMWF.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2009-04-11 19:02:32.388 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2009-04-11 19:02:37.528
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-11 19:02:37.528
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(RRComSSys.CMVE.diagram.OpenCommand,Open...,
+		Open file,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(RRComSSys.CMWF.diagram.OpenCommand,Open...,
+		Open file,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-11 19:02:37.528
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(RRComSSys.CMVE.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(RRComSSys.CMWF.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2009-04-11 19:05:38.329 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2009-04-11 19:05:40.688
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-11 19:05:40.688
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(RRComSSys.CMVE.diagram.OpenCommand,Open...,
+		Open file,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(RRComSSys.CMWF.diagram.OpenCommand,Open...,
+		Open file,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-11 19:05:40.688
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(RRComSSys.CMVE.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(RRComSSys.CMWF.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2009-04-11 19:15:12.824 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.jface 2 0 2009-04-11 19:15:18.996
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-11 19:15:18.996
+!MESSAGE A conflict occurred for CTRL+O:
+Binding(CTRL+O,
+	ParameterizedCommand(Command(RRComSSys.CMVE.diagram.OpenCommand,Open...,
+		Open file,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+O,
+	ParameterizedCommand(Command(RRComSSys.CMWF.diagram.OpenCommand,Open...,
+		Open file,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2009-04-11 19:15:18.996
+!MESSAGE A conflict occurred for CTRL+U:
+Binding(CTRL+U,
+	ParameterizedCommand(Command(RRComSSys.CMVE.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+U,
+	ParameterizedCommand(Command(RRComSSys.CMWF.diagram.OpenURICommand,Open URI...,
+		Open file by URI,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
