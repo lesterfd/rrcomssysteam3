@@ -46,11 +46,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchemaTransformer\SchemaTransformationEngine.cs" />
+    <Compile Include="SynthesisEngine\AbstractApi.cs" />
+    <Compile Include="SynthesisEngine\AbstractApiFactory.cs" />
+    <Compile Include="SynthesisEngine\ExecuteAPI.cs" />
+    <Compile Include="SynthesisEngine\FailCommand.cs" />
+    <Compile Include="SynthesisEngine\IAPICommand.cs" />
+    <Compile Include="SynthesisEngine\ICommunicationAPI.cs" />
+    <Compile Include="SynthesisEngine\LastCommandSucceeded.cs" />
+    <Compile Include="SynthesisEngine\SkypeApi.cs" />
+    <Compile Include="SynthesisEngine\SkypeApiFactory.cs" />
+    <Compile Include="SynthesisEngine\WFDecisionCommand.cs" />
+    <Compile Include="SynthesisEngine\WFItemCommand.cs" />
+    <Compile Include="SynthesisEngine\WorkFlow.cs" />
+    <Compile Include="SynthesisEngine\WorkFlowDecision.cs" />
+    <Compile Include="SynthesisEngine\WorkFlowItem.cs" />
+    <Compile Include="SynthesisEngine\WorkFlowSymbols.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RRComSSys.CVM.ObjectModel\RRComSSys.CVM.ObjectModel.csproj">
+      <Project>{FD1C6924-DA64-4D1C-910E-412F9925661D}</Project>
+      <Name>RRComSSys.CVM.ObjectModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SynthesisEngine.cd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ModelTransformer\" />
-    <Folder Include="SchemaTransformer\" />
-    <Folder Include="SynthesisEngine\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
