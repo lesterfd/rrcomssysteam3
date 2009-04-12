@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:GCML="http://GCML/1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ecore:nsPrefix="GCML" ecore:package="GCML" targetNamespace="http://GCML/1.0">
+  <xsd:import namespace=""/>
+  <xsd:import namespace="http://www.eclipse.org/emf/2002/Ecore" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.xsd"/>
+  <xsd:element ecore:ignore="true" name="Shape" type="GCML:Shape"/>
+  <xsd:element ecore:ignore="true" name="Capability" type="GCML:Capability"/>
+  <xsd:complexType ecore:name="GCMLDocument" name="GCML">
+    <xsd:sequence>
+      <xsd:element ecore:name="Shape" ecore:resolveProxies="true" maxOccurs="unbounded" minOccurs="0" name="Shape" type="GCML:Shape"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Person">
+    <xsd:complexContent>
+      <xsd:extension base="GCML:Shape">
+        <xsd:attribute ecore:name="PersonName" name="PersonName" type="ecore:EString" use="required"/>
+        <xsd:attribute ecore:id="true" ecore:name="PersonID" name="PersonID" type="ecore:EString" use="required"/>
+        <xsd:attribute ecore:name="PersonRole" name="PersonRole" type="ecore:EString" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="IsAttached">
+    <xsd:complexContent>
+      <xsd:extension base="GCML:Shape">
+        <xsd:attribute ecore:name="DeviceID" ref="DeviceID" use="required"/>
+        <xsd:attribute ecore:name="PersonID" ecore:reference="GCML:Person" name="PersonID" type="xsd:anyURI" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Device">
+    <xsd:complexContent>
+      <xsd:extension base="GCML:Shape">
+        <xsd:sequence>
+          <xsd:element ecore:name="Capability" maxOccurs="unbounded" ref="Capabilities"/>
+        </xsd:sequence>
+        <xsd:attribute ecore:id="true" ecore:name="DeviceID" ecore:unsettable="false" name="DeviceID" type="ecore:ELong" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" name="Shape"/>
+  <xsd:complexType name="Capability">
+    <xsd:complexContent>
+      <xsd:extension base="GCML:Shape">
+        <xsd:attribute ecore:name="BuiltInType" ecore:unsettable="false" name="BuiltInType" type="GCML:BuiltInType" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Connection">
+    <xsd:complexContent>
+      <xsd:extension base="GCML:Shape">
+        <xsd:sequence>
+          <xsd:element ecore:name="Device" ecore:reference="GCML:Device" maxOccurs="unbounded" name="Device" type="xsd:anyURI"/>
+          <xsd:element ecore:name="Medium" ecore:reference="GCML:Medium" maxOccurs="unbounded" minOccurs="0" name="Medium" type="xsd:anyURI"/>
+        </xsd:sequence>
+        <xsd:attribute ecore:id="true" ecore:name="ConnectionID" ecore:unsettable="false" name="ConnectionID" type="ecore:ELong" use="required"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Medium">
+    <xsd:complexContent>
+      <xsd:extension base="GCML:Shape">
+        <xsd:attribute ecore:name="MediumURL" name="MediumURL" type="ecore:EString"/>
+        <xsd:attribute ecore:name="BuiltInType" ecore:unsettable="false" name="BuiltInType" type="GCML:BuiltInType"/>
+        <xsd:attribute ecore:name="Action" ecore:unsettable="false" name="Action" type="GCML:Action"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="BuiltInType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Text"/>
+      <xsd:enumeration value="TextFile"/>
+      <xsd:enumeration value="BinaryFile"/>
+      <xsd:enumeration value="StreamFile"/>
+      <xsd:enumeration value="AudioFile"/>
+      <xsd:enumeration value="VideoFile"/>
+      <xsd:enumeration value="AudioVideoFile"/>
+      <xsd:enumeration value="NonStreamFile"/>
+      <xsd:enumeration value="LiveStream"/>
+      <xsd:enumeration value="LiveAudio"/>
+      <xsd:enumeration value="LiveVideo"/>
+      <xsd:enumeration value="LiveAudioVideo"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Action">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Send"/>
+      <xsd:enumeration value="DoNotSend"/>
+      <xsd:enumeration value="StartApplication"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>
