@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio 1.0.8.0 (http://www.liquid-technologies.com) -->
+<xsd:schema xmlns:xmi="http://www.omg.org/XMI" xmlns:GCML="http://GCML/1.0" targetNamespace="http://GCML/1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="XMI.xsd" namespace="http://www.omg.org/XMI" />
+  <xsd:simpleType name="BuiltInType">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Text" />
+      <xsd:enumeration value="TextFile" />
+      <xsd:enumeration value="BinaryFile" />
+      <xsd:enumeration value="StreamFile" />
+      <xsd:enumeration value="AudioFile" />
+      <xsd:enumeration value="VideoFile" />
+      <xsd:enumeration value="AudioVideoFile" />
+      <xsd:enumeration value="NonStreamFile" />
+      <xsd:enumeration value="LiveStream" />
+      <xsd:enumeration value="LiveAudio" />
+      <xsd:enumeration value="LiveVideo" />
+      <xsd:enumeration value="LiveAudioVideo" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Action">
+    <xsd:restriction base="xsd:NCName">
+      <xsd:enumeration value="Send" />
+      <xsd:enumeration value="DoNotSend" />
+      <xsd:enumeration value="StartApplication" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="GCML">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="Shape" type="GCML:Shape" />
+      <xsd:element ref="xmi:Extension" />
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id" />
+    <xsd:attributeGroup ref="xmi:ObjectAttribs" />
+  </xsd:complexType>
+  <xsd:element name="GCML" type="GCML:GCML" />
+  <xsd:complexType name="Person">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="GCML:Shape">
+        <xsd:attribute name="PersonName" type="xsd:string" use="required" />
+        <xsd:attribute name="PersonID" type="xsd:string" use="required" />
+        <xsd:attribute name="PersonRole" type="xsd:string" use="required" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Person" type="GCML:Person" />
+  <xsd:complexType name="IsAttached">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="GCML:Shape">
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element name="DeviceID" type="GCML:Device" />
+          <xsd:element name="PersonID" type="GCML:Person" />
+        </xsd:choice>
+        <xsd:attribute name="DeviceID" type="xsd:string" />
+        <xsd:attribute name="PersonID" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="IsAttached" type="GCML:IsAttached" />
+  <xsd:complexType name="Device">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="GCML:Shape">
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element name="Capability" type="GCML:Capability" />
+        </xsd:choice>
+        <xsd:attribute name="DeviceID" type="xsd:long" use="required" />
+        <xsd:attribute name="Capability" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Device" type="GCML:Device" />
+  <xsd:complexType name="Shape" abstract="true">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element ref="xmi:Extension" />
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id" />
+    <xsd:attributeGroup ref="xmi:ObjectAttribs" />
+  </xsd:complexType>
+  <xsd:element name="Shape" type="GCML:Shape" />
+  <xsd:complexType name="Capability">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="GCML:Shape">
+        <xsd:attribute name="BuiltInType" type="GCML:BuiltInType" use="required" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Capability" type="GCML:Capability" />
+  <xsd:complexType name="Connection">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="GCML:Shape">
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element name="Device" type="GCML:Device" />
+          <xsd:element name="Medium" type="GCML:Medium" />
+        </xsd:choice>
+        <xsd:attribute name="ConnectionID" type="xsd:long" use="required" />
+        <xsd:attribute name="Device" type="xsd:string" />
+        <xsd:attribute name="Medium" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Connection" type="GCML:Connection" />
+  <xsd:complexType name="Medium">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="GCML:Shape">
+        <xsd:attribute name="MediumURL" type="xsd:string" />
+        <xsd:attribute name="BuiltInType" type="GCML:BuiltInType" />
+        <xsd:attribute name="Action" type="GCML:Action" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Medium" type="GCML:Medium" />
+  <xsd:element name="GCMLDocument" type="GCML:GCML" />
+</xsd:schema>

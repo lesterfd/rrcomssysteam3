@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GCML:GCMLDocument xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:GCML="http://GCML/1.0">
+  <Shape xsi:type="GCML:Person" PersonName="Lester" PersonID="Person1" PersonRole="initiator"/>
+  <Shape xsi:type="GCML:IsAttached" DeviceID="1" PersonID="Person1"/>
+  <Shape xsi:type="GCML:Device" DeviceID="1" Capability="//@Shape.3"/>
+  <Shape xsi:type="GCML:Capability" BuiltInType="LiveAudio"/>
+  <Shape xsi:type="GCML:Connection" ConnectionID="1" Device="1 2" Medium="//@Shape.5"/>
+  <Shape xsi:type="GCML:Medium" MediumURL="" BuiltInType="LiveAudio" Action="DoNotSend"/>
+  <Shape xsi:type="GCML:Device" DeviceID="2" Capability="//@Shape.3 //@Shape.7"/>
+  <Shape xsi:type="GCML:Capability" BuiltInType="Text"/>
+  <Shape xsi:type="GCML:IsAttached" DeviceID="2" PersonID="Person2"/>
+  <Shape xsi:type="GCML:Person" PersonName="Maung" PersonID="Person2" PersonRole="receiver"/>
+</GCML:GCMLDocument>

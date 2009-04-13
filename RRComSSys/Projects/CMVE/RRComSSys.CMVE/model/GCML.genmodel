@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/RRComSSys.CMVE/src"
+    modelPluginID="RRComSSys.CMVE" modelName="GCML" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>GCML.ecore</foreignModel>
+  <genPackages prefix="GCML" resource="XML" disposableProviderFactory="true" ecorePackage="GCML.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="GCML.ecore#//BuiltInType">
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/SELECT_TYPE"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/Text"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/TextFile"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/BinaryFile"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/StreamFile"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/AudioFile"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/VideoFile"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/AudioVideoFile"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/NonStreamFile"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/LiveStream"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/LiveAudio"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/LiveVideo"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//BuiltInType/LiveAudioVideo"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="GCML.ecore#//Action">
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//Action/SELECT_TYPE"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//Action/Send"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//Action/DoNotSend"/>
+      <genEnumLiterals ecoreEnumLiteral="GCML.ecore#//Action/StartApplication"/>
+    </genEnums>
+    <genClasses ecoreClass="GCML.ecore#//GCMLDocument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GCML.ecore#//GCMLDocument/person"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GCML.ecore#//GCMLDocument/isAttached"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GCML.ecore#//GCMLDocument/device"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GCML.ecore#//GCMLDocument/capability"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GCML.ecore#//GCMLDocument/medium"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GCML.ecore#//GCMLDocument/connection"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute GCML.ecore#//GCMLDocument/CommunicationID"/>
+    </genClasses>
+    <genClasses ecoreClass="GCML.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GCML.ecore#//Person/PersonName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GCML.ecore#//Person/PersonID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GCML.ecore#//Person/PersonRole"/>
+    </genClasses>
+    <genClasses ecoreClass="GCML.ecore#//IsAttached">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GCML.ecore#//IsAttached/DeviceID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GCML.ecore#//IsAttached/PersonID"/>
+    </genClasses>
+    <genClasses ecoreClass="GCML.ecore#//Device">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute GCML.ecore#//Device/DeviceID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GCML.ecore#//Device/Capability"/>
+    </genClasses>
+    <genClasses ecoreClass="GCML.ecore#//Capability">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GCML.ecore#//Capability/BuiltInType"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute GCML.ecore#//Capability/CapabilityID"/>
+    </genClasses>
+    <genClasses ecoreClass="GCML.ecore#//Connection">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute GCML.ecore#//Connection/ConnectionID"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GCML.ecore#//Connection/Device"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GCML.ecore#//Connection/Medium"/>
+    </genClasses>
+    <genClasses ecoreClass="GCML.ecore#//Medium">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GCML.ecore#//Medium/MediumURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GCML.ecore#//Medium/BuiltInType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GCML.ecore#//Medium/Action"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute GCML.ecore#//Medium/MediumID"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
