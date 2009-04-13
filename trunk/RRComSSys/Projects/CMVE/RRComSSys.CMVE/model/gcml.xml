@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GCML:GCMLDocument xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:GCML="http://GCML/1.0" CommunicationID="_jRhGQSfREd6Bgpzny0v-Ow">
+  <person PersonName="maung" PersonID="_jpp5cCfREd6Bgpzny0v-Ow" PersonRole="initiator"/>
+  <person PersonName="danny" PersonID="_8RVZ0CfREd6Bgpzny0v-Ow" PersonRole="receiver"/>
+  <isAttached DeviceID="_qeRA0CfREd6Bgpzny0v-Ow" PersonID="_jpp5cCfREd6Bgpzny0v-Ow"/>
+  <isAttached DeviceID="_7KjX8CfREd6Bgpzny0v-Ow" PersonID="_8RVZ0CfREd6Bgpzny0v-Ow"/>
+  <device DeviceID="_qeRA0CfREd6Bgpzny0v-Ow" Capability="_u7xt8CfREd6Bgpzny0v-Ow"/>
+  <device DeviceID="_7KjX8CfREd6Bgpzny0v-Ow" Capability="_u7xt8CfREd6Bgpzny0v-Ow _tFwngCfREd6Bgpzny0v-Ow"/>
+  <capability BuiltInType="Text" CapabilityID="_tFwngCfREd6Bgpzny0v-Ow"/>
+  <capability BuiltInType="TextFile" CapabilityID="_u7xt8CfREd6Bgpzny0v-Ow"/>
+  <medium MediumURL="file1" BuiltInType="TextFile" Action="Send" MediumID="_wOyN8CfREd6Bgpzny0v-Ow"/>
+  <medium MediumURL="stream1" BuiltInType="Text" Action="Send" MediumID="_1cbXgCfREd6Bgpzny0v-Ow"/>
+  <connection ConnectionID="_rxtlsCfREd6Bgpzny0v-Ow" Device="_qeRA0CfREd6Bgpzny0v-Ow _7KjX8CfREd6Bgpzny0v-Ow" Medium="_wOyN8CfREd6Bgpzny0v-Ow _1cbXgCfREd6Bgpzny0v-Ow"/>
+</GCML:GCMLDocument>
