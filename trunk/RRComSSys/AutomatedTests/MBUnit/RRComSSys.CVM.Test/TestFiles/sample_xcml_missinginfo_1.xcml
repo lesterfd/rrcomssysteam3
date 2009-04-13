@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<userSchema communicationID="_9eTzYesBEd2LR6qNXxImpg">
+	<connection bandwidth="" connectionID="_0yCBEOwEEd2M0Nk-sntj1A">
+		<device isLocal="true" isVirtual="false" deviceID="_fzHMkOwDEd2M0Nk-sntj1A">
+			<deviceCapability>TextFile</deviceCapability>
+			<deviceCapability>AudioFile</deviceCapability>
+			<deviceCapability>Text</deviceCapability>
+			<deviceCapability>LiveAudio</deviceCapability>
+		</device>
+		<device isLocal="false" isVirtual="true" deviceID="_vFOEsOwDEd2M0Nk-sntj1A">
+			<deviceCapability>TextFile</deviceCapability>
+			<deviceCapability>AudioFile</deviceCapability>
+			<deviceCapability>Text</deviceCapability>
+			<deviceCapability>LiveAudio</deviceCapability>
+		</device>
+		<device isLocal="false" isVirtual="true" deviceID="_mQzEbOwDEd2M0Nk-sntj1A">
+			<deviceCapability>TextFile</deviceCapability>
+			<deviceCapability>AudioFile</deviceCapability>
+			<deviceCapability>Text</deviceCapability>
+			<deviceCapability>LiveAudio</deviceCapability>
+		</device>
+		<mediumTypeNameRef>SomeFile</mediumTypeNameRef>
+		<mediumTypeNameRef>LiveStream</mediumTypeNameRef>
+	</connection>
+	<mediumType mediumTypeName="SomeFile" suggestedApplication="QuickTime" derivedFromBuiltInType="AudioVideoFile" />
+	<mediumType mediumTypeName="LiveStream" suggestedApplication="Windows Media Player" derivedFromBuiltInType="LiveAudio" />
+	<person personRole="Researcher" personID="dflor003" personName="" />
+	<person personRole="Physicist" personID="ldiaz004" personName="" />
+	<person personRole="Biochemist" personID="mcrick001" personName="" />
+	<isAttached deviceID="_vFOEsOwDEd2M0Nk-sntj1A" personID="ldiaz004" />
+	<isAttached deviceID="_fzHMkOwDEd2M0Nk-sntj1A" personID="dflor003" />
+	<isAttached deviceID="_mQzEbOwDEd2M0Nk-sntj1A" personID="mcrick001" />
+</userSchema>
