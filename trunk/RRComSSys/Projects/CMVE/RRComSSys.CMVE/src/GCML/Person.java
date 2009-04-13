@@ -6,6 +6,8 @@
  */
 package GCML;
 
+import org.eclipse.emf.ecore.EObject;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +27,7 @@ package GCML;
  * @model extendedMetaData="kind='empty'"
  * @generated
  */
-public interface Person extends Shape {
+public interface Person extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Person Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -55,6 +57,7 @@ public interface Person extends Shape {
 
 	/**
 	 * Returns the value of the '<em><b>Person ID</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Person ID</em>' attribute isn't clear,
@@ -62,9 +65,11 @@ public interface Person extends Shape {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Person ID</em>' attribute.
+	 * @see #isSetPersonID()
+	 * @see #unsetPersonID()
 	 * @see #setPersonID(String)
 	 * @see GCML.GCMLPackage#getPerson_PersonID()
-	 * @model id="true" required="true"
+	 * @model default="" unsettable="true" id="true" required="true"
 	 *        extendedMetaData="kind='attribute'"
 	 * @generated
 	 */
@@ -75,10 +80,35 @@ public interface Person extends Shape {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Person ID</em>' attribute.
+	 * @see #isSetPersonID()
+	 * @see #unsetPersonID()
 	 * @see #getPersonID()
 	 * @generated
 	 */
 	void setPersonID(String value);
+
+	/**
+	 * Unsets the value of the '{@link GCML.Person#getPersonID <em>Person ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isSetPersonID()
+	 * @see #getPersonID()
+	 * @see #setPersonID(String)
+	 * @generated
+	 */
+	void unsetPersonID();
+
+	/**
+	 * Returns whether the value of the '{@link GCML.Person#getPersonID <em>Person ID</em>}' attribute is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Person ID</em>' attribute is set.
+	 * @see #unsetPersonID()
+	 * @see #getPersonID()
+	 * @see #setPersonID(String)
+	 * @generated
+	 */
+	boolean isSetPersonID();
 
 	/**
 	 * Returns the value of the '<em><b>Person Role</b></em>' attribute.

@@ -88,10 +88,6 @@ public class GCMLAdapterFactory extends AdapterFactoryImpl {
 				return createDeviceAdapter();
 			}
 			@Override
-			public Adapter caseShape(Shape object) {
-				return createShapeAdapter();
-			}
-			@Override
 			public Adapter caseCapability(Capability object) {
 				return createCapabilityAdapter();
 			}
@@ -176,20 +172,6 @@ public class GCMLAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createDeviceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link GCML.Shape <em>Shape</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see GCML.Shape
-	 * @generated
-	 */
-	public Adapter createShapeAdapter() {
 		return null;
 	}
 

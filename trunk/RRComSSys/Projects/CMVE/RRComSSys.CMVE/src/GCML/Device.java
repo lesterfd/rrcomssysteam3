@@ -7,6 +7,7 @@
 package GCML;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * @model extendedMetaData="kind='mixed'"
  * @generated
  */
-public interface Device extends Shape {
+public interface Device extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Device ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -35,23 +36,12 @@ public interface Device extends Shape {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Device ID</em>' attribute.
-	 * @see #setDeviceID(long)
 	 * @see GCML.GCMLPackage#getDevice_DeviceID()
-	 * @model id="true" required="true"
+	 * @model id="true" required="true" changeable="false"
 	 *        extendedMetaData="kind='attribute'"
 	 * @generated
 	 */
-	long getDeviceID();
-
-	/**
-	 * Sets the value of the '{@link GCML.Device#getDeviceID <em>Device ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Device ID</em>' attribute.
-	 * @see #getDeviceID()
-	 * @generated
-	 */
-	void setDeviceID(long value);
+	String getDeviceID();
 
 	/**
 	 * Returns the value of the '<em><b>Capability</b></em>' reference list.

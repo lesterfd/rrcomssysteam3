@@ -7,6 +7,7 @@
 package GCML;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model extendedMetaData="kind='mixed'"
  * @generated
  */
-public interface Connection extends Shape {
+public interface Connection extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Connection ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -36,23 +37,12 @@ public interface Connection extends Shape {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Connection ID</em>' attribute.
-	 * @see #setConnectionID(long)
 	 * @see GCML.GCMLPackage#getConnection_ConnectionID()
-	 * @model id="true" required="true"
+	 * @model id="true" required="true" changeable="false"
 	 *        extendedMetaData="kind='attribute'"
 	 * @generated
 	 */
-	long getConnectionID();
-
-	/**
-	 * Sets the value of the '{@link GCML.Connection#getConnectionID <em>Connection ID</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Connection ID</em>' attribute.
-	 * @see #getConnectionID()
-	 * @generated
-	 */
-	void setConnectionID(long value);
+	String getConnectionID();
 
 	/**
 	 * Returns the value of the '<em><b>Device</b></em>' reference list.

@@ -13,18 +13,23 @@ import GCML.diagram.edit.parts.ConnectionDeviceEditPart;
 import GCML.diagram.edit.parts.ConnectionEditPart;
 import GCML.diagram.edit.parts.ConnectionMediumEditPart;
 import GCML.diagram.edit.parts.DeviceCapabilityEditPart;
+import GCML.diagram.edit.parts.DeviceDeviceIDEditPart;
 import GCML.diagram.edit.parts.DeviceEditPart;
 import GCML.diagram.edit.parts.GCMLDocumentEditPart;
 import GCML.diagram.edit.parts.IsAttachedDeviceIDEditPart;
 import GCML.diagram.edit.parts.IsAttachedEditPart;
 import GCML.diagram.edit.parts.IsAttachedPersonIDEditPart;
+import GCML.diagram.edit.parts.MediumAction2EditPart;
 import GCML.diagram.edit.parts.MediumActionEditPart;
 import GCML.diagram.edit.parts.MediumBuiltInTypeEditPart;
 import GCML.diagram.edit.parts.MediumEditPart;
+import GCML.diagram.edit.parts.MediumMediumURL2EditPart;
 import GCML.diagram.edit.parts.MediumMediumURLEditPart;
 import GCML.diagram.edit.parts.PersonEditPart;
 import GCML.diagram.edit.parts.PersonPersonIDEditPart;
+import GCML.diagram.edit.parts.PersonPersonName2EditPart;
 import GCML.diagram.edit.parts.PersonPersonNameEditPart;
+import GCML.diagram.edit.parts.PersonPersonRole2EditPart;
 import GCML.diagram.edit.parts.PersonPersonRoleEditPart;
 import GCML.diagram.part.GCMLVisualIDRegistry;
 import GCML.diagram.view.factories.CapabilityBuiltInTypeViewFactory;
@@ -33,17 +38,22 @@ import GCML.diagram.view.factories.ConnectionDeviceViewFactory;
 import GCML.diagram.view.factories.ConnectionMediumViewFactory;
 import GCML.diagram.view.factories.ConnectionViewFactory;
 import GCML.diagram.view.factories.DeviceCapabilityViewFactory;
+import GCML.diagram.view.factories.DeviceDeviceIDViewFactory;
 import GCML.diagram.view.factories.DeviceViewFactory;
 import GCML.diagram.view.factories.GCMLDocumentViewFactory;
 import GCML.diagram.view.factories.IsAttachedDeviceIDViewFactory;
 import GCML.diagram.view.factories.IsAttachedPersonIDViewFactory;
 import GCML.diagram.view.factories.IsAttachedViewFactory;
+import GCML.diagram.view.factories.MediumAction2ViewFactory;
 import GCML.diagram.view.factories.MediumActionViewFactory;
 import GCML.diagram.view.factories.MediumBuiltInTypeViewFactory;
+import GCML.diagram.view.factories.MediumMediumURL2ViewFactory;
 import GCML.diagram.view.factories.MediumMediumURLViewFactory;
 import GCML.diagram.view.factories.MediumViewFactory;
 import GCML.diagram.view.factories.PersonPersonIDViewFactory;
+import GCML.diagram.view.factories.PersonPersonName2ViewFactory;
 import GCML.diagram.view.factories.PersonPersonNameViewFactory;
+import GCML.diagram.view.factories.PersonPersonRole2ViewFactory;
 import GCML.diagram.view.factories.PersonPersonRoleViewFactory;
 import GCML.diagram.view.factories.PersonViewFactory;
 
@@ -136,18 +146,17 @@ public class GCMLViewProvider extends AbstractViewProvider {
 						return null; // wrong container
 					}
 					break;
+				case PersonPersonName2EditPart.VISUAL_ID:
 				case PersonPersonNameEditPart.VISUAL_ID:
-				case PersonPersonIDEditPart.VISUAL_ID:
-				case PersonPersonRoleEditPart.VISUAL_ID:
 					if (PersonEditPart.VISUAL_ID != GCMLVisualIDRegistry
 							.getVisualID(containerView)
 							|| containerView.getElement() != domainElement) {
 						return null; // wrong container
 					}
 					break;
-				case MediumMediumURLEditPart.VISUAL_ID:
+				case MediumMediumURL2EditPart.VISUAL_ID:
 				case MediumBuiltInTypeEditPart.VISUAL_ID:
-				case MediumActionEditPart.VISUAL_ID:
+				case MediumMediumURLEditPart.VISUAL_ID:
 					if (MediumEditPart.VISUAL_ID != GCMLVisualIDRegistry
 							.getVisualID(containerView)
 							|| containerView.getElement() != domainElement) {
@@ -183,20 +192,18 @@ public class GCMLViewProvider extends AbstractViewProvider {
 			return ConnectionViewFactory.class;
 		case PersonEditPart.VISUAL_ID:
 			return PersonViewFactory.class;
+		case PersonPersonName2EditPart.VISUAL_ID:
+			return PersonPersonName2ViewFactory.class;
 		case PersonPersonNameEditPart.VISUAL_ID:
 			return PersonPersonNameViewFactory.class;
-		case PersonPersonIDEditPart.VISUAL_ID:
-			return PersonPersonIDViewFactory.class;
-		case PersonPersonRoleEditPart.VISUAL_ID:
-			return PersonPersonRoleViewFactory.class;
 		case MediumEditPart.VISUAL_ID:
 			return MediumViewFactory.class;
-		case MediumMediumURLEditPart.VISUAL_ID:
-			return MediumMediumURLViewFactory.class;
+		case MediumMediumURL2EditPart.VISUAL_ID:
+			return MediumMediumURL2ViewFactory.class;
 		case MediumBuiltInTypeEditPart.VISUAL_ID:
 			return MediumBuiltInTypeViewFactory.class;
-		case MediumActionEditPart.VISUAL_ID:
-			return MediumActionViewFactory.class;
+		case MediumMediumURLEditPart.VISUAL_ID:
+			return MediumMediumURLViewFactory.class;
 		}
 		return null;
 	}

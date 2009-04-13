@@ -71,13 +71,67 @@ public interface GCMLPackage extends EPackage {
 	int GCML_DOCUMENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Shape</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Person</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GCML_DOCUMENT__SHAPE = 0;
+	int GCML_DOCUMENT__PERSON = 0;
+
+	/**
+	 * The feature id for the '<em><b>Is Attached</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCML_DOCUMENT__IS_ATTACHED = 1;
+
+	/**
+	 * The feature id for the '<em><b>Device</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCML_DOCUMENT__DEVICE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Capability</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCML_DOCUMENT__CAPABILITY = 3;
+
+	/**
+	 * The feature id for the '<em><b>Medium</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCML_DOCUMENT__MEDIUM = 4;
+
+	/**
+	 * The feature id for the '<em><b>Connection</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCML_DOCUMENT__CONNECTION = 5;
+
+	/**
+	 * The feature id for the '<em><b>Communication ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCML_DOCUMENT__COMMUNICATION_ID = 6;
 
 	/**
 	 * The number of structural features of the '<em>Document</em>' class.
@@ -86,26 +140,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GCML_DOCUMENT_FEATURE_COUNT = 1;
-
-	/**
-	 * The meta object id for the '{@link GCML.impl.ShapeImpl <em>Shape</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see GCML.impl.ShapeImpl
-	 * @see GCML.impl.GCMLPackageImpl#getShape()
-	 * @generated
-	 */
-	int SHAPE = 4;
-
-	/**
-	 * The number of structural features of the '<em>Shape</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHAPE_FEATURE_COUNT = 0;
+	int GCML_DOCUMENT_FEATURE_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link GCML.impl.PersonImpl <em>Person</em>}' class.
@@ -124,7 +159,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__PERSON_NAME = SHAPE_FEATURE_COUNT + 0;
+	int PERSON__PERSON_NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Person ID</b></em>' attribute.
@@ -133,7 +168,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__PERSON_ID = SHAPE_FEATURE_COUNT + 1;
+	int PERSON__PERSON_ID = 1;
 
 	/**
 	 * The feature id for the '<em><b>Person Role</b></em>' attribute.
@@ -142,7 +177,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__PERSON_ROLE = SHAPE_FEATURE_COUNT + 2;
+	int PERSON__PERSON_ROLE = 2;
 
 	/**
 	 * The number of structural features of the '<em>Person</em>' class.
@@ -151,7 +186,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_FEATURE_COUNT = SHAPE_FEATURE_COUNT + 3;
+	int PERSON_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link GCML.impl.IsAttachedImpl <em>Is Attached</em>}' class.
@@ -170,7 +205,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IS_ATTACHED__DEVICE_ID = SHAPE_FEATURE_COUNT + 0;
+	int IS_ATTACHED__DEVICE_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Person ID</b></em>' reference.
@@ -179,7 +214,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IS_ATTACHED__PERSON_ID = SHAPE_FEATURE_COUNT + 1;
+	int IS_ATTACHED__PERSON_ID = 1;
 
 	/**
 	 * The number of structural features of the '<em>Is Attached</em>' class.
@@ -188,7 +223,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IS_ATTACHED_FEATURE_COUNT = SHAPE_FEATURE_COUNT + 2;
+	int IS_ATTACHED_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link GCML.impl.DeviceImpl <em>Device</em>}' class.
@@ -207,7 +242,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE__DEVICE_ID = SHAPE_FEATURE_COUNT + 0;
+	int DEVICE__DEVICE_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Capability</b></em>' reference list.
@@ -216,7 +251,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE__CAPABILITY = SHAPE_FEATURE_COUNT + 1;
+	int DEVICE__CAPABILITY = 1;
 
 	/**
 	 * The number of structural features of the '<em>Device</em>' class.
@@ -225,7 +260,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVICE_FEATURE_COUNT = SHAPE_FEATURE_COUNT + 2;
+	int DEVICE_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link GCML.impl.CapabilityImpl <em>Capability</em>}' class.
@@ -235,7 +270,7 @@ public interface GCMLPackage extends EPackage {
 	 * @see GCML.impl.GCMLPackageImpl#getCapability()
 	 * @generated
 	 */
-	int CAPABILITY = 5;
+	int CAPABILITY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Built In Type</b></em>' attribute.
@@ -244,7 +279,16 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY__BUILT_IN_TYPE = SHAPE_FEATURE_COUNT + 0;
+	int CAPABILITY__BUILT_IN_TYPE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Capability ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CAPABILITY__CAPABILITY_ID = 1;
 
 	/**
 	 * The number of structural features of the '<em>Capability</em>' class.
@@ -253,7 +297,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CAPABILITY_FEATURE_COUNT = SHAPE_FEATURE_COUNT + 1;
+	int CAPABILITY_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link GCML.impl.ConnectionImpl <em>Connection</em>}' class.
@@ -263,7 +307,7 @@ public interface GCMLPackage extends EPackage {
 	 * @see GCML.impl.GCMLPackageImpl#getConnection()
 	 * @generated
 	 */
-	int CONNECTION = 6;
+	int CONNECTION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Connection ID</b></em>' attribute.
@@ -272,7 +316,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__CONNECTION_ID = SHAPE_FEATURE_COUNT + 0;
+	int CONNECTION__CONNECTION_ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Device</b></em>' reference list.
@@ -281,7 +325,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__DEVICE = SHAPE_FEATURE_COUNT + 1;
+	int CONNECTION__DEVICE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Medium</b></em>' reference list.
@@ -290,7 +334,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION__MEDIUM = SHAPE_FEATURE_COUNT + 2;
+	int CONNECTION__MEDIUM = 2;
 
 	/**
 	 * The number of structural features of the '<em>Connection</em>' class.
@@ -299,7 +343,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTION_FEATURE_COUNT = SHAPE_FEATURE_COUNT + 3;
+	int CONNECTION_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link GCML.impl.MediumImpl <em>Medium</em>}' class.
@@ -309,7 +353,7 @@ public interface GCMLPackage extends EPackage {
 	 * @see GCML.impl.GCMLPackageImpl#getMedium()
 	 * @generated
 	 */
-	int MEDIUM = 7;
+	int MEDIUM = 6;
 
 	/**
 	 * The feature id for the '<em><b>Medium URL</b></em>' attribute.
@@ -318,7 +362,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIUM__MEDIUM_URL = SHAPE_FEATURE_COUNT + 0;
+	int MEDIUM__MEDIUM_URL = 0;
 
 	/**
 	 * The feature id for the '<em><b>Built In Type</b></em>' attribute.
@@ -327,7 +371,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIUM__BUILT_IN_TYPE = SHAPE_FEATURE_COUNT + 1;
+	int MEDIUM__BUILT_IN_TYPE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Action</b></em>' attribute.
@@ -336,7 +380,16 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIUM__ACTION = SHAPE_FEATURE_COUNT + 2;
+	int MEDIUM__ACTION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Medium ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDIUM__MEDIUM_ID = 3;
 
 	/**
 	 * The number of structural features of the '<em>Medium</em>' class.
@@ -345,7 +398,7 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDIUM_FEATURE_COUNT = SHAPE_FEATURE_COUNT + 3;
+	int MEDIUM_FEATURE_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link GCML.BuiltInType <em>Built In Type</em>}' enum.
@@ -355,7 +408,7 @@ public interface GCMLPackage extends EPackage {
 	 * @see GCML.impl.GCMLPackageImpl#getBuiltInType()
 	 * @generated
 	 */
-	int BUILT_IN_TYPE = 8;
+	int BUILT_IN_TYPE = 7;
 
 	/**
 	 * The meta object id for the '{@link GCML.Action <em>Action</em>}' enum.
@@ -365,7 +418,7 @@ public interface GCMLPackage extends EPackage {
 	 * @see GCML.impl.GCMLPackageImpl#getAction()
 	 * @generated
 	 */
-	int ACTION = 9;
+	int ACTION = 8;
 
 
 	/**
@@ -379,15 +432,81 @@ public interface GCMLPackage extends EPackage {
 	EClass getGCMLDocument();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link GCML.GCMLDocument#getShape <em>Shape</em>}'.
+	 * Returns the meta object for the containment reference list '{@link GCML.GCMLDocument#getPerson <em>Person</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Shape</em>'.
-	 * @see GCML.GCMLDocument#getShape()
+	 * @return the meta object for the containment reference list '<em>Person</em>'.
+	 * @see GCML.GCMLDocument#getPerson()
 	 * @see #getGCMLDocument()
 	 * @generated
 	 */
-	EReference getGCMLDocument_Shape();
+	EReference getGCMLDocument_Person();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link GCML.GCMLDocument#getIsAttached <em>Is Attached</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Is Attached</em>'.
+	 * @see GCML.GCMLDocument#getIsAttached()
+	 * @see #getGCMLDocument()
+	 * @generated
+	 */
+	EReference getGCMLDocument_IsAttached();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link GCML.GCMLDocument#getDevice <em>Device</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Device</em>'.
+	 * @see GCML.GCMLDocument#getDevice()
+	 * @see #getGCMLDocument()
+	 * @generated
+	 */
+	EReference getGCMLDocument_Device();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link GCML.GCMLDocument#getCapability <em>Capability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Capability</em>'.
+	 * @see GCML.GCMLDocument#getCapability()
+	 * @see #getGCMLDocument()
+	 * @generated
+	 */
+	EReference getGCMLDocument_Capability();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link GCML.GCMLDocument#getMedium <em>Medium</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Medium</em>'.
+	 * @see GCML.GCMLDocument#getMedium()
+	 * @see #getGCMLDocument()
+	 * @generated
+	 */
+	EReference getGCMLDocument_Medium();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link GCML.GCMLDocument#getConnection <em>Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Connection</em>'.
+	 * @see GCML.GCMLDocument#getConnection()
+	 * @see #getGCMLDocument()
+	 * @generated
+	 */
+	EReference getGCMLDocument_Connection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link GCML.GCMLDocument#getCommunicationID <em>Communication ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Communication ID</em>'.
+	 * @see GCML.GCMLDocument#getCommunicationID()
+	 * @see #getGCMLDocument()
+	 * @generated
+	 */
+	EAttribute getGCMLDocument_CommunicationID();
 
 	/**
 	 * Returns the meta object for class '{@link GCML.Person <em>Person</em>}'.
@@ -497,16 +616,6 @@ public interface GCMLPackage extends EPackage {
 	EReference getDevice_Capability();
 
 	/**
-	 * Returns the meta object for class '{@link GCML.Shape <em>Shape</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Shape</em>'.
-	 * @see GCML.Shape
-	 * @generated
-	 */
-	EClass getShape();
-
-	/**
 	 * Returns the meta object for class '{@link GCML.Capability <em>Capability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -526,6 +635,17 @@ public interface GCMLPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCapability_BuiltInType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link GCML.Capability#getCapabilityID <em>Capability ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Capability ID</em>'.
+	 * @see GCML.Capability#getCapabilityID()
+	 * @see #getCapability()
+	 * @generated
+	 */
+	EAttribute getCapability_CapabilityID();
 
 	/**
 	 * Returns the meta object for class '{@link GCML.Connection <em>Connection</em>}'.
@@ -614,6 +734,17 @@ public interface GCMLPackage extends EPackage {
 	EAttribute getMedium_Action();
 
 	/**
+	 * Returns the meta object for the attribute '{@link GCML.Medium#getMediumID <em>Medium ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Medium ID</em>'.
+	 * @see GCML.Medium#getMediumID()
+	 * @see #getMedium()
+	 * @generated
+	 */
+	EAttribute getMedium_MediumID();
+
+	/**
 	 * Returns the meta object for enum '{@link GCML.BuiltInType <em>Built In Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -666,12 +797,60 @@ public interface GCMLPackage extends EPackage {
 		EClass GCML_DOCUMENT = eINSTANCE.getGCMLDocument();
 
 		/**
-		 * The meta object literal for the '<em><b>Shape</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Person</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GCML_DOCUMENT__SHAPE = eINSTANCE.getGCMLDocument_Shape();
+		EReference GCML_DOCUMENT__PERSON = eINSTANCE.getGCMLDocument_Person();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Attached</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GCML_DOCUMENT__IS_ATTACHED = eINSTANCE.getGCMLDocument_IsAttached();
+
+		/**
+		 * The meta object literal for the '<em><b>Device</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GCML_DOCUMENT__DEVICE = eINSTANCE.getGCMLDocument_Device();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GCML_DOCUMENT__CAPABILITY = eINSTANCE.getGCMLDocument_Capability();
+
+		/**
+		 * The meta object literal for the '<em><b>Medium</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GCML_DOCUMENT__MEDIUM = eINSTANCE.getGCMLDocument_Medium();
+
+		/**
+		 * The meta object literal for the '<em><b>Connection</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GCML_DOCUMENT__CONNECTION = eINSTANCE.getGCMLDocument_Connection();
+
+		/**
+		 * The meta object literal for the '<em><b>Communication ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GCML_DOCUMENT__COMMUNICATION_ID = eINSTANCE.getGCMLDocument_CommunicationID();
 
 		/**
 		 * The meta object literal for the '{@link GCML.impl.PersonImpl <em>Person</em>}' class.
@@ -760,16 +939,6 @@ public interface GCMLPackage extends EPackage {
 		EReference DEVICE__CAPABILITY = eINSTANCE.getDevice_Capability();
 
 		/**
-		 * The meta object literal for the '{@link GCML.impl.ShapeImpl <em>Shape</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see GCML.impl.ShapeImpl
-		 * @see GCML.impl.GCMLPackageImpl#getShape()
-		 * @generated
-		 */
-		EClass SHAPE = eINSTANCE.getShape();
-
-		/**
 		 * The meta object literal for the '{@link GCML.impl.CapabilityImpl <em>Capability</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -786,6 +955,14 @@ public interface GCMLPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CAPABILITY__BUILT_IN_TYPE = eINSTANCE.getCapability_BuiltInType();
+
+		/**
+		 * The meta object literal for the '<em><b>Capability ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CAPABILITY__CAPABILITY_ID = eINSTANCE.getCapability_CapabilityID();
 
 		/**
 		 * The meta object literal for the '{@link GCML.impl.ConnectionImpl <em>Connection</em>}' class.
@@ -854,6 +1031,14 @@ public interface GCMLPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MEDIUM__ACTION = eINSTANCE.getMedium_Action();
+
+		/**
+		 * The meta object literal for the '<em><b>Medium ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDIUM__MEDIUM_ID = eINSTANCE.getMedium_MediumID();
 
 		/**
 		 * The meta object literal for the '{@link GCML.BuiltInType <em>Built In Type</em>}' enum.

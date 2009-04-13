@@ -16,6 +16,7 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -24,6 +25,7 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -33,7 +35,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class DeviceItemProvider
-	extends ShapeItemProvider
+	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
 		IStructuredItemContentProvider,
@@ -81,10 +83,10 @@ public class DeviceItemProvider
 				 getString("_UI_Device_DeviceID_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Device_DeviceID_feature", "_UI_Device_type"),
 				 GCMLPackage.Literals.DEVICE__DEVICE_ID,
-				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -130,8 +132,10 @@ public class DeviceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		Device device = (Device)object;
-		return getString("_UI_Device_type") + " " + device.getDeviceID();
+		String label = ((Device)object).getDeviceID();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Device_type") :
+			getString("_UI_Device_type") + " " + label;
 	}
 
 	/**
@@ -163,6 +167,17 @@ public class DeviceItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return GCMLEditPlugin.INSTANCE;
 	}
 
 }

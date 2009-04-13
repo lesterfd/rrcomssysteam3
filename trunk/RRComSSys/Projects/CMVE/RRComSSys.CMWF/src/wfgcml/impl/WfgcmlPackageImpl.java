@@ -215,6 +215,15 @@ public class WfgcmlPackageImpl extends EPackageImpl implements WfgcmlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getGCMLInstance_GCMLID() {
+		return (EAttribute)gcmlInstanceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStart() {
 		return startEClass;
 	}
@@ -244,6 +253,15 @@ public class WfgcmlPackageImpl extends EPackageImpl implements WfgcmlPackage {
 	 */
 	public EReference getCondition_Altnext() {
 		return (EReference)conditionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCondition_CondID() {
+		return (EAttribute)conditionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -309,6 +327,7 @@ public class WfgcmlPackageImpl extends EPackageImpl implements WfgcmlPackage {
 
 		gcmlInstanceEClass = createEClass(GCML_INSTANCE);
 		createEAttribute(gcmlInstanceEClass, GCML_INSTANCE__GCML_LOC);
+		createEAttribute(gcmlInstanceEClass, GCML_INSTANCE__GCMLID);
 
 		startEClass = createEClass(START);
 
@@ -316,6 +335,7 @@ public class WfgcmlPackageImpl extends EPackageImpl implements WfgcmlPackage {
 
 		conditionEClass = createEClass(CONDITION);
 		createEReference(conditionEClass, CONDITION__ALTNEXT);
+		createEAttribute(conditionEClass, CONDITION__COND_ID);
 
 		hasNextEClass = createEClass(HAS_NEXT);
 		createEReference(hasNextEClass, HAS_NEXT__NEXT);
@@ -367,6 +387,7 @@ public class WfgcmlPackageImpl extends EPackageImpl implements WfgcmlPackage {
 
 		initEClass(gcmlInstanceEClass, GCMLInstance.class, "GCMLInstance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGCMLInstance_GCMLLoc(), ecorePackage.getEString(), "GCMLLoc", "", 1, 1, GCMLInstance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGCMLInstance_GCMLID(), ecorePackage.getEString(), "GCMLID", null, 1, 1, GCMLInstance.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(startEClass, Start.class, "Start", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -374,6 +395,7 @@ public class WfgcmlPackageImpl extends EPackageImpl implements WfgcmlPackage {
 
 		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCondition_Altnext(), this.getIsNext(), null, "altnext", null, 1, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCondition_CondID(), ecorePackage.getEString(), "CondID", null, 1, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hasNextEClass, HasNext.class, "HasNext", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getHasNext_Next(), this.getIsNext(), null, "next", null, 1, 1, HasNext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

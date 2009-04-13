@@ -14,9 +14,11 @@ import org.eclipse.gmf.runtime.notation.NotationFactory;
 import org.eclipse.gmf.runtime.notation.View;
 
 import GCML.diagram.edit.parts.GCMLDocumentEditPart;
+import GCML.diagram.edit.parts.MediumAction2EditPart;
 import GCML.diagram.edit.parts.MediumActionEditPart;
 import GCML.diagram.edit.parts.MediumBuiltInTypeEditPart;
 import GCML.diagram.edit.parts.MediumEditPart;
+import GCML.diagram.edit.parts.MediumMediumURL2EditPart;
 import GCML.diagram.edit.parts.MediumMediumURLEditPart;
 import GCML.diagram.part.GCMLVisualIDRegistry;
 
@@ -61,6 +63,18 @@ public class MediumViewFactory extends AbstractShapeViewFactory {
 		if (eObject != null) {
 			eObjectAdapter = new EObjectAdapter(eObject);
 		}
+		getViewService().createNode(
+				eObjectAdapter,
+				view,
+				GCMLVisualIDRegistry
+						.getType(MediumMediumURL2EditPart.VISUAL_ID),
+				ViewUtil.APPEND, true, getPreferencesHint());
+		getViewService().createNode(
+				eObjectAdapter,
+				view,
+				GCMLVisualIDRegistry
+						.getType(MediumBuiltInTypeEditPart.VISUAL_ID),
+				ViewUtil.APPEND, true, getPreferencesHint());
 		getViewService()
 				.createNode(
 						eObjectAdapter,
@@ -68,14 +82,5 @@ public class MediumViewFactory extends AbstractShapeViewFactory {
 						GCMLVisualIDRegistry
 								.getType(MediumMediumURLEditPart.VISUAL_ID),
 						ViewUtil.APPEND, true, getPreferencesHint());
-		getViewService().createNode(
-				eObjectAdapter,
-				view,
-				GCMLVisualIDRegistry
-						.getType(MediumBuiltInTypeEditPart.VISUAL_ID),
-				ViewUtil.APPEND, true, getPreferencesHint());
-		getViewService().createNode(eObjectAdapter, view,
-				GCMLVisualIDRegistry.getType(MediumActionEditPart.VISUAL_ID),
-				ViewUtil.APPEND, true, getPreferencesHint());
 	}
 }

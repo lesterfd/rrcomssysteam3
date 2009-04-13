@@ -16,7 +16,9 @@ import org.eclipse.gmf.runtime.notation.View;
 import GCML.diagram.edit.parts.GCMLDocumentEditPart;
 import GCML.diagram.edit.parts.PersonEditPart;
 import GCML.diagram.edit.parts.PersonPersonIDEditPart;
+import GCML.diagram.edit.parts.PersonPersonName2EditPart;
 import GCML.diagram.edit.parts.PersonPersonNameEditPart;
+import GCML.diagram.edit.parts.PersonPersonRole2EditPart;
 import GCML.diagram.edit.parts.PersonPersonRoleEditPart;
 import GCML.diagram.part.GCMLVisualIDRegistry;
 
@@ -65,16 +67,13 @@ public class PersonViewFactory extends AbstractShapeViewFactory {
 				eObjectAdapter,
 				view,
 				GCMLVisualIDRegistry
-						.getType(PersonPersonNameEditPart.VISUAL_ID),
-				ViewUtil.APPEND, true, getPreferencesHint());
-		getViewService().createNode(eObjectAdapter, view,
-				GCMLVisualIDRegistry.getType(PersonPersonIDEditPart.VISUAL_ID),
+						.getType(PersonPersonName2EditPart.VISUAL_ID),
 				ViewUtil.APPEND, true, getPreferencesHint());
 		getViewService().createNode(
 				eObjectAdapter,
 				view,
 				GCMLVisualIDRegistry
-						.getType(PersonPersonRoleEditPart.VISUAL_ID),
+						.getType(PersonPersonNameEditPart.VISUAL_ID),
 				ViewUtil.APPEND, true, getPreferencesHint());
 	}
 }

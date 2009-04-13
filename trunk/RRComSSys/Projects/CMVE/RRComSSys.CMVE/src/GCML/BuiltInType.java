@@ -23,6 +23,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum BuiltInType implements Enumerator {
 	/**
+	 * The '<em><b>SELECT TYPE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SELECT_TYPE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SELECT_TYPE(0, "SELECT_TYPE", "<Select Type>"), /**
 	 * The '<em><b>Text</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -30,7 +38,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TEXT(0, "Text", "Text"),
+	TEXT(1, "Text", "Text"),
 
 	/**
 	 * The '<em><b>Text File</b></em>' literal object.
@@ -40,7 +48,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TEXT_FILE(1, "TextFile", "TextFile"),
+	TEXT_FILE(2, "TextFile", "TextFile"),
 
 	/**
 	 * The '<em><b>Binary File</b></em>' literal object.
@@ -50,7 +58,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BINARY_FILE(2, "BinaryFile", "BinaryFile"),
+	BINARY_FILE(3, "BinaryFile", "BinaryFile"),
 
 	/**
 	 * The '<em><b>Stream File</b></em>' literal object.
@@ -60,7 +68,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	STREAM_FILE(3, "StreamFile", "StreamFile"),
+	STREAM_FILE(4, "StreamFile", "StreamFile"),
 
 	/**
 	 * The '<em><b>Audio File</b></em>' literal object.
@@ -70,7 +78,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AUDIO_FILE(4, "AudioFile", "AudioFile"),
+	AUDIO_FILE(5, "AudioFile", "AudioFile"),
 
 	/**
 	 * The '<em><b>Video File</b></em>' literal object.
@@ -80,7 +88,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	VIDEO_FILE(5, "VideoFile", "VideoFile"),
+	VIDEO_FILE(6, "VideoFile", "VideoFile"),
 
 	/**
 	 * The '<em><b>Audio Video File</b></em>' literal object.
@@ -90,7 +98,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AUDIO_VIDEO_FILE(6, "AudioVideoFile", "AudioVideoFile"),
+	AUDIO_VIDEO_FILE(7, "AudioVideoFile", "AudioVideoFile"),
 
 	/**
 	 * The '<em><b>Non Stream File</b></em>' literal object.
@@ -100,7 +108,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NON_STREAM_FILE(7, "NonStreamFile", "NonStreamFile"),
+	NON_STREAM_FILE(8, "NonStreamFile", "NonStreamFile"),
 
 	/**
 	 * The '<em><b>Live Stream</b></em>' literal object.
@@ -110,7 +118,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LIVE_STREAM(8, "LiveStream", "LiveStream"),
+	LIVE_STREAM(10, "LiveStream", "LiveStream"),
 
 	/**
 	 * The '<em><b>Live Audio</b></em>' literal object.
@@ -120,7 +128,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LIVE_AUDIO(9, "LiveAudio", "LiveAudio"),
+	LIVE_AUDIO(11, "LiveAudio", "LiveAudio"),
 
 	/**
 	 * The '<em><b>Live Video</b></em>' literal object.
@@ -130,7 +138,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LIVE_VIDEO(10, "LiveVideo", "LiveVideo"),
+	LIVE_VIDEO(12, "LiveVideo", "LiveVideo"),
 
 	/**
 	 * The '<em><b>Live Audio Video</b></em>' literal object.
@@ -140,7 +148,22 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LIVE_AUDIO_VIDEO(11, "LiveAudioVideo", "LiveAudioVideo");
+	LIVE_AUDIO_VIDEO(13, "LiveAudioVideo", "LiveAudioVideo");
+
+	/**
+	 * The '<em><b>SELECT TYPE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>SELECT TYPE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #SELECT_TYPE
+	 * @model literal="<Select Type>"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SELECT_TYPE_VALUE = 0;
 
 	/**
 	 * The '<em><b>Text</b></em>' literal value.
@@ -155,7 +178,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TEXT_VALUE = 0;
+	public static final int TEXT_VALUE = 1;
 
 	/**
 	 * The '<em><b>Text File</b></em>' literal value.
@@ -170,7 +193,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TEXT_FILE_VALUE = 1;
+	public static final int TEXT_FILE_VALUE = 2;
 
 	/**
 	 * The '<em><b>Binary File</b></em>' literal value.
@@ -185,7 +208,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int BINARY_FILE_VALUE = 2;
+	public static final int BINARY_FILE_VALUE = 3;
 
 	/**
 	 * The '<em><b>Stream File</b></em>' literal value.
@@ -200,7 +223,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int STREAM_FILE_VALUE = 3;
+	public static final int STREAM_FILE_VALUE = 4;
 
 	/**
 	 * The '<em><b>Audio File</b></em>' literal value.
@@ -215,7 +238,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int AUDIO_FILE_VALUE = 4;
+	public static final int AUDIO_FILE_VALUE = 5;
 
 	/**
 	 * The '<em><b>Video File</b></em>' literal value.
@@ -230,7 +253,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int VIDEO_FILE_VALUE = 5;
+	public static final int VIDEO_FILE_VALUE = 6;
 
 	/**
 	 * The '<em><b>Audio Video File</b></em>' literal value.
@@ -245,7 +268,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int AUDIO_VIDEO_FILE_VALUE = 6;
+	public static final int AUDIO_VIDEO_FILE_VALUE = 7;
 
 	/**
 	 * The '<em><b>Non Stream File</b></em>' literal value.
@@ -260,7 +283,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int NON_STREAM_FILE_VALUE = 7;
+	public static final int NON_STREAM_FILE_VALUE = 8;
 
 	/**
 	 * The '<em><b>Live Stream</b></em>' literal value.
@@ -275,7 +298,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LIVE_STREAM_VALUE = 8;
+	public static final int LIVE_STREAM_VALUE = 10;
 
 	/**
 	 * The '<em><b>Live Audio</b></em>' literal value.
@@ -290,7 +313,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LIVE_AUDIO_VALUE = 9;
+	public static final int LIVE_AUDIO_VALUE = 11;
 
 	/**
 	 * The '<em><b>Live Video</b></em>' literal value.
@@ -305,7 +328,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LIVE_VIDEO_VALUE = 10;
+	public static final int LIVE_VIDEO_VALUE = 12;
 
 	/**
 	 * The '<em><b>Live Audio Video</b></em>' literal value.
@@ -320,7 +343,7 @@ public enum BuiltInType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LIVE_AUDIO_VIDEO_VALUE = 11;
+	public static final int LIVE_AUDIO_VIDEO_VALUE = 13;
 
 	/**
 	 * An array of all the '<em><b>Built In Type</b></em>' enumerators.
@@ -330,6 +353,7 @@ public enum BuiltInType implements Enumerator {
 	 */
 	private static final BuiltInType[] VALUES_ARRAY =
 		new BuiltInType[] {
+			SELECT_TYPE,
 			TEXT,
 			TEXT_FILE,
 			BINARY_FILE,
@@ -392,6 +416,7 @@ public enum BuiltInType implements Enumerator {
 	 */
 	public static BuiltInType get(int value) {
 		switch (value) {
+			case SELECT_TYPE_VALUE: return SELECT_TYPE;
 			case TEXT_VALUE: return TEXT;
 			case TEXT_FILE_VALUE: return TEXT_FILE;
 			case BINARY_FILE_VALUE: return BINARY_FILE;

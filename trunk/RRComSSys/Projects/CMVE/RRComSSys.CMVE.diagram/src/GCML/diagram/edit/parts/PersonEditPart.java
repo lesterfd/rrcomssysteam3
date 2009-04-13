@@ -114,19 +114,14 @@ public class PersonEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof PersonPersonNameEditPart) {
-			((PersonPersonNameEditPart) childEditPart)
+		if (childEditPart instanceof PersonPersonName2EditPart) {
+			((PersonPersonName2EditPart) childEditPart)
 					.setLabel(getPrimaryShape()
 							.getFigurePersonPersonNameFigure());
 			return true;
 		}
-		if (childEditPart instanceof PersonPersonIDEditPart) {
-			((PersonPersonIDEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigurePersonPersonIDFigure());
-			return true;
-		}
-		if (childEditPart instanceof PersonPersonRoleEditPart) {
-			((PersonPersonRoleEditPart) childEditPart)
+		if (childEditPart instanceof PersonPersonNameEditPart) {
+			((PersonPersonNameEditPart) childEditPart)
 					.setLabel(getPrimaryShape()
 							.getFigurePersonPersonRoleFigure());
 			return true;
@@ -226,7 +221,7 @@ public class PersonEditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(GCMLVisualIDRegistry
-				.getType(PersonPersonNameEditPart.VISUAL_ID));
+				.getType(PersonPersonName2EditPart.VISUAL_ID));
 	}
 
 	/**
@@ -238,10 +233,6 @@ public class PersonEditPart extends ShapeNodeEditPart {
 		 * @generated
 		 */
 		private WrappingLabel fFigurePersonPersonNameFigure;
-		/**
-		 * @generated
-		 */
-		private WrappingLabel fFigurePersonPersonIDFigure;
 		/**
 		 * @generated
 		 */
@@ -297,11 +288,6 @@ public class PersonEditPart extends ShapeNodeEditPart {
 
 			this.add(fFigurePersonPersonNameFigure);
 
-			fFigurePersonPersonIDFigure = new WrappingLabel();
-			fFigurePersonPersonIDFigure.setText("ID");
-
-			this.add(fFigurePersonPersonIDFigure);
-
 			fFigurePersonPersonRoleFigure = new WrappingLabel();
 			fFigurePersonPersonRoleFigure.setText("Role");
 
@@ -333,13 +319,6 @@ public class PersonEditPart extends ShapeNodeEditPart {
 		 */
 		public WrappingLabel getFigurePersonPersonNameFigure() {
 			return fFigurePersonPersonNameFigure;
-		}
-
-		/**
-		 * @generated
-		 */
-		public WrappingLabel getFigurePersonPersonIDFigure() {
-			return fFigurePersonPersonIDFigure;
 		}
 
 		/**

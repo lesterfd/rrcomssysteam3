@@ -29,42 +29,42 @@ public class GCMLDocumentItemSemanticEditPolicy extends
 		if (GCMLElementTypes.IsAttached_1001 == req.getElementType()) {
 			if (req.getContainmentFeature() == null) {
 				req.setContainmentFeature(GCMLPackage.eINSTANCE
-						.getGCMLDocument_Shape());
+						.getGCMLDocument_IsAttached());
 			}
 			return getGEFWrapper(new IsAttachedCreateCommand(req));
 		}
 		if (GCMLElementTypes.Capability_1002 == req.getElementType()) {
 			if (req.getContainmentFeature() == null) {
 				req.setContainmentFeature(GCMLPackage.eINSTANCE
-						.getGCMLDocument_Shape());
+						.getGCMLDocument_Capability());
 			}
 			return getGEFWrapper(new CapabilityCreateCommand(req));
 		}
 		if (GCMLElementTypes.Device_1003 == req.getElementType()) {
 			if (req.getContainmentFeature() == null) {
 				req.setContainmentFeature(GCMLPackage.eINSTANCE
-						.getGCMLDocument_Shape());
+						.getGCMLDocument_Device());
 			}
 			return getGEFWrapper(new DeviceCreateCommand(req));
 		}
 		if (GCMLElementTypes.Connection_1004 == req.getElementType()) {
 			if (req.getContainmentFeature() == null) {
 				req.setContainmentFeature(GCMLPackage.eINSTANCE
-						.getGCMLDocument_Shape());
+						.getGCMLDocument_Connection());
 			}
 			return getGEFWrapper(new ConnectionCreateCommand(req));
 		}
 		if (GCMLElementTypes.Person_1005 == req.getElementType()) {
 			if (req.getContainmentFeature() == null) {
 				req.setContainmentFeature(GCMLPackage.eINSTANCE
-						.getGCMLDocument_Shape());
+						.getGCMLDocument_Person());
 			}
 			return getGEFWrapper(new PersonCreateCommand(req));
 		}
 		if (GCMLElementTypes.Medium_1006 == req.getElementType()) {
 			if (req.getContainmentFeature() == null) {
 				req.setContainmentFeature(GCMLPackage.eINSTANCE
-						.getGCMLDocument_Shape());
+						.getGCMLDocument_Medium());
 			}
 			return getGEFWrapper(new MediumCreateCommand(req));
 		}

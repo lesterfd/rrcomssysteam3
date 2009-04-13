@@ -23,6 +23,10 @@
         <element xmi:type="ecore:EAttribute" href="WFGCML.ecore#//GCMLInstance/GCMLLoc"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_WrH2ZiFWEd6KhfVZv4N9HQ"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_ivl5YCfbEd65W8kWUqkizw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="WFGCML.ecore#//GCMLInstance/GCMLID"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ivl5YSfbEd65W8kWUqkizw"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_WrH2XiFWEd6KhfVZv4N9HQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_WrH2XyFWEd6KhfVZv4N9HQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_WrH2YCFWEd6KhfVZv4N9HQ"/>
@@ -71,6 +75,10 @@
   <children xmi:type="notation:Node" xmi:id="_WrH2fyFWEd6KhfVZv4N9HQ" type="1001">
     <children xmi:type="notation:Node" xmi:id="_WrH2giFWEd6KhfVZv4N9HQ" type="4001"/>
     <children xmi:type="notation:Node" xmi:id="_WrH2gyFWEd6KhfVZv4N9HQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_eIP60CfbEd65W8kWUqkizw" type="2001">
+        <element xmi:type="ecore:EAttribute" href="WFGCML.ecore#//Condition/CondID"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_eIP60SfbEd65W8kWUqkizw"/>
+      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_WrH2hCFWEd6KhfVZv4N9HQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_WrH2hSFWEd6KhfVZv4N9HQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_WrH2hiFWEd6KhfVZv4N9HQ"/>

@@ -6,6 +6,8 @@
  */
 package GCML;
 
+import org.eclipse.emf.ecore.EObject;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -18,6 +20,7 @@ package GCML;
  *   <li>{@link GCML.Medium#getMediumURL <em>Medium URL</em>}</li>
  *   <li>{@link GCML.Medium#getBuiltInType <em>Built In Type</em>}</li>
  *   <li>{@link GCML.Medium#getAction <em>Action</em>}</li>
+ *   <li>{@link GCML.Medium#getMediumID <em>Medium ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,7 +28,7 @@ package GCML;
  * @model extendedMetaData="kind='simple'"
  * @generated
  */
-public interface Medium extends Shape {
+public interface Medium extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Medium URL</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -109,5 +112,22 @@ public interface Medium extends Shape {
 	 * @generated
 	 */
 	void setAction(Action value);
+
+	/**
+	 * Returns the value of the '<em><b>Medium ID</b></em>' attribute.
+	 * The default value is <code>""</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Medium ID</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Medium ID</em>' attribute.
+	 * @see GCML.GCMLPackage#getMedium_MediumID()
+	 * @model default="" id="true" required="true" changeable="false"
+	 *        extendedMetaData="kind='attribute'"
+	 * @generated
+	 */
+	String getMediumID();
 
 } // Medium

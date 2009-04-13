@@ -1,9 +1,12 @@
 package GCML.diagram.edit.parts;
 
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.FlowLayout;
 import org.eclipse.draw2d.IFigure;
+import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.commands.Command;
@@ -106,8 +109,8 @@ public class MediumEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected boolean addFixedChild(EditPart childEditPart) {
-		if (childEditPart instanceof MediumMediumURLEditPart) {
-			((MediumMediumURLEditPart) childEditPart)
+		if (childEditPart instanceof MediumMediumURL2EditPart) {
+			((MediumMediumURL2EditPart) childEditPart)
 					.setLabel(getPrimaryShape()
 							.getFigureMediumMediumURLFigure());
 			return true;
@@ -118,9 +121,9 @@ public class MediumEditPart extends ShapeNodeEditPart {
 							.getFigureMediumBuiltInTypeFigure());
 			return true;
 		}
-		if (childEditPart instanceof MediumActionEditPart) {
-			((MediumActionEditPart) childEditPart).setLabel(getPrimaryShape()
-					.getFigureMediumActionFigure());
+		if (childEditPart instanceof MediumMediumURLEditPart) {
+			((MediumMediumURLEditPart) childEditPart)
+					.setLabel(getPrimaryShape().getFigureMediumActionFigure());
 			return true;
 		}
 		return false;
@@ -167,7 +170,7 @@ public class MediumEditPart extends ShapeNodeEditPart {
 	 */
 	protected NodeFigure createNodePlate() {
 		DefaultSizeNodeFigure result = new DefaultSizeNodeFigure(getMapMode()
-				.DPtoLP(40), getMapMode().DPtoLP(40));
+				.DPtoLP(125), getMapMode().DPtoLP(100));
 		return result;
 	}
 
@@ -218,7 +221,7 @@ public class MediumEditPart extends ShapeNodeEditPart {
 	 */
 	public EditPart getPrimaryChildEditPart() {
 		return getChildBySemanticHint(GCMLVisualIDRegistry
-				.getType(MediumMediumURLEditPart.VISUAL_ID));
+				.getType(MediumMediumURL2EditPart.VISUAL_ID));
 	}
 
 	/**
@@ -256,6 +259,15 @@ public class MediumEditPart extends ShapeNodeEditPart {
 			this.setLayoutManager(layoutThis);
 
 			this.setLineWidth(2);
+			this.setForegroundColor(ColorConstants.black);
+			this.setPreferredSize(new Dimension(getMapMode().DPtoLP(125),
+					getMapMode().DPtoLP(100)));
+			this.setMinimumSize(new Dimension(getMapMode().DPtoLP(125),
+					getMapMode().DPtoLP(100)));
+
+			this.setBorder(new MarginBorder(getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5), getMapMode().DPtoLP(5),
+					getMapMode().DPtoLP(5)));
 			createContents();
 		}
 
@@ -272,17 +284,17 @@ public class MediumEditPart extends ShapeNodeEditPart {
 			this.add(lblMedium0);
 
 			fFigureMediumMediumURLFigure = new WrappingLabel();
-			fFigureMediumMediumURLFigure.setText("<...>");
+			fFigureMediumMediumURLFigure.setText("MediumURL");
 
 			this.add(fFigureMediumMediumURLFigure);
 
 			fFigureMediumBuiltInTypeFigure = new WrappingLabel();
-			fFigureMediumBuiltInTypeFigure.setText("<...>");
+			fFigureMediumBuiltInTypeFigure.setText("BuiltInType");
 
 			this.add(fFigureMediumBuiltInTypeFigure);
 
 			fFigureMediumActionFigure = new WrappingLabel();
-			fFigureMediumActionFigure.setText("<...>");
+			fFigureMediumActionFigure.setText("Action");
 
 			this.add(fFigureMediumActionFigure);
 

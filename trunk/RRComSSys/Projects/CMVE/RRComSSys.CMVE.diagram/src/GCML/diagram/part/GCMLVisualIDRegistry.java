@@ -11,16 +11,21 @@ import GCML.GCMLPackage;
 import GCML.diagram.edit.parts.CapabilityBuiltInTypeEditPart;
 import GCML.diagram.edit.parts.CapabilityEditPart;
 import GCML.diagram.edit.parts.ConnectionEditPart;
+import GCML.diagram.edit.parts.DeviceDeviceIDEditPart;
 import GCML.diagram.edit.parts.DeviceEditPart;
 import GCML.diagram.edit.parts.GCMLDocumentEditPart;
 import GCML.diagram.edit.parts.IsAttachedEditPart;
+import GCML.diagram.edit.parts.MediumAction2EditPart;
 import GCML.diagram.edit.parts.MediumActionEditPart;
 import GCML.diagram.edit.parts.MediumBuiltInTypeEditPart;
 import GCML.diagram.edit.parts.MediumEditPart;
+import GCML.diagram.edit.parts.MediumMediumURL2EditPart;
 import GCML.diagram.edit.parts.MediumMediumURLEditPart;
 import GCML.diagram.edit.parts.PersonEditPart;
 import GCML.diagram.edit.parts.PersonPersonIDEditPart;
+import GCML.diagram.edit.parts.PersonPersonName2EditPart;
 import GCML.diagram.edit.parts.PersonPersonNameEditPart;
+import GCML.diagram.edit.parts.PersonPersonRole2EditPart;
 import GCML.diagram.edit.parts.PersonPersonRoleEditPart;
 
 /**
@@ -187,24 +192,21 @@ public class GCMLVisualIDRegistry {
 			}
 			break;
 		case PersonEditPart.VISUAL_ID:
+			if (PersonPersonName2EditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
 			if (PersonPersonNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (PersonPersonIDEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (PersonPersonRoleEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
 		case MediumEditPart.VISUAL_ID:
-			if (MediumMediumURLEditPart.VISUAL_ID == nodeVisualID) {
+			if (MediumMediumURL2EditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (MediumBuiltInTypeEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (MediumActionEditPart.VISUAL_ID == nodeVisualID) {
+			if (MediumMediumURLEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;

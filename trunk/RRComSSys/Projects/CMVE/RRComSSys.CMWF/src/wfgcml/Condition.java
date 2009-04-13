@@ -16,6 +16,7 @@ package wfgcml;
  * The following features are supported:
  * <ul>
  *   <li>{@link wfgcml.Condition#getAltnext <em>Altnext</em>}</li>
+ *   <li>{@link wfgcml.Condition#getCondID <em>Cond ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,5 +51,20 @@ public interface Condition extends HasNext, IsNext {
 	 * @generated
 	 */
 	void setAltnext(IsNext value);
+
+	/**
+	 * Returns the value of the '<em><b>Cond ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cond ID</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cond ID</em>' attribute.
+	 * @see wfgcml.WfgcmlPackage#getCondition_CondID()
+	 * @model id="true" required="true" changeable="false"
+	 * @generated
+	 */
+	String getCondID();
 
 } // Condition

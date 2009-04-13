@@ -16,6 +16,7 @@ package wfgcml;
  * The following features are supported:
  * <ul>
  *   <li>{@link wfgcml.GCMLInstance#getGCMLLoc <em>GCML Loc</em>}</li>
+ *   <li>{@link wfgcml.GCMLInstance#getGCMLID <em>GCMLID</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,5 +52,20 @@ public interface GCMLInstance extends HasNext, IsNext {
 	 * @generated
 	 */
 	void setGCMLLoc(String value);
+
+	/**
+	 * Returns the value of the '<em><b>GCMLID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>GCMLID</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>GCMLID</em>' attribute.
+	 * @see wfgcml.WfgcmlPackage#getGCMLInstance_GCMLID()
+	 * @model id="true" required="true" changeable="false"
+	 * @generated
+	 */
+	String getGCMLID();
 
 } // GCMLInstance
