@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio 1.0.8.0 (http://www.liquid-technologies.com) -->
+<xsd:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:wfgcml="http://wfgcml/1.0" targetNamespace="http://wfgcml/1.0" ecore:nsPrefix="wfgcml" ecore:package="wfgcml" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="../../../Utils/Ecore.xsd" namespace="http://www.eclipse.org/emf/2002/Ecore" />
+  <xsd:element ecore:ignore="true" name="WFGCMLRoot" type="wfgcml:WFGCMLRoot" />
+  <xsd:element ecore:ignore="true" name="HasNext" type="wfgcml:HasNext" />
+  <xsd:element ecore:ignore="true" name="IsNext" type="wfgcml:IsNext" />
+  <xsd:complexType name="WFGCMLRoot">
+    <xsd:sequence>
+      <xsd:element ecore:resolveProxies="true" name="start" type="wfgcml:Start" />
+      <xsd:element ecore:name="GCML" ecore:resolveProxies="true" maxOccurs="unbounded" name="GCML" type="wfgcml:GCMLInstance" />
+      <xsd:element ecore:resolveProxies="true" name="final" type="wfgcml:Final" />
+      <xsd:element ecore:resolveProxies="true" minOccurs="0" maxOccurs="unbounded" name="condition" type="wfgcml:Condition" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:implements="wfgcml:IsNext" name="GCMLInstance">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="wfgcml:HasNext">
+        <xsd:attribute ecore:default="" ecore:name="GCMLLoc" ecore:unsettable="false" name="GCMLLoc" type="ecore:EString" use="required" />
+        <xsd:attribute ecore:changeable="false" ecore:id="true" ecore:name="GCMLID" name="GCMLID" type="ecore:EString" use="required" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Start">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="wfgcml:HasNext" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="Final">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="wfgcml:IsNext" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType ecore:implements="wfgcml:IsNext" name="Condition">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="wfgcml:HasNext">
+        <xsd:attribute ecore:reference="wfgcml:IsNext" name="altnext" type="xsd:anyURI" use="required" />
+        <xsd:attribute ecore:changeable="false" ecore:id="true" ecore:name="CondID" name="CondID" type="ecore:EString" use="required" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType ecore:interface="true" name="HasNext" abstract="true">
+    <xsd:attribute ecore:reference="wfgcml:IsNext" name="next" type="xsd:anyURI" use="required" />
+  </xsd:complexType>
+  <xsd:complexType ecore:interface="true" name="IsNext" abstract="true" />
+</xsd:schema>
