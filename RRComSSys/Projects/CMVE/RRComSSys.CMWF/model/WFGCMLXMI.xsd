@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio 1.0.8.0 (http://www.liquid-technologies.com) -->
+<xsd:schema xmlns:wfgcml="http://wfgcml/1.0" xmlns:xmi="http://www.omg.org/XMI" targetNamespace="http://wfgcml/1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import schemaLocation="XMI.xsd" namespace="http://www.omg.org/XMI" />
+  <xsd:complexType name="wfgcml">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="start" type="wfgcml:Start" />
+      <xsd:element name="GCML" type="wfgcml:GCMLInstance" />
+      <xsd:element name="final" type="wfgcml:Final" />
+      <xsd:element name="condition" type="wfgcml:Condition" />
+      <xsd:element ref="xmi:Extension" />
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id" />
+    <xsd:attributeGroup ref="xmi:ObjectAttribs" />
+  </xsd:complexType>
+  <xsd:element name="wfgcml" type="wfgcml:wfgcml" />
+  <xsd:element name="WFGCMLRoot" type="wfgcml:wfgcml" />
+  <xsd:complexType name="GCMLInstance">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="wfgcml:HasNext">
+        <xsd:attribute name="GCMLLoc" type="xsd:string" use="required" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GCMLInstance" type="wfgcml:GCMLInstance" />
+  <xsd:complexType name="Start">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="wfgcml:HasNext" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Start" type="wfgcml:Start" />
+  <xsd:complexType name="Final">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="wfgcml:IsNext" />
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Final" type="wfgcml:Final" />
+  <xsd:complexType name="Condition">
+    <xsd:complexContent mixed="false">
+      <xsd:extension base="wfgcml:HasNext">
+        <xsd:choice minOccurs="0" maxOccurs="unbounded">
+          <xsd:element name="altnext" type="wfgcml:IsNext" />
+        </xsd:choice>
+        <xsd:attribute name="altnext" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Condition" type="wfgcml:Condition" />
+  <xsd:complexType name="HasNext" abstract="true">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element name="next" type="wfgcml:IsNext" />
+      <xsd:element ref="xmi:Extension" />
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id" />
+    <xsd:attributeGroup ref="xmi:ObjectAttribs" />
+    <xsd:attribute name="next" type="xsd:string" />
+  </xsd:complexType>
+  <xsd:element name="HasNext" type="wfgcml:HasNext" />
+  <xsd:complexType name="IsNext" abstract="true">
+    <xsd:choice minOccurs="0" maxOccurs="unbounded">
+      <xsd:element ref="xmi:Extension" />
+    </xsd:choice>
+    <xsd:attribute ref="xmi:id" />
+    <xsd:attributeGroup ref="xmi:ObjectAttribs" />
+  </xsd:complexType>
+  <xsd:element name="IsNext" type="wfgcml:IsNext" />
+</xsd:schema>
