@@ -55,10 +55,29 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\BaseXCMLView.resx">
+      <DependentUpon>BaseXCMLView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\ConnectionPanel.resx">
+      <DependentUpon>ConnectionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\DevicePanel.resx">
+      <DependentUpon>DevicePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\MediumPanel.resx">
+      <DependentUpon>MediumPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\MissingInformationForm.resx">
+      <DependentUpon>MissingInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\PersonPanel.resx">
+      <DependentUpon>PersonPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\RRComSSys.CVM.ObjectModel.XCMLModel.XCMLDocument.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -68,10 +87,57 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\BaseXCMLView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\BaseXCMLView.Designer.cs">
+      <DependentUpon>BaseXCMLView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\ConnectionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\ConnectionPanel.Designer.cs">
+      <DependentUpon>ConnectionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\DevicePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\DevicePanel.Designer.cs">
+      <DependentUpon>DevicePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\IXCMLView.cs" />
+    <Compile Include="UserInterface\SchemaTransformerDialogs\MediumPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\MediumPanel.Designer.cs">
+      <DependentUpon>MediumPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\MissingInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\MissingInformationForm.Designer.cs">
+      <DependentUpon>MissingInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\PersonPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\PersonPanel.Designer.cs">
+      <DependentUpon>PersonPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\XCMLViewHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RRComSSys.CVM.Common\RRComSSys.CVM.Common.csproj">
+      <Project>{8A5D2F96-E658-468C-9FFA-06D9D463270A}</Project>
+      <Name>RRComSSys.CVM.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RRComSSys.CVM.ObjectModel\RRComSSys.CVM.ObjectModel.csproj">
+      <Project>{FD1C6924-DA64-4D1C-910E-412F9925661D}</Project>
+      <Name>RRComSSys.CVM.ObjectModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ModelManager\" />
-    <Folder Include="UserInterface\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
