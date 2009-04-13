@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import wfgcml.Condition;
 import wfgcml.IsNext;
@@ -27,6 +28,7 @@ import wfgcml.WfgcmlPackage;
  * <ul>
  *   <li>{@link wfgcml.impl.ConditionImpl#getNext <em>Next</em>}</li>
  *   <li>{@link wfgcml.impl.ConditionImpl#getAltnext <em>Altnext</em>}</li>
+ *   <li>{@link wfgcml.impl.ConditionImpl#getCondID <em>Cond ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,12 +56,33 @@ public class ConditionImpl extends EObjectImpl implements Condition {
 	protected IsNext altnext;
 
 	/**
+	 * The default value of the '{@link #getCondID() <em>Cond ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see #getCondID()
 	 * @generated
+	 * @ordered
+	 */
+	protected static final String COND_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCondID() <em>Cond ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCondID()
+	 * @generated
+	 * @ordered
+	 */
+	protected String condID = COND_ID_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @NOTgenerated
 	 */
 	protected ConditionImpl() {
 		super();
+		condID = EcoreUtil.generateUUID();
 	}
 
 	/**
@@ -153,6 +176,15 @@ public class ConditionImpl extends EObjectImpl implements Condition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getCondID() {
+		return condID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -162,6 +194,8 @@ public class ConditionImpl extends EObjectImpl implements Condition {
 			case WfgcmlPackage.CONDITION__ALTNEXT:
 				if (resolve) return getAltnext();
 				return basicGetAltnext();
+			case WfgcmlPackage.CONDITION__COND_ID:
+				return getCondID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -214,8 +248,26 @@ public class ConditionImpl extends EObjectImpl implements Condition {
 				return next != null;
 			case WfgcmlPackage.CONDITION__ALTNEXT:
 				return altnext != null;
+			case WfgcmlPackage.CONDITION__COND_ID:
+				return COND_ID_EDEFAULT == null ? condID != null : !COND_ID_EDEFAULT.equals(condID);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (CondID: ");
+		result.append(condID);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ConditionImpl

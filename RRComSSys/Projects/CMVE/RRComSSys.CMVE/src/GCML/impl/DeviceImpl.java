@@ -22,8 +22,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -40,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class DeviceImpl extends ShapeImpl implements Device {
+public class DeviceImpl extends EObjectImpl implements Device {
 	/**
 	 * The default value of the '{@link #getDeviceID() <em>Device ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -49,7 +51,7 @@ public class DeviceImpl extends ShapeImpl implements Device {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long DEVICE_ID_EDEFAULT = 0L;
+	protected static final String DEVICE_ID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getDeviceID() <em>Device ID</em>}' attribute.
@@ -59,7 +61,7 @@ public class DeviceImpl extends ShapeImpl implements Device {
 	 * @generated
 	 * @ordered
 	 */
-	protected long deviceID = DEVICE_ID_EDEFAULT;
+	protected String deviceID = DEVICE_ID_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getCapability() <em>Capability</em>}' reference list.
@@ -74,10 +76,11 @@ public class DeviceImpl extends ShapeImpl implements Device {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @NOTgenerated
 	 */
 	protected DeviceImpl() {
 		super();
+		deviceID = EcoreUtil.generateUUID();
 	}
 
 	/**
@@ -95,20 +98,8 @@ public class DeviceImpl extends ShapeImpl implements Device {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getDeviceID() {
+	public String getDeviceID() {
 		return deviceID;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDeviceID(long newDeviceID) {
-		long oldDeviceID = deviceID;
-		deviceID = newDeviceID;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GCMLPackage.DEVICE__DEVICE_ID, oldDeviceID, deviceID));
 	}
 
 	/**
@@ -132,7 +123,7 @@ public class DeviceImpl extends ShapeImpl implements Device {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case GCMLPackage.DEVICE__DEVICE_ID:
-				return new Long(getDeviceID());
+				return getDeviceID();
 			case GCMLPackage.DEVICE__CAPABILITY:
 				return getCapability();
 		}
@@ -148,9 +139,6 @@ public class DeviceImpl extends ShapeImpl implements Device {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GCMLPackage.DEVICE__DEVICE_ID:
-				setDeviceID(((Long)newValue).longValue());
-				return;
 			case GCMLPackage.DEVICE__CAPABILITY:
 				getCapability().clear();
 				getCapability().addAll((Collection<? extends Capability>)newValue);
@@ -167,9 +155,6 @@ public class DeviceImpl extends ShapeImpl implements Device {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GCMLPackage.DEVICE__DEVICE_ID:
-				setDeviceID(DEVICE_ID_EDEFAULT);
-				return;
 			case GCMLPackage.DEVICE__CAPABILITY:
 				getCapability().clear();
 				return;
@@ -186,7 +171,7 @@ public class DeviceImpl extends ShapeImpl implements Device {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case GCMLPackage.DEVICE__DEVICE_ID:
-				return deviceID != DEVICE_ID_EDEFAULT;
+				return DEVICE_ID_EDEFAULT == null ? deviceID != null : !DEVICE_ID_EDEFAULT.equals(deviceID);
 			case GCMLPackage.DEVICE__CAPABILITY:
 				return capability != null && !capability.isEmpty();
 		}

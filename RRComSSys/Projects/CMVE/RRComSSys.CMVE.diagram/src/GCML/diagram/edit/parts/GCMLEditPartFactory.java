@@ -50,26 +50,23 @@ public class GCMLEditPartFactory implements EditPartFactory {
 			case PersonEditPart.VISUAL_ID:
 				return new PersonEditPart(view);
 
+			case PersonPersonName2EditPart.VISUAL_ID:
+				return new PersonPersonName2EditPart(view);
+
 			case PersonPersonNameEditPart.VISUAL_ID:
 				return new PersonPersonNameEditPart(view);
-
-			case PersonPersonIDEditPart.VISUAL_ID:
-				return new PersonPersonIDEditPart(view);
-
-			case PersonPersonRoleEditPart.VISUAL_ID:
-				return new PersonPersonRoleEditPart(view);
 
 			case MediumEditPart.VISUAL_ID:
 				return new MediumEditPart(view);
 
-			case MediumMediumURLEditPart.VISUAL_ID:
-				return new MediumMediumURLEditPart(view);
+			case MediumMediumURL2EditPart.VISUAL_ID:
+				return new MediumMediumURL2EditPart(view);
 
 			case MediumBuiltInTypeEditPart.VISUAL_ID:
 				return new MediumBuiltInTypeEditPart(view);
 
-			case MediumActionEditPart.VISUAL_ID:
-				return new MediumActionEditPart(view);
+			case MediumMediumURLEditPart.VISUAL_ID:
+				return new MediumMediumURLEditPart(view);
 
 			case ConnectionDeviceEditPart.VISUAL_ID:
 				return new ConnectionDeviceEditPart(view);

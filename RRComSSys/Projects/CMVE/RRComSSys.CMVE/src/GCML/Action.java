@@ -23,6 +23,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Action implements Enumerator {
 	/**
+	 * The '<em><b>SELECT TYPE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SELECT_TYPE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SELECT_TYPE(0, "SELECT_TYPE", "<Select Type>"), /**
 	 * The '<em><b>Send</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -30,7 +38,7 @@ public enum Action implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SEND(0, "Send", "Send"),
+	SEND(1, "Send", "Send"),
 
 	/**
 	 * The '<em><b>Do Not Send</b></em>' literal object.
@@ -40,7 +48,7 @@ public enum Action implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DO_NOT_SEND(1, "DoNotSend", "DoNotSend"),
+	DO_NOT_SEND(2, "DoNotSend", "DoNotSend"),
 
 	/**
 	 * The '<em><b>Start Application</b></em>' literal object.
@@ -50,7 +58,22 @@ public enum Action implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	START_APPLICATION(2, "StartApplication", "StartApplication");
+	START_APPLICATION(3, "StartApplication", "StartApplication");
+
+	/**
+	 * The '<em><b>SELECT TYPE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>SELECT TYPE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #SELECT_TYPE
+	 * @model literal="<Select Type>"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SELECT_TYPE_VALUE = 0;
 
 	/**
 	 * The '<em><b>Send</b></em>' literal value.
@@ -65,7 +88,7 @@ public enum Action implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SEND_VALUE = 0;
+	public static final int SEND_VALUE = 1;
 
 	/**
 	 * The '<em><b>Do Not Send</b></em>' literal value.
@@ -80,7 +103,7 @@ public enum Action implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DO_NOT_SEND_VALUE = 1;
+	public static final int DO_NOT_SEND_VALUE = 2;
 
 	/**
 	 * The '<em><b>Start Application</b></em>' literal value.
@@ -95,7 +118,7 @@ public enum Action implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int START_APPLICATION_VALUE = 2;
+	public static final int START_APPLICATION_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>Action</b></em>' enumerators.
@@ -105,6 +128,7 @@ public enum Action implements Enumerator {
 	 */
 	private static final Action[] VALUES_ARRAY =
 		new Action[] {
+			SELECT_TYPE,
 			SEND,
 			DO_NOT_SEND,
 			START_APPLICATION,
@@ -158,6 +182,7 @@ public enum Action implements Enumerator {
 	 */
 	public static Action get(int value) {
 		switch (value) {
+			case SELECT_TYPE_VALUE: return SELECT_TYPE;
 			case SEND_VALUE: return SEND;
 			case DO_NOT_SEND_VALUE: return DO_NOT_SEND;
 			case START_APPLICATION_VALUE: return START_APPLICATION;

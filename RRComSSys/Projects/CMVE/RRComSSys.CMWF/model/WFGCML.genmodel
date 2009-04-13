@@ -14,11 +14,13 @@
     </genClasses>
     <genClasses ecoreClass="WFGCML.ecore#//GCMLInstance">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WFGCML.ecore#//GCMLInstance/GCMLLoc"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute WFGCML.ecore#//GCMLInstance/GCMLID"/>
     </genClasses>
     <genClasses ecoreClass="WFGCML.ecore#//Start"/>
     <genClasses ecoreClass="WFGCML.ecore#//Final"/>
     <genClasses ecoreClass="WFGCML.ecore#//Condition">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WFGCML.ecore#//Condition/altnext"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute WFGCML.ecore#//Condition/CondID"/>
     </genClasses>
     <genClasses image="false" ecoreClass="WFGCML.ecore#//HasNext">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WFGCML.ecore#//HasNext/next"/>

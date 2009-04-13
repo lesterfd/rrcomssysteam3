@@ -21,12 +21,14 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -65,8 +67,31 @@ public class GCMLDocumentItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addCommunicationIDPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Communication ID feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCommunicationIDPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_GCMLDocument_CommunicationID_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_GCMLDocument_CommunicationID_feature", "_UI_GCMLDocument_type"),
+				 GCMLPackage.Literals.GCML_DOCUMENT__COMMUNICATION_ID,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -81,7 +106,12 @@ public class GCMLDocumentItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GCMLPackage.Literals.GCML_DOCUMENT__SHAPE);
+			childrenFeatures.add(GCMLPackage.Literals.GCML_DOCUMENT__PERSON);
+			childrenFeatures.add(GCMLPackage.Literals.GCML_DOCUMENT__IS_ATTACHED);
+			childrenFeatures.add(GCMLPackage.Literals.GCML_DOCUMENT__DEVICE);
+			childrenFeatures.add(GCMLPackage.Literals.GCML_DOCUMENT__CAPABILITY);
+			childrenFeatures.add(GCMLPackage.Literals.GCML_DOCUMENT__MEDIUM);
+			childrenFeatures.add(GCMLPackage.Literals.GCML_DOCUMENT__CONNECTION);
 		}
 		return childrenFeatures;
 	}
@@ -118,7 +148,10 @@ public class GCMLDocumentItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_GCMLDocument_type");
+		String label = ((GCMLDocument)object).getCommunicationID();
+		return label == null || label.length() == 0 ?
+			getString("_UI_GCMLDocument_type") :
+			getString("_UI_GCMLDocument_type") + " " + label;
 	}
 
 	/**
@@ -133,7 +166,15 @@ public class GCMLDocumentItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GCMLDocument.class)) {
-			case GCMLPackage.GCML_DOCUMENT__SHAPE:
+			case GCMLPackage.GCML_DOCUMENT__COMMUNICATION_ID:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case GCMLPackage.GCML_DOCUMENT__PERSON:
+			case GCMLPackage.GCML_DOCUMENT__IS_ATTACHED:
+			case GCMLPackage.GCML_DOCUMENT__DEVICE:
+			case GCMLPackage.GCML_DOCUMENT__CAPABILITY:
+			case GCMLPackage.GCML_DOCUMENT__MEDIUM:
+			case GCMLPackage.GCML_DOCUMENT__CONNECTION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -153,33 +194,33 @@ public class GCMLDocumentItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GCMLPackage.Literals.GCML_DOCUMENT__SHAPE,
+				(GCMLPackage.Literals.GCML_DOCUMENT__PERSON,
 				 GCMLFactory.eINSTANCE.createPerson()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GCMLPackage.Literals.GCML_DOCUMENT__SHAPE,
+				(GCMLPackage.Literals.GCML_DOCUMENT__IS_ATTACHED,
 				 GCMLFactory.eINSTANCE.createIsAttached()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GCMLPackage.Literals.GCML_DOCUMENT__SHAPE,
+				(GCMLPackage.Literals.GCML_DOCUMENT__DEVICE,
 				 GCMLFactory.eINSTANCE.createDevice()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GCMLPackage.Literals.GCML_DOCUMENT__SHAPE,
+				(GCMLPackage.Literals.GCML_DOCUMENT__CAPABILITY,
 				 GCMLFactory.eINSTANCE.createCapability()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GCMLPackage.Literals.GCML_DOCUMENT__SHAPE,
-				 GCMLFactory.eINSTANCE.createConnection()));
+				(GCMLPackage.Literals.GCML_DOCUMENT__MEDIUM,
+				 GCMLFactory.eINSTANCE.createMedium()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GCMLPackage.Literals.GCML_DOCUMENT__SHAPE,
-				 GCMLFactory.eINSTANCE.createMedium()));
+				(GCMLPackage.Literals.GCML_DOCUMENT__CONNECTION,
+				 GCMLFactory.eINSTANCE.createConnection()));
 	}
 
 	/**

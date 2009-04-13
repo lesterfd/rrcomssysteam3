@@ -171,13 +171,22 @@ public interface WfgcmlPackage extends EPackage {
 	int GCML_INSTANCE__GCML_LOC = HAS_NEXT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>GCMLID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCML_INSTANCE__GCMLID = HAS_NEXT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>GCML Instance</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GCML_INSTANCE_FEATURE_COUNT = HAS_NEXT_FEATURE_COUNT + 1;
+	int GCML_INSTANCE_FEATURE_COUNT = HAS_NEXT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link wfgcml.impl.StartImpl <em>Start</em>}' class.
@@ -274,13 +283,22 @@ public interface WfgcmlPackage extends EPackage {
 	int CONDITION__ALTNEXT = HAS_NEXT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Cond ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__COND_ID = HAS_NEXT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Condition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITION_FEATURE_COUNT = HAS_NEXT_FEATURE_COUNT + 1;
+	int CONDITION_FEATURE_COUNT = HAS_NEXT_FEATURE_COUNT + 2;
 
 
 	/**
@@ -359,6 +377,17 @@ public interface WfgcmlPackage extends EPackage {
 	EAttribute getGCMLInstance_GCMLLoc();
 
 	/**
+	 * Returns the meta object for the attribute '{@link wfgcml.GCMLInstance#getGCMLID <em>GCMLID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>GCMLID</em>'.
+	 * @see wfgcml.GCMLInstance#getGCMLID()
+	 * @see #getGCMLInstance()
+	 * @generated
+	 */
+	EAttribute getGCMLInstance_GCMLID();
+
+	/**
 	 * Returns the meta object for class '{@link wfgcml.Start <em>Start</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -398,6 +427,17 @@ public interface WfgcmlPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getCondition_Altnext();
+
+	/**
+	 * Returns the meta object for the attribute '{@link wfgcml.Condition#getCondID <em>Cond ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cond ID</em>'.
+	 * @see wfgcml.Condition#getCondID()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EAttribute getCondition_CondID();
 
 	/**
 	 * Returns the meta object for class '{@link wfgcml.HasNext <em>Has Next</em>}'.
@@ -513,6 +553,14 @@ public interface WfgcmlPackage extends EPackage {
 		EAttribute GCML_INSTANCE__GCML_LOC = eINSTANCE.getGCMLInstance_GCMLLoc();
 
 		/**
+		 * The meta object literal for the '<em><b>GCMLID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GCML_INSTANCE__GCMLID = eINSTANCE.getGCMLInstance_GCMLID();
+
+		/**
 		 * The meta object literal for the '{@link wfgcml.impl.StartImpl <em>Start</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -549,6 +597,14 @@ public interface WfgcmlPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONDITION__ALTNEXT = eINSTANCE.getCondition_Altnext();
+
+		/**
+		 * The meta object literal for the '<em><b>Cond ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONDITION__COND_ID = eINSTANCE.getCondition_CondID();
 
 		/**
 		 * The meta object literal for the '{@link wfgcml.HasNext <em>Has Next</em>}' class.

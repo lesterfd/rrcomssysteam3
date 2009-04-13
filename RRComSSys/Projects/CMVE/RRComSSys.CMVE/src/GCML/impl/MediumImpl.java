@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -32,12 +33,13 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link GCML.impl.MediumImpl#getMediumURL <em>Medium URL</em>}</li>
  *   <li>{@link GCML.impl.MediumImpl#getBuiltInType <em>Built In Type</em>}</li>
  *   <li>{@link GCML.impl.MediumImpl#getAction <em>Action</em>}</li>
+ *   <li>{@link GCML.impl.MediumImpl#getMediumID <em>Medium ID</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class MediumImpl extends ShapeImpl implements Medium {
+public class MediumImpl extends EObjectImpl implements Medium {
 	/**
 	 * The default value of the '{@link #getMediumURL() <em>Medium URL</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -66,7 +68,7 @@ public class MediumImpl extends ShapeImpl implements Medium {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final BuiltInType BUILT_IN_TYPE_EDEFAULT = BuiltInType.TEXT;
+	protected static final BuiltInType BUILT_IN_TYPE_EDEFAULT = BuiltInType.SELECT_TYPE;
 
 	/**
 	 * The cached value of the '{@link #getBuiltInType() <em>Built In Type</em>}' attribute.
@@ -86,7 +88,7 @@ public class MediumImpl extends ShapeImpl implements Medium {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Action ACTION_EDEFAULT = Action.SEND;
+	protected static final Action ACTION_EDEFAULT = Action.SELECT_TYPE;
 
 	/**
 	 * The cached value of the '{@link #getAction() <em>Action</em>}' attribute.
@@ -99,12 +101,33 @@ public class MediumImpl extends ShapeImpl implements Medium {
 	protected Action action = ACTION_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getMediumID() <em>Medium ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see #getMediumID()
 	 * @generated
+	 * @ordered
+	 */
+	protected static final String MEDIUM_ID_EDEFAULT = "";
+
+	/**
+	 * The cached value of the '{@link #getMediumID() <em>Medium ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMediumID()
+	 * @generated
+	 * @ordered
+	 */
+	protected String mediumID = MEDIUM_ID_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @NOTgenerated
 	 */
 	protected MediumImpl() {
 		super();
+		mediumID = EcoreUtil.generateUUID();
 	}
 
 	/**
@@ -185,6 +208,15 @@ public class MediumImpl extends ShapeImpl implements Medium {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getMediumID() {
+		return mediumID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -194,6 +226,8 @@ public class MediumImpl extends ShapeImpl implements Medium {
 				return getBuiltInType();
 			case GCMLPackage.MEDIUM__ACTION:
 				return getAction();
+			case GCMLPackage.MEDIUM__MEDIUM_ID:
+				return getMediumID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -254,6 +288,8 @@ public class MediumImpl extends ShapeImpl implements Medium {
 				return builtInType != BUILT_IN_TYPE_EDEFAULT;
 			case GCMLPackage.MEDIUM__ACTION:
 				return action != ACTION_EDEFAULT;
+			case GCMLPackage.MEDIUM__MEDIUM_ID:
+				return MEDIUM_ID_EDEFAULT == null ? mediumID != null : !MEDIUM_ID_EDEFAULT.equals(mediumID);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -274,6 +310,8 @@ public class MediumImpl extends ShapeImpl implements Medium {
 		result.append(builtInType);
 		result.append(", Action: ");
 		result.append(action);
+		result.append(", MediumID: ");
+		result.append(mediumID);
 		result.append(')');
 		return result.toString();
 	}

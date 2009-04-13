@@ -1,5 +1,6 @@
-#Tue Mar 31 22:03:46 EDT 2009
+#Sun Apr 12 22:26:12 EDT 2009
 eclipse.preferences.version=1
-encoding//model/GCML/GCML.ecore=UTF-8
-encoding//model/GCML/GCML.ecorediag=UTF-8
+encoding//model/GCML.ecore=UTF-8
+encoding//model/GCML.ecorediag=UTF-8
 encoding//model/XCML/XCML.ecorediag=UTF-8
+encoding//model/XCML/XCML.xsd=UTF8

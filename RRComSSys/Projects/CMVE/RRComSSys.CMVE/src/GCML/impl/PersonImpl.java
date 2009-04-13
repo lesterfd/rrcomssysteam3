@@ -14,6 +14,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class PersonImpl extends ShapeImpl implements Person {
+public class PersonImpl extends EObjectImpl implements Person {
 	/**
 	 * The default value of the '{@link #getPersonName() <em>Person Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -59,7 +61,7 @@ public class PersonImpl extends ShapeImpl implements Person {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PERSON_ID_EDEFAULT = null;
+	protected static final String PERSON_ID_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getPersonID() <em>Person ID</em>}' attribute.
@@ -70,6 +72,15 @@ public class PersonImpl extends ShapeImpl implements Person {
 	 * @ordered
 	 */
 	protected String personID = PERSON_ID_EDEFAULT;
+
+	/**
+	 * This is true if the Person ID attribute has been set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean personIDESet;
 
 	/**
 	 * The default value of the '{@link #getPersonRole() <em>Person Role</em>}' attribute.
@@ -94,10 +105,11 @@ public class PersonImpl extends ShapeImpl implements Person {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @NOTgenerated
 	 */
 	protected PersonImpl() {
 		super();
+		setPersonID(EcoreUtil.generateUUID());
 	}
 
 	/**
@@ -148,8 +160,33 @@ public class PersonImpl extends ShapeImpl implements Person {
 	public void setPersonID(String newPersonID) {
 		String oldPersonID = personID;
 		personID = newPersonID;
+		boolean oldPersonIDESet = personIDESet;
+		personIDESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GCMLPackage.PERSON__PERSON_ID, oldPersonID, personID));
+			eNotify(new ENotificationImpl(this, Notification.SET, GCMLPackage.PERSON__PERSON_ID, oldPersonID, personID, !oldPersonIDESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void unsetPersonID() {
+		String oldPersonID = personID;
+		boolean oldPersonIDESet = personIDESet;
+		personID = PERSON_ID_EDEFAULT;
+		personIDESet = false;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.UNSET, GCMLPackage.PERSON__PERSON_ID, oldPersonID, PERSON_ID_EDEFAULT, oldPersonIDESet));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isSetPersonID() {
+		return personIDESet;
 	}
 
 	/**
@@ -224,7 +261,7 @@ public class PersonImpl extends ShapeImpl implements Person {
 				setPersonName(PERSON_NAME_EDEFAULT);
 				return;
 			case GCMLPackage.PERSON__PERSON_ID:
-				setPersonID(PERSON_ID_EDEFAULT);
+				unsetPersonID();
 				return;
 			case GCMLPackage.PERSON__PERSON_ROLE:
 				setPersonRole(PERSON_ROLE_EDEFAULT);
@@ -244,7 +281,7 @@ public class PersonImpl extends ShapeImpl implements Person {
 			case GCMLPackage.PERSON__PERSON_NAME:
 				return PERSON_NAME_EDEFAULT == null ? personName != null : !PERSON_NAME_EDEFAULT.equals(personName);
 			case GCMLPackage.PERSON__PERSON_ID:
-				return PERSON_ID_EDEFAULT == null ? personID != null : !PERSON_ID_EDEFAULT.equals(personID);
+				return isSetPersonID();
 			case GCMLPackage.PERSON__PERSON_ROLE:
 				return PERSON_ROLE_EDEFAULT == null ? personRole != null : !PERSON_ROLE_EDEFAULT.equals(personRole);
 		}
@@ -264,7 +301,7 @@ public class PersonImpl extends ShapeImpl implements Person {
 		result.append(" (PersonName: ");
 		result.append(personName);
 		result.append(", PersonID: ");
-		result.append(personID);
+		if (personIDESet) result.append(personID); else result.append("<unset>");
 		result.append(", PersonRole: ");
 		result.append(personRole);
 		result.append(')');

@@ -7,7 +7,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.gmf.runtime.notation.View;
 
@@ -59,30 +61,58 @@ public class GCMLDiagramUpdater {
 		}
 		GCMLDocument modelElement = (GCMLDocument) view.getElement();
 		List result = new LinkedList();
-		for (Iterator it = modelElement.getShape().iterator(); it.hasNext();) {
-			Shape childElement = (Shape) it.next();
+		for (Iterator it = modelElement.getIsAttached().iterator(); it
+				.hasNext();) {
+			IsAttached childElement = (IsAttached) it.next();
 			int visualID = GCMLVisualIDRegistry.getNodeVisualID(view,
 					childElement);
 			if (visualID == IsAttachedEditPart.VISUAL_ID) {
 				result.add(new GCMLNodeDescriptor(childElement, visualID));
 				continue;
 			}
+		}
+		for (Iterator it = modelElement.getCapability().iterator(); it
+				.hasNext();) {
+			Capability childElement = (Capability) it.next();
+			int visualID = GCMLVisualIDRegistry.getNodeVisualID(view,
+					childElement);
 			if (visualID == CapabilityEditPart.VISUAL_ID) {
 				result.add(new GCMLNodeDescriptor(childElement, visualID));
 				continue;
 			}
+		}
+		for (Iterator it = modelElement.getDevice().iterator(); it.hasNext();) {
+			Device childElement = (Device) it.next();
+			int visualID = GCMLVisualIDRegistry.getNodeVisualID(view,
+					childElement);
 			if (visualID == DeviceEditPart.VISUAL_ID) {
 				result.add(new GCMLNodeDescriptor(childElement, visualID));
 				continue;
 			}
+		}
+		for (Iterator it = modelElement.getConnection().iterator(); it
+				.hasNext();) {
+			Connection childElement = (Connection) it.next();
+			int visualID = GCMLVisualIDRegistry.getNodeVisualID(view,
+					childElement);
 			if (visualID == ConnectionEditPart.VISUAL_ID) {
 				result.add(new GCMLNodeDescriptor(childElement, visualID));
 				continue;
 			}
+		}
+		for (Iterator it = modelElement.getPerson().iterator(); it.hasNext();) {
+			Person childElement = (Person) it.next();
+			int visualID = GCMLVisualIDRegistry.getNodeVisualID(view,
+					childElement);
 			if (visualID == PersonEditPart.VISUAL_ID) {
 				result.add(new GCMLNodeDescriptor(childElement, visualID));
 				continue;
 			}
+		}
+		for (Iterator it = modelElement.getMedium().iterator(); it.hasNext();) {
+			Medium childElement = (Medium) it.next();
+			int visualID = GCMLVisualIDRegistry.getNodeVisualID(view,
+					childElement);
 			if (visualID == MediumEditPart.VISUAL_ID) {
 				result.add(new GCMLNodeDescriptor(childElement, visualID));
 				continue;

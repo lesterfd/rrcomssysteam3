@@ -9,6 +9,7 @@ package wfgcml.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import wfgcml.Final;
 import wfgcml.WfgcmlPackage;

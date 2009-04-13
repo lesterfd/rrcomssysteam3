@@ -23,8 +23,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -42,7 +44,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ConnectionImpl extends ShapeImpl implements Connection {
+public class ConnectionImpl extends EObjectImpl implements Connection {
 	/**
 	 * The default value of the '{@link #getConnectionID() <em>Connection ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,7 +53,7 @@ public class ConnectionImpl extends ShapeImpl implements Connection {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final long CONNECTION_ID_EDEFAULT = 0L;
+	protected static final String CONNECTION_ID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getConnectionID() <em>Connection ID</em>}' attribute.
@@ -61,7 +63,7 @@ public class ConnectionImpl extends ShapeImpl implements Connection {
 	 * @generated
 	 * @ordered
 	 */
-	protected long connectionID = CONNECTION_ID_EDEFAULT;
+	protected String connectionID = CONNECTION_ID_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDevice() <em>Device</em>}' reference list.
@@ -86,10 +88,11 @@ public class ConnectionImpl extends ShapeImpl implements Connection {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @NOTgenerated
 	 */
 	protected ConnectionImpl() {
 		super();
+		connectionID = EcoreUtil.generateUUID();
 	}
 
 	/**
@@ -107,20 +110,8 @@ public class ConnectionImpl extends ShapeImpl implements Connection {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public long getConnectionID() {
+	public String getConnectionID() {
 		return connectionID;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setConnectionID(long newConnectionID) {
-		long oldConnectionID = connectionID;
-		connectionID = newConnectionID;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GCMLPackage.CONNECTION__CONNECTION_ID, oldConnectionID, connectionID));
 	}
 
 	/**
@@ -156,7 +147,7 @@ public class ConnectionImpl extends ShapeImpl implements Connection {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case GCMLPackage.CONNECTION__CONNECTION_ID:
-				return new Long(getConnectionID());
+				return getConnectionID();
 			case GCMLPackage.CONNECTION__DEVICE:
 				return getDevice();
 			case GCMLPackage.CONNECTION__MEDIUM:
@@ -174,9 +165,6 @@ public class ConnectionImpl extends ShapeImpl implements Connection {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case GCMLPackage.CONNECTION__CONNECTION_ID:
-				setConnectionID(((Long)newValue).longValue());
-				return;
 			case GCMLPackage.CONNECTION__DEVICE:
 				getDevice().clear();
 				getDevice().addAll((Collection<? extends Device>)newValue);
@@ -197,9 +185,6 @@ public class ConnectionImpl extends ShapeImpl implements Connection {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case GCMLPackage.CONNECTION__CONNECTION_ID:
-				setConnectionID(CONNECTION_ID_EDEFAULT);
-				return;
 			case GCMLPackage.CONNECTION__DEVICE:
 				getDevice().clear();
 				return;
@@ -219,7 +204,7 @@ public class ConnectionImpl extends ShapeImpl implements Connection {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case GCMLPackage.CONNECTION__CONNECTION_ID:
-				return connectionID != CONNECTION_ID_EDEFAULT;
+				return CONNECTION_ID_EDEFAULT == null ? connectionID != null : !CONNECTION_ID_EDEFAULT.equals(connectionID);
 			case GCMLPackage.CONNECTION__DEVICE:
 				return device != null && !device.isEmpty();
 			case GCMLPackage.CONNECTION__MEDIUM:

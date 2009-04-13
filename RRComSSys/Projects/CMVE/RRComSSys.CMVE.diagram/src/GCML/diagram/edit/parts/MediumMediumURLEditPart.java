@@ -59,7 +59,7 @@ public class MediumMediumURLEditPart extends CompartmentEditPart implements
 	/**
 	 * @generated
 	 */
-	public static final int VISUAL_ID = 4005;
+	public static final int VISUAL_ID = 4006;
 
 	/**
 	 * @generated

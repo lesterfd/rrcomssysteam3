@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import wfgcml.GCMLInstance;
 import wfgcml.IsNext;
@@ -32,6 +33,7 @@ import org.eclipse.swt.widgets.Shell;
  * <ul>
  *   <li>{@link wfgcml.impl.GCMLInstanceImpl#getNext <em>Next</em>}</li>
  *   <li>{@link wfgcml.impl.GCMLInstanceImpl#getGCMLLoc <em>GCML Loc</em>}</li>
+ *   <li>{@link wfgcml.impl.GCMLInstanceImpl#getGCMLID <em>GCMLID</em>}</li>
  * </ul>
  * </p>
  *
@@ -69,13 +71,34 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 	protected String gcmlLoc = GCML_LOC_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getGCMLID() <em>GCMLID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @NOT generated
+	 * @see #getGCMLID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String GCMLID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getGCMLID() <em>GCMLID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGCMLID()
+	 * @generated
+	 * @ordered
+	 */
+	protected String gcmlid = GCMLID_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @NOTgenerated
 	 */
 	protected GCMLInstanceImpl()
 	{
 		super();
+		gcmlid = EcoreUtil.generateUUID();
 		Shell s = new Shell();
 	    FileDialog fd = new FileDialog(s, SWT.OPEN);
 	    fd.setText("Select GCML path");
@@ -114,6 +137,7 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 		return next;
 	}
 
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -122,6 +146,7 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 	public IsNext basicGetNext() {
 		return next;
 	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,6 +159,7 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WfgcmlPackage.GCML_INSTANCE__NEXT, oldNext, next));
 	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,6 +187,16 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getGCMLID() {
+		return gcmlid;
+	}
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -169,6 +205,8 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 				return basicGetNext();
 			case WfgcmlPackage.GCML_INSTANCE__GCML_LOC:
 				return getGCMLLoc();
+			case WfgcmlPackage.GCML_INSTANCE__GCMLID:
+				return getGCMLID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -221,6 +259,8 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 				return next != null;
 			case WfgcmlPackage.GCML_INSTANCE__GCML_LOC:
 				return GCML_LOC_EDEFAULT == null ? gcmlLoc != null : !GCML_LOC_EDEFAULT.equals(gcmlLoc);
+			case WfgcmlPackage.GCML_INSTANCE__GCMLID:
+				return GCMLID_EDEFAULT == null ? gcmlid != null : !GCMLID_EDEFAULT.equals(gcmlid);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -237,6 +277,8 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (GCMLLoc: ");
 		result.append(gcmlLoc);
+		result.append(", GCMLID: ");
+		result.append(gcmlid);
 		result.append(')');
 		return result.toString();
 	}

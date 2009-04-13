@@ -96,48 +96,36 @@ public class GCMLSwitch<T> {
 			case GCMLPackage.PERSON: {
 				Person person = (Person)theEObject;
 				T result = casePerson(person);
-				if (result == null) result = caseShape(person);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GCMLPackage.IS_ATTACHED: {
 				IsAttached isAttached = (IsAttached)theEObject;
 				T result = caseIsAttached(isAttached);
-				if (result == null) result = caseShape(isAttached);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GCMLPackage.DEVICE: {
 				Device device = (Device)theEObject;
 				T result = caseDevice(device);
-				if (result == null) result = caseShape(device);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case GCMLPackage.SHAPE: {
-				Shape shape = (Shape)theEObject;
-				T result = caseShape(shape);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GCMLPackage.CAPABILITY: {
 				Capability capability = (Capability)theEObject;
 				T result = caseCapability(capability);
-				if (result == null) result = caseShape(capability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GCMLPackage.CONNECTION: {
 				Connection connection = (Connection)theEObject;
 				T result = caseConnection(connection);
-				if (result == null) result = caseShape(connection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case GCMLPackage.MEDIUM: {
 				Medium medium = (Medium)theEObject;
 				T result = caseMedium(medium);
-				if (result == null) result = caseShape(medium);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -202,21 +190,6 @@ public class GCMLSwitch<T> {
 	 * @generated
 	 */
 	public T caseDevice(Device object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Shape</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Shape</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseShape(Shape object) {
 		return null;
 	}
 

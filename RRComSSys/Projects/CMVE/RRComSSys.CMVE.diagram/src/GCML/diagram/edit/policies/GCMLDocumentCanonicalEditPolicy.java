@@ -103,7 +103,17 @@ public class GCMLDocumentCanonicalEditPolicy extends
 		if (myFeaturesToSynchronize == null) {
 			myFeaturesToSynchronize = new HashSet();
 			myFeaturesToSynchronize.add(GCMLPackage.eINSTANCE
-					.getGCMLDocument_Shape());
+					.getGCMLDocument_IsAttached());
+			myFeaturesToSynchronize.add(GCMLPackage.eINSTANCE
+					.getGCMLDocument_Capability());
+			myFeaturesToSynchronize.add(GCMLPackage.eINSTANCE
+					.getGCMLDocument_Device());
+			myFeaturesToSynchronize.add(GCMLPackage.eINSTANCE
+					.getGCMLDocument_Connection());
+			myFeaturesToSynchronize.add(GCMLPackage.eINSTANCE
+					.getGCMLDocument_Person());
+			myFeaturesToSynchronize.add(GCMLPackage.eINSTANCE
+					.getGCMLDocument_Medium());
 		}
 		return myFeaturesToSynchronize;
 	}

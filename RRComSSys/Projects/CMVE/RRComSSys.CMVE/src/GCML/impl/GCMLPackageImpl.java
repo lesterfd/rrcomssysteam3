@@ -67,13 +67,6 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass shapeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass capabilityEClass = null;
 
 	/**
@@ -186,8 +179,62 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGCMLDocument_Shape() {
+	public EReference getGCMLDocument_Person() {
 		return (EReference)gcmlDocumentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGCMLDocument_IsAttached() {
+		return (EReference)gcmlDocumentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGCMLDocument_Device() {
+		return (EReference)gcmlDocumentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGCMLDocument_Capability() {
+		return (EReference)gcmlDocumentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGCMLDocument_Medium() {
+		return (EReference)gcmlDocumentEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGCMLDocument_Connection() {
+		return (EReference)gcmlDocumentEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGCMLDocument_CommunicationID() {
+		return (EAttribute)gcmlDocumentEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -285,15 +332,6 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getShape() {
-		return shapeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCapability() {
 		return capabilityEClass;
 	}
@@ -305,6 +343,15 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 	 */
 	public EAttribute getCapability_BuiltInType() {
 		return (EAttribute)capabilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCapability_CapabilityID() {
+		return (EAttribute)capabilityEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -384,6 +431,15 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getMedium_MediumID() {
+		return (EAttribute)mediumEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getBuiltInType() {
 		return builtInTypeEEnum;
 	}
@@ -426,7 +482,13 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 
 		// Create classes and their features
 		gcmlDocumentEClass = createEClass(GCML_DOCUMENT);
-		createEReference(gcmlDocumentEClass, GCML_DOCUMENT__SHAPE);
+		createEReference(gcmlDocumentEClass, GCML_DOCUMENT__PERSON);
+		createEReference(gcmlDocumentEClass, GCML_DOCUMENT__IS_ATTACHED);
+		createEReference(gcmlDocumentEClass, GCML_DOCUMENT__DEVICE);
+		createEReference(gcmlDocumentEClass, GCML_DOCUMENT__CAPABILITY);
+		createEReference(gcmlDocumentEClass, GCML_DOCUMENT__MEDIUM);
+		createEReference(gcmlDocumentEClass, GCML_DOCUMENT__CONNECTION);
+		createEAttribute(gcmlDocumentEClass, GCML_DOCUMENT__COMMUNICATION_ID);
 
 		personEClass = createEClass(PERSON);
 		createEAttribute(personEClass, PERSON__PERSON_NAME);
@@ -441,10 +503,9 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 		createEAttribute(deviceEClass, DEVICE__DEVICE_ID);
 		createEReference(deviceEClass, DEVICE__CAPABILITY);
 
-		shapeEClass = createEClass(SHAPE);
-
 		capabilityEClass = createEClass(CAPABILITY);
 		createEAttribute(capabilityEClass, CAPABILITY__BUILT_IN_TYPE);
+		createEAttribute(capabilityEClass, CAPABILITY__CAPABILITY_ID);
 
 		connectionEClass = createEClass(CONNECTION);
 		createEAttribute(connectionEClass, CONNECTION__CONNECTION_ID);
@@ -455,6 +516,7 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 		createEAttribute(mediumEClass, MEDIUM__MEDIUM_URL);
 		createEAttribute(mediumEClass, MEDIUM__BUILT_IN_TYPE);
 		createEAttribute(mediumEClass, MEDIUM__ACTION);
+		createEAttribute(mediumEClass, MEDIUM__MEDIUM_ID);
 
 		// Create enums
 		builtInTypeEEnum = createEEnum(BUILT_IN_TYPE);
@@ -489,20 +551,20 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		personEClass.getESuperTypes().add(this.getShape());
-		isAttachedEClass.getESuperTypes().add(this.getShape());
-		deviceEClass.getESuperTypes().add(this.getShape());
-		capabilityEClass.getESuperTypes().add(this.getShape());
-		connectionEClass.getESuperTypes().add(this.getShape());
-		mediumEClass.getESuperTypes().add(this.getShape());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(gcmlDocumentEClass, GCMLDocument.class, "GCMLDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGCMLDocument_Shape(), this.getShape(), null, "Shape", null, 0, -1, GCMLDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGCMLDocument_Person(), this.getPerson(), null, "person", null, 2, -1, GCMLDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGCMLDocument_IsAttached(), this.getIsAttached(), null, "isAttached", null, 2, -1, GCMLDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGCMLDocument_Device(), this.getDevice(), null, "device", null, 2, -1, GCMLDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGCMLDocument_Capability(), this.getCapability(), null, "capability", null, 1, -1, GCMLDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGCMLDocument_Medium(), this.getMedium(), null, "medium", null, 0, -1, GCMLDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGCMLDocument_Connection(), this.getConnection(), null, "connection", null, 1, -1, GCMLDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGCMLDocument_CommunicationID(), ecorePackage.getEString(), "CommunicationID", "", 1, 1, GCMLDocument.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(personEClass, Person.class, "Person", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPerson_PersonName(), ecorePackage.getEString(), "PersonName", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPerson_PersonID(), ecorePackage.getEString(), "PersonID", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPerson_PersonID(), ecorePackage.getEString(), "PersonID", "", 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPerson_PersonRole(), ecorePackage.getEString(), "PersonRole", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(isAttachedEClass, IsAttached.class, "IsAttached", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -510,16 +572,15 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 		initEReference(getIsAttached_PersonID(), this.getPerson(), null, "PersonID", null, 1, 1, IsAttached.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(deviceEClass, Device.class, "Device", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDevice_DeviceID(), ecorePackage.getELong(), "DeviceID", null, 1, 1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDevice_DeviceID(), ecorePackage.getEString(), "DeviceID", null, 1, 1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDevice_Capability(), this.getCapability(), null, "Capability", null, 1, -1, Device.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(shapeEClass, Shape.class, "Shape", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(capabilityEClass, Capability.class, "Capability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCapability_BuiltInType(), this.getBuiltInType(), "BuiltInType", null, 1, 1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCapability_CapabilityID(), ecorePackage.getEString(), "CapabilityID", null, 1, 1, Capability.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connectionEClass, Connection.class, "Connection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getConnection_ConnectionID(), ecorePackage.getELong(), "ConnectionID", null, 1, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getConnection_ConnectionID(), ecorePackage.getEString(), "ConnectionID", null, 1, 1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Device(), this.getDevice(), null, "Device", null, 1, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConnection_Medium(), this.getMedium(), null, "Medium", null, 0, -1, Connection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -527,9 +588,11 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 		initEAttribute(getMedium_MediumURL(), ecorePackage.getEString(), "MediumURL", null, 0, 1, Medium.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMedium_BuiltInType(), this.getBuiltInType(), "BuiltInType", null, 0, 1, Medium.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMedium_Action(), this.getAction(), "Action", null, 0, 1, Medium.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMedium_MediumID(), ecorePackage.getEString(), "MediumID", "", 1, 1, Medium.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(builtInTypeEEnum, BuiltInType.class, "BuiltInType");
+		addEEnumLiteral(builtInTypeEEnum, BuiltInType.SELECT_TYPE);
 		addEEnumLiteral(builtInTypeEEnum, BuiltInType.TEXT);
 		addEEnumLiteral(builtInTypeEEnum, BuiltInType.TEXT_FILE);
 		addEEnumLiteral(builtInTypeEEnum, BuiltInType.BINARY_FILE);
@@ -544,6 +607,7 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 		addEEnumLiteral(builtInTypeEEnum, BuiltInType.LIVE_AUDIO_VIDEO);
 
 		initEEnum(actionEEnum, Action.class, "Action");
+		addEEnumLiteral(actionEEnum, Action.SELECT_TYPE);
 		addEEnumLiteral(actionEEnum, Action.SEND);
 		addEEnumLiteral(actionEEnum, Action.DO_NOT_SEND);
 		addEEnumLiteral(actionEEnum, Action.START_APPLICATION);
@@ -572,10 +636,46 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 			 "name", "GCML"
 		   });		
 		addAnnotation
-		  (getGCMLDocument_Shape(), 
+		  (getGCMLDocument_Person(), 
 		   source, 
 		   new String[] {
 			 "kind", "element"
+		   });		
+		addAnnotation
+		  (getGCMLDocument_IsAttached(), 
+		   source, 
+		   new String[] {
+			 "kind", "element"
+		   });		
+		addAnnotation
+		  (getGCMLDocument_Device(), 
+		   source, 
+		   new String[] {
+			 "kind", "element"
+		   });		
+		addAnnotation
+		  (getGCMLDocument_Capability(), 
+		   source, 
+		   new String[] {
+			 "kind", "element"
+		   });		
+		addAnnotation
+		  (getGCMLDocument_Medium(), 
+		   source, 
+		   new String[] {
+			 "kind", "element"
+		   });		
+		addAnnotation
+		  (getGCMLDocument_Connection(), 
+		   source, 
+		   new String[] {
+			 "kind", "element"
+		   });		
+		addAnnotation
+		  (getGCMLDocument_CommunicationID(), 
+		   source, 
+		   new String[] {
+			 "kind", "attribute"
 		   });		
 		addAnnotation
 		  (personEClass, 
@@ -649,6 +749,12 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 			 "kind", "attribute"
 		   });		
 		addAnnotation
+		  (getCapability_CapabilityID(), 
+		   source, 
+		   new String[] {
+			 "kind", "attribute"
+		   });		
+		addAnnotation
 		  (connectionEClass, 
 		   source, 
 		   new String[] {
@@ -678,6 +784,12 @@ public class GCMLPackageImpl extends EPackageImpl implements GCMLPackage {
 		   source, 
 		   new String[] {
 			 "kind", "simple"
+		   });		
+		addAnnotation
+		  (getMedium_MediumID(), 
+		   source, 
+		   new String[] {
+			 "kind", "attribute"
 		   });
 	}
 

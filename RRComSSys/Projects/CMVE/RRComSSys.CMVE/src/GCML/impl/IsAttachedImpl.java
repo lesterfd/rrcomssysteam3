@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +33,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class IsAttachedImpl extends ShapeImpl implements IsAttached {
+public class IsAttachedImpl extends EObjectImpl implements IsAttached {
 	/**
 	 * The cached value of the '{@link #getDeviceID() <em>Device ID</em>}' reference.
 	 * <!-- begin-user-doc -->

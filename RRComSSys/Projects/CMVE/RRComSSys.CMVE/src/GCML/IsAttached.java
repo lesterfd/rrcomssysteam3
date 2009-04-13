@@ -6,6 +6,8 @@
  */
 package GCML;
 
+import org.eclipse.emf.ecore.EObject;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +26,7 @@ package GCML;
  * @model extendedMetaData="kind='empty'"
  * @generated
  */
-public interface IsAttached extends Shape {
+public interface IsAttached extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Device ID</b></em>' reference.
 	 * <!-- begin-user-doc -->
