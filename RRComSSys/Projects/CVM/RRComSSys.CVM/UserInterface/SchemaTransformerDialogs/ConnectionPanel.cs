@@ -17,7 +17,6 @@ namespace RRComSSys.CVM.UserInterface.SchemaTransformerDialogs
 			InitializeComponent();
 			base.BindingSource = connectionsBindingSource;
 			base.RequiredFields.Add(iDTextBox);
-			base.RequiredFields.Add(bandwidthTextBox);
 		}
 
 		#region Properties
@@ -41,11 +40,6 @@ namespace RRComSSys.CVM.UserInterface.SchemaTransformerDialogs
 				panel.DataSource = device;
 				flpDevices.Controls.Add(panel);
 			}
-		}
-
-		protected void Connection_BindingComplete(Object sender, BindingCompleteEventArgs e)
-		{
-			InitializeDevices((Connection) e.Binding.DataSource);
 		}
 		#endregion
 	}

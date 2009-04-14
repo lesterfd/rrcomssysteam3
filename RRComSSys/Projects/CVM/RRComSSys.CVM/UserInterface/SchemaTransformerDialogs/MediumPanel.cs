@@ -6,6 +6,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Linq;
+using RRComSSys.CVM.ObjectModel.XCMLModel;
 
 namespace RRComSSys.CVM.UserInterface.SchemaTransformerDialogs
 {
@@ -17,8 +19,8 @@ namespace RRComSSys.CVM.UserInterface.SchemaTransformerDialogs
 			base.BindingSource = allMediaBindingSource;
 			base.RequiredFields.Add(builtInTypeComboBox);
 			base.RequiredFields.Add(nameTextBox);
-			base.RequiredFields.Add(suggestedApplicationTextBox);
-			base.RequiredFields.Add(voiceCommandTextBox);
+			foreach (CapabilityType capability in Enum.GetValues(typeof(CapabilityType)))
+				builtInTypeComboBox.Items.Add(capability);
 		}
 	}
 }
