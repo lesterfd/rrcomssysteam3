@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{585FF0F0-BF2F-4D76-822C-F870FBA0C532}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -46,32 +52,54 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CVMGUI\CVMLogin.resx">
+      <DependentUpon>CVMLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CVMGUI\CVMMain.resx">
+      <DependentUpon>CVMMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\BaseXCMLView.resx">
       <DependentUpon>BaseXCMLView.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\ConnectionPanel.resx">
       <DependentUpon>ConnectionPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\DevicePanel.resx">
       <DependentUpon>DevicePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\MediumPanel.resx">
       <DependentUpon>MediumPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\MissingInformationForm.resx">
       <DependentUpon>MissingInformationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\PersonPanel.resx">
       <DependentUpon>PersonPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -86,6 +114,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserInterface\CVMGUI\CVMLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CVMGUI\CVMLogin.Designer.cs">
+      <DependentUpon>CVMLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CVMGUI\CVMMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CVMGUI\CVMMain.Designer.cs">
+      <DependentUpon>CVMMain.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\SchemaTransformerDialogs\BaseXCMLView.cs">
       <SubType>UserControl</SubType>
@@ -125,6 +165,7 @@
       <DependentUpon>PersonPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\SchemaTransformerDialogs\XCMLViewHelper.cs" />
+    <Compile Include="UserInterface\Security\Login.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RRComSSys.CVM.Common\RRComSSys.CVM.Common.csproj">
