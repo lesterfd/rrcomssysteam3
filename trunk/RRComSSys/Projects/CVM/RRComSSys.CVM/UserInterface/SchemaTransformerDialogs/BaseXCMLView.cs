@@ -31,7 +31,6 @@ namespace RRComSSys.CVM.UserInterface.SchemaTransformerDialogs
 			set
 			{
 				_bindingSource.DataSource = value;
-				_bindingSource.BindingComplete += new BindingCompleteEventHandler(BindingSource_BindingComplete);
 			}
 		}
 
@@ -50,16 +49,14 @@ namespace RRComSSys.CVM.UserInterface.SchemaTransformerDialogs
 
 		#region Public Methods
 
-		public void Save(out bool cancel)
+		public void Save()
 		{
-			cancel = ValidateRequiredFields();
-			if (!cancel)
-				_bindingSource.EndEdit();
+			_bindingSource.EndEdit();
 		}
 
 		public void Reset()
 		{
-			_bindingSource.ResetBindings(false);
+			_bindingSource.CancelEdit();
 			ValidateRequiredFields();
 		}
 
@@ -71,24 +68,37 @@ namespace RRComSSys.CVM.UserInterface.SchemaTransformerDialogs
 		#endregion
 
 		#region Private Methods
-		protected virtual void BindingSource_BindingComplete(object sender, BindingCompleteEventArgs e)
+		public bool ValidateRequiredFields()
 		{
-			ValidateRequiredFields();
-		}
-
-		private bool ValidateRequiredFields()
-		{
-			bool hasInvalid = false;
+			bool isValid = true;
 			foreach (Control control in _requiredFields)
-				if ((control is TextBox && String.IsNullOrEmpty(control.Text)) ||
-					(control is ComboBox && String.IsNullOrEmpty((control as ComboBox).SelectedText)))
+				if (IsBlank(control))
 				{
+					control.ClearError(_errorProvider);
 					control.SetError(_errorProvider, "Required Field");
-					hasInvalid = true;
+					isValid = false;
 				}
 				else
 					control.ClearError(_errorProvider);
-			return hasInvalid;
+			return isValid;
+		}
+
+		private bool IsBlank(Control control)
+		{
+			if (control is TextBox)
+			{
+				TextBox txt = control as TextBox;
+				String text = txt.Text ?? "";
+				return String.IsNullOrEmpty(text.Trim());
+			}
+			else if (control is ComboBox)
+			{
+				ComboBox cbo = control as ComboBox;
+				String text = cbo.Text ?? "";
+				return String.IsNullOrEmpty(text.Trim());
+			}
+			else
+				return false;
 		}
 		#endregion
 	}

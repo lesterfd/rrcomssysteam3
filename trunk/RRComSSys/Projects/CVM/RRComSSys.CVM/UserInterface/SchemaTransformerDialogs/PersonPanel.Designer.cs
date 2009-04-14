@@ -36,18 +36,20 @@
 			this.peopleBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.nameTextBox = new System.Windows.Forms.TextBox();
 			this.roleTextBox = new System.Windows.Forms.TextBox();
-			this.grpPerson = new System.Windows.Forms.GroupBox();
+			this.pnlPerson = new System.Windows.Forms.Panel();
+			this.lblPerson = new System.Windows.Forms.Label();
+			this.panel1 = new System.Windows.Forms.Panel();
 			iDLabel = new System.Windows.Forms.Label();
 			nameLabel = new System.Windows.Forms.Label();
 			roleLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize) (this.peopleBindingSource)).BeginInit();
-			this.grpPerson.SuspendLayout();
+			this.pnlPerson.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// iDLabel
 			// 
 			iDLabel.AutoSize = true;
-			iDLabel.Location = new System.Drawing.Point(6, 18);
+			iDLabel.Location = new System.Drawing.Point(3, 28);
 			iDLabel.Name = "iDLabel";
 			iDLabel.Size = new System.Drawing.Size(25, 17);
 			iDLabel.TabIndex = 1;
@@ -56,7 +58,7 @@
 			// nameLabel
 			// 
 			nameLabel.AutoSize = true;
-			nameLabel.Location = new System.Drawing.Point(6, 46);
+			nameLabel.Location = new System.Drawing.Point(3, 56);
 			nameLabel.Name = "nameLabel";
 			nameLabel.Size = new System.Drawing.Size(49, 17);
 			nameLabel.TabIndex = 3;
@@ -65,7 +67,7 @@
 			// roleLabel
 			// 
 			roleLabel.AutoSize = true;
-			roleLabel.Location = new System.Drawing.Point(6, 74);
+			roleLabel.Location = new System.Drawing.Point(3, 84);
 			roleLabel.Name = "roleLabel";
 			roleLabel.Size = new System.Drawing.Size(41, 17);
 			roleLabel.TabIndex = 5;
@@ -76,9 +78,10 @@
 			this.iDTextBox.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
 						| System.Windows.Forms.AnchorStyles.Right)));
 			this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peopleBindingSource, "ID", true));
-			this.iDTextBox.Location = new System.Drawing.Point(61, 15);
+			this.iDTextBox.Location = new System.Drawing.Point(58, 25);
 			this.iDTextBox.Name = "iDTextBox";
-			this.iDTextBox.Size = new System.Drawing.Size(113, 22);
+			this.iDTextBox.ReadOnly = true;
+			this.iDTextBox.Size = new System.Drawing.Size(109, 22);
 			this.iDTextBox.TabIndex = 2;
 			// 
 			// peopleBindingSource
@@ -91,9 +94,9 @@
 			this.nameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
 						| System.Windows.Forms.AnchorStyles.Right)));
 			this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peopleBindingSource, "Name", true));
-			this.nameTextBox.Location = new System.Drawing.Point(61, 43);
+			this.nameTextBox.Location = new System.Drawing.Point(58, 53);
 			this.nameTextBox.Name = "nameTextBox";
-			this.nameTextBox.Size = new System.Drawing.Size(113, 22);
+			this.nameTextBox.Size = new System.Drawing.Size(109, 22);
 			this.nameTextBox.TabIndex = 4;
 			// 
 			// roleTextBox
@@ -101,25 +104,44 @@
 			this.roleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
 						| System.Windows.Forms.AnchorStyles.Right)));
 			this.roleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.peopleBindingSource, "Role", true));
-			this.roleTextBox.Location = new System.Drawing.Point(61, 71);
+			this.roleTextBox.Location = new System.Drawing.Point(58, 81);
 			this.roleTextBox.Name = "roleTextBox";
-			this.roleTextBox.Size = new System.Drawing.Size(113, 22);
+			this.roleTextBox.Size = new System.Drawing.Size(109, 22);
 			this.roleTextBox.TabIndex = 6;
 			// 
-			// grpPerson
+			// pnlPerson
 			// 
-			this.grpPerson.Controls.Add(iDLabel);
-			this.grpPerson.Controls.Add(this.roleTextBox);
-			this.grpPerson.Controls.Add(this.iDTextBox);
-			this.grpPerson.Controls.Add(roleLabel);
-			this.grpPerson.Controls.Add(nameLabel);
-			this.grpPerson.Controls.Add(this.nameTextBox);
-			this.grpPerson.Location = new System.Drawing.Point(3, 3);
-			this.grpPerson.Name = "grpPerson";
-			this.grpPerson.Size = new System.Drawing.Size(200, 101);
-			this.grpPerson.TabIndex = 7;
-			this.grpPerson.TabStop = false;
-			this.grpPerson.Text = "Person";
+			this.pnlPerson.BackColor = System.Drawing.Color.AliceBlue;
+			this.pnlPerson.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.pnlPerson.Controls.Add(this.lblPerson);
+			this.pnlPerson.Controls.Add(iDLabel);
+			this.pnlPerson.Controls.Add(this.roleTextBox);
+			this.pnlPerson.Controls.Add(this.nameTextBox);
+			this.pnlPerson.Controls.Add(this.iDTextBox);
+			this.pnlPerson.Controls.Add(nameLabel);
+			this.pnlPerson.Controls.Add(roleLabel);
+			this.pnlPerson.Location = new System.Drawing.Point(3, 3);
+			this.pnlPerson.Name = "pnlPerson";
+			this.pnlPerson.Size = new System.Drawing.Size(200, 114);
+			this.pnlPerson.TabIndex = 8;
+			// 
+			// lblPerson
+			// 
+			this.lblPerson.AutoSize = true;
+			this.lblPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+			this.lblPerson.ForeColor = System.Drawing.Color.Blue;
+			this.lblPerson.Location = new System.Drawing.Point(6, 5);
+			this.lblPerson.Name = "lblPerson";
+			this.lblPerson.Size = new System.Drawing.Size(59, 17);
+			this.lblPerson.TabIndex = 9;
+			this.lblPerson.Text = "Person";
+			// 
+			// panel1
+			// 
+			this.panel1.Location = new System.Drawing.Point(3, 119);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(200, 101);
+			this.panel1.TabIndex = 8;
 			// 
 			// PersonPanel
 			// 
@@ -127,12 +149,12 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.Controls.Add(this.grpPerson);
+			this.Controls.Add(this.pnlPerson);
 			this.Name = "PersonPanel";
-			this.Size = new System.Drawing.Size(206, 107);
+			this.Size = new System.Drawing.Size(206, 120);
 			((System.ComponentModel.ISupportInitialize) (this.peopleBindingSource)).EndInit();
-			this.grpPerson.ResumeLayout(false);
-			this.grpPerson.PerformLayout();
+			this.pnlPerson.ResumeLayout(false);
+			this.pnlPerson.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -143,6 +165,8 @@
 		private System.Windows.Forms.TextBox iDTextBox;
 		private System.Windows.Forms.TextBox nameTextBox;
 		private System.Windows.Forms.TextBox roleTextBox;
-		private System.Windows.Forms.GroupBox grpPerson;
+		private System.Windows.Forms.Panel pnlPerson;
+		private System.Windows.Forms.Label lblPerson;
+		private System.Windows.Forms.Panel panel1;
 	}
 }
