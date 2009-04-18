@@ -21,7 +21,6 @@ import GCML.GCMLPackage;
 import GCML.IsAttached;
 import GCML.Medium;
 import GCML.Person;
-import GCML.Shape;
 import GCML.diagram.edit.parts.CapabilityEditPart;
 import GCML.diagram.edit.parts.ConnectionDeviceEditPart;
 import GCML.diagram.edit.parts.ConnectionEditPart;

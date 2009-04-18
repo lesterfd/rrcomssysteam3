@@ -8,7 +8,7 @@
   <device DeviceID="_7KjX8CfREd6Bgpzny0v-Ow" Capability="_u7xt8CfREd6Bgpzny0v-Ow _tFwngCfREd6Bgpzny0v-Ow"/>
   <capability BuiltInType="Text" CapabilityID="_tFwngCfREd6Bgpzny0v-Ow"/>
   <capability BuiltInType="TextFile" CapabilityID="_u7xt8CfREd6Bgpzny0v-Ow"/>
-  <medium MediumURL="file1" BuiltInType="TextFile" Action="Send" MediumID="_wOyN8CfREd6Bgpzny0v-Ow"/>
-  <medium MediumURL="stream1" BuiltInType="Text" Action="Send" MediumID="_1cbXgCfREd6Bgpzny0v-Ow"/>
+  <medium MediumURL="C:\Documents and Settings\LF\default5.gcml" BuiltInType="TextFile" Action="Send" MediumID="_wOyN8CfREd6Bgpzny0v-Ow"/>
+  <medium MediumURL="_" BuiltInType="Text" Action="Send" MediumID="_1cbXgCfREd6Bgpzny0v-Ow"/>
   <connection ConnectionID="_rxtlsCfREd6Bgpzny0v-Ow" Device="_qeRA0CfREd6Bgpzny0v-Ow _7KjX8CfREd6Bgpzny0v-Ow" Medium="_wOyN8CfREd6Bgpzny0v-Ow _1cbXgCfREd6Bgpzny0v-Ow"/>
 </GCML:GCMLDocument>

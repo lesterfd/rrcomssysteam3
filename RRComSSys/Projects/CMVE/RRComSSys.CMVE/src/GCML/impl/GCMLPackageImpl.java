@@ -17,8 +17,6 @@ import GCML.GCMLPackage;
 import GCML.IsAttached;
 import GCML.Medium;
 import GCML.Person;
-import GCML.Shape;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;

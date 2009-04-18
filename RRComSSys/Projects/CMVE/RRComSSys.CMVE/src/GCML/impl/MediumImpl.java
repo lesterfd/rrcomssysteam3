@@ -22,6 +22,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.widgets.FileDialog;
+import org.eclipse.swt.widgets.Shell;
 
 /**
  * <!-- begin-user-doc -->
@@ -128,6 +131,7 @@ public class MediumImpl extends EObjectImpl implements Medium {
 	protected MediumImpl() {
 		super();
 		mediumID = EcoreUtil.generateUUID();
+		mediumURL = "_";
 	}
 
 	/**
@@ -152,11 +156,16 @@ public class MediumImpl extends EObjectImpl implements Medium {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @NOTgenerated
 	 */
 	public void setMediumURL(String newMediumURL) {
 		String oldMediumURL = mediumURL;
-		mediumURL = newMediumURL;
+		Shell s = new Shell();
+	    FileDialog fd = new FileDialog(s, SWT.OPEN);
+	    fd.setText("Confirm Medium URL");
+	    fd.setFilterPath(newMediumURL);
+	    String selected = fd.open();
+		mediumURL = selected;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GCMLPackage.MEDIUM__MEDIUM_URL, oldMediumURL, mediumURL));
 	}

@@ -14,8 +14,6 @@ import GCML.GCMLPackage;
 import GCML.IsAttached;
 import GCML.Medium;
 import GCML.Person;
-import GCML.Shape;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
