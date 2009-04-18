@@ -23,7 +23,9 @@ namespace RRComSSys.CVM.Common
 		public static class Extensions
 		{
 			public const String XCML = ".xcml";
-			public const String XCMLWorkflow = ".xcmlwf";
+			public const String XCMLWorkflow = ".wfxcml";
+			public const String GCML = ".gcml";
+			public const String GCMLWorkflow = ".wfgcml";
 		}
 	}
 }
