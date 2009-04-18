@@ -68,6 +68,10 @@
     <Compile Include="SynthesisEngine\WorkFlowSymbols.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RRComSSys.CVM.Common\RRComSSys.CVM.Common.csproj">
+      <Project>{8A5D2F96-E658-468C-9FFA-06D9D463270A}</Project>
+      <Name>RRComSSys.CVM.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RRComSSys.CVM.ObjectModel\RRComSSys.CVM.ObjectModel.csproj">
       <Project>{FD1C6924-DA64-4D1C-910E-412F9925661D}</Project>
       <Name>RRComSSys.CVM.ObjectModel</Name>
