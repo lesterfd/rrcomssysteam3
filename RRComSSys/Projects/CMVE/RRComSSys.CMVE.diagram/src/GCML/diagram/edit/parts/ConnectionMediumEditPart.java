@@ -1,5 +1,6 @@
 package GCML.diagram.edit.parts;
 
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Connection;
 import org.eclipse.draw2d.PolylineDecoration;
 import org.eclipse.draw2d.RotatableDecoration;
@@ -67,6 +68,8 @@ public class ConnectionMediumEditPart extends ConnectionNodeEditPart implements
 		 * @generated
 		 */
 		public ConnectionDeviceFigure() {
+			this.setLineWidth(2);
+			this.setForegroundColor(ColorConstants.black);
 
 			setTargetDecoration(createTargetDecoration());
 		}

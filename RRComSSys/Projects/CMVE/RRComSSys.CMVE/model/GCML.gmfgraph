@@ -169,13 +169,23 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="IsAttachedDeviceIDFigure"
-          targetDecoration="//@figures.0/@figures.0"/>
+          lineWidth="2"
+          targetDecoration="//@figures.0/@figures.0">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="IsAttachedPersonIDFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="IsAttachedPersonIDFigure"/>
+          name="IsAttachedPersonIDFigure"
+          lineWidth="2">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="DeviceFigure">
@@ -218,7 +228,12 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="DeviceCapabilityFigure"
-          targetDecoration="//@figures.0/@figures.2"/>
+          lineWidth="2"
+          targetDecoration="//@figures.0/@figures.2">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="CapabilityFigure">
@@ -349,14 +364,24 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="ConnectionDeviceFigure"
-          targetDecoration="//@figures.0/@figures.3"/>
+          lineWidth="2"
+          targetDecoration="//@figures.0/@figures.3">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="ConnectionMediumFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="ConnectionMediumFigure"
-          targetDecoration="//@figures.0/@figures.4"/>
+          lineWidth="2"
+          targetDecoration="//@figures.0/@figures.4">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="MediumFigure">
