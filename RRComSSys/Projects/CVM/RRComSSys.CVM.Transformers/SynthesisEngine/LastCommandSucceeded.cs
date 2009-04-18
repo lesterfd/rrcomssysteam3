@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RRComSSys.CMVE.SynthesisEngine
+namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
-    public class LastItemSucceeded : RRComSSys.CMVE.SynthesisEngine.IAPICommand
+    public class LastItemSucceeded : IAPICommand
     {
         private WorkFlowItem lastItem = null;
 

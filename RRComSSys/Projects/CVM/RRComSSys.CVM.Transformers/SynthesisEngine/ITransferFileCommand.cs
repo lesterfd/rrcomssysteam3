@@ -5,14 +5,9 @@ using System.Text;
 
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
-	public class SkypeApiFactory : AbstractApiFactory
+	public interface ITransferFileCommand : IAPICommand
 	{
-		public override AbstractAPI API
-		{
-			get
-			{
-				return new SkypeAPI();
-			}
-		}
+		String FileName { get; set; }
+		String[] Users { get; set; }
 	}
 }

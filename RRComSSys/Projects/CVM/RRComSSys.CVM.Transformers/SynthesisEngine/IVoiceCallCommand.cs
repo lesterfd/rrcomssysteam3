@@ -5,14 +5,8 @@ using System.Text;
 
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
-	public class SkypeApiFactory : AbstractApiFactory
+	public interface IVoiceCallCommand : IAPICommand
 	{
-		public override AbstractAPI API
-		{
-			get
-			{
-				return new SkypeAPI();
-			}
-		}
+		String[] Users { get; set; }
 	}
 }

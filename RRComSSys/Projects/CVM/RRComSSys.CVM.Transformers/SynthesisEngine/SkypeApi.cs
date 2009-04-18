@@ -3,48 +3,96 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RRComSSys.CMVE.SynthesisEngine
+namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
 	public class SkypeAPI : AbstractAPI
 	{
-		#region ICommunicationAPI Members
-
-		public override IAPICommand TransferFile()
+		public override ITransferFileCommand TransferFile
 		{
-			return new SkypeTransferFile();
+			get { return new SkypeTransferFile(); }
 		}
 
-		public override IAPICommand VoiceCall()
+		public override IVoiceCallCommand VoiceCall
 		{
-			return new SkypeVoiceCall();
+			get { return new SkypeVoiceCall(); }
 		}
 
-		#endregion
-
-		public class SkypeTransferFile : IAPICommand
+		public override ILiveVideoCommand LiveVideo
 		{
+			get { return new SkypeLiveVideo(); }
+		}
 
-			#region IAPICommand Members
-
+		public class SkypeTransferFile : ITransferFileCommand
+		{
 			public void Execute()
 			{
 				Console.WriteLine("Skype Transfer File");
 			}
 
-			#endregion
+			public string FileName
+			{
+				get
+				{
+					throw new NotImplementedException();
+				}
+				set
+				{
+					throw new NotImplementedException();
+				}
+			}
+
+			public string[] Users
+			{
+				get
+				{
+					throw new NotImplementedException();
+				}
+				set
+				{
+					throw new NotImplementedException();
+				}
+			}
 		}
 
-		public class SkypeVoiceCall : IAPICommand
+		public class SkypeVoiceCall : IVoiceCallCommand
 		{
-
-			#region IAPICommand Members
-
 			public void Execute()
 			{
 				Console.WriteLine("Skype Voice Call");
 			}
 
-			#endregion
+
+			public string[] Users
+			{
+				get
+				{
+					throw new NotImplementedException();
+				}
+				set
+				{
+					throw new NotImplementedException();
+				}
+			}
+		}
+
+		public class SkypeLiveVideo : ILiveVideoCommand
+		{
+			public void Execute()
+			{
+				Console.WriteLine("Skype Live Video");
+			}
+
+			public string[] Users
+			{
+				get
+				{
+					throw new NotImplementedException();
+				}
+				set
+				{
+					throw new NotImplementedException();
+				}
+			}
 		}
 	}
 }

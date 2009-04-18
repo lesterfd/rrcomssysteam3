@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using RRComSSys.CVM.Transformers.SynthesisEngine;
 
-namespace RRComSSys.CMVE.SynthesisEngine
+namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
 	public interface ICommunicationAPI
 	{
-		IAPICommand TransferFile();
-
-		IAPICommand VoiceCall();
+		ITransferFileCommand TransferFile { get; }
+		ILiveVideoCommand LiveVideo { get; }
+		IVoiceCallCommand VoiceCall { get; }
 	}
 }

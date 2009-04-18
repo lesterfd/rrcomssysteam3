@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using RRComSSys.CVM.Transformers.SynthesisEngine;
 
-namespace RRComSSys.CMVE.SynthesisEngine
+namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
 	public abstract class AbstractAPI : ICommunicationAPI
 	{
+		public abstract ITransferFileCommand TransferFile { get; }
 
-		#region ICommunicationAPI Members
+		public abstract ILiveVideoCommand LiveVideo { get; }
 
-		public abstract IAPICommand TransferFile();
-
-		public abstract IAPICommand VoiceCall();
-
-		#endregion
+		public abstract IVoiceCallCommand VoiceCall { get; }
 	}
 }
