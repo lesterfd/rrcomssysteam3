@@ -7,12 +7,6 @@
       name="Default">
     <figures
         xsi:type="gmfgraph:PolylineDecoration"
-        name="GCMLInstanceNextTargetDecoration"/>
-    <figures
-        xsi:type="gmfgraph:PolylineDecoration"
-        name="StartNextTargetDecoration"/>
-    <figures
-        xsi:type="gmfgraph:PolylineDecoration"
         name="ConditionNextTargetDecoration"/>
     <figures
         xsi:type="gmfgraph:PolylineDecoration"
@@ -20,24 +14,45 @@
     <descriptors
         name="GCMLInstanceFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="GCMLInstanceFigure">
+          xsi:type="gmfgraph:RoundedRectangle"
+          name="GCMLInstanceFigure"
+          lineWidth="2"
+          cornerWidth="20"
+          cornerHeight="20">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+        <maximumSize
+            dx="60"
+            dy="60"/>
+        <preferredSize
+            dx="60"
+            dy="60"/>
+        <size
+            x="60"
+            y="60"/>
         <children
             xsi:type="gmfgraph:Label"
-            name="GCMLInstanceGCMLLocFigure"
-            text="&lt;...>"/>
+            name="lblGCML"
+            text="GCML">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              faceName="Verdana"
+              style="BOLD"/>
+          <insets
+              top="2"
+              left="20"/>
+        </children>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="GCMLInstanceGCMLInstanceAliasFigure"
+            text="Alias"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
-    </descriptors>
-    <descriptors
-        name="GCMLInstanceNextFigure">
-      <actualFigure
-          xsi:type="gmfgraph:PolylineConnection"
-          name="GCMLInstanceNextFigure"
-          targetDecoration="//@figures.0/@figures.0"/>
+          accessor="getFigureGCMLInstanceGCMLInstanceAliasFigure"
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors
         name="StartFigure">
@@ -58,13 +73,6 @@
             dx="18"
             dy="18"/>
       </actualFigure>
-    </descriptors>
-    <descriptors
-        name="StartNextFigure">
-      <actualFigure
-          xsi:type="gmfgraph:PolylineConnection"
-          name="StartNextFigure"
-          targetDecoration="//@figures.0/@figures.1"/>
     </descriptors>
     <descriptors
         name="FinalFigure">
@@ -88,7 +96,8 @@
     <descriptors
         name="ConditionFigure">
       <actualFigure
-          xsi:type="gmfgraph:ScalablePolygon">
+          xsi:type="gmfgraph:ScalablePolygon"
+          lineWidth="2">
         <foregroundColor
             xsi:type="gmfgraph:ConstantColor"
             value="black"/>
@@ -111,14 +120,24 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="ConditionNextFigure"
-          targetDecoration="//@figures.0/@figures.2"/>
+          lineWidth="2"
+          targetDecoration="//@figures.0/@figures.0">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="ConditionAltnextFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="ConditionAltnextFigure"
-          targetDecoration="//@figures.0/@figures.3"/>
+          lineWidth="2"
+          targetDecoration="//@figures.0/@figures.1">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+      </actualFigure>
     </descriptors>
   </figures>
   <nodes
@@ -126,22 +145,13 @@
       figure="GCMLInstanceFigure"/>
   <nodes
       name="Start"
-      figure="StartFigure"
-      resizeConstraint="NONE"/>
+      figure="StartFigure"/>
   <nodes
       name="Final"
-      figure="FinalFigure"
-      resizeConstraint="NONE"/>
+      figure="FinalFigure"/>
   <nodes
       name="Condition"
-      figure="ConditionFigure"
-      resizeConstraint="NONE"/>
-  <connections
-      name="GCMLInstanceNext"
-      figure="GCMLInstanceNextFigure"/>
-  <connections
-      name="StartNext"
-      figure="StartNextFigure"/>
+      figure="ConditionFigure"/>
   <connections
       name="ConditionNext"
       figure="ConditionNextFigure"/>
@@ -149,7 +159,7 @@
       name="ConditionAltnext"
       figure="ConditionAltnextFigure"/>
   <labels
-      name="GCMLInstanceGCMLLoc"
+      name="GCMLInstanceAlias"
       figure="GCMLInstanceFigure"
       accessor="//@figures.0/@descriptors.0/@accessors.0"/>
 </gmfgraph:Canvas>
