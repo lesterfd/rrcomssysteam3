@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RRComSSys.CMVE.SynthesisEngine
+namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
     /*Currently, WorkFlowSymbol keeps track of what TrueWorkFlow it is assigned to. This is not good design,
      * however, in Java, this can be fixed by having TrueWorkFlow extend ArrayList and then overriding add.

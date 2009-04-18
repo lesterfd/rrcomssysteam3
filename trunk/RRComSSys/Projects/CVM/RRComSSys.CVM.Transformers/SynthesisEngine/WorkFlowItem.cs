@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RRComSSys.CMVE.SynthesisEngine
+namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
     public class WorkFlowItem : WorkFlowSymbol
     {

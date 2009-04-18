@@ -9,11 +9,15 @@ namespace RRComSSys.CVM.Transformers.SchemaTransformer
 {
 	public static class SchemaTransformationEngine
 	{
-		public static CMLDocument Transform(CMLDocument document)
+		public static CMLDocument Transform(CMLDocument document, out bool userCancelled)
 		{
+			userCancelled = false;
 			if (document is XCMLWorkflowDocument)
 				return document;
 
+
+
+			return document;
 		}
 	}
 }

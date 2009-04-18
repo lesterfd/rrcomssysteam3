@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4A42C1DB-BF9F-4947-9AB9-B862D571EADD}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -50,10 +50,13 @@
     <Compile Include="SchemaTransformer\SchemaTransformationEngine.cs" />
     <Compile Include="SynthesisEngine\AbstractApi.cs" />
     <Compile Include="SynthesisEngine\AbstractApiFactory.cs" />
+    <Compile Include="SynthesisEngine\IVoiceCallCommand.cs" />
+    <Compile Include="SynthesisEngine\ILiveVideoCommand.cs" />
     <Compile Include="SynthesisEngine\ExecuteAPI.cs" />
     <Compile Include="SynthesisEngine\FailCommand.cs" />
     <Compile Include="SynthesisEngine\IAPICommand.cs" />
     <Compile Include="SynthesisEngine\ICommunicationAPI.cs" />
+    <Compile Include="SynthesisEngine\ITransferFileCommand.cs" />
     <Compile Include="SynthesisEngine\LastCommandSucceeded.cs" />
     <Compile Include="SynthesisEngine\SkypeApi.cs" />
     <Compile Include="SynthesisEngine\SkypeApiFactory.cs" />
