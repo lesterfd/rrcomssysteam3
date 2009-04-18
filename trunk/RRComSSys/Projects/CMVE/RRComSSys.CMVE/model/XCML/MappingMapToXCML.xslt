@@ -13,7 +13,7 @@ http://www.altova.com/mapforce
 	<xsl:template match="/">
 		<UserSchema>
 			<xsl:attribute name="xsi:noNamespaceSchemaLocation">
-				<xsl:value-of select="'E:/MYDOCU~1/FIU/SwDesign/rrcomssysteam3/RRComSSys/Projects/CMVE/RRComSSys.CMVE/model/XCML/XCML.xsd'"/>
+				<xsl:value-of select="'H:/MYDOCU~1/FIU/SwDesign/rrcomssysteam3/RRComSSys/Projects/CMVE/RRComSSys.CMVE/model/XCML/XCML.xsd'"/>
 			</xsl:attribute>
 			<xsl:variable name="var1_instance" select="."/>
 			<xsl:for-each select="$var1_instance/n:GCMLDocument">
@@ -65,7 +65,14 @@ http://www.altova.com/mapforce
 								</xsl:variable>
 								<xsl:if test="string(boolean(string($var15_cond_result_exists))) != 'false'">
 									<mediumTypeNameRef>
-										<xsl:value-of select="string(@MediumURL)"/>
+										<xsl:choose>
+											<xsl:when test="string((string(@MediumURL) = '_')) != 'false'">
+												<xsl:value-of select="string(@MediumID)"/>
+											</xsl:when>
+											<xsl:otherwise>
+												<xsl:value-of select="string(@MediumURL)"/>
+											</xsl:otherwise>
+										</xsl:choose>
 									</mediumTypeNameRef>
 								</xsl:if>
 							</xsl:if>
@@ -78,7 +85,14 @@ http://www.altova.com/mapforce
 				<mediumType>
 					<xsl:if test="$var16_medium/@MediumURL">
 						<xsl:attribute name="mediumTypeName">
-							<xsl:value-of select="string(@MediumURL)"/>
+							<xsl:choose>
+								<xsl:when test="string((string(@MediumURL) = '_')) != 'false'">
+									<xsl:value-of select="string(@MediumID)"/>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="string(@MediumURL)"/>
+								</xsl:otherwise>
+							</xsl:choose>
 						</xsl:attribute>
 					</xsl:if>
 					<xsl:if test="$var16_medium/@BuiltInType">
