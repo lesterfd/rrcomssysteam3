@@ -35,6 +35,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -76,12 +77,19 @@
       <Project>{FD1C6924-DA64-4D1C-910E-412F9925661D}</Project>
       <Name>RRComSSys.CVM.ObjectModel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RRComSSys.CVM\RRComSSys.CVM.csproj">
+      <Project>{585FF0F0-BF2F-4D76-822C-F870FBA0C532}</Project>
+      <Name>RRComSSys.CVM</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="SynthesisEngine.cd" />
+    <None Include="XCML.xsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelTransformer\MappingGCMLToXCML.xslt">
+    <Content Include="MappingGCMLToXCML.xslt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

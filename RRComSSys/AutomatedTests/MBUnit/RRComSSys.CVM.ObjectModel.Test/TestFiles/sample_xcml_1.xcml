@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<userSchema communicationID="_9eTzYesBEd2LR6qNXxImpg">
-	<connection bandwidth="" connectionID="_0yCBEOwEEd2M0Nk-sntj1A">
+<UserSchema xsi:noNamespaceSchemaLocation="XCML.xsd" communicationID="_9eTzYesBEd2LR6qNXxImpg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <connection bandwidth="" connectionID="_0yCBEOwEEd2M0Nk-sntj1A">
 		<device isLocal="true" isVirtual="false" deviceID="_fzHMkOwDEd2M0Nk-sntj1A">
 			<deviceCapability>TextFile</deviceCapability>
 			<deviceCapability>AudioFile</deviceCapability>
@@ -30,4 +30,4 @@
 	<isAttached deviceID="_vFOEsOwDEd2M0Nk-sntj1A" personID="ldiaz004" />
 	<isAttached deviceID="_fzHMkOwDEd2M0Nk-sntj1A" personID="dflor003" />
 	<isAttached deviceID="_mQzEbOwDEd2M0Nk-sntj1A" personID="mcrick001" />
-</userSchema>
+</UserSchema>

@@ -20,7 +20,7 @@ namespace RRComSSys.CVM.Test.UserInterface
 			String fileName = @".\TestFiles\sample_xcml_missinginfo_1.xcml";
 
 			// Load document
-			XCMLDocument doc = (XCMLDocument) XCMLDocument.LoadDocument(fileName);
+			XCMLDocument doc = XCMLDocument.LoadDocument<XCMLDocument>(fileName);
 			Exception exception = null;
 			MissingInformationForm form = new MissingInformationForm();
 			form.Document = doc;

@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio - 30 Day Trial Edition (http://www.liquid-technologies.com)-->
+<xsd:schema xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:ci="http://jaxb.dev.java.net/plugin/code-injector" jaxb:version="2.0" jaxb:extensionBindingPrefixes="xjc ci" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- 
+		***************************
+		userSchema element definition
+		***************************
+	 -->
+  <xsd:element name="UserSchema">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="connection" type="ConnectionType" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="mediumType" type="MediumTypeType" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="formType" type="FormTypeType" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="person" type="PersonType" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="isAttached" type="IsAttachedType" />
+      </xsd:sequence>
+      <xsd:attribute name="communicationID" type="xsd:string" use="required" />
+    </xsd:complexType>
+    <xsd:key name="personIDKey">
+      <xsd:selector xpath="./person" />
+      <xsd:field xpath="@personID" />
+    </xsd:key>
+    <xsd:keyref name="personIDKeyRef" refer="personIDKey">
+      <xsd:selector xpath="./isAttached" />
+      <xsd:field xpath="@personID" />
+    </xsd:keyref>
+    <xsd:key name="mediumTypeNameKey">
+      <xsd:selector xpath="./mediumType" />
+      <xsd:field xpath="@mediumTypeName" />
+    </xsd:key>
+    <xsd:keyref name="mediumTypeNameKeyRef" refer="mediumTypeNameKey">
+      <xsd:selector xpath="./connection/mediumTypeNameRef" />
+      <xsd:field xpath="." />
+    </xsd:keyref>
+    <xsd:key name="formTypeNameKey">
+      <xsd:selector xpath="./formType" />
+      <xsd:field xpath="@formTypeName" />
+    </xsd:key>
+    <xsd:keyref name="formTypeNameKeyRef" refer="formTypeNameKey">
+      <xsd:selector xpath="./connection" />
+      <xsd:field xpath="formTypeNameRef" />
+    </xsd:keyref>
+  </xsd:element>
+  <!-- 
+		***************************
+		data element definition
+		***************************
+	 -->
+  <xsd:element name="Data">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="medium" type="MediumType" />
+        <xsd:element minOccurs="0" maxOccurs="unbounded" name="form" type="FormType" />
+      </xsd:sequence>
+      <xsd:attribute name="communicationID" type="xsd:string" use="required" />
+      <xsd:attribute name="connectionID" type="xsd:string" use="required" />
+    </xsd:complexType>
+  </xsd:element>
+  <!-- 
+		***************************
+		actionType simpleType definition
+		***************************
+	 -->
+  <xsd:simpleType name="ActionType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="send" />
+      <xsd:enumeration value="doNotSend" />
+      <xsd:enumeration value="start" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- 
+		***************************
+		capabilityType simpleType definition
+		***************************
+	 -->
+  <xsd:simpleType name="CapabilityType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TextFile" />
+      <xsd:enumeration value="BinaryFile" />
+      <xsd:enumeration value="StreamFile" />
+      <xsd:enumeration value="NonStreamFile" />
+      <xsd:enumeration value="AudioFile" />
+      <xsd:enumeration value="VideoFile" />
+      <xsd:enumeration value="AVFile" />
+      <xsd:enumeration value="Text" />
+      <xsd:enumeration value="LiveStream" />
+      <xsd:enumeration value="LiveAudio" />
+      <xsd:enumeration value="LiveVideo" />
+      <xsd:enumeration value="LiveAV" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- 
+		****************** MODIFICATION **********************
+		Added the SimpleType stateType. The use is described
+		in the mediumType complexType
+
+		***************************
+		stateType simpleType definition
+		***************************
+	-->
+  <xsd:simpleType name="StateType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="on" />
+      <xsd:enumeration value="off" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- 
+		***************************
+		***************************
+		START userSchema
+		element complexTypes
+		***************************
+		***************************
+	 -->
+  <!-- 
+		***************************
+		connectionType complexType definition
+		***************************
+	-->
+  <xsd:complexType name="ConnectionType">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" maxOccurs="unbounded" name="device" type="DeviceType" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="mediumTypeNameRef" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+                        references a mediumTypeType.mediumTypeName
+                    </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="formTypeNameRef" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+                        references a formTypeType.formTypeName
+                    </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="connectionID" type="xsd:string" use="required" />
+    <xsd:attribute name="bandwidth" type="xsd:string" />
+  </xsd:complexType>
+  <!-- 
+		***************************
+		deviceType complexType definition
+		***************************
+	-->
+  <xsd:complexType name="DeviceType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="deviceCapability" type="CapabilityType" />
+    </xsd:sequence>
+    <xsd:attribute name="deviceID" type="xsd:string" use="required" />
+    <xsd:attribute name="isVirtual" type="xsd:boolean">
+      <xsd:annotation>
+        <xsd:documentation>
+                    A device "isVirtual" if only its capabilities are known.
+                    Also a virtual device can be used as an abstraction for
+                    a set of devices and its capabilities are the union of
+                    the individual device capabilities.
+                </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="isLocal" type="xsd:boolean" />
+  </xsd:complexType>
+  <!-- 
+		***************************
+		mediumTypeType complexType definition
+		***************************
+	-->
+  <xsd:complexType name="MediumTypeType">
+    <xsd:attribute name="mediumTypeName" type="xsd:string" use="required">
+      <xsd:annotation>
+        <xsd:documentation>
+                    Can reference a built-in type, a value in the
+                    capabilityType simpleType, or be a user defined
+                    mediumType.
+                </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="derivedFromBuiltInType" type="CapabilityType">
+      <xsd:annotation>
+        <xsd:documentation>
+                    Only set if mediumTypeName is not a built-in type.
+                    If is not a built-in type and this isn't set, then
+                    the underlying layers must know how to handle it.
+                </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="suggestedApplication" type="xsd:string" />
+    <xsd:attribute name="voiceCommand" type="xsd:string" />
+  </xsd:complexType>
+  <!-- 
+		***************************
+		formTypeType complexType definition
+		***************************
+	-->
+  <xsd:complexType name="FormTypeType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="FormType" type="FormTypeType" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="mediumDataType" type="xsd:string" />
+    </xsd:sequence>
+    <xsd:attribute name="formTypeName" type="xsd:string" use="required" />
+    <xsd:attribute name="suggestedApplication" type="xsd:string" />
+    <xsd:attribute name="voiceCommand" type="xsd:string" />
+    <xsd:attribute name="action" type="ActionType" />
+  </xsd:complexType>
+  <!-- 
+		***************************
+		personType complexType definition
+		***************************
+	-->
+  <xsd:complexType name="PersonType">
+    <xsd:attribute name="personName" type="xsd:string" use="required" />
+    <xsd:attribute name="personID" type="xsd:string" use="required" />
+    <xsd:attribute name="personRole" type="xsd:string" use="required" />
+  </xsd:complexType>
+  <!-- 
+		***************************
+		isAttachedType complexType definition
+		***************************
+	-->
+  <xsd:complexType name="IsAttachedType">
+    <xsd:attribute name="personID" type="xsd:string" use="required" />
+    <xsd:attribute name="deviceID" type="xsd:string" use="required" />
+  </xsd:complexType>
+  <!-- 
+		***************************
+		***************************
+		START data element
+		complexTypes
+		***************************
+		***************************
+	 -->
+  <!-- 
+		****************** MODIFICATION **********************
+		1) Added a state attribute so we are able to turn 
+		streaming media on and off.
+		
+		2) Added actionType because Lazaro did.
+		
+		3) More completely defined the use of "mediumName" and 
+		"mediumURL" so we are able to specify:
+		  a) Which device and capability is to have its
+		     state modified
+		  b) Which local file is to be sent
+		  c) Which remote (http) file is to be sent
+		  d) Send text messages.
+		
+		For me details see annotations within the 
+		mediumType complexType.
+	-->
+  <!--
+		*************************** 
+		mediumType complexType definition
+		***************************
+	-->
+  <xsd:complexType name="MediumType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="1" name="data" type="xsd:string" />
+    </xsd:sequence>
+    <xsd:attribute name="mediumDataType" type="xsd:string" use="required">
+      <xsd:annotation>
+        <xsd:documentation>
+                    Can reference a built-in type, a value in the
+                    capabilityType simpleType, or be a user defined
+                    mediumType.
+                </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="state" type="StateType">
+      <xsd:annotation>
+        <xsd:documentation>
+                    If the media is descendant of, or derivative of, or an
+                    instance of LiveStream then setting this value to on
+                    will start the stream and of will stop it.
+                </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="mediumURL" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>
+                    If the media is descendant of, or derivative of, or an
+                    instance of LiveStream then this will be the name of the
+                    device and capability associated with the event that
+                    caused this to be sent. Along with the new state attribute
+                    this allows for devices to turn their streaming media
+                    on and off. (below is an example)
+
+                    If the media is any "File" media type, then this should be
+                    a complete or a relative URI to the file. (below is
+                    an example)
+
+                    If the media is Text, then this would be the personID and
+                    message number where the messageNumber would be 1 for the
+                    first message a person sends, 2 for the second, and so on.
+                    The actual text that is sent would be included as the
+                    value of element.
+
+                    Possible Forms:
+                    "device://deviceID/cababilityType"
+                    "text://personID/messageNumber"
+                    "file://file_path"
+
+                    Examples (assume relative paths are based off the install
+                    path of the CVM):
+                    "device://001/LiveAV"
+                    "text://023/44"
+                    "file:///home/bob/cvm/files/foo.txt" (complete path)
+                    "file://files/foo.txt" (relative path)
+                    "http://www.fiu.edu/heart_scan_video.mpg"
+                </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="mediumName" type="xsd:string" use="required">
+      <xsd:annotation>
+        <xsd:documentation>
+                    If the media is descendant of, or derivative of, or an
+                    instance of LiveStream then this will be the same as
+                    the mediumURL
+
+                    If the media is any "File" media type will be the name
+                    of the file (without the path)
+
+                    If the media is Text, then this would be the personID
+                    concatinated with the message number.
+                </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="mediumSize" type="xsd:string" />
+    <xsd:attribute name="lastModifyTime" type="xsd:time" />
+    <xsd:attribute name="validityPeriod" type="xsd:integer" />
+    <xsd:attribute name="firstTransferTime" type="xsd:time" />
+    <xsd:attribute name="voiceCommand" type="xsd:string" />
+    <xsd:attribute name="action" type="ActionType" />
+  </xsd:complexType>
+  <!-- 
+		***************************
+		formType complexType definition
+		***************************
+	-->
+  <xsd:complexType name="FormType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="form" type="FormType" />
+      <xsd:element minOccurs="0" maxOccurs="unbounded" name="medium" type="MediumType" />
+    </xsd:sequence>
+    <xsd:attribute name="formDataType" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>
+                    If formDataType is specified, it must refer to a
+                    defined formTypeType. In this case the properties
+                    are a union of the properties of this form instance
+                    and the formType, where in case of conflicts (e.g.,
+                    different voice commands) the form instance
+                    properties receive precedence. If the form instance
+                    and the formType do not have the exact same nesting
+                    structure (not just isomorphic) then a parsing error
+                    is created at validation.
+
+                    If formDataType is omitted then this is a user-defined
+                    form with no predefined type.
+                </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="formID" type="xsd:string" use="required">
+      <xsd:annotation>
+        <xsd:documentation>
+                    Every time a form is sent it must have a unique ID.
+                </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="suggestedApplication" type="xsd:string" />
+    <xsd:attribute name="voiceCommand" type="xsd:string" />
+    <xsd:attribute name="action" type="ActionType" />
+    <xsd:attribute name="layoutSpecification" type="xsd:string">
+      <xsd:annotation>
+        <xsd:documentation>
+                    The value of layoutSpecification attribute is the
+                    URL of the xhtml layout file. The reason this file
+                    is not inlined here is that it would complicate the
+                    parsing as we would have to include the XML Schema
+                    of xhtml inside our X-CML XML Schema. The mapping
+                    between media of the formType and their location in
+                    the layoutSpecification xhtml file is as follows:
+
+                    (a) For images, videos and whatever else is
+                    represented as a URL in the xhtml file, we use a CVM
+                    URL in the layoutSpecification file instead of a
+                    regulr URL. The CVM URL is denoted as
+                    â€œCMLFORM/mediumNameâ€ is mapped to the medium of this
+                    form with this mediumName. For example,
+                    CMLFORM/imageMediumName1 would map to the
+                    imageMediumName1 medium. Note that no duplicate
+                    mediumNames are allowed within a Form.
+
+                    (b) For text or other data that have to be inlined
+                    in the xhtml, we use the following comment to denote
+                    their position in the layoutSpecification file:
+                    <!--CMLINCLUDE src="CMLFORM/mediumName"-->
+                    (e.g.,<!--CMLINCLUDE src="CMLFORM/textMediumFile1"-->
+                    ). Then the receiver CVM will replace this comment
+                    by a link to this medium if the medium is inside a
+                    form that has action=â€doNotSendâ€, or inline its
+                    content in the layoutSpecification file otherwise.
+                </xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+</xsd:schema>

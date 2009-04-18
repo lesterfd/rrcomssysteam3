@@ -31,78 +31,86 @@ namespace RRComSSys.CVM.ObjectModel
 
 		#region Static Methods
 
-		public static CMLDocument LoadDocument(String fileName)
+		public static TDoc LoadDocument<TDoc>(String fileName)
+			where TDoc : CMLDocument
 		{
 			FileInfo file = new FileInfo(fileName);
-			return LoadDocument(file);
+			return LoadDocument<TDoc>(file);
 		}
 
-		public static CMLDocument LoadDocument(FileInfo file)
+		public static TDoc LoadDocument<TDoc>(FileInfo file)
+			where TDoc : CMLDocument
 		{
-			// Error checking
-			if (!file.Exists)
-				throw new FileNotFoundException(String.Format(Constants.Messages.MSG_FILE_NOT_EXISTS,
-						file.Name));
-			if (Directory.Exists(file.FullName))
-				throw new ArgumentException(String.Format(Constants.Messages.MSG_NOT_A_FILE,
-						file.Name));
-
-			// Load either WF or XCML based on extension
-			CMLDocument result = null;
+			// Setup out params
+			CMLType docType = CMLType.Other;
 			Type fileType = null;
-			CMLType cmlType = CMLType.XCML;
-			String errorMessage = null;
-			if (file.Extension.Equals(Constants.Extensions.XCML, StringComparison.CurrentCultureIgnoreCase))
-			{
-				fileType = typeof(XCMLDocument);
-				errorMessage = Constants.Messages.MSG_ERROR_XCML;
-				cmlType = CMLType.XCML;
-			}
-			else if (file.Extension.Equals(Constants.Extensions.XCMLWorkflow, StringComparison.CurrentCultureIgnoreCase))
-			{
-				fileType = typeof(XCMLWorkflowDocument);
-				errorMessage = Constants.Messages.MSG_ERROR_WF;
-				cmlType = CMLType.XCMLWorkflow;
-			}
-			else
-				throw new CMLDocumentException(String.Format(Constants.Messages.MSG_NOT_SUPPORTED,
-						file.Name));
-			try
-			{
-				String xmlText = null;
-				using(FileStream fs = new FileStream(file.FullName, FileMode.Open, FileAccess.Read))
-				using(StreamReader sr = new StreamReader(fs))
-				{
-					xmlText = sr.ReadToEnd();
-				}
-				result = Deserialize(xmlText, fileType);
-				result._documentType = cmlType;
-			}
-			catch (Exception e)
-			{
-				throw new CMLDocumentException(errorMessage, e); 
-			}
+
+			// Error check and get document info
+			DoErrorCheck(file);
+			GetDocumentInfo(file, out docType, out fileType);
+
+			// Load document
+			String xmlText = LoadDocumentToText(file);
+			CMLDocument result = LoadDocumentFromText<TDoc>(xmlText);
+
+			// Post process and return
+			result._documentLoadedFrom = file.FullName;
+			return (TDoc) result;
+		}
+
+		public static TDoc LoadDocumentFromText<TDoc>(String xmlText)
+			where TDoc : CMLDocument
+		{
+			// Deserialize
+			CMLDocument result = null;
+			result = Deserialize<TDoc>(xmlText);
+			result._documentType = GetDocumentType(typeof(TDoc));
 
 			// Throw exception on null result
 			if (result == null)
-				throw new CMLDocumentException(String.Format(Constants.Messages.MSG_NOT_A_FILE,
-						file.Name));
+				throw new CMLDocumentException(Constants.Messages.MSG_ERROR_DESERIALIZE);
 
 			// Run onLoad
-			result._documentLoadedFrom = file.FullName;
 			result.OnLoad();
 			if (result.DocumentLoaded != null)
 				result.DocumentLoaded(result, EventArgs.Empty);
 
-			return result;
+			return (TDoc)result;
 		}
 
-		public static CMLDocument Deserialize(String xmlText, Type type)
+		public static String LoadDocumentToText(String fileName)
+		{
+			return LoadDocumentToText(new FileInfo(fileName));
+		}
+
+		public static String LoadDocumentToText(FileInfo file)
+		{
+			// Read document into a string
+			String xmlText = null;
+			try
+			{
+				using (FileStream fs = new FileStream(file.FullName, FileMode.Open, FileAccess.Read))
+				using (StreamReader sr = new StreamReader(fs))
+					xmlText = sr.ReadToEnd();
+			}
+			catch (Exception e)
+			{
+				throw new CMLDocumentException(
+					String.Format(
+						Constants.Messages.MSG_ERROR_LOAD,
+						file.Name), e);
+			}
+
+			return xmlText;
+		}
+
+		public static TDoc Deserialize<TDoc>(String xmlText)
+			where TDoc : CMLDocument
 		{
 			StringReader stringReader = new StringReader(xmlText);
 			XmlTextReader xmlTextReader = new XmlTextReader(stringReader);
-			XmlSerializer xmlSerializer = new XmlSerializer(type);
-			return (CMLDocument) xmlSerializer.Deserialize(xmlTextReader);
+			XmlSerializer xmlSerializer = new XmlSerializer(typeof(TDoc));
+			return (TDoc)xmlSerializer.Deserialize(xmlTextReader);
 		}
 
 		public static CMLType GetDocumentType(String fileName)
@@ -120,6 +128,16 @@ namespace RRComSSys.CVM.ObjectModel
 			else if (file.Extension.Equals(Constants.Extensions.XCML, StringComparison.CurrentCultureIgnoreCase))
 				return CMLType.XCML;
 			else if (file.Extension.Equals(Constants.Extensions.XCMLWorkflow, StringComparison.CurrentCultureIgnoreCase))
+				return CMLType.XCMLWorkflow;
+			else
+				return CMLType.Other;
+		}
+
+		public static CMLType GetDocumentType(Type fileType)
+		{
+			if (fileType == typeof(XCMLDocument))
+				return CMLType.XCML;
+			else if (fileType == typeof(XCMLWorkflowDocument))
 				return CMLType.XCMLWorkflow;
 			else
 				return CMLType.Other;
@@ -165,6 +183,38 @@ namespace RRComSSys.CVM.ObjectModel
 		#endregion
 
 		#region Private Methods
+		private static void GetDocumentInfo(FileInfo file, out CMLType cmlType, out Type fileType)
+		{
+			// Setup out params
+			fileType = null;
+			cmlType = CMLType.XCML;
+
+			// Setup info
+			if (file.Extension.Equals(Constants.Extensions.XCML, StringComparison.CurrentCultureIgnoreCase))
+			{
+				cmlType = CMLType.XCML;
+				fileType = typeof(XCMLDocument);
+			}
+			else if (file.Extension.Equals(Constants.Extensions.XCMLWorkflow, StringComparison.CurrentCultureIgnoreCase))
+			{
+				cmlType = CMLType.XCMLWorkflow;
+				fileType = typeof(XCMLWorkflowDocument);
+			}
+			else
+				throw new CMLDocumentException(String.Format(Constants.Messages.MSG_NOT_SUPPORTED,
+						file.Name));
+		}
+
+		private static void DoErrorCheck(FileInfo file)
+		{
+			if (!file.Exists)
+				throw new FileNotFoundException(String.Format(Constants.Messages.MSG_FILE_NOT_EXISTS,
+						file.Name));
+			if (Directory.Exists(file.FullName))
+				throw new ArgumentException(String.Format(Constants.Messages.MSG_NOT_A_FILE,
+						file.Name));
+		}
+
 		protected String Serialize()
 		{
 			XmlSerializer xmlSerializer = new XmlSerializer(this.GetType());

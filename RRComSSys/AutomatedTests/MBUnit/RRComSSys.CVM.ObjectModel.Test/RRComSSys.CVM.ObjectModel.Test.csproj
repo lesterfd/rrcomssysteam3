@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="TestFiles\sample_xcml_1.xcml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>

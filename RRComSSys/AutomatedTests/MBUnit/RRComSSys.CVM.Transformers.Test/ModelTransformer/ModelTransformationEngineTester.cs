@@ -25,13 +25,14 @@ namespace RRComSSys.CVM.Transformers.Test.ModelTransformer
 		#region Tests
 		[RowTest]
 		[Row(@".\TestFiles\sample_gcml_01.gcml")]
+		[Row(@".\TestFiles\sample_xcml_01.xcml")]
 		public void Test_Load_GCML_Or_XCML_Document(String fileName)
 		{
 			// Load document
 			XCMLDocument doc = (XCMLDocument)ModelTransformationEngine.LoadCMLDocument(fileName);
 
 			// Assert Document
-			Assert.AreEqual("_9eTzYesBEd2LR6qNXxImpg", doc.CommunicationID);
+			Assert.AreEqual("_jRhGQSfREd6Bgpzny0v-Ow", doc.CommunicationID);
 
 			// Assert Users
 			Assert.AreEqual(true, doc.LocalUser == null);
@@ -58,10 +59,10 @@ namespace RRComSSys.CVM.Transformers.Test.ModelTransformer
 
 			// Assert media
 			Assert.AreEqual(2, doc.AllMedia.Count);
-			XCMLHelper.AssertMedium(doc.AllMedia[0], "file1", "QuickTime", CapabilityType.TextFile);
-			XCMLHelper.AssertMedium(doc.AllMedia[1], "stream1", "Windows Media Player", CapabilityType.Text);
-			XCMLHelper.AssertMedium(connection.Media[0], "file1", "QuickTime", CapabilityType.TextFile);
-			XCMLHelper.AssertMedium(connection.Media[1], "stream1", "Windows Media Player", CapabilityType.Text);
+			XCMLHelper.AssertMedium(doc.AllMedia[0], "file1", "", CapabilityType.TextFile);
+			XCMLHelper.AssertMedium(doc.AllMedia[1], "stream1", "", CapabilityType.Text);
+			XCMLHelper.AssertMedium(connection.Media[0], "file1", "", CapabilityType.TextFile);
+			XCMLHelper.AssertMedium(connection.Media[1], "stream1", "", CapabilityType.Text);
 		}
 		#endregion
 
