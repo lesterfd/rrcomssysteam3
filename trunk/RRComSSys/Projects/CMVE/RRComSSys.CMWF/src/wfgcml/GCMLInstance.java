@@ -16,7 +16,8 @@ package wfgcml;
  * The following features are supported:
  * <ul>
  *   <li>{@link wfgcml.GCMLInstance#getGCMLLoc <em>GCML Loc</em>}</li>
- *   <li>{@link wfgcml.GCMLInstance#getGCMLID <em>GCMLID</em>}</li>
+ *   <li>{@link wfgcml.GCMLInstance#getID <em>ID</em>}</li>
+ *   <li>{@link wfgcml.GCMLInstance#getAlias <em>Alias</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,18 +55,45 @@ public interface GCMLInstance extends HasNext, IsNext {
 	void setGCMLLoc(String value);
 
 	/**
-	 * Returns the value of the '<em><b>GCMLID</b></em>' attribute.
+	 * Returns the value of the '<em><b>ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>GCMLID</em>' attribute isn't clear,
+	 * If the meaning of the '<em>ID</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>GCMLID</em>' attribute.
-	 * @see wfgcml.WfgcmlPackage#getGCMLInstance_GCMLID()
+	 * @return the value of the '<em>ID</em>' attribute.
+	 * @see wfgcml.WfgcmlPackage#getGCMLInstance_ID()
 	 * @model id="true" required="true" changeable="false"
 	 * @generated
 	 */
-	String getGCMLID();
+	String getID();
+
+	/**
+	 * Returns the value of the '<em><b>Alias</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Alias</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Alias</em>' attribute.
+	 * @see #setAlias(String)
+	 * @see wfgcml.WfgcmlPackage#getGCMLInstance_Alias()
+	 * @model required="true"
+	 *        extendedMetaData="kind='attribute'"
+	 * @generated
+	 */
+	String getAlias();
+
+	/**
+	 * Sets the value of the '{@link wfgcml.GCMLInstance#getAlias <em>Alias</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Alias</em>' attribute.
+	 * @see #getAlias()
+	 * @generated
+	 */
+	void setAlias(String value);
 
 } // GCMLInstance

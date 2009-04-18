@@ -28,7 +28,7 @@ import wfgcml.WfgcmlPackage;
  * <ul>
  *   <li>{@link wfgcml.impl.ConditionImpl#getNext <em>Next</em>}</li>
  *   <li>{@link wfgcml.impl.ConditionImpl#getAltnext <em>Altnext</em>}</li>
- *   <li>{@link wfgcml.impl.ConditionImpl#getCondID <em>Cond ID</em>}</li>
+ *   <li>{@link wfgcml.impl.ConditionImpl#getID <em>ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,24 +56,24 @@ public class ConditionImpl extends EObjectImpl implements Condition {
 	protected IsNext altnext;
 
 	/**
-	 * The default value of the '{@link #getCondID() <em>Cond ID</em>}' attribute.
+	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCondID()
+	 * @see #getID()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String COND_ID_EDEFAULT = null;
+	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getCondID() <em>Cond ID</em>}' attribute.
+	 * The cached value of the '{@link #getID() <em>ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCondID()
+	 * @see #getID()
 	 * @generated
 	 * @ordered
 	 */
-	protected String condID = COND_ID_EDEFAULT;
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -82,7 +82,7 @@ public class ConditionImpl extends EObjectImpl implements Condition {
 	 */
 	protected ConditionImpl() {
 		super();
-		condID = EcoreUtil.generateUUID();
+		id = EcoreUtil.generateUUID();
 	}
 
 	/**
@@ -176,8 +176,8 @@ public class ConditionImpl extends EObjectImpl implements Condition {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCondID() {
-		return condID;
+	public String getID() {
+		return id;
 	}
 
 	/**
@@ -194,8 +194,8 @@ public class ConditionImpl extends EObjectImpl implements Condition {
 			case WfgcmlPackage.CONDITION__ALTNEXT:
 				if (resolve) return getAltnext();
 				return basicGetAltnext();
-			case WfgcmlPackage.CONDITION__COND_ID:
-				return getCondID();
+			case WfgcmlPackage.CONDITION__ID:
+				return getID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -248,8 +248,8 @@ public class ConditionImpl extends EObjectImpl implements Condition {
 				return next != null;
 			case WfgcmlPackage.CONDITION__ALTNEXT:
 				return altnext != null;
-			case WfgcmlPackage.CONDITION__COND_ID:
-				return COND_ID_EDEFAULT == null ? condID != null : !COND_ID_EDEFAULT.equals(condID);
+			case WfgcmlPackage.CONDITION__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -264,8 +264,8 @@ public class ConditionImpl extends EObjectImpl implements Condition {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (CondID: ");
-		result.append(condID);
+		result.append(" (ID: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

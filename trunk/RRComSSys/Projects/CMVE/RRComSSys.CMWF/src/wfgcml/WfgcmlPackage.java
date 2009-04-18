@@ -171,13 +171,22 @@ public interface WfgcmlPackage extends EPackage {
 	int GCML_INSTANCE__GCML_LOC = HAS_NEXT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>GCMLID</b></em>' attribute.
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GCML_INSTANCE__GCMLID = HAS_NEXT_FEATURE_COUNT + 1;
+	int GCML_INSTANCE__ID = HAS_NEXT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Alias</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GCML_INSTANCE__ALIAS = HAS_NEXT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>GCML Instance</em>' class.
@@ -186,7 +195,7 @@ public interface WfgcmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GCML_INSTANCE_FEATURE_COUNT = HAS_NEXT_FEATURE_COUNT + 2;
+	int GCML_INSTANCE_FEATURE_COUNT = HAS_NEXT_FEATURE_COUNT + 3;
 
 	/**
 	 * The meta object id for the '{@link wfgcml.impl.StartImpl <em>Start</em>}' class.
@@ -283,13 +292,13 @@ public interface WfgcmlPackage extends EPackage {
 	int CONDITION__ALTNEXT = HAS_NEXT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Cond ID</b></em>' attribute.
+	 * The feature id for the '<em><b>ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONDITION__COND_ID = HAS_NEXT_FEATURE_COUNT + 1;
+	int CONDITION__ID = HAS_NEXT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Condition</em>' class.
@@ -377,15 +386,26 @@ public interface WfgcmlPackage extends EPackage {
 	EAttribute getGCMLInstance_GCMLLoc();
 
 	/**
-	 * Returns the meta object for the attribute '{@link wfgcml.GCMLInstance#getGCMLID <em>GCMLID</em>}'.
+	 * Returns the meta object for the attribute '{@link wfgcml.GCMLInstance#getID <em>ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>GCMLID</em>'.
-	 * @see wfgcml.GCMLInstance#getGCMLID()
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see wfgcml.GCMLInstance#getID()
 	 * @see #getGCMLInstance()
 	 * @generated
 	 */
-	EAttribute getGCMLInstance_GCMLID();
+	EAttribute getGCMLInstance_ID();
+
+	/**
+	 * Returns the meta object for the attribute '{@link wfgcml.GCMLInstance#getAlias <em>Alias</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alias</em>'.
+	 * @see wfgcml.GCMLInstance#getAlias()
+	 * @see #getGCMLInstance()
+	 * @generated
+	 */
+	EAttribute getGCMLInstance_Alias();
 
 	/**
 	 * Returns the meta object for class '{@link wfgcml.Start <em>Start</em>}'.
@@ -429,15 +449,15 @@ public interface WfgcmlPackage extends EPackage {
 	EReference getCondition_Altnext();
 
 	/**
-	 * Returns the meta object for the attribute '{@link wfgcml.Condition#getCondID <em>Cond ID</em>}'.
+	 * Returns the meta object for the attribute '{@link wfgcml.Condition#getID <em>ID</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cond ID</em>'.
-	 * @see wfgcml.Condition#getCondID()
+	 * @return the meta object for the attribute '<em>ID</em>'.
+	 * @see wfgcml.Condition#getID()
 	 * @see #getCondition()
 	 * @generated
 	 */
-	EAttribute getCondition_CondID();
+	EAttribute getCondition_ID();
 
 	/**
 	 * Returns the meta object for class '{@link wfgcml.HasNext <em>Has Next</em>}'.
@@ -553,12 +573,20 @@ public interface WfgcmlPackage extends EPackage {
 		EAttribute GCML_INSTANCE__GCML_LOC = eINSTANCE.getGCMLInstance_GCMLLoc();
 
 		/**
-		 * The meta object literal for the '<em><b>GCMLID</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute GCML_INSTANCE__GCMLID = eINSTANCE.getGCMLInstance_GCMLID();
+		EAttribute GCML_INSTANCE__ID = eINSTANCE.getGCMLInstance_ID();
+
+		/**
+		 * The meta object literal for the '<em><b>Alias</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GCML_INSTANCE__ALIAS = eINSTANCE.getGCMLInstance_Alias();
 
 		/**
 		 * The meta object literal for the '{@link wfgcml.impl.StartImpl <em>Start</em>}' class.
@@ -599,12 +627,12 @@ public interface WfgcmlPackage extends EPackage {
 		EReference CONDITION__ALTNEXT = eINSTANCE.getCondition_Altnext();
 
 		/**
-		 * The meta object literal for the '<em><b>Cond ID</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>ID</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute CONDITION__COND_ID = eINSTANCE.getCondition_CondID();
+		EAttribute CONDITION__ID = eINSTANCE.getCondition_ID();
 
 		/**
 		 * The meta object literal for the '{@link wfgcml.HasNext <em>Has Next</em>}' class.

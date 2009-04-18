@@ -23,54 +23,75 @@
         href="WFGCML.genmodel#//wfgcml/WFGCMLRoot"/>
     <topLevelNodes
         visualID="1001"
-        editPartClassName="GCMLInstanceEditPart"
-        itemSemanticEditPolicyClassName="GCMLInstanceItemSemanticEditPolicy"
-        notationViewFactoryClassName="GCMLInstanceViewFactory"
-        canonicalEditPolicyClassName="GCMLInstanceCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="GCMLInstanceGraphicalNodeEditPolicy"
-        createCommandClassName="GCMLInstanceCreateCommand">
+        editPartClassName="FinalEditPart"
+        itemSemanticEditPolicyClassName="FinalItemSemanticEditPolicy"
+        notationViewFactoryClassName="FinalViewFactory"
+        canonicalEditPolicyClassName="FinalCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="FinalGraphicalNodeEditPolicy"
+        createCommandClassName="FinalCreateCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="GCMLInstanceEditHelper"/>
+          editHelperClassName="FinalEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
-          layoutType="FLOW_LAYOUT"
-          className="GCMLInstanceFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class GCMLInstanceFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureGCMLInstanceGCMLLocFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public GCMLInstanceFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureGCMLInstanceGCMLLocFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureGCMLInstanceGCMLLocFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureGCMLInstanceGCMLLocFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureGCMLInstanceGCMLLocFigure() {&#xA;&#x9;&#x9;return fFigureGCMLInstanceGCMLLocFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          className="FinalFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FinalFigure extends org.eclipse.draw2d.Ellipse {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FinalFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setLineWidth(4);&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 0, 0, 0);&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedBackground="true"/>
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="20"
+            height="20"/>
         <requiredPluginIDs>org.eclipse.draw2d</requiredPluginIDs>
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
       <modelFacet>
         <metaClass
-            href="WFGCML.genmodel#//wfgcml/GCMLInstance"/>
+            href="WFGCML.genmodel#//wfgcml/Final"/>
         <containmentMetaFeature
-            href="WFGCML.genmodel#//wfgcml/WFGCMLRoot/GCML"/>
+            href="WFGCML.genmodel#//wfgcml/WFGCMLRoot/final"/>
         <childMetaFeature
-            href="WFGCML.genmodel#//wfgcml/WFGCMLRoot/GCML"/>
+            href="WFGCML.genmodel#//wfgcml/WFGCMLRoot/final"/>
       </modelFacet>
-      <labels
-          visualID="4001"
-          editPartClassName="GCMLInstanceGCMLLocEditPart"
-          itemSemanticEditPolicyClassName="GCMLInstanceGCMLLocItemSemanticEditPolicy"
-          notationViewFactoryClassName="GCMLInstanceGCMLLocViewFactory"
-          elementIcon="true">
-        <diagramRunTimeClass
-            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-        <viewmap
-            xsi:type="gmfgen:ParentAssignedViewmap"
-            getterName="getFigureGCMLInstanceGCMLLocFigure"
-            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
-        <modelFacet
-            xsi:type="gmfgen:FeatureLabelModelFacet">
-          <metaFeatures
-              href="WFGCML.genmodel#//wfgcml/GCMLInstance/GCMLLoc"/>
-        </modelFacet>
-      </labels>
     </topLevelNodes>
     <topLevelNodes
         visualID="1002"
+        editPartClassName="ConditionEditPart"
+        itemSemanticEditPolicyClassName="ConditionItemSemanticEditPolicy"
+        notationViewFactoryClassName="ConditionViewFactory"
+        canonicalEditPolicyClassName="ConditionCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="ConditionGraphicalNodeEditPolicy"
+        createCommandClassName="ConditionCreateCommand">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="ConditionEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="ConditionFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ConditionFigure extends org.eclipse.draw2d.Shape {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ConditionFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.addPoint(new org.eclipse.draw2d.geometry.Point(getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(10)&#xA;));&#xA;this.addPoint(new org.eclipse.draw2d.geometry.Point(getMapMode().DPtoLP(10)&#xA;, getMapMode().DPtoLP(0)&#xA;));&#xA;this.addPoint(new org.eclipse.draw2d.geometry.Point(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(10)&#xA;));&#xA;this.addPoint(new org.eclipse.draw2d.geometry.Point(getMapMode().DPtoLP(10)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setFill(true);&#xA;this.setLineWidth(2);&#xA;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.white);&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private final org.eclipse.draw2d.geometry.PointList myTemplate = new org.eclipse.draw2d.geometry.PointList();&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.geometry.Rectangle myTemplateBounds;&#xA;&#x9;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public void addPoint(org.eclipse.draw2d.geometry.Point point){&#xA;&#x9;&#x9;myTemplate.addPoint(point);&#xA;&#x9;&#x9;myTemplateBounds = null;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void fillShape(org.eclipse.draw2d.Graphics graphics) {&#xA;&#x9;&#x9;org.eclipse.draw2d.geometry.Rectangle bounds = getBounds();&#xA;&#x9;&#x9;graphics.pushState();&#xA;&#x9;&#x9;graphics.translate(bounds.x, bounds.y);&#xA;&#x9;&#x9;graphics.fillPolygon(scalePointList());&#xA;&#x9;&#x9;graphics.popState();&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void outlineShape(org.eclipse.draw2d.Graphics graphics) {&#xA;&#x9;&#x9;org.eclipse.draw2d.geometry.Rectangle bounds = getBounds();&#xA;&#x9;&#x9;graphics.pushState();&#xA;&#x9;&#x9;graphics.translate(bounds.x, bounds.y);&#xA;&#x9;&#x9;graphics.drawPolygon(scalePointList());&#xA;&#x9;&#x9;graphics.popState();&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.geometry.Rectangle getTemplateBounds(){&#xA;&#x9;&#x9;if (myTemplateBounds == null){&#xA;&#x9;&#x9;&#x9;myTemplateBounds = myTemplate.getBounds().getCopy().union(0, 0);&#xA;&#x9;&#x9;&#x9;//just safety -- we are going to use this as divider &#xA;&#x9;&#x9;&#x9;if (myTemplateBounds.width &lt; 1){&#xA;&#x9;&#x9;&#x9;&#x9;myTemplateBounds.width = 1;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;if (myTemplateBounds.height &lt; 1){&#xA;&#x9;&#x9;&#x9;&#x9;myTemplateBounds.height = 1;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;return myTemplateBounds;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private int[] scalePointList() {&#xA;&#x9;&#x9;org.eclipse.draw2d.geometry.Rectangle pointsBounds = getTemplateBounds();&#xA;&#x9;&#x9;org.eclipse.draw2d.geometry.Rectangle actualBounds = getBounds();&#xA;&#xA;&#x9;&#x9;float xScale = ((float) actualBounds.width) / pointsBounds.width;&#xA;&#x9;&#x9;float yScale = ((float) actualBounds.height) / pointsBounds.height;&#xA;&#xA;&#x9;&#x9;if (xScale == 1 &amp;&amp; yScale == 1) {&#xA;&#x9;&#x9;&#x9;return myTemplate.toIntArray();&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;int[] scaled = (int[]) myTemplate.toIntArray().clone();&#xA;&#x9;&#x9;for (int i = 0; i &lt; scaled.length; i += 2) {&#xA;&#x9;&#x9;&#x9;scaled[i] = (int) Math.floor(scaled[i] * xScale);&#xA;&#x9;&#x9;&#x9;scaled[i + 1] = (int) Math.floor(scaled[i + 1] * yScale);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;return scaled;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedForeground="true"
+            fixedBackground="true"/>
+        <requiredPluginIDs>org.eclipse.draw2d</requiredPluginIDs>
+        <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
+      </viewmap>
+      <modelFacet>
+        <metaClass
+            href="WFGCML.genmodel#//wfgcml/Condition"/>
+        <containmentMetaFeature
+            href="WFGCML.genmodel#//wfgcml/WFGCMLRoot/condition"/>
+        <childMetaFeature
+            href="WFGCML.genmodel#//wfgcml/WFGCMLRoot/condition"/>
+      </modelFacet>
+    </topLevelNodes>
+    <topLevelNodes
+        visualID="1003"
         editPartClassName="StartEditPart"
         itemSemanticEditPolicyClassName="StartItemSemanticEditPolicy"
         notationViewFactoryClassName="StartViewFactory"
@@ -91,8 +112,6 @@
             fixedForeground="true"
             fixedBackground="true"/>
         <attributes
-            xsi:type="gmfgen:ResizeConstraints"/>
-        <attributes
             xsi:type="gmfgen:DefaultSizeAttributes"
             width="18"
             height="18"/>
@@ -109,77 +128,59 @@
       </modelFacet>
     </topLevelNodes>
     <topLevelNodes
-        visualID="1003"
-        editPartClassName="FinalEditPart"
-        itemSemanticEditPolicyClassName="FinalItemSemanticEditPolicy"
-        notationViewFactoryClassName="FinalViewFactory"
-        canonicalEditPolicyClassName="FinalCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="FinalGraphicalNodeEditPolicy"
-        createCommandClassName="FinalCreateCommand">
+        visualID="1004"
+        editPartClassName="GCMLInstanceEditPart"
+        itemSemanticEditPolicyClassName="GCMLInstanceItemSemanticEditPolicy"
+        notationViewFactoryClassName="GCMLInstanceViewFactory"
+        canonicalEditPolicyClassName="GCMLInstanceCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="GCMLInstanceGraphicalNodeEditPolicy"
+        createCommandClassName="GCMLInstanceCreateCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="FinalEditHelper"/>
+          editHelperClassName="GCMLInstanceEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
-          className="FinalFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FinalFigure extends org.eclipse.draw2d.Ellipse {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FinalFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setLineWidth(4);&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;&#x9;}&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 0, 0, 0);&#xA;&#xA;">
+          layoutType="FLOW_LAYOUT"
+          className="GCMLInstanceFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class GCMLInstanceFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureGCMLInstanceGCMLInstanceAliasFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public GCMLInstanceFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setLineWidth(2);&#xA;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(60)&#xA;, getMapMode().DPtoLP(60)&#xA;));&#xA;this.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(60)&#xA;, getMapMode().DPtoLP(60)&#xA;));&#xA;this.setSize(getMapMode().DPtoLP(60)&#xA;, getMapMode().DPtoLP(60)&#xA;);&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel lblGCML0 = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;lblGCML0.setText(&quot;GCML&quot;);&#xA;&#xA;lblGCML0.setFont(LBLGCML0_FONT);&#xA;&#xA;&#xA;&#xA;lblGCML0.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(2)&#xA;, getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(0)&#xA;));&#xA;&#xA;this.add(lblGCML0);&#xA;&#xA;&#xA;&#xA;fFigureGCMLInstanceGCMLInstanceAliasFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureGCMLInstanceGCMLInstanceAliasFigure.setText(&quot;Alias&quot;);&#xA;&#xA;this.add(fFigureGCMLInstanceGCMLInstanceAliasFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private boolean myUseLocalCoordinates = false;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected boolean useLocalCoordinates() {&#xA;&#x9;&#x9;return myUseLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void setUseLocalCoordinates(boolean useLocalCoordinates) {&#xA;&#x9;&#x9;myUseLocalCoordinates = useLocalCoordinates;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureGCMLInstanceGCMLInstanceAliasFigure() {&#xA;&#x9;&#x9;return fFigureGCMLInstanceGCMLInstanceAliasFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font LBLGCML0_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), &quot;Verdana&quot;, 9, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
-            fixedBackground="true"/>
-        <attributes
-            xsi:type="gmfgen:ResizeConstraints"/>
+            fixedForeground="true"/>
         <attributes
             xsi:type="gmfgen:DefaultSizeAttributes"
-            width="20"
-            height="20"/>
+            width="60"
+            height="60"/>
         <requiredPluginIDs>org.eclipse.draw2d</requiredPluginIDs>
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
       <modelFacet>
         <metaClass
-            href="WFGCML.genmodel#//wfgcml/Final"/>
+            href="WFGCML.genmodel#//wfgcml/GCMLInstance"/>
         <containmentMetaFeature
-            href="WFGCML.genmodel#//wfgcml/WFGCMLRoot/final"/>
+            href="WFGCML.genmodel#//wfgcml/WFGCMLRoot/GCML"/>
         <childMetaFeature
-            href="WFGCML.genmodel#//wfgcml/WFGCMLRoot/final"/>
+            href="WFGCML.genmodel#//wfgcml/WFGCMLRoot/GCML"/>
       </modelFacet>
-    </topLevelNodes>
-    <topLevelNodes
-        visualID="1004"
-        editPartClassName="ConditionEditPart"
-        itemSemanticEditPolicyClassName="ConditionItemSemanticEditPolicy"
-        notationViewFactoryClassName="ConditionViewFactory"
-        canonicalEditPolicyClassName="ConditionCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="ConditionGraphicalNodeEditPolicy"
-        createCommandClassName="ConditionCreateCommand">
-      <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
-      <elementType
-          xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="ConditionEditHelper"/>
-      <viewmap
-          xsi:type="gmfgen:InnerClassViewmap"
-          className="ConditionFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ConditionFigure extends org.eclipse.draw2d.Shape {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ConditionFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.addPoint(new org.eclipse.draw2d.geometry.Point(getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(10)&#xA;));&#xA;this.addPoint(new org.eclipse.draw2d.geometry.Point(getMapMode().DPtoLP(10)&#xA;, getMapMode().DPtoLP(0)&#xA;));&#xA;this.addPoint(new org.eclipse.draw2d.geometry.Point(getMapMode().DPtoLP(20)&#xA;, getMapMode().DPtoLP(10)&#xA;));&#xA;this.addPoint(new org.eclipse.draw2d.geometry.Point(getMapMode().DPtoLP(10)&#xA;, getMapMode().DPtoLP(20)&#xA;));&#xA;this.setFill(true);&#xA;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.white);&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private final org.eclipse.draw2d.geometry.PointList myTemplate = new org.eclipse.draw2d.geometry.PointList();&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.geometry.Rectangle myTemplateBounds;&#xA;&#x9;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public void addPoint(org.eclipse.draw2d.geometry.Point point){&#xA;&#x9;&#x9;myTemplate.addPoint(point);&#xA;&#x9;&#x9;myTemplateBounds = null;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void fillShape(org.eclipse.draw2d.Graphics graphics) {&#xA;&#x9;&#x9;org.eclipse.draw2d.geometry.Rectangle bounds = getBounds();&#xA;&#x9;&#x9;graphics.pushState();&#xA;&#x9;&#x9;graphics.translate(bounds.x, bounds.y);&#xA;&#x9;&#x9;graphics.fillPolygon(scalePointList());&#xA;&#x9;&#x9;graphics.popState();&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;protected void outlineShape(org.eclipse.draw2d.Graphics graphics) {&#xA;&#x9;&#x9;org.eclipse.draw2d.geometry.Rectangle bounds = getBounds();&#xA;&#x9;&#x9;graphics.pushState();&#xA;&#x9;&#x9;graphics.translate(bounds.x, bounds.y);&#xA;&#x9;&#x9;graphics.drawPolygon(scalePointList());&#xA;&#x9;&#x9;graphics.popState();&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.geometry.Rectangle getTemplateBounds(){&#xA;&#x9;&#x9;if (myTemplateBounds == null){&#xA;&#x9;&#x9;&#x9;myTemplateBounds = myTemplate.getBounds().getCopy().union(0, 0);&#xA;&#x9;&#x9;&#x9;//just safety -- we are going to use this as divider &#xA;&#x9;&#x9;&#x9;if (myTemplateBounds.width &lt; 1){&#xA;&#x9;&#x9;&#x9;&#x9;myTemplateBounds.width = 1;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;if (myTemplateBounds.height &lt; 1){&#xA;&#x9;&#x9;&#x9;&#x9;myTemplateBounds.height = 1;&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;return myTemplateBounds;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private int[] scalePointList() {&#xA;&#x9;&#x9;org.eclipse.draw2d.geometry.Rectangle pointsBounds = getTemplateBounds();&#xA;&#x9;&#x9;org.eclipse.draw2d.geometry.Rectangle actualBounds = getBounds();&#xA;&#xA;&#x9;&#x9;float xScale = ((float) actualBounds.width) / pointsBounds.width;&#xA;&#x9;&#x9;float yScale = ((float) actualBounds.height) / pointsBounds.height;&#xA;&#xA;&#x9;&#x9;if (xScale == 1 &amp;&amp; yScale == 1) {&#xA;&#x9;&#x9;&#x9;return myTemplate.toIntArray();&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;int[] scaled = (int[]) myTemplate.toIntArray().clone();&#xA;&#x9;&#x9;for (int i = 0; i &lt; scaled.length; i += 2) {&#xA;&#x9;&#x9;&#x9;scaled[i] = (int) Math.floor(scaled[i] * xScale);&#xA;&#x9;&#x9;&#x9;scaled[i + 1] = (int) Math.floor(scaled[i + 1] * yScale);&#xA;&#x9;&#x9;}&#xA;&#x9;&#x9;return scaled;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
-        <attributes
-            xsi:type="gmfgen:StyleAttributes"
-            fixedForeground="true"
-            fixedBackground="true"/>
-        <attributes
-            xsi:type="gmfgen:ResizeConstraints"/>
-        <requiredPluginIDs>org.eclipse.draw2d</requiredPluginIDs>
-        <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
-      </viewmap>
-      <modelFacet>
-        <metaClass
-            href="WFGCML.genmodel#//wfgcml/Condition"/>
-        <containmentMetaFeature
-            href="WFGCML.genmodel#//wfgcml/WFGCMLRoot/condition"/>
-        <childMetaFeature
-            href="WFGCML.genmodel#//wfgcml/WFGCMLRoot/condition"/>
-      </modelFacet>
+      <labels
+          visualID="4001"
+          editPartClassName="GCMLInstanceAliasEditPart"
+          itemSemanticEditPolicyClassName="GCMLInstanceAliasItemSemanticEditPolicy"
+          notationViewFactoryClassName="GCMLInstanceAliasViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureGCMLInstanceGCMLInstanceAliasFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet">
+          <metaFeatures
+              href="WFGCML.genmodel#//wfgcml/GCMLInstance/Alias"/>
+        </modelFacet>
+      </labels>
     </topLevelNodes>
     <links
         visualID="3001"
@@ -194,8 +195,11 @@
           xsi:type="gmfgen:SpecializationType"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
-          className="ConditionNextFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ConditionNextFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ConditionNextFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          className="ConditionAltnextFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ConditionAltnextFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ConditionAltnextFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedForeground="true"/>
         <requiredPluginIDs>org.eclipse.draw2d</requiredPluginIDs>
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
@@ -218,8 +222,11 @@
           xsi:type="gmfgen:SpecializationType"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
-          className="GCMLInstanceNextFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class GCMLInstanceNextFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public GCMLInstanceNextFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          className="ConditionNextFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class ConditionNextFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public ConditionNextFigure() {&#xA;&#x9;&#x9;this.setLineWidth(2);&#xA;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedForeground="true"/>
         <requiredPluginIDs>org.eclipse.draw2d</requiredPluginIDs>
         <requiredPluginIDs>org.eclipse.gmf.runtime.draw2d.ui</requiredPluginIDs>
       </viewmap>
@@ -236,7 +243,7 @@
             xsi:type="gmfgen:ToolEntry"
             title="GCML"
             description="Create new GCML"
-            genNodes="//@diagram/@topLevelNodes.0"/>
+            genNodes="//@diagram/@topLevelNodes.3"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Next"
@@ -246,46 +253,46 @@
             xsi:type="gmfgen:ToolEntry"
             title="Start"
             description="Create new Start"
-            genNodes="//@diagram/@topLevelNodes.1"/>
+            genNodes="//@diagram/@topLevelNodes.2"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Final"
             description="Create new Final"
-            genNodes="//@diagram/@topLevelNodes.2"/>
+            genNodes="//@diagram/@topLevelNodes.0"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Condition"
             description="Create new Condition"
-            genNodes="//@diagram/@topLevelNodes.3"/>
+            genNodes="//@diagram/@topLevelNodes.1"/>
       </groups>
     </palette>
     <preferencePages
         xsi:type="gmfgen:GenStandardPreferencePage"
-        iD="RRComSSys.CMVE.diagram.general"
+        iD="RRComSSys.CMWF.diagram.general"
         name="WFGCML Diagram">
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="RRComSSys.CMVE.diagram.appearance"
+          iD="RRComSSys.CMWF.diagram.appearance"
           name="Appearance"
           kind="Appearance"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="RRComSSys.CMVE.diagram.connections"
+          iD="RRComSSys.CMWF.diagram.connections"
           name="Connections"
           kind="Connections"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="RRComSSys.CMVE.diagram.printing"
+          iD="RRComSSys.CMWF.diagram.printing"
           name="Printing"
           kind="Printing"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="RRComSSys.CMVE.diagram.rulersAndGrid"
+          iD="RRComSSys.CMWF.diagram.rulersAndGrid"
           name="Rulers And Grid"
           kind="RulersAndGrid"/>
       <children
           xsi:type="gmfgen:GenStandardPreferencePage"
-          iD="RRComSSys.CMVE.diagram.pathmaps"
+          iD="RRComSSys.CMWF.diagram.pathmaps"
           name="Pathmaps"
           kind="Pathmaps"/>
     </preferencePages>
