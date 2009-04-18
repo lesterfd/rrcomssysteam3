@@ -61,6 +61,10 @@
       <Project>{FD1C6924-DA64-4D1C-910E-412F9925661D}</Project>
       <Name>RRComSSys.CVM.ObjectModel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RRComSSys.Testing.Common\RRComSSys.Testing.Common.csproj">
+      <Project>{A22B9A96-B194-4161-B092-F59A14F3D6AC}</Project>
+      <Name>RRComSSys.Testing.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="TestFiles\sample_xcml_1.xcml">

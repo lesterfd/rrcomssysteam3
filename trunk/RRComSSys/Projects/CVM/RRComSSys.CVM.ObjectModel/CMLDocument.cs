@@ -15,10 +15,18 @@ namespace RRComSSys.CVM.ObjectModel
 	{
 		#region Member Variables
 		private String _documentLoadedFrom;
+		private CMLType _documentType;
 		#endregion
 
 		#region Events
 		public event EventHandler DocumentLoaded;
+		#endregion
+
+		#region Properties
+		public CMLType DocumentType
+		{
+			get { return _documentType; }
+		}
 		#endregion
 
 		#region Static Methods
@@ -42,16 +50,19 @@ namespace RRComSSys.CVM.ObjectModel
 			// Load either WF or XCML based on extension
 			CMLDocument result = null;
 			Type fileType = null;
+			CMLType cmlType = CMLType.XCML;
 			String errorMessage = null;
 			if (file.Extension.Equals(Constants.Extensions.XCML, StringComparison.CurrentCultureIgnoreCase))
 			{
 				fileType = typeof(XCMLDocument);
 				errorMessage = Constants.Messages.MSG_ERROR_XCML;
+				cmlType = CMLType.XCML;
 			}
 			else if (file.Extension.Equals(Constants.Extensions.XCMLWorkflow, StringComparison.CurrentCultureIgnoreCase))
 			{
 				fileType = typeof(XCMLWorkflowDocument);
 				errorMessage = Constants.Messages.MSG_ERROR_WF;
+				cmlType = CMLType.XCMLWorkflow;
 			}
 			else
 				throw new CMLDocumentException(String.Format(Constants.Messages.MSG_NOT_SUPPORTED,
@@ -64,10 +75,8 @@ namespace RRComSSys.CVM.ObjectModel
 				{
 					xmlText = sr.ReadToEnd();
 				}
-				StringReader stringReader = new StringReader(xmlText);
-				XmlTextReader xmlTextReader = new XmlTextReader(stringReader);
-				XmlSerializer xmlSerializer = new XmlSerializer(fileType);
-				result = (CMLDocument) xmlSerializer.Deserialize(xmlTextReader);
+				result = Deserialize(xmlText, fileType);
+				result._documentType = cmlType;
 			}
 			catch (Exception e)
 			{
@@ -86,6 +95,34 @@ namespace RRComSSys.CVM.ObjectModel
 				result.DocumentLoaded(result, EventArgs.Empty);
 
 			return result;
+		}
+
+		public static CMLDocument Deserialize(String xmlText, Type type)
+		{
+			StringReader stringReader = new StringReader(xmlText);
+			XmlTextReader xmlTextReader = new XmlTextReader(stringReader);
+			XmlSerializer xmlSerializer = new XmlSerializer(type);
+			return (CMLDocument) xmlSerializer.Deserialize(xmlTextReader);
+		}
+
+		public static CMLType GetDocumentType(String fileName)
+		{
+			return GetDocumentType(new FileInfo(fileName));
+		}
+
+		public static CMLType GetDocumentType(FileInfo file)
+		{
+			if (!file.Exists) return CMLType.Other;
+			else if (file.Extension.Equals(Constants.Extensions.GCML, StringComparison.CurrentCultureIgnoreCase))
+				return CMLType.GCML;
+			else if (file.Extension.Equals(Constants.Extensions.GCMLWorkflow, StringComparison.CurrentCultureIgnoreCase))
+				return CMLType.GCMLWorkflow;
+			else if (file.Extension.Equals(Constants.Extensions.XCML, StringComparison.CurrentCultureIgnoreCase))
+				return CMLType.XCML;
+			else if (file.Extension.Equals(Constants.Extensions.XCMLWorkflow, StringComparison.CurrentCultureIgnoreCase))
+				return CMLType.XCMLWorkflow;
+			else
+				return CMLType.Other;
 		}
 
 		#endregion
@@ -140,5 +177,14 @@ namespace RRComSSys.CVM.ObjectModel
 
 		protected virtual void OnLoad() { }
 		#endregion
+	}
+
+	public enum CMLType
+	{
+		Other,
+		GCML,
+		GCMLWorkflow,
+		XCML,
+		XCMLWorkflow
 	}
 }

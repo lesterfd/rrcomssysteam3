@@ -31,6 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MbUnit.Framework, Version=2.4.2.355, Culture=neutral, PublicKeyToken=5e72ecd30bc408d5">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ExternalLibraries\MbUnit.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MbUnit.Framework.2.0, Version=2.4.2.355, Culture=neutral, PublicKeyToken=5e72ecd30bc408d5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ExternalLibraries\MbUnit.Framework.2.0.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -45,10 +53,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModelTransformer\ModelTransformationEngineTester.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ModelTransformer\" />
+    <ProjectReference Include="..\..\..\Projects\CVM\RRComSSys.CVM.ObjectModel\RRComSSys.CVM.ObjectModel.csproj">
+      <Project>{FD1C6924-DA64-4D1C-910E-412F9925661D}</Project>
+      <Name>RRComSSys.CVM.ObjectModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Projects\CVM\RRComSSys.CVM.Transformers\RRComSSys.CVM.Transformers.csproj">
+      <Project>{4A42C1DB-BF9F-4947-9AB9-B862D571EADD}</Project>
+      <Name>RRComSSys.CVM.Transformers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RRComSSys.Testing.Common\RRComSSys.Testing.Common.csproj">
+      <Project>{A22B9A96-B194-4161-B092-F59A14F3D6AC}</Project>
+      <Name>RRComSSys.Testing.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestFiles\sample_gcml_01.gcml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="SchemaTransformer\" />
     <Folder Include="SynthesisEngine\" />
   </ItemGroup>
