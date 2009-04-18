@@ -45,6 +45,7 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 			set { _mediaRefList = value; }
 		}
 
+		[XmlIgnore]
 		public List<Medium> Media
 		{
 			get { return _media; }

@@ -16,8 +16,8 @@ namespace RRComSSys.CVM.Common
 			public const String MSG_NOT_A_FILE = "The file: '{0}' is not a valid file";
 			public const String MSG_BAD_EXTENSION = "The file: '{0}' has a bad extension";
 			public const String MSG_NOT_SUPPORTED = "The file: '{0}' is not a supported file type";
-			public const String MSG_ERROR_XCML = "An error ocurred while loading the XCML file: '{0}'";
-			public const String MSG_ERROR_WF = "An error ocurred while loading the XCML Workflow file: '{0}'";
+			public const String MSG_ERROR_LOAD = "An error ocurred while loading the file: '{0}'";
+			public const String MSG_ERROR_DESERIALIZE = "An error occured while deserializing a CMLDocument file";
 		}
 
 		public static class Extensions

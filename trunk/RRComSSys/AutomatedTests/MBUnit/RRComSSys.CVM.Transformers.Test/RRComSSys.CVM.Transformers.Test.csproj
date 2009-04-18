@@ -71,8 +71,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="TestFiles\sample_xcml_01.xcml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="TestFiles\sample_gcml_01.gcml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>

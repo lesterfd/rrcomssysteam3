@@ -13,7 +13,7 @@ using RRComSSys.CVM.Common;
 
 namespace RRComSSys.CVM.Transformers.ModelTransformer
 {
-    public static class ModelTransformationEngine
+	public static class ModelTransformationEngine
 	{
 		#region Member Variables
 		private const String _defaultMappingFileName = "MappingGCMLToXCML.xslt";
@@ -44,44 +44,45 @@ namespace RRComSSys.CVM.Transformers.ModelTransformer
 
 		#region Private Methods
 
-		private static XCMLDocument LoadXCMLDocument(FileInfo file)
+		private static CMLDocument LoadXCMLDocument(FileInfo file)
+		{
+			return XCMLDocument.LoadDocument<XCMLDocument>(file);
+		}
+
+		private static CMLDocument LoadGCMLDocument(FileInfo file)
+		{
+			String xmlText = TransformGCMLToXCML(file.FullName);
+			return XCMLDocument.LoadDocumentFromText<XCMLDocument>(xmlText);
+		}
+
+		private static CMLDocument LoadXCMLWorkflowDocument(FileInfo file)
 		{
 			throw new NotImplementedException();
 		}
 
-		private static XCMLDocument LoadGCMLDocument(FileInfo file)
+		private static CMLDocument LoadGCMLWorkflowDocument(FileInfo file)
 		{
 			throw new NotImplementedException();
 		}
 
-		private static XCMLWorkflowDocument LoadXCMLWorkflowDocument(FileInfo file)
+		private static String TransformGCMLToXCML(String inputFile)
 		{
-			throw new NotImplementedException();
+			return TransformGCMLToXCML(inputFile, _defaultMappingFileName);
 		}
 
-		private static XCMLWorkflowDocument LoadGCMLWorkflowDocument(FileInfo file)
+		private static String TransformGCMLToXCML(String inputFile, String xslt)
 		{
-			throw new NotImplementedException();
+			StringWriter writer = new StringWriter();
+			XslCompiledTransform xsltrans = new XslCompiledTransform();
+			xsltrans.Load(xslt);
+			XPathDocument doc = new XPathDocument(inputFile);
+			xsltrans.Transform(doc, null, writer);
+			return writer.ToString();
 		}
 
-		private static void TransformGCMLToXCML(String inputFile, String outputFile)
-        {
-			TransformGCMLToXCML(inputFile, outputFile, _defaultMappingFileName);
-        }
-
-        private static void TransformGCMLToXCML(String inputFile, String outputFile, String xslt)
-        {
-            XmlTextWriter writer = new XmlTextWriter(outputFile, null);
-            XslCompiledTransform xsltrans = new XslCompiledTransform();
-            xsltrans.Load(xslt);
-            XPathDocument doc = new XPathDocument(inputFile);
-            xsltrans.Transform(doc, null, writer);
-            writer.Close();
-        }
-
-        private static void TransformWFGCMLToWFXCML(String intputFile, String outputFile)
-        {
-            // TODO
+		private static void TransformWFGCMLToWFXCML(String intputFile, String outputFile)
+		{
+			// TODO
 		}
 		#endregion
 	}

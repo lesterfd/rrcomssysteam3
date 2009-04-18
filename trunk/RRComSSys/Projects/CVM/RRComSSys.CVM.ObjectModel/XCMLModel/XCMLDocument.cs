@@ -10,7 +10,7 @@ using RRComSSys.CVM.Common;
 namespace RRComSSys.CVM.ObjectModel.XCMLModel
 {
 	[XmlTypeAttribute(AnonymousType = true)]
-	[XmlRoot(ElementName = "userSchema")]
+	[XmlRoot(ElementName = "UserSchema", Namespace = "", IsNullable = false)]
 	public class XCMLDocument : CMLDocument
 	{
 		#region Member Variables
@@ -59,16 +59,19 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 			set { _isAttachedList = value; }
 		}
 
+		[XmlIgnore]
 		public UserDefinition LocalUser
 		{
 			get { return _localUser; }
 		}
 
+		[XmlIgnore]
 		public List<UserDefinition> RemoteUsers
 		{
 			get { return _remoteUsers; }
 		}
 
+		[XmlIgnore]
 		public List<UserDefinition> AllUsers
 		{
 			get
