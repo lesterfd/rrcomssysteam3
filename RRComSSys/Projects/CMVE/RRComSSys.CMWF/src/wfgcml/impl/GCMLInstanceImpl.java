@@ -102,7 +102,6 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 		Shell s = new Shell();
 	    FileDialog fd = new FileDialog(s, SWT.OPEN);
 	    fd.setText("Select GCML path");
-	    //fd.setFilterPath("H:/");
 	    String[] filterExt = {"*.gcml"};
 	    fd.setFilterExtensions(filterExt);
 	    String selected = fd.open();

@@ -48,10 +48,10 @@ public class MediumImpl extends EObjectImpl implements Medium {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMediumURL()
-	 * @generated
+	 * @NOTgenerated
 	 * @ordered
 	 */
-	protected static final String MEDIUM_URL_EDEFAULT = null;
+	protected static final String MEDIUM_URL_EDEFAULT = "_";
 
 	/**
 	 * The cached value of the '{@link #getMediumURL() <em>Medium URL</em>}' attribute.
@@ -131,7 +131,7 @@ public class MediumImpl extends EObjectImpl implements Medium {
 	protected MediumImpl() {
 		super();
 		mediumID = EcoreUtil.generateUUID();
-		mediumURL = "_";
+		mediumURL = MEDIUM_URL_EDEFAULT;
 	}
 
 	/**
@@ -165,7 +165,7 @@ public class MediumImpl extends EObjectImpl implements Medium {
 	    fd.setText("Confirm Medium URL");
 	    fd.setFilterPath(newMediumURL);
 	    String selected = fd.open();
-		mediumURL = selected;
+		mediumURL = selected == null ? MEDIUM_URL_EDEFAULT : selected;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GCMLPackage.MEDIUM__MEDIUM_URL, oldMediumURL, mediumURL));
 	}
