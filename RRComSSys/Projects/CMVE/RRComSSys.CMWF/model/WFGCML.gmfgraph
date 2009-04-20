@@ -7,6 +7,12 @@
       name="Default">
     <figures
         xsi:type="gmfgraph:PolylineDecoration"
+        name="GCMLInstanceNextTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
+        name="StartNextTargetDecoration"/>
+    <figures
+        xsi:type="gmfgraph:PolylineDecoration"
         name="ConditionNextTargetDecoration"/>
     <figures
         xsi:type="gmfgraph:PolylineDecoration"
@@ -24,14 +30,19 @@
         <foregroundColor
             xsi:type="gmfgraph:ConstantColor"
             value="black"/>
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"/>
         <maximumSize
-            dx="60"
+            dx="80"
+            dy="60"/>
+        <minimumSize
+            dx="80"
             dy="60"/>
         <preferredSize
-            dx="60"
+            dx="80"
             dy="60"/>
         <size
-            x="60"
+            x="80"
             y="60"/>
         <children
             xsi:type="gmfgraph:Label"
@@ -47,12 +58,23 @@
         </children>
         <children
             xsi:type="gmfgraph:Label"
-            name="GCMLInstanceGCMLInstanceAliasFigure"
-            text="Alias"/>
+            name="GCMLInstanceGCMLLocFigure"
+            text="&lt;...>"/>
       </actualFigure>
       <accessors
-          accessor="getFigureGCMLInstanceGCMLInstanceAliasFigure"
           figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors
+        name="GCMLInstanceNextFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="GCMLInstanceNextFigure"
+          lineWidth="2"
+          targetDecoration="//@figures.0/@figures.0">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="StartFigure">
@@ -72,6 +94,18 @@
         <preferredSize
             dx="18"
             dy="18"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors
+        name="StartNextFigure">
+      <actualFigure
+          xsi:type="gmfgraph:PolylineConnection"
+          name="StartNextFigure"
+          lineWidth="2"
+          targetDecoration="//@figures.0/@figures.1">
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
       </actualFigure>
     </descriptors>
     <descriptors
@@ -121,7 +155,7 @@
           xsi:type="gmfgraph:PolylineConnection"
           name="ConditionNextFigure"
           lineWidth="2"
-          targetDecoration="//@figures.0/@figures.0">
+          targetDecoration="//@figures.0/@figures.2">
         <foregroundColor
             xsi:type="gmfgraph:ConstantColor"
             value="black"/>
@@ -133,7 +167,7 @@
           xsi:type="gmfgraph:PolylineConnection"
           name="ConditionAltnextFigure"
           lineWidth="2"
-          targetDecoration="//@figures.0/@figures.1">
+          targetDecoration="//@figures.0/@figures.3">
         <foregroundColor
             xsi:type="gmfgraph:ConstantColor"
             value="black"/>
@@ -145,13 +179,22 @@
       figure="GCMLInstanceFigure"/>
   <nodes
       name="Start"
-      figure="StartFigure"/>
+      figure="StartFigure"
+      resizeConstraint="NONE"/>
   <nodes
       name="Final"
-      figure="FinalFigure"/>
+      figure="FinalFigure"
+      resizeConstraint="NONE"/>
   <nodes
-      name="Condition"
-      figure="ConditionFigure"/>
+      name="Decision"
+      figure="ConditionFigure"
+      resizeConstraint="NONE"/>
+  <connections
+      name="GCMLInstanceNext"
+      figure="GCMLInstanceNextFigure"/>
+  <connections
+      name="StartNext"
+      figure="StartNextFigure"/>
   <connections
       name="ConditionNext"
       figure="ConditionNextFigure"/>
@@ -159,7 +202,7 @@
       name="ConditionAltnext"
       figure="ConditionAltnextFigure"/>
   <labels
-      name="GCMLInstanceAlias"
+      name="GCMLInstanceGCMLLoc"
       figure="GCMLInstanceFigure"
       accessor="//@figures.0/@descriptors.0/@accessors.0"/>
 </gmfgraph:Canvas>

@@ -15,7 +15,6 @@
     <genClasses ecoreClass="WFGCML.ecore#//GCMLInstance">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WFGCML.ecore#//GCMLInstance/GCMLLoc"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute WFGCML.ecore#//GCMLInstance/ID"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WFGCML.ecore#//GCMLInstance/Alias"/>
     </genClasses>
     <genClasses ecoreClass="WFGCML.ecore#//Start"/>
     <genClasses ecoreClass="WFGCML.ecore#//Final"/>

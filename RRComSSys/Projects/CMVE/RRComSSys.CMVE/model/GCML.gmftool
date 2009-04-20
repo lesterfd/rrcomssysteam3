@@ -8,61 +8,60 @@
     <tools
         xsi:type="gmftool:ToolGroup"
         title="GCML"
-        description="GCML Nodes"
-        collapsible="true">
+        description="">
       <tools
           xsi:type="gmftool:CreationTool"
           title="Person"
           description="Create new Person">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="\model\Icons\user.png"
+            bundle="RRComSSys.CMVE"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="IsAttached"
           description="Create new IsAttached">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="\model\Icons\connect.png"
+            bundle="RRComSSys.CMVE"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Device"
           description="Create new Device">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="\model\Icons\device.png"
+            bundle="RRComSSys.CMVE"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Capability"
           description="Create new Capability">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="\model\Icons\capability.png"
+            bundle="RRComSSys.CMVE"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Connection"
           description="Create new Connection">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="\model\Icons\connection.png"
+            bundle="RRComSSys.CMVE"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Medium"
           description="Create new Medium">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="\model\Icons\medium.ico"
+            bundle="RRComSSys.CMVE"/>
       </tools>
     </tools>
   </palette>

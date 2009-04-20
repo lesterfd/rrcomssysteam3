@@ -495,42 +495,47 @@
     <palette>
       <groups
           title="GCML"
-          description="GCML Nodes"
-          collapse="true">
+          description="">
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Person"
             description="Create new Person"
+            smallIconPath="/RRComSSys.CMVE/model/Icons/user.png"
             genNodes="//@diagram/@topLevelNodes.4"
             genLinks="//@diagram/@links.0"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="IsAttached"
             description="Create new IsAttached"
+            smallIconPath="/RRComSSys.CMVE/model/Icons/connect.png"
             genNodes="//@diagram/@topLevelNodes.0"
             genLinks="//@diagram/@links.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Device"
             description="Create new Device"
+            smallIconPath="/RRComSSys.CMVE/model/Icons/device.png"
             genNodes="//@diagram/@topLevelNodes.2"
             genLinks="//@diagram/@links.2"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Capability"
             description="Create new Capability"
+            smallIconPath="/RRComSSys.CMVE/model/Icons/capability.png"
             genNodes="//@diagram/@topLevelNodes.1"
             genLinks="//@diagram/@links.3"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Connection"
             description="Create new Connection"
+            smallIconPath="/RRComSSys.CMVE/model/Icons/connection.png"
             genNodes="//@diagram/@topLevelNodes.3"
             genLinks="//@diagram/@links.4"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Medium"
             description="Create new Medium"
+            smallIconPath="/RRComSSys.CMVE/model/Icons/medium.ico"
             genNodes="//@diagram/@topLevelNodes.5"/>
       </groups>
     </palette>

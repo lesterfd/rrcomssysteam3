@@ -7,6 +7,39 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
+        href="WFGCML.ecore#//WFGCMLRoot/GCML"/>
+    <ownedChild>
+      <domainMetaElement
+          href="WFGCML.ecore#//GCMLInstance"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="WFGCML.gmfgraph#GCMLInstanceGCMLLoc"/>
+        <features
+            href="WFGCML.ecore#//GCMLInstance/GCMLLoc"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="WFGCML.gmftool#//@palette/@tools.0/@tools.0"/>
+      <diagramNode
+          href="WFGCML.gmfgraph#GCMLInstance"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="WFGCML.ecore#//WFGCMLRoot/start"/>
+    <ownedChild>
+      <domainMetaElement
+          href="WFGCML.ecore#//Start"/>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="WFGCML.gmftool#//@palette/@tools.0/@tools.2"/>
+      <diagramNode
+          href="WFGCML.gmfgraph#Start"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
         href="WFGCML.ecore#//WFGCMLRoot/final"/>
     <ownedChild>
       <domainMetaElement
@@ -28,40 +61,7 @@
           xsi:type="gmftool:CreationTool"
           href="WFGCML.gmftool#//@palette/@tools.0/@tools.4"/>
       <diagramNode
-          href="WFGCML.gmfgraph#Condition"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="WFGCML.ecore#//WFGCMLRoot/start"/>
-    <ownedChild>
-      <domainMetaElement
-          href="WFGCML.ecore#//Start"/>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="WFGCML.gmftool#//@palette/@tools.0/@tools.2"/>
-      <diagramNode
-          href="WFGCML.gmfgraph#Start"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="WFGCML.ecore#//WFGCMLRoot/GCML"/>
-    <ownedChild>
-      <domainMetaElement
-          href="WFGCML.ecore#//GCMLInstance"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="WFGCML.gmfgraph#GCMLInstanceAlias"/>
-        <features
-            href="WFGCML.ecore#//GCMLInstance/Alias"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="WFGCML.gmftool#//@palette/@tools.0/@tools.0"/>
-      <diagramNode
-          href="WFGCML.gmfgraph#GCMLInstance"/>
+          href="WFGCML.gmfgraph#Decision"/>
     </ownedChild>
   </nodes>
   <links>
@@ -69,7 +69,7 @@
         xsi:type="gmftool:CreationTool"
         href="WFGCML.gmftool#//@palette/@tools.0/@tools.1"/>
     <diagramLink
-        href="WFGCML.gmfgraph#ConditionAltnext"/>
+        href="WFGCML.gmfgraph#ConditionNext"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="WFGCML.ecore#//Condition/altnext"/>
@@ -79,7 +79,7 @@
         xsi:type="gmftool:CreationTool"
         href="WFGCML.gmftool#//@palette/@tools.0/@tools.1"/>
     <diagramLink
-        href="WFGCML.gmfgraph#ConditionNext"/>
+        href="WFGCML.gmfgraph#GCMLInstanceNext"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="WFGCML.ecore#//HasNext/next"/>

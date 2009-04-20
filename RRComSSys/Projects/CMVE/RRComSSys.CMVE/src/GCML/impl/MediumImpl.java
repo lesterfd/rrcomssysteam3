@@ -44,14 +44,19 @@ import org.eclipse.swt.widgets.Shell;
  */
 public class MediumImpl extends EObjectImpl implements Medium {
 	/**
+	 * @NOTgenerated
+	 */
+	protected static final String SPECIAL_CHAR = "_";
+	
+	/**
 	 * The default value of the '{@link #getMediumURL() <em>Medium URL</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getMediumURL()
-	 * @NOTgenerated
+	 * @generated
 	 * @ordered
 	 */
-	protected static final String MEDIUM_URL_EDEFAULT = "_";
+	protected static final String MEDIUM_URL_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getMediumURL() <em>Medium URL</em>}' attribute.
@@ -131,7 +136,7 @@ public class MediumImpl extends EObjectImpl implements Medium {
 	protected MediumImpl() {
 		super();
 		mediumID = EcoreUtil.generateUUID();
-		mediumURL = MEDIUM_URL_EDEFAULT;
+		mediumURL = SPECIAL_CHAR;
 	}
 
 	/**
@@ -160,12 +165,14 @@ public class MediumImpl extends EObjectImpl implements Medium {
 	 */
 	public void setMediumURL(String newMediumURL) {
 		String oldMediumURL = mediumURL;
-		Shell s = new Shell();
-	    FileDialog fd = new FileDialog(s, SWT.OPEN);
-	    fd.setText("Confirm Medium URL");
-	    fd.setFilterPath(newMediumURL);
-	    String selected = fd.open();
-		mediumURL = selected == null ? MEDIUM_URL_EDEFAULT : selected;
+		if (newMediumURL != oldMediumURL){
+			Shell s = new Shell();
+		    FileDialog fd = new FileDialog(s, SWT.OPEN);
+		    fd.setText("Confirm Medium URL?");
+		    fd.setFileName(newMediumURL);
+		    String selected = fd.open();
+		    mediumURL = selected == null ? (newMediumURL == "" ? SPECIAL_CHAR : newMediumURL) : selected;
+			}
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, GCMLPackage.MEDIUM__MEDIUM_URL, oldMediumURL, mediumURL));
 	}

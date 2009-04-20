@@ -27,10 +27,6 @@
         <element xmi:type="ecore:EAttribute" href="WFGCML.ecore#//GCMLInstance/ID"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_ivl5YSfbEd65W8kWUqkizw"/>
       </children>
-      <children xmi:type="notation:Node" xmi:id="_HUPPkSxREd6nFv_UO-Kc6A" type="2001">
-        <element xmi:type="ecore:EAttribute" href="WFGCML.ecore#//GCMLInstance/Alias"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_HUPPkixREd6nFv_UO-Kc6A"/>
-      </children>
       <styles xmi:type="notation:DrawerStyle" xmi:id="_WrH2XiFWEd6KhfVZv4N9HQ"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_WrH2XyFWEd6KhfVZv4N9HQ"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_WrH2YCFWEd6KhfVZv4N9HQ"/>

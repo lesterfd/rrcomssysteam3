@@ -34,7 +34,6 @@ import org.eclipse.swt.widgets.Shell;
  *   <li>{@link wfgcml.impl.GCMLInstanceImpl#getNext <em>Next</em>}</li>
  *   <li>{@link wfgcml.impl.GCMLInstanceImpl#getGCMLLoc <em>GCML Loc</em>}</li>
  *   <li>{@link wfgcml.impl.GCMLInstanceImpl#getID <em>ID</em>}</li>
- *   <li>{@link wfgcml.impl.GCMLInstanceImpl#getAlias <em>Alias</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,10 +55,10 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGCMLLoc()
-	 * @generated
+	 * @NOTgenerated
 	 * @ordered
 	 */
-	protected static final String GCML_LOC_EDEFAULT = "";
+	protected static final String GCML_LOC_EDEFAULT = "_";
 
 	/**
 	 * The cached value of the '{@link #getGCMLLoc() <em>GCML Loc</em>}' attribute.
@@ -90,26 +89,6 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getAlias() <em>Alias</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAlias()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ALIAS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getAlias() <em>Alias</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAlias()
-	 * @generated
-	 * @ordered
-	 */
-	protected String alias = ALIAS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -186,11 +165,20 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @NOTgenerated
 	 */
 	public void setGCMLLoc(String newGCMLLoc) {
 		String oldGCMLLoc = gcmlLoc;
-		gcmlLoc = newGCMLLoc;
+		if (newGCMLLoc != oldGCMLLoc){
+		Shell s = new Shell();
+	    FileDialog fd = new FileDialog(s, SWT.OPEN);
+	    fd.setText("Confirm GCML path?");
+	    fd.setFilterPath(newGCMLLoc);
+	    String[] filterExt = {"*.gcml"};
+	    fd.setFilterExtensions(filterExt);
+	    String selected = fd.open();
+	    gcmlLoc = selected == null ? (newGCMLLoc == "" ? GCML_LOC_EDEFAULT : newGCMLLoc) : selected;
+		}
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, WfgcmlPackage.GCML_INSTANCE__GCML_LOC, oldGCMLLoc, gcmlLoc));
 	}
@@ -210,38 +198,6 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getAlias() {
-		return alias;
-	}
-
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @NOTgenerated
-	 */
-	public void setAlias(String newAlias) {
-		String oldAlias = alias;
-		alias = newAlias;
-		
-		Shell s = new Shell();
-	    FileDialog fd = new FileDialog(s, SWT.OPEN);
-	    fd.setText("Select GCML path");
-	    String[] filterExt = {"*.gcml"};
-	    fd.setFilterExtensions(filterExt);
-	    String selected = fd.open();
-	    setGCMLLoc(selected);
-		
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WfgcmlPackage.GCML_INSTANCE__ALIAS, oldAlias, alias));
-	}
-
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -252,8 +208,6 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 				return getGCMLLoc();
 			case WfgcmlPackage.GCML_INSTANCE__ID:
 				return getID();
-			case WfgcmlPackage.GCML_INSTANCE__ALIAS:
-				return getAlias();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -271,9 +225,6 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 				return;
 			case WfgcmlPackage.GCML_INSTANCE__GCML_LOC:
 				setGCMLLoc((String)newValue);
-				return;
-			case WfgcmlPackage.GCML_INSTANCE__ALIAS:
-				setAlias((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -293,9 +244,6 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 			case WfgcmlPackage.GCML_INSTANCE__GCML_LOC:
 				setGCMLLoc(GCML_LOC_EDEFAULT);
 				return;
-			case WfgcmlPackage.GCML_INSTANCE__ALIAS:
-				setAlias(ALIAS_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -314,8 +262,6 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 				return GCML_LOC_EDEFAULT == null ? gcmlLoc != null : !GCML_LOC_EDEFAULT.equals(gcmlLoc);
 			case WfgcmlPackage.GCML_INSTANCE__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case WfgcmlPackage.GCML_INSTANCE__ALIAS:
-				return ALIAS_EDEFAULT == null ? alias != null : !ALIAS_EDEFAULT.equals(alias);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -334,8 +280,6 @@ public class GCMLInstanceImpl extends EObjectImpl implements GCMLInstance {
 		result.append(gcmlLoc);
 		result.append(", ID: ");
 		result.append(id);
-		result.append(", Alias: ");
-		result.append(alias);
 		result.append(')');
 		return result.toString();
 	}
