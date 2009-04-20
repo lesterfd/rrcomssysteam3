@@ -13,45 +13,45 @@
           title="GCML"
           description="Create new GCML">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="\model\Icons\doc.png"
+            bundle="RRComSSys.CMWF"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Next"
           description="Create new Next">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="\model\Icons\connect.png"
+            bundle="RRComSSys.CMWF"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Start"
           description="Create new Start">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="\model\Icons\start.png"
+            bundle="RRComSSys.CMWF"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
           title="Final"
           description="Create new Final">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="\model\Icons\finish.png"
+            bundle="RRComSSys.CMWF"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Condition"
+          title="Decision"
           description="Create new Condition">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="\model\Icons\decision.png"
+            bundle="RRComSSys.CMWF"/>
       </tools>
     </tools>
   </palette>

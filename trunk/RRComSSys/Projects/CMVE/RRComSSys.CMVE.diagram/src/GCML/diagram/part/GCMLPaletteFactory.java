@@ -31,7 +31,7 @@ public class GCMLPaletteFactory {
 	 * @generated
 	 */
 	private PaletteContainer createGCML1Group() {
-		PaletteDrawer paletteContainer = new PaletteDrawer(
+		PaletteGroup paletteContainer = new PaletteGroup(
 				Messages.GCML1Group_title);
 		paletteContainer.setDescription(Messages.GCML1Group_desc);
 		paletteContainer.add(createPerson1CreationTool());
@@ -52,8 +52,8 @@ public class GCMLPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Person1CreationTool_title,
 				Messages.Person1CreationTool_desc, types);
-		entry.setSmallIcon(GCMLElementTypes
-				.getImageDescriptor(GCMLElementTypes.Person_1005));
+		entry.setSmallIcon(GCMLDiagramEditorPlugin
+				.findImageDescriptor("/RRComSSys.CMVE/model/Icons/user.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -67,8 +67,9 @@ public class GCMLPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.IsAttached2CreationTool_title,
 				Messages.IsAttached2CreationTool_desc, types);
-		entry.setSmallIcon(GCMLElementTypes
-				.getImageDescriptor(GCMLElementTypes.IsAttached_1001));
+		entry
+				.setSmallIcon(GCMLDiagramEditorPlugin
+						.findImageDescriptor("/RRComSSys.CMVE/model/Icons/connect.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -82,8 +83,8 @@ public class GCMLPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Device3CreationTool_title,
 				Messages.Device3CreationTool_desc, types);
-		entry.setSmallIcon(GCMLElementTypes
-				.getImageDescriptor(GCMLElementTypes.Device_1003));
+		entry.setSmallIcon(GCMLDiagramEditorPlugin
+				.findImageDescriptor("/RRComSSys.CMVE/model/Icons/device.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -97,8 +98,9 @@ public class GCMLPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Capability4CreationTool_title,
 				Messages.Capability4CreationTool_desc, types);
-		entry.setSmallIcon(GCMLElementTypes
-				.getImageDescriptor(GCMLElementTypes.Capability_1002));
+		entry
+				.setSmallIcon(GCMLDiagramEditorPlugin
+						.findImageDescriptor("/RRComSSys.CMVE/model/Icons/capability.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -112,8 +114,9 @@ public class GCMLPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Connection5CreationTool_title,
 				Messages.Connection5CreationTool_desc, types);
-		entry.setSmallIcon(GCMLElementTypes
-				.getImageDescriptor(GCMLElementTypes.Connection_1004));
+		entry
+				.setSmallIcon(GCMLDiagramEditorPlugin
+						.findImageDescriptor("/RRComSSys.CMVE/model/Icons/connection.png")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -127,8 +130,8 @@ public class GCMLPaletteFactory {
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Medium6CreationTool_title,
 				Messages.Medium6CreationTool_desc, types);
-		entry.setSmallIcon(GCMLElementTypes
-				.getImageDescriptor(GCMLElementTypes.Medium_1006));
+		entry.setSmallIcon(GCMLDiagramEditorPlugin
+				.findImageDescriptor("/RRComSSys.CMVE/model/Icons/medium.ico")); //$NON-NLS-1$
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

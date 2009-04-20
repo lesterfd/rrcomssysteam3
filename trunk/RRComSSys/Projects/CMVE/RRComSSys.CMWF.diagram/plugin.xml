@@ -273,41 +273,41 @@
       </metamodel>
       <metamodel nsURI="http://wfgcml/1.0">
          <metamodelType
-               id="RRComSSys.CMWF.diagram.Final_1001"
-               name="%metatype.name.Final_1001"
+               id="RRComSSys.CMWF.diagram.GCMLInstance_1001"
+               name="%metatype.name.GCMLInstance_1001"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Final"
-               edithelper="wfgcml.diagram.edit.helpers.FinalEditHelper">
+               eclass="GCMLInstance"
+               edithelper="wfgcml.diagram.edit.helpers.GCMLInstanceEditHelper">
             <param name="semanticHint" value="1001"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://wfgcml/1.0">
          <metamodelType
-               id="RRComSSys.CMWF.diagram.Condition_1002"
-               name="%metatype.name.Condition_1002"
+               id="RRComSSys.CMWF.diagram.Start_1002"
+               name="%metatype.name.Start_1002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Condition"
-               edithelper="wfgcml.diagram.edit.helpers.ConditionEditHelper">
+               eclass="Start"
+               edithelper="wfgcml.diagram.edit.helpers.StartEditHelper">
             <param name="semanticHint" value="1002"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://wfgcml/1.0">
          <metamodelType
-               id="RRComSSys.CMWF.diagram.Start_1003"
-               name="%metatype.name.Start_1003"
+               id="RRComSSys.CMWF.diagram.Final_1003"
+               name="%metatype.name.Final_1003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Start"
-               edithelper="wfgcml.diagram.edit.helpers.StartEditHelper">
+               eclass="Final"
+               edithelper="wfgcml.diagram.edit.helpers.FinalEditHelper">
             <param name="semanticHint" value="1003"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://wfgcml/1.0">
          <metamodelType
-               id="RRComSSys.CMWF.diagram.GCMLInstance_1004"
-               name="%metatype.name.GCMLInstance_1004"
+               id="RRComSSys.CMWF.diagram.Condition_1004"
+               name="%metatype.name.Condition_1004"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="GCMLInstance"
-               edithelper="wfgcml.diagram.edit.helpers.GCMLInstanceEditHelper">
+               eclass="Condition"
+               edithelper="wfgcml.diagram.edit.helpers.ConditionEditHelper">
             <param name="semanticHint" value="1004"/>
          </metamodelType>
       </metamodel>
@@ -342,10 +342,10 @@
       </clientContext> 
       <binding context="RRComSSys.CMWF.diagram.TypeContext">
          <elementType ref="RRComSSys.CMWF.diagram.WFGCMLRoot_79"/>
-         <elementType ref="RRComSSys.CMWF.diagram.Final_1001"/>
-         <elementType ref="RRComSSys.CMWF.diagram.Condition_1002"/>
-         <elementType ref="RRComSSys.CMWF.diagram.Start_1003"/>
-         <elementType ref="RRComSSys.CMWF.diagram.GCMLInstance_1004"/>
+         <elementType ref="RRComSSys.CMWF.diagram.GCMLInstance_1001"/>
+         <elementType ref="RRComSSys.CMWF.diagram.Start_1002"/>
+         <elementType ref="RRComSSys.CMWF.diagram.Final_1003"/>
+         <elementType ref="RRComSSys.CMWF.diagram.Condition_1004"/>
          <elementType ref="RRComSSys.CMWF.diagram.ConditionAltnext_3001"/>
          <elementType ref="RRComSSys.CMWF.diagram.HasNextNext_3002"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>

@@ -17,7 +17,6 @@ package wfgcml;
  * <ul>
  *   <li>{@link wfgcml.GCMLInstance#getGCMLLoc <em>GCML Loc</em>}</li>
  *   <li>{@link wfgcml.GCMLInstance#getID <em>ID</em>}</li>
- *   <li>{@link wfgcml.GCMLInstance#getAlias <em>Alias</em>}</li>
  * </ul>
  * </p>
  *
@@ -68,32 +67,5 @@ public interface GCMLInstance extends HasNext, IsNext {
 	 * @generated
 	 */
 	String getID();
-
-	/**
-	 * Returns the value of the '<em><b>Alias</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Alias</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Alias</em>' attribute.
-	 * @see #setAlias(String)
-	 * @see wfgcml.WfgcmlPackage#getGCMLInstance_Alias()
-	 * @model required="true"
-	 *        extendedMetaData="kind='attribute'"
-	 * @generated
-	 */
-	String getAlias();
-
-	/**
-	 * Sets the value of the '{@link wfgcml.GCMLInstance#getAlias <em>Alias</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Alias</em>' attribute.
-	 * @see #getAlias()
-	 * @generated
-	 */
-	void setAlias(String value);
 
 } // GCMLInstance

@@ -13,7 +13,7 @@ http://www.altova.com/mapforce
 	<xsl:template match="/">
 		<UserSchema>
 			<xsl:attribute name="xsi:noNamespaceSchemaLocation">
-				<xsl:value-of select="'H:/MYDOCU~1/FIU/SwDesign/rrcomssysteam3/RRComSSys/Projects/CMVE/RRComSSys.CMVE/model/XCML/XCML.xsd'"/>
+				<xsl:value-of select="'XCML.xsd'"/>
 			</xsl:attribute>
 			<xsl:variable name="var1_instance" select="."/>
 			<xsl:for-each select="$var1_instance/n:GCMLDocument">

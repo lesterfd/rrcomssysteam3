@@ -180,22 +180,13 @@ public interface WfgcmlPackage extends EPackage {
 	int GCML_INSTANCE__ID = HAS_NEXT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Alias</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GCML_INSTANCE__ALIAS = HAS_NEXT_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>GCML Instance</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GCML_INSTANCE_FEATURE_COUNT = HAS_NEXT_FEATURE_COUNT + 3;
+	int GCML_INSTANCE_FEATURE_COUNT = HAS_NEXT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link wfgcml.impl.StartImpl <em>Start</em>}' class.
@@ -397,17 +388,6 @@ public interface WfgcmlPackage extends EPackage {
 	EAttribute getGCMLInstance_ID();
 
 	/**
-	 * Returns the meta object for the attribute '{@link wfgcml.GCMLInstance#getAlias <em>Alias</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Alias</em>'.
-	 * @see wfgcml.GCMLInstance#getAlias()
-	 * @see #getGCMLInstance()
-	 * @generated
-	 */
-	EAttribute getGCMLInstance_Alias();
-
-	/**
 	 * Returns the meta object for class '{@link wfgcml.Start <em>Start</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -579,14 +559,6 @@ public interface WfgcmlPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GCML_INSTANCE__ID = eINSTANCE.getGCMLInstance_ID();
-
-		/**
-		 * The meta object literal for the '<em><b>Alias</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GCML_INSTANCE__ALIAS = eINSTANCE.getGCMLInstance_Alias();
 
 		/**
 		 * The meta object literal for the '{@link wfgcml.impl.StartImpl <em>Start</em>}' class.
