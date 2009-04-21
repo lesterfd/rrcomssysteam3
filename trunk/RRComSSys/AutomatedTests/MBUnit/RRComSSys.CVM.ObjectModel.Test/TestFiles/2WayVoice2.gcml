@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GCML:GCMLDocument xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:GCML="http://GCML/1.0" CommunicationID="_EU5FgS1BEd62ipL9nrgHRg">
+  <person PersonName="lesterfd" PersonID="_HmZ5kC1BEd62ipL9nrgHRg" PersonRole="initiator"/>
+  <person PersonName="msan001" PersonID="_IA7SYC1BEd62ipL9nrgHRg" PersonRole="target"/>
+  <isAttached DeviceID="_L57kQC1BEd62ipL9nrgHRg" PersonID="_HmZ5kC1BEd62ipL9nrgHRg"/>
+  <isAttached DeviceID="_MeJEkC1BEd62ipL9nrgHRg" PersonID="_IA7SYC1BEd62ipL9nrgHRg"/>
+  <device DeviceID="_L57kQC1BEd62ipL9nrgHRg" Capability="_OEq9gC1BEd62ipL9nrgHRg"/>
+  <device DeviceID="_MeJEkC1BEd62ipL9nrgHRg" Capability="_NCqG4C1BEd62ipL9nrgHRg"/>
+  <capability BuiltInType="LiveAudio" CapabilityID="_NCqG4C1BEd62ipL9nrgHRg"/>
+  <capability BuiltInType="LiveAudio" CapabilityID="_OEq9gC1BEd62ipL9nrgHRg"/>
+  <connection ConnectionID="_PV4GsC1BEd62ipL9nrgHRg" Device="_L57kQC1BEd62ipL9nrgHRg _MeJEkC1BEd62ipL9nrgHRg"/>
+</GCML:GCMLDocument>
