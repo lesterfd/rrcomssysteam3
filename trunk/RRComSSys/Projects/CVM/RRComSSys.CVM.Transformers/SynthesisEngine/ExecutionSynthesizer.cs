@@ -13,15 +13,25 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
 
         public static IExecutionContainer SynthesizeExecutionContainer(CMLDocument document)
         {
-           if(document is WorkFlow)
-                return SynthesizeWorkFlow(document);
-            else
-                return SynthesizeXCMLContainer(document);
+           //if(document is WorkFlow)
+           //     return SynthesizeWorkFlow(document);
+           // else
+                return SynthesizeXCMLContainer((XCMLDocument)document);
         }
 
         private static XCMLContainer SynthesizeXCMLContainer(XCMLDocument doc)
         {
-            foreach(Connection conn in doc.Connections)
+            foreach (Connection conn in doc.Connections)
+            {
+                foreach (CapabilityType cap in doc.LocalUser.Device.Capabilities)
+                {
+                    List<UserDefinition> remoteUsers = conn.FindItems<UserDefinition>(
+                                         user => !  user.IsLocal 
+                                                 && user.Device.Capabilities.Contains(cap));
+                    List<Medium> media = conn.FindItems<Medium>(
+                                         med => med.BuiltInType.Equals(cap));
+                }
+            }
         }
 
         private static WorkFlow SynthesizeWorkFlow(XCMLDocument doc)
