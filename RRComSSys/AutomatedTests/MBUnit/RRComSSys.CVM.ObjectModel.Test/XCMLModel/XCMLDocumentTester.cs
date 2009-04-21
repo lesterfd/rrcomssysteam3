@@ -193,6 +193,11 @@ namespace RRComSSys.CVM.ObjectModel.Test.XCMLModel
 			List<UserDefinition> users = doc.Connections[0].FindItems<UserDefinition>(
 				user => !user.IsLocal && user.Device.Capabilities.Contains(doc.LocalUser.Device.Capabilities[0]));
 			Assert.AreEqual(2, users.Count);
+
+            // Find all media with a matching capability
+            List<Medium> media = doc.Connections[0].FindItems<Medium>(
+                     med => med.BuiltInType.Equals(doc.LocalUser.Device.Capabilities[3]));
+            Assert.AreEqual(1, media.Count);
 		}
 		#endregion
 
