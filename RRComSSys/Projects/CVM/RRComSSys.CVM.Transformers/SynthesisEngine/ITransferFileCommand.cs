@@ -9,5 +9,6 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
 	{
         String FileLocation { get; set; }
 		String[] Users { get; set; }
+		IFileTransferHandler Handler { get; set; }
 	}
 }

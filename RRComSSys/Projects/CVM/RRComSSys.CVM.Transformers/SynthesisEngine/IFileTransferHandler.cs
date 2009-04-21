@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SKYPE4COMLib;
 
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
-	public interface IVoiceCallCommand : IAPICommand
+	public interface IFileTransferHandler
 	{
-		String[] Users { get; set; }
-		ICallHandler Handler { get; set; }
+		void SetStatus(IFileTransfer fileTransfer, TFileTransferStatus status);
 	}
 }
