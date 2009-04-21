@@ -39,7 +39,7 @@ namespace RRComSSys.CVM.ObjectModel.XCMLWorkflowModel
 			where TWFItem : IWorkflowItem
 		{
 			foreach (IWorkflowItem item in _allItems)
-				if (item.GetType().IsSubclassOf(typeof(TWFItem)) &&
+				if (IsTypeOrSubclass(item, typeof(TWFItem)) &&
 					predicate((TWFItem) item))
 					return (TWFItem) item;
 			return default(TWFItem);
@@ -50,7 +50,7 @@ namespace RRComSSys.CVM.ObjectModel.XCMLWorkflowModel
 		{
 			List<TWFItem> result = new List<TWFItem>();
 			foreach (IWorkflowItem item in _allItems)
-				if (item.GetType().IsSubclassOf(typeof(TWFItem)) &&
+				if (IsTypeOrSubclass(item, typeof(TWFItem)) &&
 					predicate((TWFItem) item))
 					result.Add((TWFItem) item);
 			return result;
@@ -103,6 +103,13 @@ namespace RRComSSys.CVM.ObjectModel.XCMLWorkflowModel
 				XCMLDocument xcmlDoc = GCMLTransformer.Transform(item.GCMLPath);
 				item.XCMLDocument = xcmlDoc;
 			}
+		}
+
+		private bool IsTypeOrSubclass(Object obj, Type type)
+		{
+			return
+				obj.GetType() == type ||
+				obj.GetType().IsSubclassOf(type);
 		}
 		#endregion
 	}
