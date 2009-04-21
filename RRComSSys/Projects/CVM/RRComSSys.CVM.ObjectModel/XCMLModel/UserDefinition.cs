@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace RRComSSys.CVM.ObjectModel.XCMLModel
 {
-	public class UserDefinition
+	public class UserDefinition : IXCMLItem
 	{
 		#region Constructors & Initializers
 		public UserDefinition() { }

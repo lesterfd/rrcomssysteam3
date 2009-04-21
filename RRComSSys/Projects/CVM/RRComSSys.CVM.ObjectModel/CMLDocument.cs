@@ -195,9 +195,9 @@ namespace RRComSSys.CVM.ObjectModel
 				cmlType = CMLType.XCML;
 				fileType = typeof(XCMLDocument);
 			}
-			else if (file.Extension.Equals(Constants.Extensions.XCMLWorkflow, StringComparison.CurrentCultureIgnoreCase))
+			else if (file.Extension.Equals(Constants.Extensions.GCMLWorkflow, StringComparison.CurrentCultureIgnoreCase))
 			{
-				cmlType = CMLType.XCMLWorkflow;
+				cmlType = CMLType.GCMLWorkflow;
 				fileType = typeof(XCMLWorkflowDocument);
 			}
 			else

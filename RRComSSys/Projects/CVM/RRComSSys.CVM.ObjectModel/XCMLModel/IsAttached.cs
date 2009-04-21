@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace RRComSSys.CVM.ObjectModel.XCMLModel
 {
-	public class IsAttached
+	public class IsAttached : IXCMLItem
 	{
 		#region Member Variables
 		private String _personID = "";

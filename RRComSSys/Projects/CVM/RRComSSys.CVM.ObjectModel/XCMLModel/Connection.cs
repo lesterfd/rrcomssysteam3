@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace RRComSSys.CVM.ObjectModel.XCMLModel
 {
-	public class Connection
+	public class Connection : IXCMLContainer, IXCMLItem
 	{
 		#region Member Variables
 		private String _id = "";
@@ -14,6 +14,8 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 		private List<Device> _deviceList = new List<Device>();
 		private List<String> _mediaRefList = new List<String>();
 		private List<Medium> _media = new List<Medium>();
+		private List<IXCMLItem> _allItems = new List<IXCMLItem>();
+		private List<UserDefinition> _remoteUsers = new List<UserDefinition>();
 		#endregion
 
 		#region Properties
@@ -49,29 +51,64 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 		public List<Medium> Media
 		{
 			get { return _media; }
-
+		}
+		
+		[XmlIgnore]
+		public List<UserDefinition> RemoteUsers
+		{
+			get { return _remoteUsers; }
 		}
 		#endregion
 
 		#region Public Methods
-		public Medium GetMediumByName(List<Medium> mediumList, String name)
+		public TXCMLItem FindItem<TXCMLItem>(Predicate<TXCMLItem> predicate)
+			where TXCMLItem : IXCMLItem
 		{
-			foreach (Medium medium in mediumList)
-				if (medium.Name.Equals(name))
-					return medium;
-			return null;
+			foreach (IXCMLItem item in _allItems)
+				if (item.GetType() == typeof(TXCMLItem) && 
+					predicate((TXCMLItem) item))
+					return (TXCMLItem) item;
+			return default(TXCMLItem);
+		}
+
+		public List<TXCMLItem> FindItems<TXCMLItem>(Predicate<TXCMLItem> predicate) 
+			where TXCMLItem : IXCMLItem
+		{
+			List<TXCMLItem> result = new List<TXCMLItem>();
+			foreach (IXCMLItem item in _allItems)
+				if (item.GetType() == typeof(TXCMLItem) &&
+					predicate((TXCMLItem) item))
+					result.Add((TXCMLItem) item);
+			return result;
+		}
+
+		public bool Contains<TXCMLItem>(Predicate<TXCMLItem> predicate)
+			where TXCMLItem : IXCMLItem
+		{
+			return FindItem<TXCMLItem>(predicate) != null;
 		}
 		#endregion
 
 		#region Private Methods
-		internal void InitializeMedia(List<Medium> media)
+		internal void InitializeReferences(XCMLDocument doc)
 		{
 			foreach (String mediaRef in _mediaRefList)
 			{
-				Medium medium = GetMediumByName(media, mediaRef);
+				Medium medium = doc.FindItem<Medium>(m => m.Name == mediaRef);
 				if (medium == null)
 					continue;
 				_media.Add(medium);
+				_allItems.Add(medium);
+			}
+
+			foreach (Device device in _deviceList)
+				_allItems.Add(device);
+
+			foreach (UserDefinition user in doc.FindItems<UserDefinition>(u => Devices.Contains(u.Device)))
+			{
+				_allItems.Add(user);
+				if (!user.IsLocal) 
+					_remoteUsers.Add(user);
 			}
 		}
 		#endregion
