@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4A42C1DB-BF9F-4947-9AB9-B862D571EADD}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -46,11 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SynthesisEngine\NoSuchFactoryException.cs" />
+    <Compile Include="SynthesisEngine\IExecutionContainer.cs" />
     <Compile Include="ModelTransformer\ModelTransformationEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchemaTransformer\SchemaTransformationEngine.cs" />
     <Compile Include="SynthesisEngine\AbstractApi.cs" />
     <Compile Include="SynthesisEngine\AbstractApiFactory.cs" />
+    <Compile Include="SynthesisEngine\ExecutionSynthesizer.cs" />
     <Compile Include="SynthesisEngine\IVoiceCallCommand.cs" />
     <Compile Include="SynthesisEngine\ILiveVideoCommand.cs" />
     <Compile Include="SynthesisEngine\ExecuteAPI.cs" />
@@ -61,12 +64,14 @@
     <Compile Include="SynthesisEngine\LastCommandSucceeded.cs" />
     <Compile Include="SynthesisEngine\SkypeApi.cs" />
     <Compile Include="SynthesisEngine\SkypeApiFactory.cs" />
+    <Compile Include="SynthesisEngine\SynthesisEngineController.cs" />
     <Compile Include="SynthesisEngine\WFDecisionCommand.cs" />
     <Compile Include="SynthesisEngine\WFItemCommand.cs" />
     <Compile Include="SynthesisEngine\WorkFlow.cs" />
     <Compile Include="SynthesisEngine\WorkFlowDecision.cs" />
     <Compile Include="SynthesisEngine\WorkFlowItem.cs" />
     <Compile Include="SynthesisEngine\WorkFlowSymbols.cs" />
+    <Compile Include="SynthesisEngine\XCMLContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\AutomatedTests\MBUnit\RRComSSys.Testing.Common\RRComSSys.Testing.Common.csproj">

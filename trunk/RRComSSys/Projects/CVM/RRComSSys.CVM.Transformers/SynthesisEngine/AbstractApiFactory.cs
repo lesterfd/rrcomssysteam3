@@ -7,6 +7,22 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
 	public abstract class AbstractApiFactory
 	{
-		public abstract AbstractAPI API { get; }
+        
+        public abstract AbstractAPI API{ get; }
+
+
+        public static AbstractApiFactory GetFactory(string factoryType)
+        {
+            switch (factoryType)
+            {
+                case "Skype":
+                    { return new SkypeApiFactory(); }
+                    break;
+
+                default:
+                    throw new NoSuchFactoryException();
+                    break;
+            }
+        }
 	}
 }
