@@ -77,6 +77,9 @@
     <None Include="TestFiles\sample_gcml_01.gcml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="TestFiles\sample_xcml_missinginfo_1.xcml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SchemaTransformer\" />
