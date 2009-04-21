@@ -8,5 +8,8 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
 	public interface IVoiceCallCommand : IAPICommand
 	{
 		String[] Users { get; set; }
+
+
+
 	}
 }

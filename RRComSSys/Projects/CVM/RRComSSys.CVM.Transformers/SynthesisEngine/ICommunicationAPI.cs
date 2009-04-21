@@ -11,5 +11,7 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
 		ITransferFileCommand TransferFile { get; }
 		ILiveVideoCommand LiveVideo { get; }
 		IVoiceCallCommand VoiceCall { get; }
+        IEndCallCommand EndCall { get; }
+        IChatCommand TextChat { get; }
 	}
 }
