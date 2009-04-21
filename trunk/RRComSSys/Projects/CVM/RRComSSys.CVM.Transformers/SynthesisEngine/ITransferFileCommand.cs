@@ -7,7 +7,7 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
 	public interface ITransferFileCommand : IAPICommand
 	{
-		String FileName { get; set; }
+        String FileLocation { get; set; }
 		String[] Users { get; set; }
 	}
 }

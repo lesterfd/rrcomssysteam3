@@ -13,5 +13,11 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
 		public abstract ILiveVideoCommand LiveVideo { get; }
 
 		public abstract IVoiceCallCommand VoiceCall { get; }
+
+		public abstract IChatCommand  TextChat { get; }
+
+        public abstract IEndCallCommand EndCall { get; }
+
+
 	}
 }
