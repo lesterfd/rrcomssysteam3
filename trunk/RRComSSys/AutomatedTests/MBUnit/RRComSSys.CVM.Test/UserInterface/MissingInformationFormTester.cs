@@ -7,6 +7,7 @@ using RRComSSys.CVM.UserInterface;
 using RRComSSys.CVM.ObjectModel.XCMLModel;
 using RRComSSys.CVM.UserInterface.SchemaTransformerDialogs;
 using System.Drawing;
+using RRComSSys.Testing.Common;
 
 namespace RRComSSys.CVM.Test.UserInterface
 {
