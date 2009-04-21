@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SKYPE4COMLib;
 
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
-	public interface IVoiceCallCommand : IAPICommand
+	public interface IChatHandler
 	{
-		String[] Users { get; set; }
-		ICallHandler Handler { get; set; }
+		void MessageReceived(ChatMessage message, TChatMessageStatus status);
 	}
 }

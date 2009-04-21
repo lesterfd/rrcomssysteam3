@@ -8,6 +8,7 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
     public interface IChatCommand : IAPICommand
     {
         String[] Users { get; set; }
-        
+		IChatHandler Handler { get; set; }
+		String TextMessage { get; set; }
     }
 }
