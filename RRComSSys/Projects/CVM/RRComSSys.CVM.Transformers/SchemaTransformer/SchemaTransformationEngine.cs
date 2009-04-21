@@ -6,6 +6,7 @@ using RRComSSys.CVM.ObjectModel;
 using RRComSSys.CVM.ObjectModel.XCMLWorkflowModel;
 using RRComSSys.CVM.UserInterface.SchemaTransformerDialogs;
 using RRComSSys.CVM.ObjectModel.XCMLModel;
+using RRComSSys.Testing.Common;
 using System.Windows.Forms;
 
 namespace RRComSSys.CVM.Transformers.SchemaTransformer
@@ -24,6 +25,13 @@ namespace RRComSSys.CVM.Transformers.SchemaTransformer
 			MissingInformationForm form = new MissingInformationForm();
 			form.Document = (XCMLDocument)document;
 
+			// Attach test event
+			form.Activated += new EventHandler(delegate(object sender, EventArgs e)
+				{
+					form.FindControls(x => x.Name == "NameTextBox");
+				});
+
+			// Show dialog
 			DialogResult result = form.ShowDialog();
 			if (result == DialogResult.Cancel)
 				userCancelled = true;

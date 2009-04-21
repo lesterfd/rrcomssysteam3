@@ -15,10 +15,6 @@ namespace RRComSSys.CVM.Transformers.ModelTransformer
 {
 	public static class ModelTransformationEngine
 	{
-		#region Member Variables
-		private const String _defaultMappingFileName = "MappingGCMLToXCML.xslt";
-		#endregion
-
 		#region Public Methods
 		public static CMLDocument LoadCMLDocument(String fileName)
 		{
@@ -51,8 +47,7 @@ namespace RRComSSys.CVM.Transformers.ModelTransformer
 
 		private static CMLDocument LoadGCMLDocument(FileInfo file)
 		{
-			String xmlText = TransformGCMLToXCML(file.FullName);
-			return XCMLDocument.LoadDocumentFromText<XCMLDocument>(xmlText);
+			return GCMLTransformer.Transform(file.FullName);
 		}
 
 		private static CMLDocument LoadXCMLWorkflowDocument(FileInfo file)
@@ -63,26 +58,6 @@ namespace RRComSSys.CVM.Transformers.ModelTransformer
 		private static CMLDocument LoadGCMLWorkflowDocument(FileInfo file)
 		{
 			throw new NotImplementedException();
-		}
-
-		private static String TransformGCMLToXCML(String inputFile)
-		{
-			return TransformGCMLToXCML(inputFile, _defaultMappingFileName);
-		}
-
-		private static String TransformGCMLToXCML(String inputFile, String xslt)
-		{
-			StringWriter writer = new StringWriter();
-			XslCompiledTransform xsltrans = new XslCompiledTransform();
-			xsltrans.Load(xslt);
-			XPathDocument doc = new XPathDocument(inputFile);
-			xsltrans.Transform(doc, null, writer);
-			return writer.ToString();
-		}
-
-		private static void TransformWFGCMLToWFXCML(String intputFile, String outputFile)
-		{
-			// TODO
 		}
 		#endregion
 	}

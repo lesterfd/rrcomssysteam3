@@ -69,6 +69,10 @@
     <Compile Include="SynthesisEngine\WorkFlowSymbols.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\AutomatedTests\MBUnit\RRComSSys.Testing.Common\RRComSSys.Testing.Common.csproj">
+      <Project>{A22B9A96-B194-4161-B092-F59A14F3D6AC}</Project>
+      <Name>RRComSSys.Testing.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RRComSSys.CVM.Common\RRComSSys.CVM.Common.csproj">
       <Project>{8A5D2F96-E658-468C-9FFA-06D9D463270A}</Project>
       <Name>RRComSSys.CVM.Common</Name>
@@ -87,11 +91,6 @@
     <None Include="XCML.xsd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="MappingGCMLToXCML.xslt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
