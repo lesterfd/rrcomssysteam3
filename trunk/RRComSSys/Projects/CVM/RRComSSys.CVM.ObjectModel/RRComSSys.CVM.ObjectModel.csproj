@@ -48,15 +48,24 @@
     <Compile Include="CMLDocument.cs" />
     <Compile Include="CMLDocumentException.cs" />
     <Compile Include="CMLValidationException.cs" />
+    <Compile Include="GCMLTransformer.cs" />
     <Compile Include="XCMLModel\Action.cs" />
     <Compile Include="XCMLModel\CapabilityType.cs" />
     <Compile Include="XCMLModel\Connection.cs" />
     <Compile Include="XCMLModel\Device.cs" />
     <Compile Include="XCMLModel\IsAttached.cs" />
+    <Compile Include="XCMLModel\IXCMLContainer.cs" />
+    <Compile Include="XCMLModel\IXCMLItem.cs" />
     <Compile Include="XCMLModel\Medium.cs" />
     <Compile Include="XCMLModel\Person.cs" />
     <Compile Include="XCMLModel\UserDefinition.cs" />
     <Compile Include="XCMLModel\XCMLDocument.cs" />
+    <Compile Include="XCMLWorkflowModel\IWorkflowContainer.cs" />
+    <Compile Include="XCMLWorkflowModel\IWorkflowItem.cs" />
+    <Compile Include="XCMLWorkflowModel\WorkflowCondition.cs" />
+    <Compile Include="XCMLWorkflowModel\WorkflowGCMLItem.cs" />
+    <Compile Include="XCMLWorkflowModel\WorkflowItem.cs" />
+    <Compile Include="XCMLWorkflowModel\WorkflowStart.cs" />
     <Compile Include="XCMLWorkflowModel\XCMLWorkflowDocument.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -65,6 +74,11 @@
       <Project>{8A5D2F96-E658-468C-9FFA-06D9D463270A}</Project>
       <Name>RRComSSys.CVM.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MappingGCMLToXCML.xslt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

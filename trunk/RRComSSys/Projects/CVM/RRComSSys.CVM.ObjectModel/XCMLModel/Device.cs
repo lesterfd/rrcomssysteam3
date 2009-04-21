@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace RRComSSys.CVM.ObjectModel.XCMLModel
 {
-	public class Device
+	public class Device : IXCMLItem
 	{
 		#region Member Variables
 		private String _id = "";

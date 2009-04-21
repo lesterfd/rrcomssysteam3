@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace RRComSSys.CVM.ObjectModel.XCMLModel
 {
-	public class Medium
+	public class Medium : IXCMLItem
 	{
 		#region Member Variables
 		private String _name = "";

@@ -11,7 +11,7 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 {
 	[XmlTypeAttribute(AnonymousType = true)]
 	[XmlRoot(ElementName = "UserSchema", Namespace = "", IsNullable = false)]
-	public class XCMLDocument : CMLDocument
+	public class XCMLDocument : CMLDocument, IXCMLContainer
 	{
 		#region Member Variables
 		private UserDefinition _localUser;
@@ -21,6 +21,7 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 		private List<Person> _personList = new List<Person>();
 		private List<IsAttached> _isAttachedList = new List<IsAttached>();
 		private List<UserDefinition> _remoteUsers = new List<UserDefinition>();
+		private List<IXCMLItem> _allItems = new List<IXCMLItem>();
 		#endregion
 
 		#region Properties
@@ -84,9 +85,41 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 			}
 		}
 
+		[XmlIgnore]
+		public List<IXCMLItem> AllItems
+		{
+			get { return _allItems; }
+		}
+
 		#endregion
 
 		#region Public Methods
+		public TXCMLItem FindItem<TXCMLItem>(Predicate<TXCMLItem> predicate)
+			where TXCMLItem : IXCMLItem
+		{
+			foreach (IXCMLItem item in _allItems)
+				if (item.GetType() == typeof(TXCMLItem) &&
+					predicate((TXCMLItem) item))
+					return (TXCMLItem) item;
+			return default(TXCMLItem);
+		}
+
+		public List<TXCMLItem> FindItems<TXCMLItem>(Predicate<TXCMLItem> predicate)
+			where TXCMLItem : IXCMLItem
+		{
+			List<TXCMLItem> result = new List<TXCMLItem>();
+			foreach (IXCMLItem item in _allItems)
+				if (item.GetType() == typeof(TXCMLItem) &&
+					predicate((TXCMLItem) item))
+					result.Add((TXCMLItem) item);
+			return result;
+		}
+
+		public bool Contains<TXCMLItem>(Predicate<TXCMLItem> predicate)
+			where TXCMLItem : IXCMLItem
+		{
+			return FindItem<TXCMLItem>(predicate) != null;
+		}
 		#endregion
 
 		#region Private Methods
@@ -94,8 +127,9 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 		{
 			try
 			{
-				processUsers();
-				processMedia();
+				PreProcessItems();
+				ProcessUsers();
+				ProcessMedia();
 			}
 			catch (CMLValidationException e)
 			{
@@ -103,14 +137,30 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 			}
 		}
 
-		private void processUsers()
+		private void PreProcessItems()
+		{
+			foreach (Person person in _personList)
+				_allItems.Add(person);
+			foreach (Medium medium in _mediumList)
+				_allItems.Add(medium);
+			foreach (IsAttached isAttached in _isAttachedList)
+				_allItems.Add(isAttached);
+			foreach (Connection conn in _connectionList)
+			{
+				foreach (Device device in conn.Devices)
+					_allItems.Add(device);
+				_allItems.Add(conn);
+			}
+		}
+
+		private void ProcessUsers()
 		{
 			// Make user definitions
 			foreach (IsAttached isAttached in _isAttachedList)
 			{
 				// Retrieve person and device
-				Person person = getPersonById(isAttached.PersonID);
-				Device device = getDeviceById(isAttached.DeviceID);
+				Person person = FindItem<Person>(p => p.ID == isAttached.PersonID);
+				Device device = FindItem<Device>(d => d.ID == isAttached.DeviceID);
 
 				// Error checking
 				if (person == null)
@@ -122,11 +172,9 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 
 				// Add user to document
 				UserDefinition user = new UserDefinition(person, isAttached, device);
+				_allItems.Add(user);
 				if (_localUser == null && user.IsLocal)
-				{
 					_localUser = user;
-					continue;
-				}
 				else if (_localUser != null && user.IsLocal)
 					throw new CMLValidationException(Constants.Messages.MSG_TOO_MANY_LOCAL);
 				else
@@ -134,27 +182,10 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 			}
 		}
 
-		private void processMedia()
+		private void ProcessMedia()
 		{
 			foreach (Connection connection in _connectionList)
-				connection.InitializeMedia(_mediumList);
-		}
-
-		private Person getPersonById(String id)
-		{
-			foreach (Person person in _personList)
-				if (person.ID.Equals(id))
-					return person;
-			return null;
-		}
-
-		private Device getDeviceById(String id)
-		{
-			foreach (Connection connection in _connectionList)
-				foreach (Device device in connection.Devices)
-					if (device.ID.Equals(id))
-						return device;
-			return null;
+				connection.InitializeReferences(this);
 		}
 		#endregion
 	}
