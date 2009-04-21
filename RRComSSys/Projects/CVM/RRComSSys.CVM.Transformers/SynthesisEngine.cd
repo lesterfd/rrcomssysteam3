@@ -1,45 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="RRComSSys.CMVE.SynthesisEngine.AbstractAPI">
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.AbstractAPI">
     <Position X="1.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAgAAEAAAA=</HashCode>
       <FileName>SynthesisEngine\AbstractApi.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="RRComSSys.CMVE.SynthesisEngine.AbstractApiFactory">
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.AbstractApiFactory">
     <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SynthesisEngine\AbstractApiFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RRComSSys.CMVE.SynthesisEngine.ExecuteAPI">
-    <Position X="9" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AIAAAoACAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
-      <FileName>SynthesisEngine\ExecuteAPI.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="RRComSSys.CMVE.SynthesisEngine.LastItemSucceeded" BaseTypeListCollapsed="true">
-    <Position X="16.75" Y="0.5" Width="1.5" />
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.LastItemSucceeded" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SynthesisEngine\LastCommandSucceeded.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="RRComSSys.CMVE.SynthesisEngine.SkypeAPI">
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI">
     <Position X="1.75" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <NestedTypes>
-      <Class Name="RRComSSys.CMVE.SynthesisEngine.SkypeAPI.SkypeTransferFile" Collapsed="true">
+      <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI.SkypeTransferFile" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>SynthesisEngine\SkypeApi.cs</NewMemberFileName>
         </TypeIdentifier>
         <Lollipop Position="0.2" />
       </Class>
-      <Class Name="RRComSSys.CMVE.SynthesisEngine.SkypeAPI.SkypeVoiceCall" Collapsed="true">
+      <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI.SkypeVoiceCall" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>SynthesisEngine\SkypeApi.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -47,56 +43,67 @@
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAgAAEAAAA=</HashCode>
       <FileName>SynthesisEngine\SkypeApi.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RRComSSys.CMVE.SynthesisEngine.SkypeApiFactory">
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.SkypeApiFactory">
     <Position X="4.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SynthesisEngine\SkypeApiFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RRComSSys.CMVE.SynthesisEngine.WFDecisionCommand" BaseTypeListCollapsed="true">
-    <Position X="11.5" Y="0.5" Width="1.5" />
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.WFDecisionCommand" BaseTypeListCollapsed="true">
+    <Position X="10" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAEQAAAAAAAAQAAAEAAAAAAgAAAAAAAA=</HashCode>
       <FileName>SynthesisEngine\WFDecisionCommand.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="RRComSSys.CMVE.SynthesisEngine.WFItemCommand" BaseTypeListCollapsed="true">
-    <Position X="13.25" Y="0.5" Width="1.5" />
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.WFItemCommand" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
       <FileName>SynthesisEngine\WFItemCommand.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="RRComSSys.CMVE.SynthesisEngine.WorkFlow" BaseTypeListCollapsed="true">
-    <Position X="15" Y="0.5" Width="1.5" />
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.WorkFlow" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAEAAAABAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SynthesisEngine\WorkFlow.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="RRComSSys.CMVE.SynthesisEngine.WorkFlowDecision" Collapsed="true">
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.WorkFlowDecision" Collapsed="true">
     <Position X="3.75" Y="7.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.WorkFlowDecision.WorkFlowDecisionCommand" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SynthesisEngine\WorkFlowDecision.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAgAAEAEAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>SynthesisEngine\WorkFlowDecision.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RRComSSys.CMVE.SynthesisEngine.WorkFlowItem" Collapsed="true">
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.WorkFlowItem" Collapsed="true">
     <Position X="6" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAQAQAAAAAAAggAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>SynthesisEngine\WorkFlowItem.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RRComSSys.CMVE.SynthesisEngine.WorkFlowSymbol" Collapsed="true">
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.WorkFlowSymbol" Collapsed="true">
     <Position X="5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAggAAAIIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -104,18 +111,57 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="RRComSSys.CMVE.SynthesisEngine.IAPICommand">
-    <Position X="13.25" Y="2.75" Width="1.5" />
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.XCMLContainer">
+    <Position X="17" Y="3.25" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAIAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SynthesisEngine\XCMLContainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.ExecutionSynthesizer">
+    <Position X="10" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAQAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SynthesisEngine\ExecutionSynthesizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.SynthesisEngineController">
+    <Position X="13.5" Y="6.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>SynthesisEngine\SynthesisEngineController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RRComSSys.CVM.Transformers.SynthesisEngine.NoSuchFactoryException">
+    <Position X="10" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SynthesisEngine\NoSuchFactoryException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="RRComSSys.CVM.Transformers.SynthesisEngine.IAPICommand">
+    <Position X="11.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>SynthesisEngine\IAPICommand.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="RRComSSys.CMVE.SynthesisEngine.ICommunicationAPI">
-    <Position X="17.25" Y="3.5" Width="1.5" />
+  <Interface Name="RRComSSys.CVM.Transformers.SynthesisEngine.ICommunicationAPI">
+    <Position X="13.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAgAAEAAAA=</HashCode>
       <FileName>SynthesisEngine\ICommunicationAPI.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RRComSSys.CVM.Transformers.IExecutionContainer">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SynthesisEngine\IExecutionContainer.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Tahoma" Size="9.6" />

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
-    public class WorkFlow : IAPICommand
+    public class WorkFlow : IAPICommand, IExecutionContainer
     {
         private List<WorkFlowSymbol> symbols;
 
