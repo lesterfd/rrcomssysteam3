@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\Distrib\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -25,7 +25,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\..\Distrib\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModelManager\ModelManagementEngine.cs" />
     <Compile Include="Program.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -76,38 +77,6 @@
     <EmbeddedResource Include="UserInterface\CVMGUI\CVMMain.resx">
       <DependentUpon>CVMMain.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\BaseCMLView.resx">
-      <DependentUpon>BaseCMLView.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\WorkflowConditionView.resx">
-      <DependentUpon>WorkflowConditionView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\ConnectionView.resx">
-      <DependentUpon>ConnectionView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\DeviceView.resx">
-      <DependentUpon>DeviceView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\MediumView.resx">
-      <DependentUpon>MediumView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\MissingInformationForm.resx">
-      <DependentUpon>MissingInformationForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\PersonView.resx">
-      <DependentUpon>PersonView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\XCMLWorkflowDocumentPanel.resx">
-      <DependentUpon>XCMLWorkflowDocumentPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\WorkflowGCMLView.resx">
-      <DependentUpon>WorkflowGCMLView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\XCMLDocumentPanel.resx">
-      <DependentUpon>XCMLDocumentPanel.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -138,69 +107,6 @@
     <Compile Include="UserInterface\CVMGUI\CVMMain.Designer.cs">
       <DependentUpon>CVMMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\BaseCMLView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\BaseCMLView.Designer.cs">
-      <DependentUpon>BaseCMLView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\ICMLDocumentView.cs" />
-    <Compile Include="UserInterface\SchemaTransformerDialogs\WorkflowConditionView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\WorkflowConditionView.Designer.cs">
-      <DependentUpon>WorkflowConditionView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\ConnectionView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\ConnectionView.Designer.cs">
-      <DependentUpon>ConnectionView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\DeviceView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\DeviceView.Designer.cs">
-      <DependentUpon>DeviceView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\IBoundView.cs" />
-    <Compile Include="UserInterface\SchemaTransformerDialogs\MediumView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\MediumView.Designer.cs">
-      <DependentUpon>MediumView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\MissingInformationForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\MissingInformationForm.Designer.cs">
-      <DependentUpon>MissingInformationForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\PersonView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\PersonView.Designer.cs">
-      <DependentUpon>PersonView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\XCMLWorkflowDocumentPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\XCMLWorkflowDocumentPanel.Designer.cs">
-      <DependentUpon>XCMLWorkflowDocumentPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\WorkflowGCMLView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\WorkflowGCMLView.Designer.cs">
-      <DependentUpon>WorkflowGCMLView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\XCMLDocumentPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\XCMLDocumentPanel.Designer.cs">
-      <DependentUpon>XCMLDocumentPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\XCMLViewHelper.cs" />
     <Compile Include="UserInterface\Security\Login.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -212,9 +118,13 @@
       <Project>{FD1C6924-DA64-4D1C-910E-412F9925661D}</Project>
       <Name>RRComSSys.CVM.ObjectModel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RRComSSys.CVM.Transformers\RRComSSys.CVM.Transformers.csproj">
+      <Project>{4A42C1DB-BF9F-4947-9AB9-B862D571EADD}</Project>
+      <Name>RRComSSys.CVM.Transformers</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ModelManager\" />
+    <Folder Include="SampleDocuments\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
