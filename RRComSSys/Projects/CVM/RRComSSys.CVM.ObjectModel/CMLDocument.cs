@@ -27,6 +27,12 @@ namespace RRComSSys.CVM.ObjectModel
 		{
 			get { return _documentType; }
 		}
+
+		public String Name
+		{
+			get { return _documentLoadedFrom ?? "Untitled"; }
+			set { _documentLoadedFrom = value; }
+		}
 		#endregion
 
 		#region Static Methods

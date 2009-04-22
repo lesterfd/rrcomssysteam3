@@ -61,6 +61,16 @@ namespace RRComSSys.CVM.ObjectModel.XCMLWorkflowModel
 		{
 			return FindItem<TWFItem>(predicate) != null;
 		}
+
+		public List<TWFItem> GetAllItems<TWFItem>()
+			where TWFItem : IWorkflowItem
+		{
+			List<TWFItem> result = new List<TWFItem>();
+			foreach (IWorkflowItem item in _allItems)
+				if (item.GetType() == typeof(TWFItem))
+					result.Add((TWFItem)item);
+			return result;
+		}
 		#endregion
 
 		#region Private Methods
