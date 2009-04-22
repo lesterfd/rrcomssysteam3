@@ -15,6 +15,7 @@ namespace RRComSSys.CVM.ObjectModel
 	{
 		#region Member Variables
 		private String _documentLoadedFrom;
+		private String _name;
 		private CMLType _documentType;
 		#endregion
 
@@ -30,7 +31,13 @@ namespace RRComSSys.CVM.ObjectModel
 
 		public String Name
 		{
-			get { return _documentLoadedFrom ?? "Untitled"; }
+			get { return _name ?? "Untitled"; }
+			set { _name = value; }
+		}
+
+		public String Path
+		{
+			get { return _documentLoadedFrom; }
 			set { _documentLoadedFrom = value; }
 		}
 		#endregion
@@ -61,6 +68,7 @@ namespace RRComSSys.CVM.ObjectModel
 
 			// Post process and return
 			result._documentLoadedFrom = file.FullName;
+			result._name = file.Name;
 			return (TDoc) result;
 		}
 
