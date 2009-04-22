@@ -107,9 +107,21 @@ namespace RRComSSys.CVM.ObjectModel.XCMLWorkflowModel
 		private void ProcessXCMLDocuments()
 		{
 			List<WorkflowGCMLItem> validGCMLItems = this.FindItems<WorkflowGCMLItem>(
-				x => !String.IsNullOrEmpty(x.GCMLPath) && File.Exists(x.GCMLPath));
+				x => !String.IsNullOrEmpty(x.GCMLPath));
 			foreach (WorkflowGCMLItem item in validGCMLItems)
 			{
+				if (!File.Exists(item.GCMLPath))
+				{
+					String sameDirPath = item.GCMLPath;
+					int indexLastSlash = sameDirPath.LastIndexOf('\\');
+					sameDirPath = sameDirPath.Substring(indexLastSlash);
+					item.GCMLPath = this.Path + sameDirPath;
+					if (!File.Exists(item.GCMLPath))
+					{
+						item.GCMLPath = "";
+						continue;
+					}
+				}
 				XCMLDocument xcmlDoc = GCMLTransformer.Transform(item.GCMLPath);
 				item.XCMLDocument = xcmlDoc;
 			}
