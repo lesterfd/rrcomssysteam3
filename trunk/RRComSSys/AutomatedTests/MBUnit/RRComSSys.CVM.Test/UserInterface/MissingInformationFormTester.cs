@@ -8,6 +8,10 @@ using RRComSSys.CVM.ObjectModel.XCMLModel;
 using RRComSSys.CVM.UserInterface.SchemaTransformerDialogs;
 using System.Drawing;
 using RRComSSys.Testing.Common;
+using MbUnit.Core.Exceptions;
+using System.Windows.Forms;
+using RRComSSys.CVM.Transformers.ModelTransformer;
+using RRComSSys.CVM.ObjectModel.XCMLWorkflowModel;
 
 namespace RRComSSys.CVM.Test.UserInterface
 {
@@ -16,12 +20,12 @@ namespace RRComSSys.CVM.Test.UserInterface
 	{
 		#region Tests
 		[Test]
-		public void TestPopulatePeople()
+		public void Test_Missing_Info_XCML()
 		{
 			String fileName = @".\TestFiles\sample_xcml_missinginfo_1.xcml";
 
 			// Load document
-			XCMLDocument doc = XCMLDocument.LoadDocument<XCMLDocument>(fileName);
+			XCMLDocument doc = (XCMLDocument)ModelTransformationEngine.LoadCMLDocument(fileName);
 			Exception exception = null;
 			MissingInformationForm form = new MissingInformationForm();
 			form.Document = doc;
@@ -29,18 +33,49 @@ namespace RRComSSys.CVM.Test.UserInterface
 				{
 					try
 					{
-						Assert.AreNotEqual(null, form.FindControl(
-							c =>
-								c.BackColor == Color.Bisque &&
-								String.IsNullOrEmpty(c.Text) &&
-								c.Parent.FindControl(
-									c2 => c2.Text.Equals("ldiaz004")) != null));
+						//Assert.IsTrue(form.FindControl(
+						//    c => c.GetType() == typeof(TextBox) ) != null);
+						//Assert.IsTrue(form.Exists<TextBox>(
+						//    c => false));
+						//Assert.IsTrue(form.Exists<TextBox>(
+						//    c => false ));
 					}
-					catch (Exception ex) { exception = ex; }
+					catch (AssertionException ex) { exception = ex; }
 					//form.Close();
 				});
 			form.ShowDialog();
 			if(exception != null)
+				throw exception;
+		}
+
+		[Test]
+		public void Test_Missing_Info_Workflow()
+		{
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+			String fileName = @".\TestFiles\sample_wf_complete_1.wfgcml";
+
+			// Load document
+			XCMLWorkflowDocument doc = (XCMLWorkflowDocument) ModelTransformationEngine.LoadCMLDocument(fileName);
+			Exception exception = null;
+			MissingInformationForm form = new MissingInformationForm();
+			form.Document = doc;
+			form.Activated += new EventHandler(delegate(object sender, EventArgs e)
+			{
+				try
+				{
+					//Assert.IsTrue(form.FindControl(
+					//    c => c.GetType() == typeof(TextBox) ) != null);
+					//Assert.IsTrue(form.Exists<TextBox>(
+					//    c => false));
+					//Assert.IsTrue(form.Exists<TextBox>(
+					//    c => false ));
+				}
+				catch (AssertionException ex) { exception = ex; }
+				//form.Close();
+			});
+			form.ShowDialog();
+			if (exception != null)
 				throw exception;
 		}
 		#endregion
