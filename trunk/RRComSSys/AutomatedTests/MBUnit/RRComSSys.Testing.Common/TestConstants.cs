@@ -11,6 +11,7 @@ namespace RRComSSys.Testing.Common
 		{
 			public const String UnitTest = "Unit Test";
 			public const String IntegrationTest = "Integration Test";
+			public const String ManualTest = "Manual Test";
 		}
 	}
 }
