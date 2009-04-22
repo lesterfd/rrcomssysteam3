@@ -16,20 +16,10 @@ namespace RRComSSys.CVM.Transformers.SchemaTransformer
 		public static CMLDocument Transform(CMLDocument document, out bool userCancelled)
 		{
 			userCancelled = false;
-			
-			// Process XCML Workflow document
-			if (document is XCMLWorkflowDocument)
-				return document;
 
 			// Process XCML document
 			MissingInformationForm form = new MissingInformationForm();
-			form.Document = (XCMLDocument)document;
-
-			// Attach test event
-			form.Activated += new EventHandler(delegate(object sender, EventArgs e)
-				{
-					form.FindControls(x => x.Name == "NameTextBox");
-				});
+			form.Document = document;
 
 			// Show dialog
 			DialogResult result = form.ShowDialog();
