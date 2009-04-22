@@ -6,6 +6,7 @@ using System.Xml.Serialization;
 using System.Xml.Schema;
 using System.IO;
 using RRComSSys.CVM.ObjectModel.XCMLModel;
+using RRComSSys.CVM.Common;
 
 namespace RRComSSys.CVM.ObjectModel.XCMLWorkflowModel
 {
@@ -122,7 +123,11 @@ namespace RRComSSys.CVM.ObjectModel.XCMLWorkflowModel
 						continue;
 					}
 				}
-				XCMLDocument xcmlDoc = GCMLTransformer.Transform(item.GCMLPath);
+				XCMLDocument xcmlDoc = null;
+				if (item.GCMLPath.EndsWith(Constants.Extensions.GCML))
+					xcmlDoc = GCMLTransformer.Transform(item.GCMLPath);
+				else if (item.GCMLPath.EndsWith(Constants.Extensions.XCML))
+					xcmlDoc = XCMLDocument.LoadDocument<XCMLDocument>(item.GCMLPath);
 				item.XCMLDocument = xcmlDoc;
 			}
 		}
