@@ -29,12 +29,14 @@ namespace RRComSSys.CVM.ObjectModel
 			get { return _documentType; }
 		}
 
+		[XmlIgnore]
 		public String Name
 		{
 			get { return _name ?? "Untitled"; }
 			set { _name = value; }
 		}
 
+		[XmlIgnore]
 		public String Path
 		{
 			get { return _documentLoadedFrom; }
