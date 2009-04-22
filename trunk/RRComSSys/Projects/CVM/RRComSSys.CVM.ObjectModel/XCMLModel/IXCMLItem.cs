@@ -5,5 +5,8 @@ using System.Text;
 
 namespace RRComSSys.CVM.ObjectModel.XCMLModel
 {
-	public interface IXCMLItem { }
+	public interface IXCMLItem
+	{
+		XCMLDocument Document { get; set; }
+	}
 }

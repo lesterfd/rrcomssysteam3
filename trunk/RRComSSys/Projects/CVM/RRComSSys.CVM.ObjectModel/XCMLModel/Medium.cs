@@ -43,6 +43,9 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 			get { return _capabilityType; }
 			set { _capabilityType = value; }
 		}
+
+		[XmlIgnore]
+		public XCMLDocument Document { get; set; }
 		#endregion
 	}
 }

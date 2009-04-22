@@ -27,6 +27,9 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 			get { return _deviceID; }
 			set { _deviceID = value; }
 		}
+
+		[XmlIgnore]
+		public XCMLDocument Document { get; set; }
 		#endregion
 	}
 }

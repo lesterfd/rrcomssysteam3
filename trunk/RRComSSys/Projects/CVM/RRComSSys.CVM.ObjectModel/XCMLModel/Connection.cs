@@ -58,6 +58,9 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 		{
 			get { return _remoteUsers; }
 		}
+
+		[XmlIgnore]
+		public XCMLDocument Document { get; set; }
 		#endregion
 
 		#region Public Methods
