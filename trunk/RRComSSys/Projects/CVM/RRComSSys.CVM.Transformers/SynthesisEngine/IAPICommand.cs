@@ -7,6 +7,7 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
 	public interface IAPICommand
 	{
+        String[] Users { get; set; }
 		void Execute();
 	}
 }

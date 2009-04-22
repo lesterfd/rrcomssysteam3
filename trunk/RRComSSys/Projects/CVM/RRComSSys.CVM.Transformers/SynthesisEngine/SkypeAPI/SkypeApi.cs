@@ -122,7 +122,7 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 					UserCollectionClass users = new UserCollectionClass();
 					foreach(String username in _Users)
 						users.Add(_skypeAPI._skype.get_User(username));
-					_skypeAPI._skype.CreateChatMultiple(users);
+					this._skypeAPI._Chat=_skypeAPI._skype.CreateChatMultiple(users);
 				}
 				_skypeAPI._skype.MessageStatus += new _ISkypeEvents_MessageStatusEventHandler(
 					delegate(ChatMessage msg, TChatMessageStatus status)

@@ -9,7 +9,7 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
      * Since this is not the final implementation, creating a wrapper class would not be a good use of
      * time. Furthermore, the classes futherdown may override the add method.
      */
-    public abstract class WorkFlowSymbol : IAPICommand
+    public abstract class WorkFlowSymbol
     {
         private List<IAPICommand> commands;
         private WorkFlow workFlow;

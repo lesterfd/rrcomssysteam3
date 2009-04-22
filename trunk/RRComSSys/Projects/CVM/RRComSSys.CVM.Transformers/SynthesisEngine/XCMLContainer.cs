@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
-    public class XCMLContainer : RRComSSys.CVM.Transformers.SynthesisEngine.IAPICommand, IExecutionContainer
+    public class XCMLContainer : IExecutionContainer
     {
         private List<IAPICommand> commands = new List<IAPICommand>();
     
