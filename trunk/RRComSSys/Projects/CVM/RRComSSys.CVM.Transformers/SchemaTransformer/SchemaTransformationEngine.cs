@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using RRComSSys.CVM.ObjectModel;
 using RRComSSys.CVM.ObjectModel.XCMLWorkflowModel;
-using RRComSSys.CVM.UserInterface.SchemaTransformerDialogs;
+using RRComSSys.CVM.Transformers.SchemaTransformer;
 using RRComSSys.CVM.ObjectModel.XCMLModel;
 using RRComSSys.Testing.Common;
 using System.Windows.Forms;
