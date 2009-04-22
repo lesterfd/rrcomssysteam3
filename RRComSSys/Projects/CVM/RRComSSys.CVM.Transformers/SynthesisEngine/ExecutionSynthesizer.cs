@@ -24,10 +24,15 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
 
         public IExecutionContainer SynthesizeExecutionContainer(CMLDocument document)
         {
-           if(document is XCMLWorkflowDocument)
-                return SynthesizeWorkFlow((XCMLWorkflowDocument)document);
-           else
-                return SynthesizeXCMLContainer((XCMLDocument)document);
+            try
+            {
+                if (document is XCMLWorkflowDocument)
+                    return SynthesizeWorkFlow((XCMLWorkflowDocument)document);
+                if (document is XCMLDocument)
+                    return SynthesizeXCMLContainer((XCMLDocument)document);
+                throw new Exception("CML Document not found/supported");
+            }
+            catch { throw; }
         }
 
         private XCMLContainer SynthesizeXCMLContainer(XCMLDocument doc)
@@ -109,11 +114,7 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
 
         private WorkFlow SynthesizeWorkFlow(XCMLWorkflowDocument doc)
         {
-            WorkFlow wfcontainer = new WorkFlow();
-
-            
-
-            return wfcontainer;
+            return new WorkFlow(doc);
         }
     }
 }
