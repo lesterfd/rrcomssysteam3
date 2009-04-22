@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
-    public class LastItemSucceeded : IAPICommand
+    public class LastItemSucceeded
     {
         private WorkFlowItem lastItem = null;
 

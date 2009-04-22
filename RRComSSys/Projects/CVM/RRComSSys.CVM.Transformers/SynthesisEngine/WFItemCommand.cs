@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
-	public class WFItemCommand : IAPICommand
+	public class WFItemCommand
 	{
 		private IList<IAPICommand> _commands = new List<IAPICommand>();
 

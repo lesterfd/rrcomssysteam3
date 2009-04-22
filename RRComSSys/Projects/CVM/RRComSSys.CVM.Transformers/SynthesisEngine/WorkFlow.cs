@@ -4,25 +4,25 @@ using System.Text;
 
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
-    public class WorkFlow : IAPICommand, IExecutionContainer
+    public class WorkFlow : IExecutionContainer
     {
-        private List<WorkFlowSymbol> symbols;
+        private List<WorkFlowItem> items;
 
         
         public WorkFlow()
         {
-            symbols = new List<WorkFlowSymbol>();
+            items = new List<WorkFlowItem>();
         }
 
-        public List<WorkFlowSymbol> Symbols
+        public List<WorkFlowItem> Symbols
         {
             get
-            {  return symbols;   }
+            {  return items;   }
         }
 
         public void Execute()
         {
-            foreach(WorkFlowSymbol current in symbols)
+            foreach (WorkFlowItem current in items)
             {
                 current.Execute();
             }

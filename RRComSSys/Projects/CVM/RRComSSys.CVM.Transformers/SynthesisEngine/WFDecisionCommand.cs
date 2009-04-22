@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
-	public class WFDecisionCommand : IAPICommand
+	public class WFDecisionCommand
 	{
 		private WFItemCommand _branchTrue;
 		private WFItemCommand _branchFalse;

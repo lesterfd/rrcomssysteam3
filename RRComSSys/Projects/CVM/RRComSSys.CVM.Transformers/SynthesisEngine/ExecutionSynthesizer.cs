@@ -4,23 +4,36 @@ using System.Text;
 using RRComSSys.CVM.ObjectModel.XCMLModel;
 using RRComSSys.CVM.Transformers.SynthesisEngine;
 using RRComSSys.CVM.ObjectModel;
+using System.Linq;
+using RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI;
+using RRComSSys.CVM.ObjectModel.XCMLWorkflowModel;
 
 
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
-    public static class ExecutionSynthesizer
+    public class ExecutionSynthesizer
     {
+        private AbstractApiFactory apiFactory;
 
-        public static IExecutionContainer SynthesizeExecutionContainer(CMLDocument document)
+        public ExecutionSynthesizer():this("Skype"){}
+
+        public ExecutionSynthesizer(String platform)
         {
-           //if(document is WorkFlow)
-           //     return SynthesizeWorkFlow(document);
-           // else
+            apiFactory = AbstractApiFactory.GetFactory(platform);
+        }
+
+        public IExecutionContainer SynthesizeExecutionContainer(CMLDocument document)
+        {
+           if(document is XCMLWorkflowDocument)
+                return SynthesizeWorkFlow((XCMLWorkflowDocument)document);
+           else
                 return SynthesizeXCMLContainer((XCMLDocument)document);
         }
 
-        private static XCMLContainer SynthesizeXCMLContainer(XCMLDocument doc)
+        private XCMLContainer SynthesizeXCMLContainer(XCMLDocument doc)
         {
+            XCMLContainer container = new XCMLContainer();
+
             foreach (Connection conn in doc.Connections)
             {
                 foreach (CapabilityType cap in doc.LocalUser.Device.Capabilities)
@@ -28,15 +41,79 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
                     List<UserDefinition> remoteUsers = conn.FindItems<UserDefinition>(
                                          user => !  user.IsLocal 
                                                  && user.Device.Capabilities.Contains(cap));
-                    List<Medium> media = conn.FindItems<Medium>(
-                                         med => med.BuiltInType.Equals(cap));
+                    if (remoteUsers.Count > 0)
+                    {
+                        List<Medium> media = conn.FindItems<Medium>(
+                                             med => med.BuiltInType.Equals(cap));
+
+                        List<IAPICommand> commands = new List<IAPICommand>();
+
+                        switch (cap)
+                        {
+                            #region Text Chat
+                            case CapabilityType.Text:
+                                foreach (Medium medium in media)
+                                {
+                                    IChatCommand cmd = apiFactory.API.TextChat;
+                                    cmd.TextMessage = medium.Name;
+                                    commands.Add(cmd);
+                                }
+                                break;
+                            #endregion
+                            #region File Transfer
+                            case CapabilityType.TextFile:
+                            case CapabilityType.BinaryFile:
+                            case CapabilityType.StreamFile:
+                            case CapabilityType.AudioFile:
+                            case CapabilityType.VideoFile:
+                            case CapabilityType.AudioVideoFile:
+                            case CapabilityType.NonStreamFile:
+                                foreach (Medium medium in media)
+                                {
+                                    ITransferFileCommand cmd = apiFactory.API.TransferFile;
+                                    cmd.FileLocation = medium.Name;
+                                    commands.Add(cmd);
+                                }
+                                break;
+                            #endregion
+                            #region AudioVideo
+                            case CapabilityType.LiveAudio:
+                                commands.Add(apiFactory.API.VoiceCall);
+                                break;
+                            case CapabilityType.LiveVideo:
+                            case CapabilityType.LiveAudioVideo:
+                                commands.Add(apiFactory.API.LiveVideo);
+                                break;
+                            #endregion
+                            #region Other not supported
+                            case CapabilityType.LiveStream:
+                                break;
+                            default:
+                                break;
+                            #endregion
+                        }
+
+                        var names =
+                            from user in remoteUsers
+                            select user.Person.Name;
+
+                        foreach (IAPICommand cmd in commands)
+                            cmd.Users = names.ToArray<String>();
+
+                        container.Commands.AddRange(commands);
+                    }
                 }
             }
+            return container;
         }
 
-        private static WorkFlow SynthesizeWorkFlow(XCMLDocument doc)
+        private WorkFlow SynthesizeWorkFlow(XCMLWorkflowDocument doc)
         {
-            throw new System.NotImplementedException();
+            WorkFlow wfcontainer = new WorkFlow();
+
+            
+
+            return wfcontainer;
         }
     }
 }

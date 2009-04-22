@@ -52,7 +52,7 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
 
 
 
-        public class WorkFlowDecisionCommand : IAPICommand
+        public class WorkFlowDecisionCommand
         {
             WorkFlowDecision workFlowDecision;
 
