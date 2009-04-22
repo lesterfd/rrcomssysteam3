@@ -27,7 +27,27 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 		public bool IsLocal
 		{
 			get { return _isLocal; }
-			set { _isLocal = value; }
+			set
+			{
+				if (value == _isLocal)
+					return;
+				_isLocal = value;
+
+				if (UserDefinition == null)
+					return;
+
+				if (_isLocal)
+				{
+					Document.LocalUser.IsLocal = false;
+					Document.RemoteUsers.Remove(UserDefinition);
+					Document.LocalUser = UserDefinition;
+				}
+				else
+				{
+					Document.LocalUser = null;
+					Document.RemoteUsers.Add(UserDefinition);
+				}
+			}
 		}
 
 		[XmlAttribute(AttributeName = "isVirtual")]
@@ -43,6 +63,12 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 			get { return _capabilitiesList; }
 			set { _capabilitiesList = value; }
 		}
+
+		[XmlIgnore]
+		public XCMLDocument Document { get; set; }
+
+		[XmlIgnore]
+		public UserDefinition UserDefinition { get; set; }
 		#endregion
 	}
 }

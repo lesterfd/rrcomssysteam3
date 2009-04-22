@@ -64,6 +64,7 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 		public UserDefinition LocalUser
 		{
 			get { return _localUser; }
+			internal set { _localUser = value; }
 		}
 
 		[XmlIgnore]
@@ -151,6 +152,9 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 					_allItems.Add(device);
 				_allItems.Add(conn);
 			}
+
+			foreach (IXCMLItem item in _allItems)
+				item.Document = this;
 		}
 
 		private void ProcessUsers()
