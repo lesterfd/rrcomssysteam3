@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GCML:GCMLDocument xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:GCML="http://GCML/1.0" CommunicationID="_xANG0C8DEd6Kt53374UEQQ">
+  <person PersonName="Danil.M.Flores" PersonID="_yDaQQC8DEd6Kt53374UEQQ" PersonRole="Tutor"/>
+  <person PersonName="msan001" PersonID="_Ai28YC8EEd6Kt53374UEQQ" PersonRole="Professor"/>
+  <person PersonID="_PMSq8C8EEd6Kt53374UEQQ" PersonRole="Student"/>
+  <isAttached DeviceID="_4iQjAC8DEd6Kt53374UEQQ" PersonID="_yDaQQC8DEd6Kt53374UEQQ"/>
+  <isAttached DeviceID="_GkMzwC8EEd6Kt53374UEQQ" PersonID="_Ai28YC8EEd6Kt53374UEQQ"/>
+  <isAttached DeviceID="_R1HuYC8EEd6Kt53374UEQQ" PersonID="_PMSq8C8EEd6Kt53374UEQQ"/>
+  <device DeviceID="_4iQjAC8DEd6Kt53374UEQQ" Capability="_6_dlQC8DEd6Kt53374UEQQ _cHJ-4C8EEd6Kt53374UEQQ"/>
+  <device DeviceID="_GkMzwC8EEd6Kt53374UEQQ" Capability="_JDpRsC8EEd6Kt53374UEQQ _cy9U8C8EEd6Kt53374UEQQ"/>
+  <device DeviceID="_R1HuYC8EEd6Kt53374UEQQ" Capability="_WlGrkC8EEd6Kt53374UEQQ _bwM3cC8EEd6Kt53374UEQQ"/>
+  <capability BuiltInType="LiveVideo" CapabilityID="_6_dlQC8DEd6Kt53374UEQQ"/>
+  <capability BuiltInType="LiveAudio" CapabilityID="_JDpRsC8EEd6Kt53374UEQQ"/>
+  <capability BuiltInType="LiveAudio" CapabilityID="_WlGrkC8EEd6Kt53374UEQQ"/>
+  <capability BuiltInType="Text" CapabilityID="_bwM3cC8EEd6Kt53374UEQQ"/>
+  <capability BuiltInType="Text" CapabilityID="_cHJ-4C8EEd6Kt53374UEQQ"/>
+  <capability BuiltInType="Text" CapabilityID="_cy9U8C8EEd6Kt53374UEQQ"/>
+  <connection ConnectionID="__UBxwC8DEd6Kt53374UEQQ" Device="_4iQjAC8DEd6Kt53374UEQQ _GkMzwC8EEd6Kt53374UEQQ _R1HuYC8EEd6Kt53374UEQQ"/>
+</GCML:GCMLDocument>
