@@ -52,12 +52,12 @@ namespace RRComSSys.CVM.Transformers.ModelTransformer
 
 		private static CMLDocument LoadXCMLWorkflowDocument(FileInfo file)
 		{
-			throw new NotImplementedException();
+			return LoadGCMLWorkflowDocument(file);
 		}
 
 		private static CMLDocument LoadGCMLWorkflowDocument(FileInfo file)
 		{
-			throw new NotImplementedException();
+			return XCMLWorkflowDocument.LoadDocument<XCMLWorkflowDocument>(file);
 		}
 		#endregion
 	}
