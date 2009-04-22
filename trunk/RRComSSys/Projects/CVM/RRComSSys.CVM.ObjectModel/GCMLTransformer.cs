@@ -12,7 +12,7 @@ namespace RRComSSys.CVM.ObjectModel
 	public static class GCMLTransformer
 	{
 		#region Member Variables
-		private const String _defaultMappingFileName = "MappingGCMLToXCML.xslt";
+		private const String _defaultMappingFileName = "./MappingGCMLToXCML.xslt";
 		#endregion
 
 		#region Public Methods
