@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wfgcml:WFGCMLRoot xmlns:wfgcml="http://wfgcml/1.0">
+  <start next="#_bLZx8C07Ed6gjJDsNGhRmg"/>
+  <GCML next="#_ctKfoC07Ed6gjJDsNGhRmg" GCMLLoc=".\TestFiles\sample_xcml_01.xcml" ID="_bLZx8C07Ed6gjJDsNGhRmg"/>
+  <GCML next="#//@final" GCMLLoc=".\TestFiles\sample_xcml_02.xcml" ID="_dg30gC07Ed6gjJDsNGhRmg"/>
+  <final/>
+  <condition next="#//@final" altnext="#_dg30gC07Ed6gjJDsNGhRmg" ID="_ctKfoC07Ed6gjJDsNGhRmg"/>
+</wfgcml:WFGCMLRoot>

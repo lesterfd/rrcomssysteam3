@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<UserSchema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" communicationID="_jRhGQSfREd6Bgpzny0v-Ow">
+    <connection connectionID="_rxtlsCfREd6Bgpzny0v-Ow" bandwidth="">
+        <device deviceID="_qeRA0CfREd6Bgpzny0v-Ow" isLocal="true" isVirtual="false">
+            <deviceCapability>LiveAudio</deviceCapability>
+            <deviceCapability>Text</deviceCapability>
+        </device>
+        <device deviceID="_7KjX8CfREd6Bgpzny0v-Ow" isLocal="false" isVirtual="false">
+            <deviceCapability>Text</deviceCapability>
+        </device>
+        <device deviceID="_8KjX8CfREd6Bgpzny0v-Ow" isLocal="false" isVirtual="false">
+            <deviceCapability>Text</deviceCapability>
+        </device>
+      <mediumTypeNameRef>file1</mediumTypeNameRef>
+        <mediumTypeNameRef>stream1</mediumTypeNameRef>
+    </connection>
+    <mediumType mediumTypeName="file1" suggestedApplication="" voiceCommand="" derivedFromBuiltInType="TextFile" />
+    <mediumType mediumTypeName="stream1" suggestedApplication="" voiceCommand="" derivedFromBuiltInType="Text" />
+    <person personName="lesterfd" personID="_jpp5cCfREd6Bgpzny0v-Ow" personRole="initiator" />
+    <person personName="danil.m.flores" personID="_8RVZ0CfREd6Bgpzny0v-Ow" personRole="receiver" />
+    <person personName="msan001" personID="_9RVZ0CfREd6Bgpzny0v-Ow" personRole="receiver" />
+    <isAttached personID="_jpp5cCfREd6Bgpzny0v-Ow" deviceID="_qeRA0CfREd6Bgpzny0v-Ow" />
+    <isAttached personID="_8RVZ0CfREd6Bgpzny0v-Ow" deviceID="_7KjX8CfREd6Bgpzny0v-Ow" />
+    <isAttached personID="_9RVZ0CfREd6Bgpzny0v-Ow" deviceID="_8KjX8CfREd6Bgpzny0v-Ow" />
+</UserSchema>
