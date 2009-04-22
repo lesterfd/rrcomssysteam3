@@ -240,6 +240,20 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 				_handler.SetStatus(pCall, Status);
 			}
 
+			public override string ToString()
+			{
+				StringBuilder sb = new StringBuilder("Voice Call: ");
+				sb
+					.Append(this._skypeAPI._skype.CurrentUser.DisplayName)
+					.Append(", ");
+				foreach (String user in _Users)
+				{
+					sb.Append(user);
+					if (!_Users[_Users.Length - 1].Equals(user))
+						sb.Append(", ");
+				}
+				return sb.ToString();
+			}
 
 			public void Execute()
 			{
