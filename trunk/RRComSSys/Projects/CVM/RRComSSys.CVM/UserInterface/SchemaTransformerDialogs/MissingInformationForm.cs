@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using RRComSSys.CVM.ObjectModel.XCMLModel;
+using RRComSSys.CVM.ObjectModel;
+using RRComSSys.CVM.ObjectModel.XCMLWorkflowModel;
 
 namespace RRComSSys.CVM.UserInterface.SchemaTransformerDialogs
 {
 	public partial class MissingInformationForm : Form
 	{
 		#region Member Variables
-		private List<IXCMLView> _items = new List<IXCMLView>();
+		private CMLDocument _document;
+		private List<ICMLDocumentView> _documentViews = new List<ICMLDocumentView>();
 		#endregion
 
 		#region Constructors & Initializers
@@ -24,17 +27,14 @@ namespace RRComSSys.CVM.UserInterface.SchemaTransformerDialogs
 		#endregion
 
 		#region Properties
-		public XCMLDocument Document { get; set; }
+		public CMLDocument Document
+		{
+			get { return _document; }
+			set { InitializeDocument(value); }
+		}
 		#endregion
 
 		#region Event Handlers
-		protected override void OnShown(EventArgs e)
-		{
-			base.OnShown(e);
-			InitializeDataSource();
-			Validate();
-		}
-
 		private void btnSave_Click(object sender, EventArgs e)
 		{
 			Save();
@@ -45,11 +45,6 @@ namespace RRComSSys.CVM.UserInterface.SchemaTransformerDialogs
 			Validate();
 		}
 
-		private void btnReset_Click(object sender, EventArgs e)
-		{
-			Reset();
-		}
-
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
 			Cancel();
@@ -57,73 +52,67 @@ namespace RRComSSys.CVM.UserInterface.SchemaTransformerDialogs
 		#endregion
 
 		#region Private Methods
-		private void InitializeDataSource()
+		private void InitializeDocument(CMLDocument doc)
 		{
-			foreach (Person person in this.Document.People)
+			_document = doc;
+			if (doc.GetType() == typeof(XCMLDocument))
 			{
-				PersonPanel panel = new PersonPanel();
-				panel.DataSource = person;
-				flpParticipants.Controls.Add(panel);
-				_items.Add(panel);
+				XCMLDocumentPanel panel = new XCMLDocumentPanel();
+				panel.Document = (XCMLDocument) doc;
+				panel.Dock = DockStyle.Fill;
+				tbcDocumentTabs.TabPages.Add(doc.Name);
+				tbcDocumentTabs.TabPages[0].Controls.Add(panel);
 			}
-
-			foreach (Medium medium in this.Document.AllMedia)
+			else if (doc.GetType() == typeof(XCMLWorkflowDocument))
 			{
-				MediumPanel panel = new MediumPanel();
-				panel.DataSource = medium;
-				flpMedia.Controls.Add(panel);
-				_items.Add(panel);
+				XCMLWorkflowDocument workflow = (XCMLWorkflowDocument) doc;
+				XCMLWorkflowDocumentPanel wfPanel = new XCMLWorkflowDocumentPanel();
+				wfPanel.Document = workflow;
+				wfPanel.Dock = DockStyle.Fill;
+				tbcDocumentTabs.TabPages.Add(doc.Name);
+				tbcDocumentTabs.TabPages[0].Controls.Add(wfPanel);
+
+				int i = 1;
+				List<WorkflowGCMLItem> gcmlItems = workflow.GetAllItems<WorkflowGCMLItem>();
+				foreach (WorkflowGCMLItem item in gcmlItems)
+				{
+					if (String.IsNullOrEmpty(item.GCMLPath))
+						continue;
+					XCMLDocumentPanel xcmlPanel = new XCMLDocumentPanel();
+					XCMLDocument xcmlDoc = item.XCMLDocument;
+					xcmlPanel.Document = xcmlDoc;
+					xcmlPanel.Dock = DockStyle.Fill;
+					tbcDocumentTabs.TabPages.Add(xcmlDoc.Name);
+					tbcDocumentTabs.TabPages[i++].Controls.Add(xcmlPanel);
+				}
 			}
-
-			foreach (Connection connection in this.Document.Connections)
-			{
-				ConnectionPanel panel = new ConnectionPanel();
-				panel.DataSource = connection;
-				flpConnections.Controls.Add(panel);
-				_items.Add(panel);
-			}
-		}
-
-		private void Reset()
-		{
-			foreach (IXCMLView view in _items)
-				view.Reset();
-		}
-
-		private bool Validate()
-		{
-			bool isValid = true;
-			foreach (IXCMLView view in _items)
-				if (!view.ValidateRequiredFields())
-					isValid = false;
-			return isValid;
 		}
 
 		private void Save()
 		{
-			bool isValid = Validate();
-			if (!isValid)
+			if (Validate())
 			{
-				MessageBox.Show(
-					"Please fill out all required fields before continuing.",
-					"Validation Error",
-					MessageBoxButtons.OK,
-					MessageBoxIcon.Exclamation);
-				return;
+				foreach (ICMLDocumentView view in _documentViews)
+					view.Save();
+				this.Close();
 			}
+		}
 
-			foreach (IXCMLView view in _items)
-				view.Save();
-			this.Close();
+		private new bool Validate()
+		{
+			bool isValid = true;
+			foreach (ICMLDocumentView view in _documentViews)
+				if (!view.Validate())
+					isValid = false;
+			return isValid;
 		}
 
 		private void Cancel()
 		{
-			foreach (IXCMLView view in _items)
-				view.Cancel();
+			foreach (ICMLDocumentView view in _documentViews)
+				view.Reset();
 			this.Close();
 		}
-
 		#endregion
 	}
 }

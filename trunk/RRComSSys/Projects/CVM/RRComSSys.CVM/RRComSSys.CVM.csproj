@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{585FF0F0-BF2F-4D76-822C-F870FBA0C532}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -77,35 +77,46 @@
       <DependentUpon>CVMMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\BaseXCMLView.resx">
-      <DependentUpon>BaseXCMLView.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\BaseCMLView.resx">
+      <DependentUpon>BaseCMLView.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\ConnectionPanel.resx">
-      <DependentUpon>ConnectionPanel.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\WorkflowConditionView.resx">
+      <DependentUpon>WorkflowConditionView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\DevicePanel.resx">
-      <DependentUpon>DevicePanel.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\ConnectionView.resx">
+      <DependentUpon>ConnectionView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\MediumPanel.resx">
-      <DependentUpon>MediumPanel.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\DeviceView.resx">
+      <DependentUpon>DeviceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\MediumView.resx">
+      <DependentUpon>MediumView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\MissingInformationForm.resx">
       <DependentUpon>MissingInformationForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\PersonPanel.resx">
-      <DependentUpon>PersonPanel.cs</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\PersonView.resx">
+      <DependentUpon>PersonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\XCMLWorkflowDocumentPanel.resx">
+      <DependentUpon>XCMLWorkflowDocumentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\WorkflowGCMLView.resx">
+      <DependentUpon>WorkflowGCMLView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\SchemaTransformerDialogs\XCMLDocumentPanel.resx">
+      <DependentUpon>XCMLDocumentPanel.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Properties\DataSources\RRComSSys.CVM.ObjectModel.XCMLModel.XCMLDocument.datasource" />
+    <None Include="Properties\DataSources\RRComSSys.CVM.ObjectModel.XCMLWorkflowModel.WorkflowCondition.datasource" />
+    <None Include="Properties\DataSources\RRComSSys.CVM.ObjectModel.XCMLWorkflowModel.WorkflowGCMLItem.datasource" />
+    <None Include="Properties\DataSources\RRComSSys.CVM.ObjectModel.XCMLWorkflowModel.XCMLWorkflowDocument.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,30 +138,37 @@
     <Compile Include="UserInterface\CVMGUI\CVMMain.Designer.cs">
       <DependentUpon>CVMMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\BaseXCMLView.cs">
+    <Compile Include="UserInterface\SchemaTransformerDialogs\BaseCMLView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\BaseXCMLView.Designer.cs">
-      <DependentUpon>BaseXCMLView.cs</DependentUpon>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\BaseCMLView.Designer.cs">
+      <DependentUpon>BaseCMLView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\ConnectionPanel.cs">
+    <Compile Include="UserInterface\SchemaTransformerDialogs\ICMLDocumentView.cs" />
+    <Compile Include="UserInterface\SchemaTransformerDialogs\WorkflowConditionView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\ConnectionPanel.Designer.cs">
-      <DependentUpon>ConnectionPanel.cs</DependentUpon>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\WorkflowConditionView.Designer.cs">
+      <DependentUpon>WorkflowConditionView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\DevicePanel.cs">
+    <Compile Include="UserInterface\SchemaTransformerDialogs\ConnectionView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\DevicePanel.Designer.cs">
-      <DependentUpon>DevicePanel.cs</DependentUpon>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\ConnectionView.Designer.cs">
+      <DependentUpon>ConnectionView.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\IXCMLView.cs" />
-    <Compile Include="UserInterface\SchemaTransformerDialogs\MediumPanel.cs">
+    <Compile Include="UserInterface\SchemaTransformerDialogs\DeviceView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\MediumPanel.Designer.cs">
-      <DependentUpon>MediumPanel.cs</DependentUpon>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\DeviceView.Designer.cs">
+      <DependentUpon>DeviceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\IBoundView.cs" />
+    <Compile Include="UserInterface\SchemaTransformerDialogs\MediumView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\MediumView.Designer.cs">
+      <DependentUpon>MediumView.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\SchemaTransformerDialogs\MissingInformationForm.cs">
       <SubType>Form</SubType>
@@ -158,11 +176,29 @@
     <Compile Include="UserInterface\SchemaTransformerDialogs\MissingInformationForm.Designer.cs">
       <DependentUpon>MissingInformationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\PersonPanel.cs">
+    <Compile Include="UserInterface\SchemaTransformerDialogs\PersonView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserInterface\SchemaTransformerDialogs\PersonPanel.Designer.cs">
-      <DependentUpon>PersonPanel.cs</DependentUpon>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\PersonView.Designer.cs">
+      <DependentUpon>PersonView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\XCMLWorkflowDocumentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\XCMLWorkflowDocumentPanel.Designer.cs">
+      <DependentUpon>XCMLWorkflowDocumentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\WorkflowGCMLView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\WorkflowGCMLView.Designer.cs">
+      <DependentUpon>WorkflowGCMLView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\XCMLDocumentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\SchemaTransformerDialogs\XCMLDocumentPanel.Designer.cs">
+      <DependentUpon>XCMLDocumentPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterface\SchemaTransformerDialogs\XCMLViewHelper.cs" />
     <Compile Include="UserInterface\Security\Login.cs" />
