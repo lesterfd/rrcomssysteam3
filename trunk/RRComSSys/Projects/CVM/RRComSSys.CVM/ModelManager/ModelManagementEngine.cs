@@ -6,12 +6,14 @@ using RRComSSys.CVM.Transformers.ModelTransformer;
 using RRComSSys.CVM.ObjectModel;
 using System.Windows;
 using RRComSSys.CVM.Transformers.SchemaTransformer;
+using RRComSSys.CVM.Transformers;
+using RRComSSys.CVM.Transformers.SynthesisEngine;
 
 namespace RRComSSys.CVM.ModelManager
 {
 	public static class ModelManagementEngine
 	{
-		public static void LoadDocument(String fileName)
+		public static IExecutionContainer LoadDocument(String fileName)
 		{
 			// Load document through MTE
 			CMLDocument document = null;
@@ -26,7 +28,7 @@ namespace RRComSSys.CVM.ModelManager
 					"Error Loading Document",
 					MessageBoxButton.OK,
 					MessageBoxImage.Error);
-				return;
+				return null;
 			}
 
 			// Transform document to instance
@@ -42,9 +44,26 @@ namespace RRComSSys.CVM.ModelManager
 					"Error Schema Transforming Document",
 					MessageBoxButton.OK,
 					MessageBoxImage.Error);
-				return;
+				return null;
 			}
-			if (cancelled) return;
+			if (cancelled) return null;
+
+			// Generate commands
+			IExecutionContainer result = null;
+			try
+			{
+				result = SynthesisEngineController.Instance.GenerateCommands(document);
+			}
+			catch (Exception e)
+			{
+				MessageBox.Show(
+					String.Format("An error occured while generating commands: {0}", e.Message),
+					"Error Schema Transforming Document",
+					MessageBoxButton.OK,
+					MessageBoxImage.Error);
+				return null;
+			}
+			return result;
 		}
 	}
 }
