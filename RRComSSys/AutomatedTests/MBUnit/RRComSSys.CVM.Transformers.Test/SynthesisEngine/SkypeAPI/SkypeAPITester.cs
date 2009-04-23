@@ -9,10 +9,14 @@ using System.IO;
 using SKYPE4COMLib;
 using System.Threading;
 using System.Diagnostics;
+using RRComSSys.Testing.Common;
 
 namespace RRComSSys.CVM.Transformers.Test.SynthesisEngine.SkypeAPI
 {
 	[TestFixture]
+	[TestCategory(TestConstants.Categories.ManualTest)]
+	[Author("Danil Mariovich Flores", "Danil.Flores@ultimatesoftware.com")]
+	[Author("Maung San", "msan001@fiu.edu")]
 	public class SkypeAPITester
 	{
 		[Test]
@@ -21,7 +25,7 @@ namespace RRComSSys.CVM.Transformers.Test.SynthesisEngine.SkypeAPI
 			String filePath = new FileInfo(@".\TestFiles\sample_gcml_01.gcml").FullName;
 			ITransferFileCommand command = new SkypeApiFactory().API.TransferFile;
 			command.FileLocation = filePath;
-			command.Users = new String[] { "msan001" };
+			command.Users = new String[] { "marcelo.lopezjr" };
 			command.Handler = new FileTransferHandler();
 			command.Execute();
 			Thread.Sleep(20000);
@@ -31,7 +35,7 @@ namespace RRComSSys.CVM.Transformers.Test.SynthesisEngine.SkypeAPI
 		public void Test_Voice_Call_Single_Command()
 		{
 			IVoiceCallCommand command = new SkypeApiFactory().API.VoiceCall;
-			command.Users = new String[] { "msan001" };
+			command.Users = new String[] { "jmrodriguez24" };
 			command.Handler = new CallHandler();
 			command.Execute();
 			Thread.Sleep(20000);
@@ -41,7 +45,7 @@ namespace RRComSSys.CVM.Transformers.Test.SynthesisEngine.SkypeAPI
 		public void Test_Voice_Conference_Call()
 		{
 			IVoiceCallCommand command = new SkypeApiFactory().API.VoiceCall;
-			command.Users = new String[] { "msan001", "kuzuye" };
+			command.Users = new String[] { "msan001", "jmrodriguez" };
 			command.Handler = new CallHandler();
 			command.Execute();
 			Thread.Sleep(20000);
@@ -61,7 +65,7 @@ namespace RRComSSys.CVM.Transformers.Test.SynthesisEngine.SkypeAPI
 		public void Test_Receive_Chat_Message()
 		{
 			IChatCommand command = new SkypeApiFactory().API.TextChat;
-			command.Users = new String[] { "msan001"};
+			command.Users = new String[] { "jmrodriguez"};
 			command.Handler = new ChatHandler();
 			command.TextMessage = "Yooooooooooooo";
 			command.Execute();
@@ -74,6 +78,16 @@ namespace RRComSSys.CVM.Transformers.Test.SynthesisEngine.SkypeAPI
 			{
 				Debug.WriteLine(status.ToString());
 			}
+
+			#region IFileTransferHandler Members
+
+
+			public void Close()
+			{
+				throw new NotImplementedException();
+			}
+
+			#endregion
 		}
 
 		public class CallHandler : ICallHandler
@@ -82,15 +96,48 @@ namespace RRComSSys.CVM.Transformers.Test.SynthesisEngine.SkypeAPI
 			{
 				Debug.WriteLine(status.ToString());
 			}
+
+			#region ICallHandler Members
+
+
+			public void Close()
+			{
+				throw new NotImplementedException();
+			}
+
+			#endregion
 		}
 
 		public class ChatHandler : IChatHandler
 		{
+			
 			public void MessageReceived(ChatMessage message, TChatMessageStatus status)
 			{
 				if (status == TChatMessageStatus.cmsReceived)
 					Debug.WriteLine(message.Body);
 			}
+
+			public event ChatMessageHandler  MessageSent;
+
+			#region IChatHandler Members
+
+
+			public void InitializeUsers(string[] users)
+			{
+				throw new NotImplementedException();
+			}
+
+			#endregion
+
+			#region IChatHandler Members
+
+
+			public void Close()
+			{
+				throw new NotImplementedException();
+			}
+
+			#endregion
 		}
 	}
 }
