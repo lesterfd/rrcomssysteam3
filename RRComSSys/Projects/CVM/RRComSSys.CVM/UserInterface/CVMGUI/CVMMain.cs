@@ -8,6 +8,10 @@ using System.Text;
 using System.Windows.Forms;
 using RRComSSys.CVM.ModelManager;
 using System.Diagnostics;
+using RRComSSys.CVM.Transformers;
+using RRComSSys.CVM.Transformers.SynthesisEngine;
+using RRComSSys.CVM.UserInterface.CVMGUI.Handlers;
+using RRComSSys.CVM.UserInterface.CVMGUI;
 
 namespace RRComSSys.CVM.UserInterface.CVMUI
 {
@@ -24,16 +28,76 @@ namespace RRComSSys.CVM.UserInterface.CVMUI
 
         private void OpenFile(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-			openFileDialog.RestoreDirectory = true;
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-			openFileDialog.Filter = "GCML Diagram Files (*.gcml)|*.gcml|XCML Files (*.xcml)|*.xcml|Workflow Files (*.wfgcml)|*.wfgcml";
             if (openFileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 string fileName = openFileDialog.FileName;
-				ModelManagementEngine.LoadDocument(fileName);
+				IExecutionContainer container = ModelManagementEngine.LoadDocument(fileName);
+				if (container != null)
+					ProcessCommands(container);
             }
         }
+
+		private void ProcessCommands(IExecutionContainer container)
+		{
+			if (container is WorkFlow)
+				ProcessWorkflow((WorkFlow) container);
+			if (container is XCMLContainer)
+				ProcessXCML((XCMLContainer) container);
+		}
+
+		private CommandList ProcessXCML(XCMLContainer XCMLContainer)
+		{
+			Form mdiForm = new Form();
+			mdiForm.MdiParent = this;
+			mdiForm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+			mdiForm.AutoSize = true;
+			CommandList cmdList = new CommandList();
+			mdiForm.Controls.Add(cmdList);
+			foreach (IAPICommand command in XCMLContainer.Commands)
+			{
+				if (command is IVoiceCallCommand)
+				{
+					IVoiceCallCommand voiceCall = command as IVoiceCallCommand;
+					VoiceCallHandler handler = new VoiceCallHandler();
+					voiceCall.Handler = handler;
+					cmdList.Handlers.Add(handler);
+				}
+				else if (command is IChatCommand)
+				{
+					IChatCommand chat = command as IChatCommand;
+					ChatHandler handler = new ChatHandler();
+					chat.Handler = handler;
+					cmdList.Handlers.Add(handler);
+				}
+				else if (command is ITransferFileCommand)
+				{
+					ITransferFileCommand ft = command as ITransferFileCommand;
+					FileTransferHandler handler = new FileTransferHandler();
+					ft.Handler = handler;
+					cmdList.Handlers.Add(handler);
+				}
+			}
+			cmdList.Commands = XCMLContainer;
+			mdiForm.Show();
+			return cmdList;
+		}
+
+		private void ProcessWorkflow(WorkFlow workFlow)
+		{
+			Form mdiForm = new Form();
+			mdiForm.MdiParent = this;
+			mdiForm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+			mdiForm.AutoSize = true;
+			WorkflowRunner runner = new WorkflowRunner();
+			mdiForm.Controls.Add(runner);
+			workFlow.ProcessingXCML += new ProcessingXCMLHandler(delegate(XCMLContainer container)
+				{
+					CommandList cmds = ProcessXCML(container);
+					cmds.ExecuteEnabled = false;
+					cmds.SpawnHandlers();
+				});
+			mdiForm.Show();
+		}
 
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
         {
