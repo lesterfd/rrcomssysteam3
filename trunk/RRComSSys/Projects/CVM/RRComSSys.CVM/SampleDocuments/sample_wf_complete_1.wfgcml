@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wfgcml:WFGCMLRoot xmlns:wfgcml="http://wfgcml/1.0">
+  <start next="#_bLZx8C07Ed6gjJDsNGhRmg"/>
+  <GCML next="#_ctKfoC07Ed6gjJDsNGhRmg" GCMLLoc="C:\Projects\RRComSSys\Projects\CVM\RRComSSys.CVM\SampleDocuments\2WayVoice1.gcml" ID="_bLZx8C07Ed6gjJDsNGhRmg"/>
+  <GCML next="#//@final" GCMLLoc="C:\Projects\RRComSSys\Projects\CVM\RRComSSys.CVM\SampleDocuments\2WayVoice2.gcml" ID="_dg30gC07Ed6gjJDsNGhRmg"/>
+  <final/>
+  <condition next="#//@final" altnext="#_dg30gC07Ed6gjJDsNGhRmg" ID="_ctKfoC07Ed6gjJDsNGhRmg"/>
+</wfgcml:WFGCMLRoot>

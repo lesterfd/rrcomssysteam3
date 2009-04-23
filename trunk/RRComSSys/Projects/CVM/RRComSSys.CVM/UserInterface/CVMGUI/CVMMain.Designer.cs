@@ -62,6 +62,7 @@
 			this.statusStrip = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
 			this.menuStrip.SuspendLayout();
 			this.toolStrip.SuspendLayout();
 			this.statusStrip.SuspendLayout();
@@ -334,6 +335,13 @@
 			this.toolStripStatusLabel.Size = new System.Drawing.Size(57, 21);
 			this.toolStripStatusLabel.Text = "Status";
 			// 
+			// openFileDialog
+			// 
+			this.openFileDialog.Filter = "GCML Diagram Files (*.gcml)|*.gcml|XCML Files (*.xcml)|*.xcml|Workflow Files (*.w" +
+				"fgcml)|*.wfgcml";
+			this.openFileDialog.InitialDirectory = global::RRComSSys.CVM.Properties.Settings.Default.LastDirectory;
+			this.openFileDialog.RestoreDirectory = true;
+			// 
 			// CVMMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -394,6 +402,7 @@
         private System.Windows.Forms.ToolStripMenuItem logOffToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem gCMLDiagramToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem gCMLWorkflowDiagramToolStripMenuItem;
+		private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 

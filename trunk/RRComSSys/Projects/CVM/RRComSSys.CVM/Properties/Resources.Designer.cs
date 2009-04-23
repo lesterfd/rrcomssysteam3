@@ -59,5 +59,75 @@ namespace RRComSSys.CVM.Properties {
                 resourceCulture = value;
             }
         }
+        
+        internal static System.Drawing.Bitmap CallEnd_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("CallEnd_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap CallEnd_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("CallEnd_48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap CallStart_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("CallStart_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap CallStart_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("CallStart_48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Contact_128x128 {
+            get {
+                object obj = ResourceManager.GetObject("Contact_128x128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Contact_256x256 {
+            get {
+                object obj = ResourceManager.GetObject("Contact_256x256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Contact_48x48 {
+            get {
+                object obj = ResourceManager.GetObject("Contact_48x48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap File_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("File_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Message_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Message_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Video_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Video_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
