@@ -57,12 +57,13 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
                         {
                             #region Text Chat
                             case CapabilityType.Text:
-                                foreach (Medium medium in media)
-                                {
-                                    IChatCommand cmd = apiFactory.API.TextChat;
-                                    cmd.TextMessage = medium.Name;
-                                    commands.Add(cmd);
-                                }
+								IChatCommand txtCmd = apiFactory.API.TextChat;
+								List<Medium> txtMedia = doc.FindItems<Medium>(m => m.BuiltInType == CapabilityType.Text);
+								StringBuilder msg = new StringBuilder();
+								foreach (Medium medium in txtMedia)
+									msg.Append(medium.Name).Append("\n");
+								txtCmd.TextMessage = msg.ToString();
+								commands.Add(txtCmd);
                                 break;
                             #endregion
                             #region File Transfer

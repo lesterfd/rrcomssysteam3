@@ -51,6 +51,7 @@ namespace RRComSSys.CVM.Transformers.SchemaTransformer
 
 		public void Save()
 		{
+			_bindingSource.ResumeBinding();
 			_bindingSource.EndEdit();
 		}
 
