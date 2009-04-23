@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using RRComSSys.CVM.ObjectModel.XCMLModel;
 
 namespace RRComSSys.CVM.Transformers.SchemaTransformer
 {
@@ -16,6 +17,14 @@ namespace RRComSSys.CVM.Transformers.SchemaTransformer
 			InitializeComponent();
 			this.BindingSource = devicesBindingSource;
 			this.RequiredFields.Add(iDTextBox);
+			
+		}
+
+		protected override void OnVisibleChanged(EventArgs e)
+		{
+			base.OnVisibleChanged(e);
+			Device device = this.DataSource as Device;
+			lblUser.Text = device.UserDefinition.Person.ID;
 		}
 	}
 }

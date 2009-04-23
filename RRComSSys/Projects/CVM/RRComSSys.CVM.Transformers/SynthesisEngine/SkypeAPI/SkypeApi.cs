@@ -57,12 +57,16 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 		{
 			get { return new SkypeLiveVideo(this); }
 		}
-
+		public override IEndCallCommand EndCall
+		{
+			get { throw new NotImplementedException(); }
+		}
 		#endregion
 
 		#region Commands
 		public class SkypeTextChat : IChatCommand
 		{
+
 			#region Member Variables
 			private SkypeAPI _skypeAPI;
 			private String _TextMessage;
@@ -71,6 +75,7 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 			#endregion
 
 			#region Constructors & Initializers
+
 			public SkypeTextChat(SkypeAPI skypeapi)
 			{
 				this._skypeAPI = skypeapi;
@@ -78,10 +83,11 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 			#endregion
 
 			#region Properties
+
 			public String[] Users
 			{
 				get { return this._Users; }
-				set {_Users = value; }
+				set { _Users = value; }
 			}
 
 			public String TextMessage
@@ -93,9 +99,17 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 			public IChatHandler Handler
 			{
 				get { return _handler; }
-				set { _handler = value; }
+				set
+				{
+					_handler = value;
+					_handler.MessageSent += new ChatMessageHandler(sendchat);
+				}
 			}
 			#endregion
+			public void sendchat(string chat)
+			{
+				this._skypeAPI._Chat.SendMessage(chat);
+			}
 
 			public void Execute()
 			{
@@ -112,30 +126,45 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 					}
 				}
 				if (!success)
+				{
+					if (_handler != null)
+						_handler.Close();
 					throw new CommunicationException("Cannot establish chat. One or more of the users are unavailable");
+				}
 
+				_handler.InitializeUsers(_Users);
 				// Create channel
 				if (_Users.Length == 1)
 					this._skypeAPI._Chat = this._skypeAPI._skype.CreateChatWith(this._Users[0]);
 				else
 				{
 					UserCollectionClass users = new UserCollectionClass();
-					foreach(String username in _Users)
+					foreach (String username in _Users)
 						users.Add(_skypeAPI._skype.get_User(username));
-					this._skypeAPI._Chat=_skypeAPI._skype.CreateChatMultiple(users);
+					this._skypeAPI._Chat = _skypeAPI._skype.CreateChatMultiple(users);
 				}
-				_skypeAPI._skype.MessageStatus += new _ISkypeEvents_MessageStatusEventHandler(
-					delegate(ChatMessage msg, TChatMessageStatus status)
-					{
-						_handler.MessageReceived(msg, status);
-					});
+				_skypeAPI._skype.MessageStatus += new _ISkypeEvents_MessageStatusEventHandler(_skype_MessageStatus);
 
-				// 
-				if(!String.IsNullOrEmpty(_TextMessage))
+
+				if (!String.IsNullOrEmpty(_TextMessage))
 					this._skypeAPI._Chat.SendMessage(this._TextMessage);
-					
 
-				Debug.WriteLine("Skype Text Chat");
+
+
+			}
+
+			public override string ToString()
+			{
+				StringBuilder sb = new StringBuilder("Chat: ");
+				foreach (String user in _Users)
+					sb.Append(user).Append("  ");
+				return sb.ToString();
+			}
+
+			void _skype_MessageStatus(ChatMessage pMessage, TChatMessageStatus Status)
+			{
+
+				_handler.MessageReceived(pMessage, Status);
 
 			}
 		}
@@ -145,7 +174,6 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 			#region Member Variables
 			private string[] _users;
 			private string _fileLocation;
-			private string _fileTransferStatus;
 			private SkypeAPI _skypeAPI;
 			private IFileTransferHandler _handler;
 			#endregion
@@ -194,6 +222,14 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 					Console.WriteLine("Skype File Transfer");
 				}
 			}
+
+			public override string ToString()
+			{
+				StringBuilder sb = new StringBuilder("Transfer File: ");
+				foreach (String user in _users)
+					sb.Append(user).Append("  ");
+				return sb.ToString();
+			}
 		}
 
 		public class SkypeVoiceCall : IVoiceCallCommand
@@ -202,8 +238,6 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 
 			private SkypeAPI _skypeAPI;
 			private String[] _Users = new String[4] { "", "", "", "" };
-			private bool _conference;
-			private string CallStatus;
 			private ICallHandler _handler;
 
 			#endregion
@@ -240,25 +274,11 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 				_handler.SetStatus(pCall, Status);
 			}
 
-			public override string ToString()
-			{
-				StringBuilder sb = new StringBuilder("Voice Call: ");
-				sb
-					.Append(this._skypeAPI._skype.CurrentUser.DisplayName)
-					.Append(", ");
-				foreach (String user in _Users)
-				{
-					sb.Append(user);
-					if (!_Users[_Users.Length - 1].Equals(user))
-						sb.Append(", ");
-				}
-				return sb.ToString();
-			}
 
 			public void Execute()
 			{
 				bool success = true;
-				foreach(String username in _Users)
+				foreach (String username in _Users)
 				{
 					if (String.IsNullOrEmpty(username))
 						continue;
@@ -273,12 +293,24 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 				if (success)
 					this._skypeAPI._Call = this._skypeAPI._skype.PlaceCall(this._Users[0], this._Users[1], this._Users[2], this._Users[3]);
 				else
+				{
+					if (_handler != null)
+						_handler.Close();
 					throw new CommunicationException("Cannot establish voice call with users. One or more of the users is not available.");
+				}
 				//if (this._conference == false)
 				//    this._skypeAPI._Call = this._skypeAPI._skype.PlaceCall(this._Users[0], this._Users[1], this._Users[2], this._Users[3]);
 				//else
 				//    this._skypeAPI._Call = this._skypeAPI._skype.PlaceCall(this._Users[0], "", "", "");
 				Console.WriteLine("Skype Voice Call");
+			}
+
+			public override string ToString()
+			{
+				StringBuilder sb = new StringBuilder("Voice Call: ");
+				foreach (String user in _Users)
+					sb.Append(user).Append("  ");
+				return sb.ToString();
 			}
 		}
 
@@ -286,8 +318,7 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 		{
 			private SkypeAPI _skypeAPI;
 			private String[] _Users = new String[4] { "", "", "", "" };
-			//private bool _conference;
-			private string VideoStatus;
+			private IVideoHandler _handler;
 			public SkypeLiveVideo(SkypeAPI skypeapi)
 			{
 				this._skypeAPI = skypeapi;
@@ -297,7 +328,7 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 
 			void _skype_CallVideoStatusChanged(Call pCall, TCallVideoStatus Status)
 			{
-				this.VideoStatus = Status.ToString();
+				_handler.SetStatus(pCall, Status);
 			}
 			public String[] Users
 			{
@@ -310,19 +341,62 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine.SkypeAPI
 					}
 				}
 			}
+			public IVideoHandler Handler
+			{
+				get { return this._handler; }
+				set { this._handler = value; }
+			}
 			public void Execute()
 			{
-				if (this._skypeAPI._Call == null)
-					this._skypeAPI._Call.StartVideoSend();
+				//   Command aCom = new Command();
+
+				if (this._skypeAPI._Call != null && this._skypeAPI._Call.Status == TCallStatus.clsInProgress)
+				{
+					if (_skypeAPI._Call.VideoReceiveStatus == TCallVideoSendStatus.vssAvailable)
+						this._skypeAPI._Call.StartVideoReceive();
+					if (_skypeAPI._Call.VideoSendStatus == TCallVideoSendStatus.vssAvailable)
+						this._skypeAPI._Call.StartVideoSend();
+
+					this._skypeAPI._skype.Client.OpenVideoTestDialog();
+					// if( _skypeAPI._Call.VideoSendStatus==TCallVideoSendStatus.vssAvailable )
+					//this._skypeAPI._skype.SendCommand(aCom);
+					// if (_skypeAPI._Call.VideoReceiveStatus == TCallVideoSendStatus.vssStarting)
+					// this._skypeAPI._Call.StartVideoReceive();
+				}
+				else
+				{
+					//  this._skypeAPI._skype.Settings.VideoIn= 
+					this._skypeAPI._Call = this._skypeAPI._skype.PlaceCall(this._Users[0], "", "", "");
+					if (_skypeAPI._Call.VideoReceiveStatus == TCallVideoSendStatus.vssAvailable)
+						this._skypeAPI._Call.StartVideoReceive();
+
+					if (_skypeAPI._Call.VideoSendStatus == TCallVideoSendStatus.vssAvailable)
+						this._skypeAPI._Call.StartVideoSend();
+
+					this._skypeAPI._skype.Client.OpenVideoTestDialog();
+
+					//if (_skypeAPI._Call.VideoSendStatus == TCallVideoSendStatus.vssAvailable)
+					// aCom.Command = "ALTER CALL " + this._skypeAPI._Call.Id + " START_VIDEO_SEND";
+					// this._skypeAPI._skype.SendCommand(aCom);
+					// this._skypeAPI._Call.StartVideoSend();
+
+					// this._skypeAPI._Call.StartVideoReceive();
+
+				}
 				Console.WriteLine("Skype Live Video");
+			}
+
+			public override string ToString()
+			{
+				StringBuilder sb = new StringBuilder("Live Video: ");
+				foreach (String user in _Users)
+					sb.Append(user).Append("  ");
+				return sb.ToString();
 			}
 
 		}
 		#endregion
 
-		public override IEndCallCommand EndCall
-		{
-			get { throw new NotImplementedException(); }
-		}
+
 	}
 }

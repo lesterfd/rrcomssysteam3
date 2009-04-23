@@ -93,7 +93,23 @@ namespace RRComSSys.CVM.Transformers.SchemaTransformer
 			if (Validate())
 			{
 				foreach (ICMLDocumentView view in _documentViews)
+				{
 					view.Save();
+					if (view is XCMLDocumentPanel)
+					{
+						XCMLDocumentPanel xcmlView = view as XCMLDocumentPanel;
+						if (xcmlView.Document.LocalUser == null)
+						{
+							MessageBox.Show(
+								"Please select a local user for each XCML document",
+								"Validation Error",
+								MessageBoxButtons.OK,
+								MessageBoxIcon.Exclamation);
+							return;
+						}
+					}
+				}
+				this.DialogResult = DialogResult.OK;
 				this.Close();
 			}
 		}
@@ -111,6 +127,7 @@ namespace RRComSSys.CVM.Transformers.SchemaTransformer
 		{
 			foreach (ICMLDocumentView view in _documentViews)
 				view.Reset();
+			this.DialogResult = DialogResult.Cancel;
 			this.Close();
 		}
 		#endregion

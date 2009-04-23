@@ -40,6 +40,8 @@
 			this.isVirtualCheckBox = new System.Windows.Forms.CheckBox();
 			this.pnlDevice = new System.Windows.Forms.Panel();
 			this.lblDevice = new System.Windows.Forms.Label();
+			this.lblUserLabel = new System.Windows.Forms.Label();
+			this.lblUser = new System.Windows.Forms.Label();
 			iDLabel = new System.Windows.Forms.Label();
 			isLocalLabel = new System.Windows.Forms.Label();
 			isVirtualLabel = new System.Windows.Forms.Label();
@@ -130,6 +132,8 @@
 			// 
 			this.pnlDevice.BackColor = System.Drawing.Color.AliceBlue;
 			this.pnlDevice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.pnlDevice.Controls.Add(this.lblUser);
+			this.pnlDevice.Controls.Add(this.lblUserLabel);
 			this.pnlDevice.Controls.Add(this.lblDevice);
 			this.pnlDevice.Controls.Add(this.capabilitiesListBox);
 			this.pnlDevice.Controls.Add(iDLabel);
@@ -154,14 +158,32 @@
 			this.lblDevice.TabIndex = 2;
 			this.lblDevice.Text = "Device";
 			// 
-			// DevicePanel
+			// lblUserLabel
+			// 
+			this.lblUserLabel.AutoSize = true;
+			this.lblUserLabel.Location = new System.Drawing.Point(100, 45);
+			this.lblUserLabel.Name = "lblUserLabel";
+			this.lblUserLabel.Size = new System.Drawing.Size(42, 17);
+			this.lblUserLabel.TabIndex = 7;
+			this.lblUserLabel.Text = "User:";
+			// 
+			// lblUser
+			// 
+			this.lblUser.AutoSize = true;
+			this.lblUser.Location = new System.Drawing.Point(120, 62);
+			this.lblUser.Name = "lblUser";
+			this.lblUser.Size = new System.Drawing.Size(59, 17);
+			this.lblUser.TabIndex = 8;
+			this.lblUser.Text = "[UserID]";
+			// 
+			// DeviceView
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.Controls.Add(this.pnlDevice);
-			this.Name = "DevicePanel";
+			this.Name = "DeviceView";
 			this.Size = new System.Drawing.Size(278, 235);
 			((System.ComponentModel.ISupportInitialize) (this.capabilitiesBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize) (this.devicesBindingSource)).EndInit();
@@ -181,5 +203,7 @@
 		private System.Windows.Forms.CheckBox isVirtualCheckBox;
 		private System.Windows.Forms.Panel pnlDevice;
 		private System.Windows.Forms.Label lblDevice;
+		private System.Windows.Forms.Label lblUser;
+		private System.Windows.Forms.Label lblUserLabel;
 	}
 }

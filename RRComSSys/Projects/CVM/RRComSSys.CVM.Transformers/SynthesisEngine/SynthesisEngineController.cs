@@ -9,28 +9,36 @@ using RRComSSys.CVM.ObjectModel;
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
     public sealed class SynthesisEngineController
-    {
-        SynthesisEngineController() { }
+	{
+		#region Member Variables
+		private static readonly SynthesisEngineController instance = new SynthesisEngineController();
+		private IExecutionContainer container;
+		#endregion
 
-        private static readonly SynthesisEngineController instance = new SynthesisEngineController();
+		#region Constructors & Initializers
+		private SynthesisEngineController() { }
+		#endregion
 
-        private IExecutionContainer container;
-
-        public static SynthesisEngineController Instance
+		#region Properties
+		public static SynthesisEngineController Instance
         {
             get { return instance; }
-        }
+		}
+		#endregion
 
-        public void GenerateCommands(CMLDocument doc)
+
+		#region Public Methods
+		public IExecutionContainer GenerateCommands(CMLDocument doc)
         {
             ExecutionSynthesizer xs = new ExecutionSynthesizer();
             container = xs.SynthesizeExecutionContainer(doc);
+			return container;
         }
 
         public void ExecuteCommands()
         {
             container.Execute();
-            Thread.Sleep(20000);
-        }
-    }
+		}
+		#endregion
+	}
 }

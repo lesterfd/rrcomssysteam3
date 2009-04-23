@@ -7,31 +7,39 @@ using RRComSSys.CVM.ObjectModel.XCMLModel;
 
 namespace RRComSSys.CVM.Transformers.SynthesisEngine
 {
+	public delegate void ProcessingXCMLHandler(XCMLContainer container);
+
     public class WorkFlow : IExecutionContainer
-    {
-        private List<WorkflowItem> items;
-
+	{
+		#region Member Variables
+		private List<WorkflowItem> items;
         private XCMLWorkflowDocument wfDoc;
-
+		private List<XCMLContainer> _xcmlContainers = new List<XCMLContainer>();
         private bool lastFailed;
+		#endregion
 
-        public WorkFlow()
+		public event ProcessingXCMLHandler ProcessingXCML;
+
+		#region Constructors & Initializers
+		public WorkFlow()
         {
             items = new List<WorkflowItem>();
-        }
-
-        public WorkFlow(XCMLWorkflowDocument doc)
+		}
+		
+		public WorkFlow(XCMLWorkflowDocument doc)
         {
             wfDoc = doc;
-        }
+		}
+		#endregion
 
-        public List<WorkflowItem> Symbols
+		#region Properties
+		public List<WorkflowItem> Symbols
         {
-            get
-            {  return items;   }
-        }
+            get {  return items;   }
+		}
+		#endregion
 
-        public void Execute()
+		public void Execute()
         {
             ExecutionSynthesizer xs = new ExecutionSynthesizer();
             WorkflowItem current = wfDoc.Start.First;
@@ -41,10 +49,11 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
                 {
                     XCMLDocument xcml = ((WorkflowGCMLItem)current).XCMLDocument;
                     XCMLContainer container = (XCMLContainer)xs.SynthesizeExecutionContainer(xcml);
+					if (ProcessingXCML != null)
+						ProcessingXCML(container);
                     try
                     {
                         container.Execute();
-                        Thread.Sleep(20000);
                         lastFailed = false;
                     }
                     catch

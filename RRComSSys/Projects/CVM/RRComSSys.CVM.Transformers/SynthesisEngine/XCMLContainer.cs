@@ -7,6 +7,8 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
     public class XCMLContainer : IExecutionContainer
     {
         private List<IAPICommand> commands = new List<IAPICommand>();
+		
+		public event Action Executing;
     
         public List<IAPICommand> Commands
         {  get{  return commands;  } }
@@ -15,9 +17,12 @@ namespace RRComSSys.CVM.Transformers.SynthesisEngine
 
         public void Execute()
         {
+			if(Executing != null)
+				Executing();
             foreach (IAPICommand aCom in commands)
                 aCom.Execute();
         }
+
 
         #endregion
     }

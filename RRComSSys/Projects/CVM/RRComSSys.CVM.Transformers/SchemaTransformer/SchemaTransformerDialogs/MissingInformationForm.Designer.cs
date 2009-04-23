@@ -30,9 +30,9 @@
 		{
 			this.tbcDocumentTabs = new System.Windows.Forms.TabControl();
 			this.pnlButtons = new System.Windows.Forms.Panel();
-			this.btnValidate = new System.Windows.Forms.Button();
-			this.btnCancel = new System.Windows.Forms.Button();
 			this.btnSave = new System.Windows.Forms.Button();
+			this.btnCancel = new System.Windows.Forms.Button();
+			this.btnValidate = new System.Windows.Forms.Button();
 			this.pnlButtons.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -42,7 +42,7 @@
 			this.tbcDocumentTabs.Location = new System.Drawing.Point(5, 5);
 			this.tbcDocumentTabs.Name = "tbcDocumentTabs";
 			this.tbcDocumentTabs.SelectedIndex = 0;
-			this.tbcDocumentTabs.Size = new System.Drawing.Size(1006, 677);
+			this.tbcDocumentTabs.Size = new System.Drawing.Size(1082, 677);
 			this.tbcDocumentTabs.TabIndex = 0;
 			// 
 			// pnlButtons
@@ -53,30 +53,8 @@
 			this.pnlButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.pnlButtons.Location = new System.Drawing.Point(5, 682);
 			this.pnlButtons.Name = "pnlButtons";
-			this.pnlButtons.Size = new System.Drawing.Size(1006, 36);
+			this.pnlButtons.Size = new System.Drawing.Size(1082, 36);
 			this.pnlButtons.TabIndex = 1;
-			// 
-			// btnValidate
-			// 
-			this.btnValidate.AutoSize = true;
-			this.btnValidate.Location = new System.Drawing.Point(843, 6);
-			this.btnValidate.Name = "btnValidate";
-			this.btnValidate.Size = new System.Drawing.Size(88, 27);
-			this.btnValidate.TabIndex = 0;
-			this.btnValidate.Text = "Validate All";
-			this.btnValidate.UseVisualStyleBackColor = true;
-			this.btnValidate.Click += new System.EventHandler(this.btnValidate_Click);
-			// 
-			// btnCancel
-			// 
-			this.btnCancel.AutoSize = true;
-			this.btnCancel.Location = new System.Drawing.Point(942, 6);
-			this.btnCancel.Name = "btnCancel";
-			this.btnCancel.Size = new System.Drawing.Size(61, 27);
-			this.btnCancel.TabIndex = 1;
-			this.btnCancel.Text = "Cancel";
-			this.btnCancel.UseVisualStyleBackColor = true;
-			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 			// 
 			// btnSave
 			// 
@@ -89,16 +67,39 @@
 			this.btnSave.UseVisualStyleBackColor = true;
 			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 
+			// btnCancel
+			// 
+			this.btnCancel.AutoSize = true;
+			this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.btnCancel.Location = new System.Drawing.Point(942, 6);
+			this.btnCancel.Name = "btnCancel";
+			this.btnCancel.Size = new System.Drawing.Size(61, 27);
+			this.btnCancel.TabIndex = 1;
+			this.btnCancel.Text = "Cancel";
+			this.btnCancel.UseVisualStyleBackColor = true;
+			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+			// 
+			// btnValidate
+			// 
+			this.btnValidate.AutoSize = true;
+			this.btnValidate.Location = new System.Drawing.Point(843, 6);
+			this.btnValidate.Name = "btnValidate";
+			this.btnValidate.Size = new System.Drawing.Size(88, 27);
+			this.btnValidate.TabIndex = 0;
+			this.btnValidate.Text = "Validate All";
+			this.btnValidate.UseVisualStyleBackColor = true;
+			this.btnValidate.Click += new System.EventHandler(this.btnValidate_Click);
+			// 
 			// MissingInformationForm
 			// 
 			this.AcceptButton = this.btnSave;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.btnCancel;
-			this.ClientSize = new System.Drawing.Size(1016, 723);
+			this.ClientSize = new System.Drawing.Size(1092, 723);
 			this.Controls.Add(this.tbcDocumentTabs);
 			this.Controls.Add(this.pnlButtons);
-			this.MinimumSize = new System.Drawing.Size(1024, 768);
+			this.MinimumSize = new System.Drawing.Size(1100, 768);
 			this.Name = "MissingInformationForm";
 			this.Padding = new System.Windows.Forms.Padding(5);
 			this.ShowIcon = false;
