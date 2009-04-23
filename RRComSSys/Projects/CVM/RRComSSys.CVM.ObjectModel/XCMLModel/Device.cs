@@ -38,7 +38,8 @@ namespace RRComSSys.CVM.ObjectModel.XCMLModel
 
 				if (_isLocal)
 				{
-					Document.LocalUser.IsLocal = false;
+					if(Document.LocalUser != null)
+						Document.LocalUser.IsLocal = false;
 					Document.RemoteUsers.Remove(UserDefinition);
 					Document.LocalUser = UserDefinition;
 				}
