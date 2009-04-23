@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using MbUnit.Framework;
-using RRComSSys.CVM.UserInterface;
-using RRComSSys.CVM.ObjectModel.XCMLModel;
-using RRComSSys.CVM.UserInterface.SchemaTransformerDialogs;
-using System.Drawing;
-using RRComSSys.Testing.Common;
-using MbUnit.Core.Exceptions;
 using System.Windows.Forms;
-using RRComSSys.CVM.Transformers.ModelTransformer;
+using MbUnit.Core.Exceptions;
+using MbUnit.Framework;
+using RRComSSys.CVM.ObjectModel.XCMLModel;
 using RRComSSys.CVM.ObjectModel.XCMLWorkflowModel;
+using RRComSSys.CVM.Transformers.ModelTransformer;
+using RRComSSys.CVM.Transformers.SchemaTransformer;
 
 namespace RRComSSys.CVM.Test.UserInterface
 {
